@@ -13,6 +13,7 @@ namespace oksana_kids
     public partial class Tests : Form
     {
         public int tabIndex;
+        public string testName = "";
 
         List<string> fio = new List<string>();
         Dictionary<int, string> fio_dict = new Dictionary<int, string>();
@@ -27,6 +28,10 @@ namespace oksana_kids
 
         }
 
+        public Tests() {
+
+        }
+
         private void Tests_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet5.T01_2_others". При необходимости она может быть перемещена или удалена.
@@ -37,13 +42,41 @@ namespace oksana_kids
             this.t02_view_testsTableAdapter.Fill(this.bd_kidsDataSet3.T02_view_tests);
             tabControl1.SelectTab(tabIndex);
 
-            
+            test_construct_button.Enabled = false;
+
+
+
         }
 
         private void test_construct_button_Click(object sender, EventArgs e)
         {
-            AdaptiveTestConstructor a = new AdaptiveTestConstructor();
+            AdaptiveTestConstructor a = new AdaptiveTestConstructor(testName);
             a.Show();
+        }
+        
+        private void dataGridView1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void dataGridView1_Click(object sender, EventArgs e)
+        {
+            string selectedRow = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            int testID = int.Parse(selectedRow);
+
+            var linq = from i in bd.T02_tests
+                       where i.id_test == testID
+                       select new
+                       {
+                           name = i.name_test
+                       };
+
+            foreach (var item in linq)
+            {
+                testName = item.name;
+            }
+
+            test_construct_button.Enabled = true;
         }
     }
 }

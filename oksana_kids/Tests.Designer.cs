@@ -48,6 +48,13 @@
             this.name_test = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.idtestDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nametestDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecreateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecorrectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxpassingdurationsecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.t02viewtestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSet3 = new oksana_kids.bd_kidsDataSet3();
             this.T03_testing_task_modules = new System.Windows.Forms.TabPage();
@@ -60,13 +67,6 @@
             this.t01personalitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t01_personalitiesTableAdapter = new oksana_kids.bd_kidsDataSet4TableAdapters.T01_personalitiesTableAdapter();
             this.t01_2_othersTableAdapter = new oksana_kids.bd_kidsDataSet5TableAdapters.T01_2_othersTableAdapter();
-            this.idtestDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nametestDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecreateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecorrectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxpassingdurationsecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.T02_tests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
@@ -271,8 +271,58 @@
             this.dataGridView1.DataSource = this.t02viewtestsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(360, 16);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(556, 317);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
+            this.dataGridView1.Enter += new System.EventHandler(this.dataGridView1_Enter);
+            // 
+            // idtestDataGridViewTextBoxColumn
+            // 
+            this.idtestDataGridViewTextBoxColumn.DataPropertyName = "id_test";
+            this.idtestDataGridViewTextBoxColumn.HeaderText = "id_test";
+            this.idtestDataGridViewTextBoxColumn.Name = "idtestDataGridViewTextBoxColumn";
+            this.idtestDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nametestDataGridViewTextBoxColumn
+            // 
+            this.nametestDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.nametestDataGridViewTextBoxColumn.DataPropertyName = "name_test";
+            this.nametestDataGridViewTextBoxColumn.HeaderText = "Название теста";
+            this.nametestDataGridViewTextBoxColumn.Name = "nametestDataGridViewTextBoxColumn";
+            this.nametestDataGridViewTextBoxColumn.Width = 104;
+            // 
+            // fioDataGridViewTextBoxColumn
+            // 
+            this.fioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn.HeaderText = "ФИО автора";
+            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
+            this.fioDataGridViewTextBoxColumn.Width = 89;
+            // 
+            // datecreateDataGridViewTextBoxColumn
+            // 
+            this.datecreateDataGridViewTextBoxColumn.DataPropertyName = "date_create";
+            this.datecreateDataGridViewTextBoxColumn.HeaderText = "Дата создания";
+            this.datecreateDataGridViewTextBoxColumn.Name = "datecreateDataGridViewTextBoxColumn";
+            // 
+            // datecorrectDataGridViewTextBoxColumn
+            // 
+            this.datecorrectDataGridViewTextBoxColumn.DataPropertyName = "date_correct";
+            this.datecorrectDataGridViewTextBoxColumn.HeaderText = "Дата корректировки";
+            this.datecorrectDataGridViewTextBoxColumn.Name = "datecorrectDataGridViewTextBoxColumn";
+            // 
+            // maxpassingdurationsecDataGridViewTextBoxColumn
+            // 
+            this.maxpassingdurationsecDataGridViewTextBoxColumn.DataPropertyName = "max_passing_duration_sec";
+            this.maxpassingdurationsecDataGridViewTextBoxColumn.HeaderText = "Макс. длительность прохождения, сек";
+            this.maxpassingdurationsecDataGridViewTextBoxColumn.Name = "maxpassingdurationsecDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
             // t02viewtestsBindingSource
             // 
@@ -343,53 +393,6 @@
             // t01_2_othersTableAdapter
             // 
             this.t01_2_othersTableAdapter.ClearBeforeFill = true;
-            // 
-            // idtestDataGridViewTextBoxColumn
-            // 
-            this.idtestDataGridViewTextBoxColumn.DataPropertyName = "id_test";
-            this.idtestDataGridViewTextBoxColumn.HeaderText = "id_test";
-            this.idtestDataGridViewTextBoxColumn.Name = "idtestDataGridViewTextBoxColumn";
-            this.idtestDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nametestDataGridViewTextBoxColumn
-            // 
-            this.nametestDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.nametestDataGridViewTextBoxColumn.DataPropertyName = "name_test";
-            this.nametestDataGridViewTextBoxColumn.HeaderText = "Название теста";
-            this.nametestDataGridViewTextBoxColumn.Name = "nametestDataGridViewTextBoxColumn";
-            this.nametestDataGridViewTextBoxColumn.Width = 104;
-            // 
-            // fioDataGridViewTextBoxColumn
-            // 
-            this.fioDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn.HeaderText = "ФИО автора";
-            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
-            this.fioDataGridViewTextBoxColumn.Width = 89;
-            // 
-            // datecreateDataGridViewTextBoxColumn
-            // 
-            this.datecreateDataGridViewTextBoxColumn.DataPropertyName = "date_create";
-            this.datecreateDataGridViewTextBoxColumn.HeaderText = "Дата создания";
-            this.datecreateDataGridViewTextBoxColumn.Name = "datecreateDataGridViewTextBoxColumn";
-            // 
-            // datecorrectDataGridViewTextBoxColumn
-            // 
-            this.datecorrectDataGridViewTextBoxColumn.DataPropertyName = "date_correct";
-            this.datecorrectDataGridViewTextBoxColumn.HeaderText = "Дата корректировки";
-            this.datecorrectDataGridViewTextBoxColumn.Name = "datecorrectDataGridViewTextBoxColumn";
-            // 
-            // maxpassingdurationsecDataGridViewTextBoxColumn
-            // 
-            this.maxpassingdurationsecDataGridViewTextBoxColumn.DataPropertyName = "max_passing_duration_sec";
-            this.maxpassingdurationsecDataGridViewTextBoxColumn.HeaderText = "Макс. длительность прохождения, сек";
-            this.maxpassingdurationsecDataGridViewTextBoxColumn.Name = "maxpassingdurationsecDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
             // Tests
             // 

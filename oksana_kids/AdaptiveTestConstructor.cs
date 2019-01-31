@@ -14,10 +14,12 @@ namespace oksana_kids
     {
         public int try_number;
         public int change_number;
+        public string name = "";
 
 
-        public AdaptiveTestConstructor()
+        public AdaptiveTestConstructor(string testName)
         {
+            name = testName;
             InitializeComponent();
             
         }
@@ -25,6 +27,7 @@ namespace oksana_kids
 
         private void AdaptiveTestConstructor_Load(object sender, EventArgs e)
         {
+            selectedTest.Text = name;
             
         }
         
