@@ -21,6 +21,10 @@ namespace oksana_kids
 
         private void Personalities_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSetOthers.T01_2_others". При необходимости она может быть перемещена или удалена.
+            this.t01_2_othersTableAdapter2.Fill(this.bd_kidsDataSetOthers.T01_2_others);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataPupils.T01_1_pupils". При необходимости она может быть перемещена или удалена.
+            this.t01_1_pupilsTableAdapter1.Fill(this.bd_kidsDataPupils.T01_1_pupils);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet6.T01_2_others". При необходимости она может быть перемещена или удалена.
             this.t01_2_othersTableAdapter1.Fill(this.bd_kidsDataSet6.T01_2_others);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet.T01_personalities". При необходимости она может быть перемещена или удалена.
@@ -33,16 +37,15 @@ namespace oksana_kids
             this.r01_people_categoryTableAdapter.Fill(this.bd_kidsDataSet.R01_people_category);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSetGender.R00_decode". При необходимости она может быть перемещена или удалена.
             this.r00_decodeTableAdapter.Fill(this.bd_kidsDataSetGender.R00_decode);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet1.T01_2_others". При необходимости она может быть перемещена или удалена.
-            this.t01_2_othersTableAdapter.Fill(this.bd_kidsDataSet1.T01_2_others);
+            
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSetPupils.T01_1_pupils". При необходимости она может быть перемещена или удалена.
             this.t01_1_pupilsTableAdapter.Fill(this.bd_kidsDataSetPupils.T01_1_pupils);
 
             study_class.Enabled = false;
             study_years.Enabled = false;
 
-            birth_date.Format = DateTimePickerFormat.Custom;
-            birth_date.CustomFormat = "dd.mm.yyyy";
+            //birth_date.Format = DateTimePickerFormat.Custom;
+            //birth_date.CustomFormat = "dd.mm.yyyy";
 
             gender.DropDownStyle = ComboBoxStyle.DropDownList;
             human_category.DropDownStyle = ComboBoxStyle.DropDownList;
@@ -80,6 +83,7 @@ namespace oksana_kids
         {
             try
             {
+                
                 if (human_category.SelectedValue.ToString() == "2")
                     {
                         study_class.Enabled = true;
@@ -91,7 +95,7 @@ namespace oksana_kids
                         study_years.Enabled = false;
                     }
             }
-            catch(Exception ee) { MessageBox.Show("!!!"); MessageBox.Show(ee.StackTrace); }
+            catch(Exception ee) {  }
             
         }
 
@@ -103,24 +107,26 @@ namespace oksana_kids
             }
             else
             {
-                try
-                {
+                //try
+                //{
                     bd_kidsDataSet.T01_personalitiesRow row;
                     row = bd_kidsDataSet.T01_personalities.NewT01_personalitiesRow();
                     row.surname = surname.Text;
                     row.name = name.Text;
                     row.patronymic = patronymic.Text;
 
-                    //birth_date.Format = DateTimePickerFormat.Custom;
-                    //birth_date.CustomFormat = "dd.mm.yyyy";
+                //birth_date.Format = DateTimePickerFormat.Custom;
+                //birth_date.CustomFormat = "dd.mm.yyyy";
 
-                    row.date_birth = "dd.mm.yyyy";
+                //row.date_birth = birth_date.Value; 
+                    row.date_birth = birth_date.Value.ToShortDateString();
+
                     row.gender = (long)gender.SelectedValue;
                     row.code_category = (long)human_category.SelectedValue;
                     row.id_org = (long)place_work_study.SelectedValue;
                     if (human_category.SelectedValue.ToString() == "2")
                     {
-                        row.code_class = (int)study_class.SelectedValue;
+                        row.code_class = int.Parse(study_class.SelectedValue.ToString());
                     }
                     else
                     {
@@ -129,19 +135,22 @@ namespace oksana_kids
                     }
                     row.login = login.Text;
                     row.password = password.Text;
-                    row.date_updating = DateTime.Now.ToString("dd.mm.yyyy");
+                    row.date_updating = null;
+
+                
                     row.note = note.Text == " " ? " " : note.Text;
 
                     this.bd_kidsDataSet.T01_personalities.Rows.Add(row);
                     this.t01_personalitiesTableAdapter.Update(this.bd_kidsDataSet.T01_personalities);
-                }
-                catch (Exception ee)
-                {
-                    MessageBox.Show(ee.Message);
-                }
 
-                gridViewOthers.Refresh();
-                gridViewPupils.Refresh();
+                    gridViewPupils.DataSource = t011pupilsBindingSource1;
+                //}
+                //catch (Exception ee)
+                //{
+                //    MessageBox.Show(ee.Message);
+                //}
+
+
             }
         }
 
@@ -149,5 +158,7 @@ namespace oksana_kids
         {
 
         }
+
+        
     }
 }

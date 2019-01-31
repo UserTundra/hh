@@ -20,9 +20,9 @@ namespace oksana_kids {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("bd_kidsDataSetPupils")]
+    [global::System.Xml.Serialization.XmlRootAttribute("bd_kidsDataPupils")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class bd_kidsDataSetPupils : global::System.Data.DataSet {
+    public partial class bd_kidsDataPupils : global::System.Data.DataSet {
         
         private T01_1_pupilsDataTable tableT01_1_pupils;
         
@@ -30,7 +30,7 @@ namespace oksana_kids {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bd_kidsDataSetPupils() {
+        public bd_kidsDataPupils() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace oksana_kids {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected bd_kidsDataSetPupils(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected bd_kidsDataPupils(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -127,7 +127,7 @@ namespace oksana_kids {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            bd_kidsDataSetPupils cln = ((bd_kidsDataSetPupils)(base.Clone()));
+            bd_kidsDataPupils cln = ((bd_kidsDataPupils)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -199,9 +199,9 @@ namespace oksana_kids {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "bd_kidsDataSetPupils";
+            this.DataSetName = "bd_kidsDataPupils";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/bd_kidsDataSetPupils.xsd";
+            this.Namespace = "http://tempuri.org/bd_kidsDataPupils.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableT01_1_pupils = new T01_1_pupilsDataTable();
@@ -225,7 +225,7 @@ namespace oksana_kids {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            bd_kidsDataSetPupils ds = new bd_kidsDataSetPupils();
+            bd_kidsDataPupils ds = new bd_kidsDataPupils();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -280,14 +280,8 @@ namespace oksana_kids {
         public partial class T01_1_pupilsDataTable : global::System.Data.TypedTableBase<T01_1_pupilsRow> {
             
             private global::System.Data.DataColumn columnid_person;
-
+            
             private global::System.Data.DataColumn columnfio;
-
-            //private global::System.Data.DataColumn columnsurname;
-            
-            //private global::System.Data.DataColumn columnname;
-            
-            //private global::System.Data.DataColumn columnpatronymic;
             
             private global::System.Data.DataColumn columndate_birth;
             
@@ -347,40 +341,14 @@ namespace oksana_kids {
                     return this.columnid_person;
                 }
             }
-
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn fioColumn
-            {
-                get
-                {
+            public global::System.Data.DataColumn fioColumn {
+                get {
                     return this.columnfio;
                 }
             }
-
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public global::System.Data.DataColumn surnameColumn {
-            //    get {
-            //        return this.columnsurname;
-            //    }
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public global::System.Data.DataColumn nameColumn {
-            //    get {
-            //        return this.columnname;
-            //    }
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public global::System.Data.DataColumn patronymicColumn {
-            //    get {
-            //        return this.columnpatronymic;
-            //    }
-            //}
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -491,15 +459,11 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public T01_1_pupilsRow AddT01_1_pupilsRow(string surname, string name, string patronymic, string date_birth, string name_decode, string name_category, string name_class, string short_name, string login, string password, string date_updating, string note)
-            public T01_1_pupilsRow AddT01_1_pupilsRow(string fio, string date_birth, string name_decode, string name_category, string name_class, string short_name, string login, string password, string date_updating, string note) {
+            public T01_1_pupilsRow AddT01_1_pupilsRow(object fio, string date_birth, string name_decode, string name_category, string name_class, string short_name, string login, string password, string date_updating, string note) {
                 T01_1_pupilsRow rowT01_1_pupilsRow = ((T01_1_pupilsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         fio,
-                        //surname,
-                        //name,
-                        //patronymic,
                         date_birth,
                         name_decode,
                         name_category,
@@ -533,9 +497,6 @@ namespace oksana_kids {
             internal void InitVars() {
                 this.columnid_person = base.Columns["id_person"];
                 this.columnfio = base.Columns["fio"];
-                //this.columnsurname = base.Columns["surname"];
-                //this.columnname = base.Columns["name"];
-                //this.columnpatronymic = base.Columns["patronymic"];
                 this.columndate_birth = base.Columns["date_birth"];
                 this.columnname_decode = base.Columns["name_decode"];
                 this.columnname_category = base.Columns["name_category"];
@@ -552,14 +513,8 @@ namespace oksana_kids {
             private void InitClass() {
                 this.columnid_person = new global::System.Data.DataColumn("id_person", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_person);
-                this.columnfio = new global::System.Data.DataColumn("fio", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnfio = new global::System.Data.DataColumn("fio", typeof(object), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfio);
-                //this.columnsurname = new global::System.Data.DataColumn("surname", typeof(string), null, global::System.Data.MappingType.Element);
-                //base.Columns.Add(this.columnsurname);
-                //this.columnname = new global::System.Data.DataColumn("name", typeof(string), null, global::System.Data.MappingType.Element);
-                //base.Columns.Add(this.columnname);
-                //this.columnpatronymic = new global::System.Data.DataColumn("patronymic", typeof(string), null, global::System.Data.MappingType.Element);
-                //base.Columns.Add(this.columnpatronymic);
                 this.columndate_birth = new global::System.Data.DataColumn("date_birth", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_birth);
                 this.columnname_decode = new global::System.Data.DataColumn("name_decode", typeof(string), null, global::System.Data.MappingType.Element);
@@ -582,10 +537,6 @@ namespace oksana_kids {
                 this.columnid_person.AutoIncrementSeed = -1;
                 this.columnid_person.AutoIncrementStep = -1;
                 this.columnid_person.AllowDBNull = false;
-                this.columnfio.MaxLength = 2147483647;
-                //this.columnsurname.MaxLength = 2147483647;
-                //this.columnname.MaxLength = 2147483647;
-                //this.columnpatronymic.MaxLength = 2147483647;
                 this.columndate_birth.MaxLength = 2147483647;
                 this.columnname_decode.MaxLength = 2147483647;
                 this.columnname_category.MaxLength = 2147483647;
@@ -662,7 +613,7 @@ namespace oksana_kids {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                bd_kidsDataSetPupils ds = new bd_kidsDataSetPupils();
+                bd_kidsDataPupils ds = new bd_kidsDataPupils();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -745,75 +696,22 @@ namespace oksana_kids {
                     this[this.tableT01_1_pupils.id_personColumn] = value;
                 }
             }
-
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string fio
-            {
-                get
-                {
-                    try
-                    {
-                        return ((string)(this[this.tableT01_1_pupils.fioColumn]));
+            public object fio {
+                get {
+                    try {
+                        return ((object)(this[this.tableT01_1_pupils.fioColumn]));
                     }
-                    catch (global::System.InvalidCastException e)
-                    {
+                    catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'fio\' в таблице \'T01_1_pupils\' равно DBNull.", e);
                     }
                 }
-                set
-                {
+                set {
                     this[this.tableT01_1_pupils.fioColumn] = value;
                 }
             }
-
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public string surname {
-            //    get {
-            //        try {
-            //            return ((string)(this[this.tableT01_1_pupils.surnameColumn]));
-            //        }
-            //        catch (global::System.InvalidCastException e) {
-            //            throw new global::System.Data.StrongTypingException("Значение для столбца \'surname\' в таблице \'T01_1_pupils\' равно DBNull.", e);
-            //        }
-            //    }
-            //    set {
-            //        this[this.tableT01_1_pupils.surnameColumn] = value;
-            //    }
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public string name {
-            //    get {
-            //        try {
-            //            return ((string)(this[this.tableT01_1_pupils.nameColumn]));
-            //        }
-            //        catch (global::System.InvalidCastException e) {
-            //            throw new global::System.Data.StrongTypingException("Значение для столбца \'name\' в таблице \'T01_1_pupils\' равно DBNull.", e);
-            //        }
-            //    }
-            //    set {
-            //        this[this.tableT01_1_pupils.nameColumn] = value;
-            //    }
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public string patronymic {
-            //    get {
-            //        try {
-            //            return ((string)(this[this.tableT01_1_pupils.patronymicColumn]));
-            //        }
-            //        catch (global::System.InvalidCastException e) {
-            //            throw new global::System.Data.StrongTypingException("Значение для столбца \'patronymic\' в таблице \'T01_1_pupils\' равно DBNull.", e);
-            //        }
-            //    }
-            //    set {
-            //        this[this.tableT01_1_pupils.patronymicColumn] = value;
-            //    }
-            //}
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -958,56 +856,18 @@ namespace oksana_kids {
                     this[this.tableT01_1_pupils.noteColumn] = value;
                 }
             }
-
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsfioNull()
-            {
+            public bool IsfioNull() {
                 return this.IsNull(this.tableT01_1_pupils.fioColumn);
             }
-
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetfioNull()
-            {
+            public void SetfioNull() {
                 this[this.tableT01_1_pupils.fioColumn] = global::System.Convert.DBNull;
             }
-
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public bool IssurnameNull() {
-            //    return this.IsNull(this.tableT01_1_pupils.surnameColumn);
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public void SetsurnameNull() {
-            //    this[this.tableT01_1_pupils.surnameColumn] = global::System.Convert.DBNull;
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public bool IsnameNull() {
-            //    return this.IsNull(this.tableT01_1_pupils.nameColumn);
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public void SetnameNull() {
-            //    this[this.tableT01_1_pupils.nameColumn] = global::System.Convert.DBNull;
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public bool IspatronymicNull() {
-            //    return this.IsNull(this.tableT01_1_pupils.patronymicColumn);
-            //}
-            
-            //[global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            //[global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            //public void SetpatronymicNull() {
-            //    this[this.tableT01_1_pupils.patronymicColumn] = global::System.Convert.DBNull;
-            //}
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -1153,7 +1013,7 @@ namespace oksana_kids {
         }
     }
 }
-namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
+namespace oksana_kids.bd_kidsDataPupilsTableAdapters {
     
     
     /// <summary>
@@ -1279,9 +1139,6 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
             tableMapping.DataSetTable = "T01_1_pupils";
             tableMapping.ColumnMappings.Add("id_person", "id_person");
             tableMapping.ColumnMappings.Add("fio", "fio");
-            //tableMapping.ColumnMappings.Add("surname", "surname");
-            //tableMapping.ColumnMappings.Add("name", "name");
-            //tableMapping.ColumnMappings.Add("patronymic", "patronymic");
             tableMapping.ColumnMappings.Add("date_birth", "date_birth");
             tableMapping.ColumnMappings.Add("name_decode", "name_decode");
             tableMapping.ColumnMappings.Add("name_category", "name_category");
@@ -1307,10 +1164,9 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
             this._commandCollection = new global::System.Data.SQLite.SQLiteCommand[1];
             this._commandCollection[0] = new global::System.Data.SQLite.SQLiteCommand();
             this._commandCollection[0].Connection = this.Connection;
-            //this._commandCollection[0].CommandText = "SELECT [id_person], [surname], [name], [patronymic], [date_birth], [name_decode]," +
-            this._commandCollection[0].CommandText = "SELECT [id_person], [fio], [date_birth], [name_decode]," +
-                " [name_category], [name_class], [short_name], [login], [password], [date_updatin" +
-                "g], [note] FROM [T01_1_pupils]";
+            this._commandCollection[0].CommandText = "SELECT [id_person], [fio], [date_birth], [name_decode], [name_category], [name_cl" +
+                "ass], [short_name], [login], [password], [date_updating], [note] FROM [T01_1_pup" +
+                "ils]";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -1318,7 +1174,7 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(bd_kidsDataSetPupils.T01_1_pupilsDataTable dataTable) {
+        public virtual int Fill(bd_kidsDataPupils.T01_1_pupilsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -1331,9 +1187,9 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual bd_kidsDataSetPupils.T01_1_pupilsDataTable GetData() {
+        public virtual bd_kidsDataPupils.T01_1_pupilsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            bd_kidsDataSetPupils.T01_1_pupilsDataTable dataTable = new bd_kidsDataSetPupils.T01_1_pupilsDataTable();
+            bd_kidsDataPupils.T01_1_pupilsDataTable dataTable = new bd_kidsDataPupils.T01_1_pupilsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1407,7 +1263,7 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(bd_kidsDataSetPupils dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(bd_kidsDataPupils dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1417,7 +1273,7 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(bd_kidsDataSetPupils dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(bd_kidsDataPupils dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1427,7 +1283,7 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(bd_kidsDataSetPupils dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(bd_kidsDataPupils dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1461,7 +1317,7 @@ namespace oksana_kids.bd_kidsDataSetPupilsTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(bd_kidsDataSetPupils dataSet) {
+        public virtual int UpdateAll(bd_kidsDataPupils dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

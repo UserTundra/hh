@@ -31,9 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.gridViewPupils = new System.Windows.Forms.DataGridView();
             this.idpersonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.patronymicDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.datebirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namedecodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namecategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,10 +41,26 @@
             this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateupdatingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t011pupilsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataPupils = new oksana_kids.bd_kidsDataPupils();
             this.t011pupilsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSetPupils = new oksana_kids.bd_kidsDataSetPupils();
             this.t01_1_pupilsTableAdapter = new oksana_kids.bd_kidsDataSetPupilsTableAdapters.T01_1_pupilsTableAdapter();
             this.gridViewOthers = new System.Windows.Forms.DataGridView();
+            this.idpersonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datebirthDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namedecodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namecategoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shortnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateupdatingDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t012othersBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSetOthers = new oksana_kids.bd_kidsDataSetOthers();
+            this.t012othersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet6 = new oksana_kids.bd_kidsDataSet6();
             this.t012othersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSet1 = new oksana_kids.bd_kidsDataSet1();
             this.t01_2_othersTableAdapter = new oksana_kids.bd_kidsDataSet1TableAdapters.T01_2_othersTableAdapter();
@@ -88,23 +102,21 @@
             this.birth_date = new System.Windows.Forms.DateTimePicker();
             this.t01personalitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t01_personalitiesTableAdapter = new oksana_kids.bd_kidsDataSetTableAdapters.T01_personalitiesTableAdapter();
-            this.idpersonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.surnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datebirthDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namedecodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namecategoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shortnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateupdatingDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bd_kidsDataSet6 = new oksana_kids.bd_kidsDataSet6();
-            this.t012othersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.t01_2_othersTableAdapter1 = new oksana_kids.bd_kidsDataSet6TableAdapters.T01_2_othersTableAdapter();
+            this.t01_1_pupilsTableAdapter1 = new oksana_kids.bd_kidsDataPupilsTableAdapters.T01_1_pupilsTableAdapter();
+            this.t01_2_othersTableAdapter2 = new oksana_kids.bd_kidsDataSetOthersTableAdapters.T01_2_othersTableAdapter();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPupils)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t011pupilsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataPupils)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t011pupilsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetPupils)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOthers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetOthers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.r01peoplecategoryBindingSource)).BeginInit();
@@ -114,8 +126,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.r00decodeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetGender)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t01personalitiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridViewPupils
@@ -125,9 +135,7 @@
             this.gridViewPupils.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewPupils.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idpersonDataGridViewTextBoxColumn,
-            this.surnameDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.patronymicDataGridViewTextBoxColumn,
+            this.fio,
             this.datebirthDataGridViewTextBoxColumn,
             this.namedecodeDataGridViewTextBoxColumn,
             this.namecategoryDataGridViewTextBoxColumn,
@@ -137,8 +145,8 @@
             this.passwordDataGridViewTextBoxColumn,
             this.dateupdatingDataGridViewTextBoxColumn,
             this.noteDataGridViewTextBoxColumn});
-            this.gridViewPupils.DataSource = this.t011pupilsBindingSource;
-            this.gridViewPupils.Location = new System.Drawing.Point(392, 12);
+            this.gridViewPupils.DataSource = this.t011pupilsBindingSource1;
+            this.gridViewPupils.Location = new System.Drawing.Point(392, 40);
             this.gridViewPupils.Name = "gridViewPupils";
             this.gridViewPupils.Size = new System.Drawing.Size(596, 232);
             this.gridViewPupils.TabIndex = 0;
@@ -149,27 +157,14 @@
             this.idpersonDataGridViewTextBoxColumn.HeaderText = "id_person";
             this.idpersonDataGridViewTextBoxColumn.Name = "idpersonDataGridViewTextBoxColumn";
             this.idpersonDataGridViewTextBoxColumn.Visible = false;
+            this.idpersonDataGridViewTextBoxColumn.Width = 78;
             // 
-            // surnameDataGridViewTextBoxColumn
+            // fio
             // 
-            this.surnameDataGridViewTextBoxColumn.DataPropertyName = "surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
-            this.surnameDataGridViewTextBoxColumn.Width = 81;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 54;
-            // 
-            // patronymicDataGridViewTextBoxColumn
-            // 
-            this.patronymicDataGridViewTextBoxColumn.DataPropertyName = "patronymic";
-            this.patronymicDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.patronymicDataGridViewTextBoxColumn.Name = "patronymicDataGridViewTextBoxColumn";
-            this.patronymicDataGridViewTextBoxColumn.Width = 79;
+            this.fio.DataPropertyName = "fio";
+            this.fio.HeaderText = "Ф.И.О.";
+            this.fio.Name = "fio";
+            this.fio.Width = 68;
             // 
             // datebirthDataGridViewTextBoxColumn
             // 
@@ -234,6 +229,16 @@
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             this.noteDataGridViewTextBoxColumn.Width = 95;
             // 
+            // t011pupilsBindingSource1
+            // 
+            this.t011pupilsBindingSource1.DataMember = "T01_1_pupils";
+            this.t011pupilsBindingSource1.DataSource = this.bd_kidsDataPupils;
+            // 
+            // bd_kidsDataPupils
+            // 
+            this.bd_kidsDataPupils.DataSetName = "bd_kidsDataPupils";
+            this.bd_kidsDataPupils.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // t011pupilsBindingSource
             // 
             this.t011pupilsBindingSource.DataMember = "T01_1_pupils";
@@ -263,11 +268,92 @@
             this.passwordDataGridViewTextBoxColumn1,
             this.dateupdatingDataGridViewTextBoxColumn1,
             this.noteDataGridViewTextBoxColumn1});
-            this.gridViewOthers.DataSource = this.t012othersBindingSource1;
-            this.gridViewOthers.Location = new System.Drawing.Point(392, 250);
+            this.gridViewOthers.DataSource = this.t012othersBindingSource2;
+            this.gridViewOthers.Location = new System.Drawing.Point(392, 310);
             this.gridViewOthers.Name = "gridViewOthers";
             this.gridViewOthers.Size = new System.Drawing.Size(596, 240);
             this.gridViewOthers.TabIndex = 1;
+            // 
+            // idpersonDataGridViewTextBoxColumn1
+            // 
+            this.idpersonDataGridViewTextBoxColumn1.DataPropertyName = "id_person";
+            this.idpersonDataGridViewTextBoxColumn1.HeaderText = "id_person";
+            this.idpersonDataGridViewTextBoxColumn1.Name = "idpersonDataGridViewTextBoxColumn1";
+            this.idpersonDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // surnameDataGridViewTextBoxColumn1
+            // 
+            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "fio";
+            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Ф.И.О";
+            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
+            // 
+            // datebirthDataGridViewTextBoxColumn1
+            // 
+            this.datebirthDataGridViewTextBoxColumn1.DataPropertyName = "date_birth";
+            this.datebirthDataGridViewTextBoxColumn1.HeaderText = "Дата рождения";
+            this.datebirthDataGridViewTextBoxColumn1.Name = "datebirthDataGridViewTextBoxColumn1";
+            // 
+            // namedecodeDataGridViewTextBoxColumn1
+            // 
+            this.namedecodeDataGridViewTextBoxColumn1.DataPropertyName = "name_decode";
+            this.namedecodeDataGridViewTextBoxColumn1.HeaderText = "Пол";
+            this.namedecodeDataGridViewTextBoxColumn1.Name = "namedecodeDataGridViewTextBoxColumn1";
+            // 
+            // namecategoryDataGridViewTextBoxColumn1
+            // 
+            this.namecategoryDataGridViewTextBoxColumn1.DataPropertyName = "name_category";
+            this.namecategoryDataGridViewTextBoxColumn1.HeaderText = "Категория физ.лица";
+            this.namecategoryDataGridViewTextBoxColumn1.Name = "namecategoryDataGridViewTextBoxColumn1";
+            // 
+            // shortnameDataGridViewTextBoxColumn1
+            // 
+            this.shortnameDataGridViewTextBoxColumn1.DataPropertyName = "short_name";
+            this.shortnameDataGridViewTextBoxColumn1.HeaderText = "Место работы";
+            this.shortnameDataGridViewTextBoxColumn1.Name = "shortnameDataGridViewTextBoxColumn1";
+            // 
+            // loginDataGridViewTextBoxColumn1
+            // 
+            this.loginDataGridViewTextBoxColumn1.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn1.HeaderText = "login";
+            this.loginDataGridViewTextBoxColumn1.Name = "loginDataGridViewTextBoxColumn1";
+            // 
+            // passwordDataGridViewTextBoxColumn1
+            // 
+            this.passwordDataGridViewTextBoxColumn1.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn1.HeaderText = "password";
+            this.passwordDataGridViewTextBoxColumn1.Name = "passwordDataGridViewTextBoxColumn1";
+            // 
+            // dateupdatingDataGridViewTextBoxColumn1
+            // 
+            this.dateupdatingDataGridViewTextBoxColumn1.DataPropertyName = "date_updating";
+            this.dateupdatingDataGridViewTextBoxColumn1.HeaderText = "Дата обновления";
+            this.dateupdatingDataGridViewTextBoxColumn1.Name = "dateupdatingDataGridViewTextBoxColumn1";
+            // 
+            // noteDataGridViewTextBoxColumn1
+            // 
+            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            // 
+            // t012othersBindingSource2
+            // 
+            this.t012othersBindingSource2.DataMember = "T01_2_others";
+            this.t012othersBindingSource2.DataSource = this.bd_kidsDataSetOthers;
+            // 
+            // bd_kidsDataSetOthers
+            // 
+            this.bd_kidsDataSetOthers.DataSetName = "bd_kidsDataSetOthers";
+            this.bd_kidsDataSetOthers.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t012othersBindingSource1
+            // 
+            this.t012othersBindingSource1.DataMember = "T01_2_others";
+            this.t012othersBindingSource1.DataSource = this.bd_kidsDataSet6;
+            // 
+            // bd_kidsDataSet6
+            // 
+            this.bd_kidsDataSet6.DataSetName = "bd_kidsDataSet6";
+            this.bd_kidsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // t012othersBindingSource
             // 
@@ -286,7 +372,7 @@
             // T01addButton
             // 
             this.T01addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T01addButton.Location = new System.Drawing.Point(607, 496);
+            this.T01addButton.Location = new System.Drawing.Point(263, 310);
             this.T01addButton.Name = "T01addButton";
             this.T01addButton.Size = new System.Drawing.Size(123, 47);
             this.T01addButton.TabIndex = 4;
@@ -297,7 +383,7 @@
             // T01changeButton
             // 
             this.T01changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T01changeButton.Location = new System.Drawing.Point(736, 496);
+            this.T01changeButton.Location = new System.Drawing.Point(263, 363);
             this.T01changeButton.Name = "T01changeButton";
             this.T01changeButton.Size = new System.Drawing.Size(123, 47);
             this.T01changeButton.TabIndex = 5;
@@ -307,7 +393,7 @@
             // T01deleteButton
             // 
             this.T01deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T01deleteButton.Location = new System.Drawing.Point(865, 496);
+            this.T01deleteButton.Location = new System.Drawing.Point(263, 416);
             this.T01deleteButton.Name = "T01deleteButton";
             this.T01deleteButton.Size = new System.Drawing.Size(123, 47);
             this.T01deleteButton.TabIndex = 6;
@@ -582,86 +668,45 @@
             // 
             this.t01_personalitiesTableAdapter.ClearBeforeFill = true;
             // 
-            // idpersonDataGridViewTextBoxColumn1
-            // 
-            this.idpersonDataGridViewTextBoxColumn1.DataPropertyName = "id_person";
-            this.idpersonDataGridViewTextBoxColumn1.HeaderText = "id_person";
-            this.idpersonDataGridViewTextBoxColumn1.Name = "idpersonDataGridViewTextBoxColumn1";
-            this.idpersonDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // surnameDataGridViewTextBoxColumn1
-            // 
-            this.surnameDataGridViewTextBoxColumn1.DataPropertyName = "fio";
-            this.surnameDataGridViewTextBoxColumn1.HeaderText = "Ф.И.О";
-            this.surnameDataGridViewTextBoxColumn1.Name = "surnameDataGridViewTextBoxColumn1";
-            // 
-            // datebirthDataGridViewTextBoxColumn1
-            // 
-            this.datebirthDataGridViewTextBoxColumn1.DataPropertyName = "date_birth";
-            this.datebirthDataGridViewTextBoxColumn1.HeaderText = "Дата рождения";
-            this.datebirthDataGridViewTextBoxColumn1.Name = "datebirthDataGridViewTextBoxColumn1";
-            // 
-            // namedecodeDataGridViewTextBoxColumn1
-            // 
-            this.namedecodeDataGridViewTextBoxColumn1.DataPropertyName = "name_decode";
-            this.namedecodeDataGridViewTextBoxColumn1.HeaderText = "Пол";
-            this.namedecodeDataGridViewTextBoxColumn1.Name = "namedecodeDataGridViewTextBoxColumn1";
-            // 
-            // namecategoryDataGridViewTextBoxColumn1
-            // 
-            this.namecategoryDataGridViewTextBoxColumn1.DataPropertyName = "name_category";
-            this.namecategoryDataGridViewTextBoxColumn1.HeaderText = "Категория физ.лица";
-            this.namecategoryDataGridViewTextBoxColumn1.Name = "namecategoryDataGridViewTextBoxColumn1";
-            // 
-            // shortnameDataGridViewTextBoxColumn1
-            // 
-            this.shortnameDataGridViewTextBoxColumn1.DataPropertyName = "short_name";
-            this.shortnameDataGridViewTextBoxColumn1.HeaderText = "Место работы";
-            this.shortnameDataGridViewTextBoxColumn1.Name = "shortnameDataGridViewTextBoxColumn1";
-            // 
-            // loginDataGridViewTextBoxColumn1
-            // 
-            this.loginDataGridViewTextBoxColumn1.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn1.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn1.Name = "loginDataGridViewTextBoxColumn1";
-            // 
-            // passwordDataGridViewTextBoxColumn1
-            // 
-            this.passwordDataGridViewTextBoxColumn1.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn1.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn1.Name = "passwordDataGridViewTextBoxColumn1";
-            // 
-            // dateupdatingDataGridViewTextBoxColumn1
-            // 
-            this.dateupdatingDataGridViewTextBoxColumn1.DataPropertyName = "date_updating";
-            this.dateupdatingDataGridViewTextBoxColumn1.HeaderText = "Дата обновления";
-            this.dateupdatingDataGridViewTextBoxColumn1.Name = "dateupdatingDataGridViewTextBoxColumn1";
-            // 
-            // noteDataGridViewTextBoxColumn1
-            // 
-            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
-            // 
-            // bd_kidsDataSet6
-            // 
-            this.bd_kidsDataSet6.DataSetName = "bd_kidsDataSet6";
-            this.bd_kidsDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t012othersBindingSource1
-            // 
-            this.t012othersBindingSource1.DataMember = "T01_2_others";
-            this.t012othersBindingSource1.DataSource = this.bd_kidsDataSet6;
-            // 
             // t01_2_othersTableAdapter1
             // 
             this.t01_2_othersTableAdapter1.ClearBeforeFill = true;
+            // 
+            // t01_1_pupilsTableAdapter1
+            // 
+            this.t01_1_pupilsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // t01_2_othersTableAdapter2
+            // 
+            this.t01_2_othersTableAdapter2.ClearBeforeFill = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(392, 14);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(71, 16);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "Ученики";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(392, 284);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 16);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Учителя";
             // 
             // Personalities
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 555);
+            this.ClientSize = new System.Drawing.Size(1000, 558);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.birth_date);
             this.Controls.Add(this.study_years);
             this.Controls.Add(this.gender);
@@ -694,9 +739,15 @@
             this.Text = "Физические лица";
             this.Load += new System.EventHandler(this.Personalities_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPupils)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t011pupilsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataPupils)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t011pupilsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetPupils)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewOthers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetOthers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.r01peoplecategoryBindingSource)).EndInit();
@@ -706,8 +757,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.r00decodeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetGender)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t01personalitiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -718,19 +767,6 @@
         private bd_kidsDataSetPupils bd_kidsDataSetPupils;
         private System.Windows.Forms.BindingSource t011pupilsBindingSource;
         private bd_kidsDataSetPupilsTableAdapters.T01_1_pupilsTableAdapter t01_1_pupilsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpersonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn patronymicDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datebirthDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namedecodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namecategoryDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameclassDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shortnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateupdatingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView gridViewOthers;
         private bd_kidsDataSet1 bd_kidsDataSet1;
         private System.Windows.Forms.BindingSource t012othersBindingSource;
@@ -786,5 +822,24 @@
         private bd_kidsDataSet6 bd_kidsDataSet6;
         private System.Windows.Forms.BindingSource t012othersBindingSource1;
         private bd_kidsDataSet6TableAdapters.T01_2_othersTableAdapter t01_2_othersTableAdapter1;
+        private bd_kidsDataPupils bd_kidsDataPupils;
+        private System.Windows.Forms.BindingSource t011pupilsBindingSource1;
+        private bd_kidsDataPupilsTableAdapters.T01_1_pupilsTableAdapter t01_1_pupilsTableAdapter1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpersonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datebirthDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namedecodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namecategoryDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameclassDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shortnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateupdatingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private bd_kidsDataSetOthers bd_kidsDataSetOthers;
+        private System.Windows.Forms.BindingSource t012othersBindingSource2;
+        private bd_kidsDataSetOthersTableAdapters.T01_2_othersTableAdapter t01_2_othersTableAdapter2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
