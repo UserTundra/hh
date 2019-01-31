@@ -26,8 +26,8 @@ namespace oksana_kids.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\Дарья\\Documents\\Visual Studio 2015\\Projects\\oksanas_kids\\ok" +
-            "sana_kids\\bd_kids.db\"")]
+        [global::System.Configuration.DefaultSettingValueAttribute("data source=\"C:\\Users\\Дарья\\Documents\\Visual Studio 2015\\Projects\\oksanas_kids-ma" +
+            "ster\\oksana_kids\\bd_kids.db\"")]
         public string bd_kidsConnectionString {
             get {
                 return ((string)(this["bd_kidsConnectionString"]));

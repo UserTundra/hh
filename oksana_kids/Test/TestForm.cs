@@ -20,10 +20,13 @@ namespace oksana_kids.Test
 
         public int SelectedCheckBoxIdx = 0;
         public int RightAnswersCount = 0;
+        public int SummaryFailCount = 0;
 
         public List<SimplyTest> testCollection;
         public int currentTestIndex = 0;
         private SimplyTest _currentValue;
+        private CheckBox _selectedCheckBox = null;
+        private PictureBox _selectedPicture = null;
         public SimplyTest CurrentTest
         {
             get
@@ -66,10 +69,20 @@ namespace oksana_kids.Test
                     MessageBox.Show("Упс, что то пошло не так!");
                 }
             }
-            for (int i = counter+1; i <= MAX_BLOCKS_SIZE; i++)
+            for (int i = 1; i <= MAX_BLOCKS_SIZE; i++)
             {
-                this.Controls["checkBox" + i].Visible = false;
-                this.Controls["pictureBox" + i].Visible = false;
+                if(i < counter + 1)
+                {
+                    
+                    this.Controls["checkBox" + i].Visible = true;
+                    this.Controls["pictureBox" + i].Visible = true;
+                }
+                else
+                {
+                    this.Controls["checkBox" + i].Visible = false;
+                    this.Controls["pictureBox" + i].Visible = false;
+                }
+                
             }
 
         }
@@ -108,6 +121,14 @@ namespace oksana_kids.Test
         {
             if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx)
                 this.RightAnswersCount++;
+            else
+            {
+                if(this._selectedCheckBox.Visible)
+                    SummaryFailCount++;
+                _selectedCheckBox.Visible = false;
+                _selectedPicture.Visible = false;
+                return;
+            }
             if (currentTestIndex < testCollection.Count - 1) {
                 this.CurrentTest = testCollection[++currentTestIndex];
                 QuestionInit(this.CurrentTest);
@@ -143,7 +164,18 @@ namespace oksana_kids.Test
                     this.checkBox6,
                     this.checkBox7,
                 };
-
+                var pictureBoxArray = new List<PictureBox>()
+                {
+                    this.pictureBox1,
+                    this.pictureBox2,
+                    this.pictureBox3,
+                    this.pictureBox4,
+                    this.pictureBox5,
+                    this.pictureBox6,
+                    this.pictureBox7,
+                };
+                int idx = 0;
+                int i = 0;
                 foreach (CheckBox box in checkBoxArrayToCheck)
                 {
                     if(box.Name != currentCheckBoxName)
@@ -152,9 +184,13 @@ namespace oksana_kids.Test
                     }
                     else
                     {
+                        idx = i;
+                        _selectedCheckBox = box;
                         box.Checked = true;
                     }
+                    i++;
                 }
+                _selectedPicture = pictureBoxArray[idx];
             }
             if(this.currentTestIndex == this.testCollection.Count-1)
             {
