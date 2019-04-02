@@ -59,6 +59,7 @@
             this.bd_kidsDataSet3 = new oksana_kids.bd_kidsDataSet3();
             this.T03_testing_task_modules = new System.Windows.Forms.TabPage();
             this.T04_testing_tasks = new System.Windows.Forms.TabPage();
+            this.TT_constructor_button = new System.Windows.Forms.Button();
             this.T05_test_passing_results = new System.Windows.Forms.TabPage();
             this.bd_kidsDataSet2 = new oksana_kids.bd_kidsDataSet2();
             this.bdkidsDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -67,6 +68,32 @@
             this.t01personalitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t01_personalitiesTableAdapter = new oksana_kids.bd_kidsDataSet4TableAdapters.T01_personalitiesTableAdapter();
             this.t01_2_othersTableAdapter = new oksana_kids.bd_kidsDataSet5TableAdapters.T01_2_othersTableAdapter();
+            this.bd_kidsDataSet7 = new oksana_kids.bd_kidsDataSet7();
+            this.t04viewtestingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t04_view_testing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet7TableAdapters.T04_view_testing_tasksTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.bd_kidsDataSet8 = new oksana_kids.bd_kidsDataSet8();
+            this.t04viewtestingtasksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.t04_view_testing_tasksTableAdapter1 = new oksana_kids.bd_kidsDataSet8TableAdapters.T04_view_testing_tasksTableAdapter();
+            this.idtaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nametaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecreateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecorrectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nametypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.T02_tests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
@@ -74,10 +101,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet3)).BeginInit();
+            this.T04_testing_tasks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdkidsDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t01personalitiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -217,6 +250,7 @@
             this.testAuthorSelect.Size = new System.Drawing.Size(199, 21);
             this.testAuthorSelect.TabIndex = 6;
             this.testAuthorSelect.ValueMember = "id_person";
+            this.testAuthorSelect.SelectedIndexChanged += new System.EventHandler(this.testAuthorSelect_SelectedIndexChanged);
             // 
             // t012othersBindingSource
             // 
@@ -346,12 +380,37 @@
             // 
             // T04_testing_tasks
             // 
+            this.T04_testing_tasks.Controls.Add(this.comboBox2);
+            this.T04_testing_tasks.Controls.Add(this.label13);
+            this.T04_testing_tasks.Controls.Add(this.dateTimePicker1);
+            this.T04_testing_tasks.Controls.Add(this.dateTimePicker2);
+            this.T04_testing_tasks.Controls.Add(this.textBox1);
+            this.T04_testing_tasks.Controls.Add(this.label8);
+            this.T04_testing_tasks.Controls.Add(this.label9);
+            this.T04_testing_tasks.Controls.Add(this.label10);
+            this.T04_testing_tasks.Controls.Add(this.comboBox1);
+            this.T04_testing_tasks.Controls.Add(this.label11);
+            this.T04_testing_tasks.Controls.Add(this.textBox2);
+            this.T04_testing_tasks.Controls.Add(this.label12);
+            this.T04_testing_tasks.Controls.Add(this.dataGridView2);
+            this.T04_testing_tasks.Controls.Add(this.TT_constructor_button);
             this.T04_testing_tasks.Location = new System.Drawing.Point(4, 22);
             this.T04_testing_tasks.Name = "T04_testing_tasks";
             this.T04_testing_tasks.Size = new System.Drawing.Size(922, 402);
             this.T04_testing_tasks.TabIndex = 2;
             this.T04_testing_tasks.Text = "Тестовые задания";
             this.T04_testing_tasks.UseVisualStyleBackColor = true;
+            // 
+            // TT_constructor_button
+            // 
+            this.TT_constructor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TT_constructor_button.Location = new System.Drawing.Point(228, 176);
+            this.TT_constructor_button.Name = "TT_constructor_button";
+            this.TT_constructor_button.Size = new System.Drawing.Size(123, 47);
+            this.TT_constructor_button.TabIndex = 17;
+            this.TT_constructor_button.Text = "Конструктор";
+            this.TT_constructor_button.UseVisualStyleBackColor = true;
+            this.TT_constructor_button.Click += new System.EventHandler(this.TT_constructor_button_Click);
             // 
             // T05_test_passing_results
             // 
@@ -394,6 +453,208 @@
             // 
             this.t01_2_othersTableAdapter.ClearBeforeFill = true;
             // 
+            // bd_kidsDataSet7
+            // 
+            this.bd_kidsDataSet7.DataSetName = "bd_kidsDataSet7";
+            this.bd_kidsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t04viewtestingtasksBindingSource
+            // 
+            this.t04viewtestingtasksBindingSource.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource.DataSource = this.bd_kidsDataSet7;
+            // 
+            // t04_view_testing_tasksTableAdapter
+            // 
+            this.t04_view_testing_tasksTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idtaskDataGridViewTextBoxColumn,
+            this.nametaskDataGridViewTextBoxColumn,
+            this.fioDataGridViewTextBoxColumn1,
+            this.datecreateDataGridViewTextBoxColumn1,
+            this.datecorrectDataGridViewTextBoxColumn1,
+            this.nametypeDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.t04viewtestingtasksBindingSource1;
+            this.dataGridView2.Location = new System.Drawing.Point(357, 16);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(553, 306);
+            this.dataGridView2.TabIndex = 18;
+            // 
+            // bd_kidsDataSet8
+            // 
+            this.bd_kidsDataSet8.DataSetName = "bd_kidsDataSet8";
+            this.bd_kidsDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t04viewtestingtasksBindingSource1
+            // 
+            this.t04viewtestingtasksBindingSource1.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource1.DataSource = this.bd_kidsDataSet8;
+            // 
+            // t04_view_testing_tasksTableAdapter1
+            // 
+            this.t04_view_testing_tasksTableAdapter1.ClearBeforeFill = true;
+            // 
+            // idtaskDataGridViewTextBoxColumn
+            // 
+            this.idtaskDataGridViewTextBoxColumn.DataPropertyName = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.HeaderText = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.Name = "idtaskDataGridViewTextBoxColumn";
+            this.idtaskDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nametaskDataGridViewTextBoxColumn
+            // 
+            this.nametaskDataGridViewTextBoxColumn.DataPropertyName = "name_task";
+            this.nametaskDataGridViewTextBoxColumn.HeaderText = "Название ТЗ";
+            this.nametaskDataGridViewTextBoxColumn.Name = "nametaskDataGridViewTextBoxColumn";
+            // 
+            // fioDataGridViewTextBoxColumn1
+            // 
+            this.fioDataGridViewTextBoxColumn1.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn1.HeaderText = "ФИО автора";
+            this.fioDataGridViewTextBoxColumn1.Name = "fioDataGridViewTextBoxColumn1";
+            // 
+            // datecreateDataGridViewTextBoxColumn1
+            // 
+            this.datecreateDataGridViewTextBoxColumn1.DataPropertyName = "date_create";
+            this.datecreateDataGridViewTextBoxColumn1.HeaderText = "Дата создания";
+            this.datecreateDataGridViewTextBoxColumn1.Name = "datecreateDataGridViewTextBoxColumn1";
+            // 
+            // datecorrectDataGridViewTextBoxColumn1
+            // 
+            this.datecorrectDataGridViewTextBoxColumn1.DataPropertyName = "date_correct";
+            this.datecorrectDataGridViewTextBoxColumn1.HeaderText = "Дата корректировки";
+            this.datecorrectDataGridViewTextBoxColumn1.Name = "datecorrectDataGridViewTextBoxColumn1";
+            // 
+            // nametypeDataGridViewTextBoxColumn
+            // 
+            this.nametypeDataGridViewTextBoxColumn.DataPropertyName = "name_type";
+            this.nametypeDataGridViewTextBoxColumn.HeaderText = "Тип ТЗ";
+            this.nametypeDataGridViewTextBoxColumn.Name = "nametypeDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn1
+            // 
+            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(152, 90);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(199, 20);
+            this.dateTimePicker1.TabIndex = 28;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Location = new System.Drawing.Point(152, 66);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(199, 20);
+            this.dateTimePicker2.TabIndex = 27;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(152, 141);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(199, 20);
+            this.textBox1.TabIndex = 26;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label8.Location = new System.Drawing.Point(3, 142);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(91, 16);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Примечание";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(3, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(143, 16);
+            this.label9.TabIndex = 24;
+            this.label9.Text = "Дата корректировки";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(3, 66);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(105, 16);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Дата создания";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataSource = this.t012othersBindingSource;
+            this.comboBox1.DisplayMember = "fio";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(152, 40);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(199, 21);
+            this.comboBox1.TabIndex = 22;
+            this.comboBox1.ValueMember = "id_person";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.Location = new System.Drawing.Point(3, 41);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(69, 16);
+            this.label11.TabIndex = 21;
+            this.label11.Text = "Автор ТЗ";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(152, 16);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(199, 20);
+            this.textBox2.TabIndex = 20;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(3, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(95, 16);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Название ТЗ";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(3, 117);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 16);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Тип ТЗ";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DataSource = this.t012othersBindingSource;
+            this.comboBox2.DisplayMember = "fio";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(152, 116);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(199, 21);
+            this.comboBox2.TabIndex = 31;
+            this.comboBox2.ValueMember = "id_person";
+            // 
             // Tests
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -412,10 +673,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet3)).EndInit();
+            this.T04_testing_tasks.ResumeLayout(false);
+            this.T04_testing_tasks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdkidsDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t01personalitiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,5 +728,32 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datecorrectDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maxpassingdurationsecDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button TT_constructor_button;
+        private bd_kidsDataSet7 bd_kidsDataSet7;
+        private System.Windows.Forms.BindingSource t04viewtestingtasksBindingSource;
+        private bd_kidsDataSet7TableAdapters.T04_view_testing_tasksTableAdapter t04_view_testing_tasksTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private bd_kidsDataSet8 bd_kidsDataSet8;
+        private System.Windows.Forms.BindingSource t04viewtestingtasksBindingSource1;
+        private bd_kidsDataSet8TableAdapters.T04_view_testing_tasksTableAdapter t04_view_testing_tasksTableAdapter1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idtaskDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nametaskDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datecreateDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datecorrectDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nametypeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
     }
 }

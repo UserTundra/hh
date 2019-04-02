@@ -34,6 +34,10 @@ namespace oksana_kids
 
         private void Tests_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet8.T04_view_testing_tasks". При необходимости она может быть перемещена или удалена.
+            this.t04_view_testing_tasksTableAdapter1.Fill(this.bd_kidsDataSet8.T04_view_testing_tasks);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet7.T04_view_testing_tasks". При необходимости она может быть перемещена или удалена.
+            this.t04_view_testing_tasksTableAdapter.Fill(this.bd_kidsDataSet7.T04_view_testing_tasks);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet5.T01_2_others". При необходимости она может быть перемещена или удалена.
             this.t01_2_othersTableAdapter.Fill(this.bd_kidsDataSet5.T01_2_others);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet4.T01_personalities". При необходимости она может быть перемещена или удалена.
@@ -77,6 +81,17 @@ namespace oksana_kids
             }
 
             test_construct_button.Enabled = true;
+        }
+
+        private void TT_constructor_button_Click(object sender, EventArgs e)
+        {
+            AdaptiveTTConstructor tt = new AdaptiveTTConstructor();
+            tt.Show();
+        }
+
+        private void testAuthorSelect_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

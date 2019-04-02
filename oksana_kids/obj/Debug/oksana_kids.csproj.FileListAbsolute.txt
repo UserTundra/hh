@@ -199,3 +199,4 @@ C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Test.TestParent.re
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Videos.resources
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Zoom.resources
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.Cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.AdaptiveTTConstructor.resources
