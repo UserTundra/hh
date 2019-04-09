@@ -10,17 +10,18 @@ using System.Windows.Forms;
 
 namespace oksana_kids.Test
 {
+
     public partial class TestParent : Form
     {
-        List<SimplyTest> a;
-        List<SimplyTest> b;
-        PupilSelectionWindow callback;
+        
+        
         public int SummaryRightAnswers = 0;
-        public TestParent(List<SimplyTest> a, List<SimplyTest> b, PupilSelectionWindow callback)
+
+        private TestFormsArgument Condition;
+
+        public TestParent(TestFormsArgument cond)
         {
-            this.a = a;
-            this.b = b;
-            this.callback = callback;
+            this.Condition = cond;
             InitializeComponent();
         }
 
@@ -35,30 +36,36 @@ namespace oksana_kids.Test
                     mdi.BackColor = this.BackColor;
                 }catch(Exception ee) { }
             }
-
-
-
-
-
-
-
-            this.IsMdiContainer = true;
-            TestForm first = new TestForm(a, this, this.Width,this.Height);
-            first.MdiParent = this;
-            first.Left = 0;
-            first.Top = 0;
-            first.Show();
+            this.Condition.IdxCurrentTest = -1; // then it will be 0 on ShowNext step
+            ShowNext();
+            
 
 
         }
         public void ShowNext()
         {
-            TestForm2 second = new TestForm2(b,callback,this);
-            second.MdiParent = this;
-            second.Left = 0;
-            second.Top = 0;
-            second.Show();
+            this.Condition.GetNextTest();
+            if(this.Condition.IdxCurrentTest == 0)
+            {
+                this.IsMdiContainer = true;
+                TestForm first = new TestForm(this.Condition.CurrentTest, this, this.Width, this.Height);
+                InitChildForm(first);
+                first.Show();
+            }
+            if(this.Condition.IdxCurrentTest == 1) { 
+                TestForm2 second = new TestForm2(this.Condition.CurrentTest,this.Condition.Callback,this);
+                InitChildForm(second);
+                second.Show();
+            }
         }
+
+        private void InitChildForm(Form form)
+        {
+            form.MdiParent = this;
+            form.Left = 0;
+            form.Top = 0;
+        }
+        
 
         public void preClose()
         {

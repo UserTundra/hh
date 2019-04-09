@@ -344,6 +344,7 @@
     <Compile Include="Test\TestForm2.Designer.cs">
       <DependentUpon>TestForm2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Test\TestFormsArgument.cs" />
     <Compile Include="Test\TestParent.cs">
       <SubType>Form</SubType>
     </Compile>

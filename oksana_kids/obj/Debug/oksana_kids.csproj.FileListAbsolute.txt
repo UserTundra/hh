@@ -181,7 +181,6 @@ C:\учеба\new_oksana\hh\oksana_kids\bin\Debug\EntityFramework.SqlServer.xml
 C:\учеба\new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.xml
 C:\учеба\new_oksana\hh\oksana_kids\bin\Debug\Interop.WMPLib.dll
 C:\учеба\new_oksana\hh\oksana_kids\bin\Debug\AxInterop.WMPLib.dll
-C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AdaptiveTestConstructor.resources
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AskToLeaveForm.resources
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AuthorisationForm.resources
@@ -199,4 +198,7 @@ C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Test.TestParent.re
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Videos.resources
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Zoom.resources
 C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.Cache
-C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.AdaptiveTTConstructor.resources
+C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csprojAssemblyReference.cache
+C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CoreCompileInputs.cache
+C:\учеба\new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.dll.config
+C:\учеба\new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CopyComplete
