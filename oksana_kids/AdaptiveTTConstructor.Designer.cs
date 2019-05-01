@@ -30,25 +30,25 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.all_TT = new System.Windows.Forms.TabPage();
-            this.TT_1_class = new System.Windows.Forms.TabPage();
-            this.TT_2_class = new System.Windows.Forms.TabPage();
-            this.TT_3_class = new System.Windows.Forms.TabPage();
-            this.TT_4_class = new System.Windows.Forms.TabPage();
-            this.selectedTT = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.adaptiveTTAllConstructorGo = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.max_duration_testing = new System.Windows.Forms.TextBox();
-            this.adaptiveTTAllConstructorGo = new System.Windows.Forms.Button();
-            this.adaptiveTT1ConstructorGo = new System.Windows.Forms.Button();
-            this.adaptiveTT2ConstructorGo = new System.Windows.Forms.Button();
-            this.adaptiveTT3ConstructorGo = new System.Windows.Forms.Button();
-            this.adaptiveTT4ConstructorGo = new System.Windows.Forms.Button();
+            this.TT_1_class = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.adaptiveTT1ConstructorGo = new System.Windows.Forms.Button();
+            this.TT_2_class = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.adaptiveTT2ConstructorGo = new System.Windows.Forms.Button();
+            this.TT_3_class = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.adaptiveTT3ConstructorGo = new System.Windows.Forms.Button();
+            this.TT_4_class = new System.Windows.Forms.TabPage();
+            this.adaptiveTT4ConstructorGo = new System.Windows.Forms.Button();
+            this.selectedTT = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.all_TT.SuspendLayout();
             this.TT_1_class.SuspendLayout();
@@ -83,72 +83,15 @@
             this.all_TT.Text = "Для ТЗ всех типов";
             this.all_TT.UseVisualStyleBackColor = true;
             // 
-            // TT_1_class
+            // adaptiveTTAllConstructorGo
             // 
-            this.TT_1_class.Controls.Add(this.label1);
-            this.TT_1_class.Controls.Add(this.textBox1);
-            this.TT_1_class.Controls.Add(this.adaptiveTT1ConstructorGo);
-            this.TT_1_class.Location = new System.Drawing.Point(4, 22);
-            this.TT_1_class.Name = "TT_1_class";
-            this.TT_1_class.Padding = new System.Windows.Forms.Padding(3);
-            this.TT_1_class.Size = new System.Drawing.Size(449, 153);
-            this.TT_1_class.TabIndex = 1;
-            this.TT_1_class.Text = "Для ТЗ 1 типа";
-            this.TT_1_class.UseVisualStyleBackColor = true;
-            // 
-            // TT_2_class
-            // 
-            this.TT_2_class.Controls.Add(this.label4);
-            this.TT_2_class.Controls.Add(this.textBox2);
-            this.TT_2_class.Controls.Add(this.adaptiveTT2ConstructorGo);
-            this.TT_2_class.Location = new System.Drawing.Point(4, 22);
-            this.TT_2_class.Name = "TT_2_class";
-            this.TT_2_class.Size = new System.Drawing.Size(449, 153);
-            this.TT_2_class.TabIndex = 2;
-            this.TT_2_class.Text = "Для ТЗ 2 типа";
-            this.TT_2_class.UseVisualStyleBackColor = true;
-            // 
-            // TT_3_class
-            // 
-            this.TT_3_class.Controls.Add(this.label5);
-            this.TT_3_class.Controls.Add(this.textBox3);
-            this.TT_3_class.Controls.Add(this.adaptiveTT3ConstructorGo);
-            this.TT_3_class.Location = new System.Drawing.Point(4, 22);
-            this.TT_3_class.Name = "TT_3_class";
-            this.TT_3_class.Size = new System.Drawing.Size(449, 153);
-            this.TT_3_class.TabIndex = 3;
-            this.TT_3_class.Text = "Для ТЗ 3 типа";
-            this.TT_3_class.UseVisualStyleBackColor = true;
-            // 
-            // TT_4_class
-            // 
-            this.TT_4_class.Controls.Add(this.adaptiveTT4ConstructorGo);
-            this.TT_4_class.Location = new System.Drawing.Point(4, 22);
-            this.TT_4_class.Name = "TT_4_class";
-            this.TT_4_class.Size = new System.Drawing.Size(449, 153);
-            this.TT_4_class.TabIndex = 4;
-            this.TT_4_class.Text = "Для ТЗ 4 типа";
-            this.TT_4_class.UseVisualStyleBackColor = true;
-            // 
-            // selectedTT
-            // 
-            this.selectedTT.AutoSize = true;
-            this.selectedTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.selectedTT.Location = new System.Drawing.Point(252, 18);
-            this.selectedTT.Name = "selectedTT";
-            this.selectedTT.Size = new System.Drawing.Size(45, 16);
-            this.selectedTT.TabIndex = 11;
-            this.selectedTT.Text = "label4";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(13, 18);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(239, 16);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Выбранное тестовое задание: ";
+            this.adaptiveTTAllConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adaptiveTTAllConstructorGo.Location = new System.Drawing.Point(308, 91);
+            this.adaptiveTTAllConstructorGo.Name = "adaptiveTTAllConstructorGo";
+            this.adaptiveTTAllConstructorGo.Size = new System.Drawing.Size(123, 47);
+            this.adaptiveTTAllConstructorGo.TabIndex = 8;
+            this.adaptiveTTAllConstructorGo.Text = "Задать";
+            this.adaptiveTTAllConstructorGo.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -167,55 +110,18 @@
             this.max_duration_testing.Size = new System.Drawing.Size(90, 20);
             this.max_duration_testing.TabIndex = 7;
             // 
-            // adaptiveTTAllConstructorGo
+            // TT_1_class
             // 
-            this.adaptiveTTAllConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adaptiveTTAllConstructorGo.Location = new System.Drawing.Point(308, 91);
-            this.adaptiveTTAllConstructorGo.Name = "adaptiveTTAllConstructorGo";
-            this.adaptiveTTAllConstructorGo.Size = new System.Drawing.Size(123, 47);
-            this.adaptiveTTAllConstructorGo.TabIndex = 8;
-            this.adaptiveTTAllConstructorGo.Text = "Задать";
-            this.adaptiveTTAllConstructorGo.UseVisualStyleBackColor = true;
-            // 
-            // adaptiveTT1ConstructorGo
-            // 
-            this.adaptiveTT1ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adaptiveTT1ConstructorGo.Location = new System.Drawing.Point(309, 89);
-            this.adaptiveTT1ConstructorGo.Name = "adaptiveTT1ConstructorGo";
-            this.adaptiveTT1ConstructorGo.Size = new System.Drawing.Size(123, 47);
-            this.adaptiveTT1ConstructorGo.TabIndex = 9;
-            this.adaptiveTT1ConstructorGo.Text = "Задать";
-            this.adaptiveTT1ConstructorGo.UseVisualStyleBackColor = true;
-            // 
-            // adaptiveTT2ConstructorGo
-            // 
-            this.adaptiveTT2ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adaptiveTT2ConstructorGo.Location = new System.Drawing.Point(307, 91);
-            this.adaptiveTT2ConstructorGo.Name = "adaptiveTT2ConstructorGo";
-            this.adaptiveTT2ConstructorGo.Size = new System.Drawing.Size(123, 47);
-            this.adaptiveTT2ConstructorGo.TabIndex = 10;
-            this.adaptiveTT2ConstructorGo.Text = "Задать";
-            this.adaptiveTT2ConstructorGo.UseVisualStyleBackColor = true;
-            // 
-            // adaptiveTT3ConstructorGo
-            // 
-            this.adaptiveTT3ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adaptiveTT3ConstructorGo.Location = new System.Drawing.Point(308, 90);
-            this.adaptiveTT3ConstructorGo.Name = "adaptiveTT3ConstructorGo";
-            this.adaptiveTT3ConstructorGo.Size = new System.Drawing.Size(123, 47);
-            this.adaptiveTT3ConstructorGo.TabIndex = 10;
-            this.adaptiveTT3ConstructorGo.Text = "Задать";
-            this.adaptiveTT3ConstructorGo.UseVisualStyleBackColor = true;
-            // 
-            // adaptiveTT4ConstructorGo
-            // 
-            this.adaptiveTT4ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.adaptiveTT4ConstructorGo.Location = new System.Drawing.Point(307, 90);
-            this.adaptiveTT4ConstructorGo.Name = "adaptiveTT4ConstructorGo";
-            this.adaptiveTT4ConstructorGo.Size = new System.Drawing.Size(123, 47);
-            this.adaptiveTT4ConstructorGo.TabIndex = 10;
-            this.adaptiveTT4ConstructorGo.Text = "Задать";
-            this.adaptiveTT4ConstructorGo.UseVisualStyleBackColor = true;
+            this.TT_1_class.Controls.Add(this.label1);
+            this.TT_1_class.Controls.Add(this.textBox1);
+            this.TT_1_class.Controls.Add(this.adaptiveTT1ConstructorGo);
+            this.TT_1_class.Location = new System.Drawing.Point(4, 22);
+            this.TT_1_class.Name = "TT_1_class";
+            this.TT_1_class.Padding = new System.Windows.Forms.Padding(3);
+            this.TT_1_class.Size = new System.Drawing.Size(449, 153);
+            this.TT_1_class.TabIndex = 1;
+            this.TT_1_class.Text = "Для ТЗ 1 типа";
+            this.TT_1_class.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -234,6 +140,28 @@
             this.textBox1.Size = new System.Drawing.Size(90, 20);
             this.textBox1.TabIndex = 11;
             // 
+            // adaptiveTT1ConstructorGo
+            // 
+            this.adaptiveTT1ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adaptiveTT1ConstructorGo.Location = new System.Drawing.Point(309, 89);
+            this.adaptiveTT1ConstructorGo.Name = "adaptiveTT1ConstructorGo";
+            this.adaptiveTT1ConstructorGo.Size = new System.Drawing.Size(123, 47);
+            this.adaptiveTT1ConstructorGo.TabIndex = 9;
+            this.adaptiveTT1ConstructorGo.Text = "Задать";
+            this.adaptiveTT1ConstructorGo.UseVisualStyleBackColor = true;
+            // 
+            // TT_2_class
+            // 
+            this.TT_2_class.Controls.Add(this.label4);
+            this.TT_2_class.Controls.Add(this.textBox2);
+            this.TT_2_class.Controls.Add(this.adaptiveTT2ConstructorGo);
+            this.TT_2_class.Location = new System.Drawing.Point(4, 22);
+            this.TT_2_class.Name = "TT_2_class";
+            this.TT_2_class.Size = new System.Drawing.Size(449, 153);
+            this.TT_2_class.TabIndex = 2;
+            this.TT_2_class.Text = "Для ТЗ 2 типа";
+            this.TT_2_class.UseVisualStyleBackColor = true;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -250,6 +178,28 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(90, 20);
             this.textBox2.TabIndex = 12;
+            // 
+            // adaptiveTT2ConstructorGo
+            // 
+            this.adaptiveTT2ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adaptiveTT2ConstructorGo.Location = new System.Drawing.Point(307, 91);
+            this.adaptiveTT2ConstructorGo.Name = "adaptiveTT2ConstructorGo";
+            this.adaptiveTT2ConstructorGo.Size = new System.Drawing.Size(123, 47);
+            this.adaptiveTT2ConstructorGo.TabIndex = 10;
+            this.adaptiveTT2ConstructorGo.Text = "Задать";
+            this.adaptiveTT2ConstructorGo.UseVisualStyleBackColor = true;
+            // 
+            // TT_3_class
+            // 
+            this.TT_3_class.Controls.Add(this.label5);
+            this.TT_3_class.Controls.Add(this.textBox3);
+            this.TT_3_class.Controls.Add(this.adaptiveTT3ConstructorGo);
+            this.TT_3_class.Location = new System.Drawing.Point(4, 22);
+            this.TT_3_class.Name = "TT_3_class";
+            this.TT_3_class.Size = new System.Drawing.Size(449, 153);
+            this.TT_3_class.TabIndex = 3;
+            this.TT_3_class.Text = "Для ТЗ 3 типа";
+            this.TT_3_class.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -268,6 +218,56 @@
             this.textBox3.Size = new System.Drawing.Size(90, 20);
             this.textBox3.TabIndex = 12;
             // 
+            // adaptiveTT3ConstructorGo
+            // 
+            this.adaptiveTT3ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adaptiveTT3ConstructorGo.Location = new System.Drawing.Point(308, 90);
+            this.adaptiveTT3ConstructorGo.Name = "adaptiveTT3ConstructorGo";
+            this.adaptiveTT3ConstructorGo.Size = new System.Drawing.Size(123, 47);
+            this.adaptiveTT3ConstructorGo.TabIndex = 10;
+            this.adaptiveTT3ConstructorGo.Text = "Задать";
+            this.adaptiveTT3ConstructorGo.UseVisualStyleBackColor = true;
+            // 
+            // TT_4_class
+            // 
+            this.TT_4_class.Controls.Add(this.adaptiveTT4ConstructorGo);
+            this.TT_4_class.Location = new System.Drawing.Point(4, 22);
+            this.TT_4_class.Name = "TT_4_class";
+            this.TT_4_class.Size = new System.Drawing.Size(449, 153);
+            this.TT_4_class.TabIndex = 4;
+            this.TT_4_class.Text = "Для ТЗ 4 типа";
+            this.TT_4_class.UseVisualStyleBackColor = true;
+            // 
+            // adaptiveTT4ConstructorGo
+            // 
+            this.adaptiveTT4ConstructorGo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adaptiveTT4ConstructorGo.Location = new System.Drawing.Point(307, 90);
+            this.adaptiveTT4ConstructorGo.Name = "adaptiveTT4ConstructorGo";
+            this.adaptiveTT4ConstructorGo.Size = new System.Drawing.Size(123, 47);
+            this.adaptiveTT4ConstructorGo.TabIndex = 10;
+            this.adaptiveTT4ConstructorGo.Text = "Задать";
+            this.adaptiveTT4ConstructorGo.UseVisualStyleBackColor = true;
+            // 
+            // selectedTT
+            // 
+            this.selectedTT.AutoSize = true;
+            this.selectedTT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.selectedTT.Location = new System.Drawing.Point(252, 18);
+            this.selectedTT.Name = "selectedTT";
+            this.selectedTT.Size = new System.Drawing.Size(45, 16);
+            this.selectedTT.TabIndex = 11;
+            this.selectedTT.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(13, 18);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(243, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Выбранное тестовое задание: ";
+            // 
             // AdaptiveTTConstructor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -279,6 +279,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AdaptiveTTConstructor";
             this.Text = "Конструктор параметров адаптивного тестового задания";
+            this.Load += new System.EventHandler(this.AdaptiveTTConstructor_Load);
             this.tabControl1.ResumeLayout(false);
             this.all_TT.ResumeLayout(false);
             this.all_TT.PerformLayout();

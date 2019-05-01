@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.T02_tests = new System.Windows.Forms.TabPage();
+            this.T02addButton = new System.Windows.Forms.Button();
+            this.T02changeButton = new System.Windows.Forms.Button();
+            this.T02deleteButton = new System.Windows.Forms.Button();
             this.test_construct_button = new System.Windows.Forms.Button();
             this.datePicker_change = new System.Windows.Forms.DateTimePicker();
             this.datePicker_create = new System.Windows.Forms.DateTimePicker();
@@ -55,33 +58,12 @@
             this.datecorrectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maxpassingdurationsecDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.t02viewtestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bd_kidsDataSet3 = new oksana_kids.bd_kidsDataSet3();
+            this.t02viewtestsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSetFOR_TESTS = new oksana_kids.bd_kidsDataSetFOR_TESTS();
             this.T03_testing_task_modules = new System.Windows.Forms.TabPage();
             this.T04_testing_tasks = new System.Windows.Forms.TabPage();
-            this.TT_constructor_button = new System.Windows.Forms.Button();
-            this.T05_test_passing_results = new System.Windows.Forms.TabPage();
-            this.bd_kidsDataSet2 = new oksana_kids.bd_kidsDataSet2();
-            this.bdkidsDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.t02_view_testsTableAdapter = new oksana_kids.bd_kidsDataSet3TableAdapters.T02_view_testsTableAdapter();
-            this.bd_kidsDataSet4 = new oksana_kids.bd_kidsDataSet4();
-            this.t01personalitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.t01_personalitiesTableAdapter = new oksana_kids.bd_kidsDataSet4TableAdapters.T01_personalitiesTableAdapter();
-            this.t01_2_othersTableAdapter = new oksana_kids.bd_kidsDataSet5TableAdapters.T01_2_othersTableAdapter();
-            this.bd_kidsDataSet7 = new oksana_kids.bd_kidsDataSet7();
-            this.t04viewtestingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.t04_view_testing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet7TableAdapters.T04_view_testing_tasksTableAdapter();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.bd_kidsDataSet8 = new oksana_kids.bd_kidsDataSet8();
-            this.t04viewtestingtasksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.t04_view_testing_tasksTableAdapter1 = new oksana_kids.bd_kidsDataSet8TableAdapters.T04_view_testing_tasksTableAdapter();
-            this.idtaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nametaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecreateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecorrectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nametypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -92,25 +74,66 @@
             this.label11 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.idtaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nametaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecreateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecorrectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nametypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t04viewtestingtasksBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet_TESTING_TASKS = new oksana_kids.bd_kidsDataSet_TESTING_TASKS();
+            this.TT_constructor_button = new System.Windows.Forms.Button();
+            this.T05_test_passing_results = new System.Windows.Forms.TabPage();
+            this.t02viewtestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet3 = new oksana_kids.bd_kidsDataSet3();
+            this.t04viewtestingtasksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet8 = new oksana_kids.bd_kidsDataSet8();
+            this.bd_kidsDataSet2 = new oksana_kids.bd_kidsDataSet2();
+            this.bdkidsDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t02_view_testsTableAdapter = new oksana_kids.bd_kidsDataSet3TableAdapters.T02_view_testsTableAdapter();
+            this.bd_kidsDataSet4 = new oksana_kids.bd_kidsDataSet4();
+            this.t01personalitiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t01_personalitiesTableAdapter = new oksana_kids.bd_kidsDataSet4TableAdapters.T01_personalitiesTableAdapter();
+            this.t01_2_othersTableAdapter = new oksana_kids.bd_kidsDataSet5TableAdapters.T01_2_othersTableAdapter();
+            this.bd_kidsDataSet7 = new oksana_kids.bd_kidsDataSet7();
+            this.t04viewtestingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t04_view_testing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet7TableAdapters.T04_view_testing_tasksTableAdapter();
+            this.t04_view_testing_tasksTableAdapter1 = new oksana_kids.bd_kidsDataSet8TableAdapters.T04_view_testing_tasksTableAdapter();
+            this.bd_kidsDataSet9 = new oksana_kids.bd_kidsDataSet9();
+            this.t02viewtestsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.t02_view_testsTableAdapter1 = new oksana_kids.bd_kidsDataSet9TableAdapters.T02_view_testsTableAdapter();
+            this.t02_view_testsTableAdapter2 = new oksana_kids.bd_kidsDataSetFOR_TESTSTableAdapters.T02_view_testsTableAdapter();
+            this.bd_kidsDataSetFOR_TESTING_TASKS = new oksana_kids.bd_kidsDataSetFOR_TESTING_TASKS();
+            this.t04viewtestingtasksBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.t04_view_testing_tasksTableAdapter2 = new oksana_kids.bd_kidsDataSetFOR_TESTING_TASKSTableAdapters.T04_view_testing_tasksTableAdapter();
+            this.t04_view_testing_tasksTableAdapter3 = new oksana_kids.bd_kidsDataSet_TESTING_TASKSTableAdapters.T04_view_testing_tasksTableAdapter();
             this.tabControl1.SuspendLayout();
             this.T02_tests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetFOR_TESTS)).BeginInit();
+            this.T04_testing_tasks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet_TESTING_TASKS)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet3)).BeginInit();
-            this.T04_testing_tasks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdkidsDataSet2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t01personalitiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetFOR_TESTING_TASKS)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -127,6 +150,9 @@
             // 
             // T02_tests
             // 
+            this.T02_tests.Controls.Add(this.T02addButton);
+            this.T02_tests.Controls.Add(this.T02changeButton);
+            this.T02_tests.Controls.Add(this.T02deleteButton);
             this.T02_tests.Controls.Add(this.test_construct_button);
             this.T02_tests.Controls.Add(this.datePicker_change);
             this.T02_tests.Controls.Add(this.datePicker_create);
@@ -149,6 +175,37 @@
             this.T02_tests.TabIndex = 0;
             this.T02_tests.Text = "Тесты";
             this.T02_tests.UseVisualStyleBackColor = true;
+            // 
+            // T02addButton
+            // 
+            this.T02addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.T02addButton.Location = new System.Drawing.Point(231, 242);
+            this.T02addButton.Name = "T02addButton";
+            this.T02addButton.Size = new System.Drawing.Size(123, 47);
+            this.T02addButton.TabIndex = 17;
+            this.T02addButton.Text = "Добавить";
+            this.T02addButton.UseVisualStyleBackColor = true;
+            this.T02addButton.Click += new System.EventHandler(this.T02addButton_Click);
+            // 
+            // T02changeButton
+            // 
+            this.T02changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.T02changeButton.Location = new System.Drawing.Point(231, 295);
+            this.T02changeButton.Name = "T02changeButton";
+            this.T02changeButton.Size = new System.Drawing.Size(123, 47);
+            this.T02changeButton.TabIndex = 18;
+            this.T02changeButton.Text = "Изменить";
+            this.T02changeButton.UseVisualStyleBackColor = true;
+            // 
+            // T02deleteButton
+            // 
+            this.T02deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.T02deleteButton.Location = new System.Drawing.Point(231, 348);
+            this.T02deleteButton.Name = "T02deleteButton";
+            this.T02deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.T02deleteButton.TabIndex = 19;
+            this.T02deleteButton.Text = "Удалить";
+            this.T02deleteButton.UseVisualStyleBackColor = true;
             // 
             // test_construct_button
             // 
@@ -302,11 +359,11 @@
             this.datecorrectDataGridViewTextBoxColumn,
             this.maxpassingdurationsecDataGridViewTextBoxColumn,
             this.noteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.t02viewtestsBindingSource;
+            this.dataGridView1.DataSource = this.t02viewtestsBindingSource2;
             this.dataGridView1.Location = new System.Drawing.Point(360, 16);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(556, 317);
+            this.dataGridView1.Size = new System.Drawing.Size(556, 326);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.Click += new System.EventHandler(this.dataGridView1_Click);
             this.dataGridView1.Enter += new System.EventHandler(this.dataGridView1_Enter);
@@ -358,15 +415,15 @@
             this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
-            // t02viewtestsBindingSource
+            // t02viewtestsBindingSource2
             // 
-            this.t02viewtestsBindingSource.DataMember = "T02_view_tests";
-            this.t02viewtestsBindingSource.DataSource = this.bd_kidsDataSet3;
+            this.t02viewtestsBindingSource2.DataMember = "T02_view_tests";
+            this.t02viewtestsBindingSource2.DataSource = this.bd_kidsDataSetFOR_TESTS;
             // 
-            // bd_kidsDataSet3
+            // bd_kidsDataSetFOR_TESTS
             // 
-            this.bd_kidsDataSet3.DataSetName = "bd_kidsDataSet3";
-            this.bd_kidsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.bd_kidsDataSetFOR_TESTS.DataSetName = "bd_kidsDataSetFOR_TESTS";
+            this.bd_kidsDataSetFOR_TESTS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // T03_testing_task_modules
             // 
@@ -401,147 +458,26 @@
             this.T04_testing_tasks.Text = "Тестовые задания";
             this.T04_testing_tasks.UseVisualStyleBackColor = true;
             // 
-            // TT_constructor_button
+            // comboBox2
             // 
-            this.TT_constructor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TT_constructor_button.Location = new System.Drawing.Point(228, 176);
-            this.TT_constructor_button.Name = "TT_constructor_button";
-            this.TT_constructor_button.Size = new System.Drawing.Size(123, 47);
-            this.TT_constructor_button.TabIndex = 17;
-            this.TT_constructor_button.Text = "Конструктор";
-            this.TT_constructor_button.UseVisualStyleBackColor = true;
-            this.TT_constructor_button.Click += new System.EventHandler(this.TT_constructor_button_Click);
+            this.comboBox2.DataSource = this.t012othersBindingSource;
+            this.comboBox2.DisplayMember = "fio";
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(152, 116);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(199, 21);
+            this.comboBox2.TabIndex = 31;
+            this.comboBox2.ValueMember = "id_person";
             // 
-            // T05_test_passing_results
+            // label13
             // 
-            this.T05_test_passing_results.Location = new System.Drawing.Point(4, 22);
-            this.T05_test_passing_results.Name = "T05_test_passing_results";
-            this.T05_test_passing_results.Size = new System.Drawing.Size(922, 402);
-            this.T05_test_passing_results.TabIndex = 3;
-            this.T05_test_passing_results.Text = "Результаты прохождения тестов";
-            this.T05_test_passing_results.UseVisualStyleBackColor = true;
-            // 
-            // bd_kidsDataSet2
-            // 
-            this.bd_kidsDataSet2.DataSetName = "bd_kidsDataSet2";
-            this.bd_kidsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bdkidsDataSet2BindingSource
-            // 
-            this.bdkidsDataSet2BindingSource.DataSource = this.bd_kidsDataSet2;
-            this.bdkidsDataSet2BindingSource.Position = 0;
-            // 
-            // t02_view_testsTableAdapter
-            // 
-            this.t02_view_testsTableAdapter.ClearBeforeFill = true;
-            // 
-            // bd_kidsDataSet4
-            // 
-            this.bd_kidsDataSet4.DataSetName = "bd_kidsDataSet4";
-            this.bd_kidsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t01personalitiesBindingSource
-            // 
-            this.t01personalitiesBindingSource.DataMember = "T01_personalities";
-            this.t01personalitiesBindingSource.DataSource = this.bd_kidsDataSet4;
-            // 
-            // t01_personalitiesTableAdapter
-            // 
-            this.t01_personalitiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // t01_2_othersTableAdapter
-            // 
-            this.t01_2_othersTableAdapter.ClearBeforeFill = true;
-            // 
-            // bd_kidsDataSet7
-            // 
-            this.bd_kidsDataSet7.DataSetName = "bd_kidsDataSet7";
-            this.bd_kidsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t04viewtestingtasksBindingSource
-            // 
-            this.t04viewtestingtasksBindingSource.DataMember = "T04_view_testing_tasks";
-            this.t04viewtestingtasksBindingSource.DataSource = this.bd_kidsDataSet7;
-            // 
-            // t04_view_testing_tasksTableAdapter
-            // 
-            this.t04_view_testing_tasksTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.AutoGenerateColumns = false;
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idtaskDataGridViewTextBoxColumn,
-            this.nametaskDataGridViewTextBoxColumn,
-            this.fioDataGridViewTextBoxColumn1,
-            this.datecreateDataGridViewTextBoxColumn1,
-            this.datecorrectDataGridViewTextBoxColumn1,
-            this.nametypeDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn1});
-            this.dataGridView2.DataSource = this.t04viewtestingtasksBindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(357, 16);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(553, 306);
-            this.dataGridView2.TabIndex = 18;
-            // 
-            // bd_kidsDataSet8
-            // 
-            this.bd_kidsDataSet8.DataSetName = "bd_kidsDataSet8";
-            this.bd_kidsDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t04viewtestingtasksBindingSource1
-            // 
-            this.t04viewtestingtasksBindingSource1.DataMember = "T04_view_testing_tasks";
-            this.t04viewtestingtasksBindingSource1.DataSource = this.bd_kidsDataSet8;
-            // 
-            // t04_view_testing_tasksTableAdapter1
-            // 
-            this.t04_view_testing_tasksTableAdapter1.ClearBeforeFill = true;
-            // 
-            // idtaskDataGridViewTextBoxColumn
-            // 
-            this.idtaskDataGridViewTextBoxColumn.DataPropertyName = "id_task";
-            this.idtaskDataGridViewTextBoxColumn.HeaderText = "id_task";
-            this.idtaskDataGridViewTextBoxColumn.Name = "idtaskDataGridViewTextBoxColumn";
-            this.idtaskDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nametaskDataGridViewTextBoxColumn
-            // 
-            this.nametaskDataGridViewTextBoxColumn.DataPropertyName = "name_task";
-            this.nametaskDataGridViewTextBoxColumn.HeaderText = "Название ТЗ";
-            this.nametaskDataGridViewTextBoxColumn.Name = "nametaskDataGridViewTextBoxColumn";
-            // 
-            // fioDataGridViewTextBoxColumn1
-            // 
-            this.fioDataGridViewTextBoxColumn1.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn1.HeaderText = "ФИО автора";
-            this.fioDataGridViewTextBoxColumn1.Name = "fioDataGridViewTextBoxColumn1";
-            // 
-            // datecreateDataGridViewTextBoxColumn1
-            // 
-            this.datecreateDataGridViewTextBoxColumn1.DataPropertyName = "date_create";
-            this.datecreateDataGridViewTextBoxColumn1.HeaderText = "Дата создания";
-            this.datecreateDataGridViewTextBoxColumn1.Name = "datecreateDataGridViewTextBoxColumn1";
-            // 
-            // datecorrectDataGridViewTextBoxColumn1
-            // 
-            this.datecorrectDataGridViewTextBoxColumn1.DataPropertyName = "date_correct";
-            this.datecorrectDataGridViewTextBoxColumn1.HeaderText = "Дата корректировки";
-            this.datecorrectDataGridViewTextBoxColumn1.Name = "datecorrectDataGridViewTextBoxColumn1";
-            // 
-            // nametypeDataGridViewTextBoxColumn
-            // 
-            this.nametypeDataGridViewTextBoxColumn.DataPropertyName = "name_type";
-            this.nametypeDataGridViewTextBoxColumn.HeaderText = "Тип ТЗ";
-            this.nametypeDataGridViewTextBoxColumn.Name = "nametypeDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn1
-            // 
-            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(3, 117);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 16);
+            this.label13.TabIndex = 30;
+            this.label13.Text = "Тип ТЗ";
             // 
             // dateTimePicker1
             // 
@@ -634,26 +570,204 @@
             this.label12.TabIndex = 19;
             this.label12.Text = "Название ТЗ";
             // 
-            // label13
+            // dataGridView2
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label13.Location = new System.Drawing.Point(3, 117);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(54, 16);
-            this.label13.TabIndex = 30;
-            this.label13.Text = "Тип ТЗ";
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idtaskDataGridViewTextBoxColumn,
+            this.nametaskDataGridViewTextBoxColumn,
+            this.fioDataGridViewTextBoxColumn1,
+            this.datecreateDataGridViewTextBoxColumn1,
+            this.datecorrectDataGridViewTextBoxColumn1,
+            this.nametypeDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn1});
+            this.dataGridView2.DataSource = this.t04viewtestingtasksBindingSource3;
+            this.dataGridView2.Location = new System.Drawing.Point(357, 16);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView2.Size = new System.Drawing.Size(553, 306);
+            this.dataGridView2.TabIndex = 18;
+            this.dataGridView2.Click += new System.EventHandler(this.dataGridView2_Click);
             // 
-            // comboBox2
+            // idtaskDataGridViewTextBoxColumn
             // 
-            this.comboBox2.DataSource = this.t012othersBindingSource;
-            this.comboBox2.DisplayMember = "fio";
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(152, 116);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(199, 21);
-            this.comboBox2.TabIndex = 31;
-            this.comboBox2.ValueMember = "id_person";
+            this.idtaskDataGridViewTextBoxColumn.DataPropertyName = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.HeaderText = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.Name = "idtaskDataGridViewTextBoxColumn";
+            // 
+            // nametaskDataGridViewTextBoxColumn
+            // 
+            this.nametaskDataGridViewTextBoxColumn.DataPropertyName = "name_task";
+            this.nametaskDataGridViewTextBoxColumn.HeaderText = "Название ТЗ";
+            this.nametaskDataGridViewTextBoxColumn.Name = "nametaskDataGridViewTextBoxColumn";
+            // 
+            // fioDataGridViewTextBoxColumn1
+            // 
+            this.fioDataGridViewTextBoxColumn1.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn1.HeaderText = "ФИО автора";
+            this.fioDataGridViewTextBoxColumn1.Name = "fioDataGridViewTextBoxColumn1";
+            // 
+            // datecreateDataGridViewTextBoxColumn1
+            // 
+            this.datecreateDataGridViewTextBoxColumn1.DataPropertyName = "date_create";
+            this.datecreateDataGridViewTextBoxColumn1.HeaderText = "Дата создания";
+            this.datecreateDataGridViewTextBoxColumn1.Name = "datecreateDataGridViewTextBoxColumn1";
+            // 
+            // datecorrectDataGridViewTextBoxColumn1
+            // 
+            this.datecorrectDataGridViewTextBoxColumn1.DataPropertyName = "date_correct";
+            this.datecorrectDataGridViewTextBoxColumn1.HeaderText = "Дата корректировки";
+            this.datecorrectDataGridViewTextBoxColumn1.Name = "datecorrectDataGridViewTextBoxColumn1";
+            // 
+            // nametypeDataGridViewTextBoxColumn
+            // 
+            this.nametypeDataGridViewTextBoxColumn.DataPropertyName = "name_type";
+            this.nametypeDataGridViewTextBoxColumn.HeaderText = "Тип ТЗ";
+            this.nametypeDataGridViewTextBoxColumn.Name = "nametypeDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn1
+            // 
+            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            // 
+            // t04viewtestingtasksBindingSource3
+            // 
+            this.t04viewtestingtasksBindingSource3.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource3.DataSource = this.bd_kidsDataSet_TESTING_TASKS;
+            // 
+            // bd_kidsDataSet_TESTING_TASKS
+            // 
+            this.bd_kidsDataSet_TESTING_TASKS.DataSetName = "bd_kidsDataSet_TESTING_TASKS";
+            this.bd_kidsDataSet_TESTING_TASKS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // TT_constructor_button
+            // 
+            this.TT_constructor_button.Enabled = false;
+            this.TT_constructor_button.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TT_constructor_button.Location = new System.Drawing.Point(228, 176);
+            this.TT_constructor_button.Name = "TT_constructor_button";
+            this.TT_constructor_button.Size = new System.Drawing.Size(123, 47);
+            this.TT_constructor_button.TabIndex = 17;
+            this.TT_constructor_button.Text = "Конструктор";
+            this.TT_constructor_button.UseVisualStyleBackColor = true;
+            this.TT_constructor_button.Click += new System.EventHandler(this.TT_constructor_button_Click);
+            // 
+            // T05_test_passing_results
+            // 
+            this.T05_test_passing_results.Location = new System.Drawing.Point(4, 22);
+            this.T05_test_passing_results.Name = "T05_test_passing_results";
+            this.T05_test_passing_results.Size = new System.Drawing.Size(922, 402);
+            this.T05_test_passing_results.TabIndex = 3;
+            this.T05_test_passing_results.Text = "Результаты прохождения тестов";
+            this.T05_test_passing_results.UseVisualStyleBackColor = true;
+            // 
+            // t02viewtestsBindingSource
+            // 
+            this.t02viewtestsBindingSource.DataMember = "T02_view_tests";
+            this.t02viewtestsBindingSource.DataSource = this.bd_kidsDataSet3;
+            // 
+            // bd_kidsDataSet3
+            // 
+            this.bd_kidsDataSet3.DataSetName = "bd_kidsDataSet3";
+            this.bd_kidsDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t04viewtestingtasksBindingSource1
+            // 
+            this.t04viewtestingtasksBindingSource1.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource1.DataSource = this.bd_kidsDataSet8;
+            // 
+            // bd_kidsDataSet8
+            // 
+            this.bd_kidsDataSet8.DataSetName = "bd_kidsDataSet8";
+            this.bd_kidsDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bd_kidsDataSet2
+            // 
+            this.bd_kidsDataSet2.DataSetName = "bd_kidsDataSet2";
+            this.bd_kidsDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bdkidsDataSet2BindingSource
+            // 
+            this.bdkidsDataSet2BindingSource.DataSource = this.bd_kidsDataSet2;
+            this.bdkidsDataSet2BindingSource.Position = 0;
+            // 
+            // t02_view_testsTableAdapter
+            // 
+            this.t02_view_testsTableAdapter.ClearBeforeFill = true;
+            // 
+            // bd_kidsDataSet4
+            // 
+            this.bd_kidsDataSet4.DataSetName = "bd_kidsDataSet4";
+            this.bd_kidsDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t01personalitiesBindingSource
+            // 
+            this.t01personalitiesBindingSource.DataMember = "T01_personalities";
+            this.t01personalitiesBindingSource.DataSource = this.bd_kidsDataSet4;
+            // 
+            // t01_personalitiesTableAdapter
+            // 
+            this.t01_personalitiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // t01_2_othersTableAdapter
+            // 
+            this.t01_2_othersTableAdapter.ClearBeforeFill = true;
+            // 
+            // bd_kidsDataSet7
+            // 
+            this.bd_kidsDataSet7.DataSetName = "bd_kidsDataSet7";
+            this.bd_kidsDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t04viewtestingtasksBindingSource
+            // 
+            this.t04viewtestingtasksBindingSource.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource.DataSource = this.bd_kidsDataSet7;
+            // 
+            // t04_view_testing_tasksTableAdapter
+            // 
+            this.t04_view_testing_tasksTableAdapter.ClearBeforeFill = true;
+            // 
+            // t04_view_testing_tasksTableAdapter1
+            // 
+            this.t04_view_testing_tasksTableAdapter1.ClearBeforeFill = true;
+            // 
+            // bd_kidsDataSet9
+            // 
+            this.bd_kidsDataSet9.DataSetName = "bd_kidsDataSet9";
+            this.bd_kidsDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t02viewtestsBindingSource1
+            // 
+            this.t02viewtestsBindingSource1.DataMember = "T02_view_tests";
+            this.t02viewtestsBindingSource1.DataSource = this.bd_kidsDataSet9;
+            // 
+            // t02_view_testsTableAdapter1
+            // 
+            this.t02_view_testsTableAdapter1.ClearBeforeFill = true;
+            // 
+            // t02_view_testsTableAdapter2
+            // 
+            this.t02_view_testsTableAdapter2.ClearBeforeFill = true;
+            // 
+            // bd_kidsDataSetFOR_TESTING_TASKS
+            // 
+            this.bd_kidsDataSetFOR_TESTING_TASKS.DataSetName = "bd_kidsDataSetFOR_TESTING_TASKS";
+            this.bd_kidsDataSetFOR_TESTING_TASKS.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t04viewtestingtasksBindingSource2
+            // 
+            this.t04viewtestingtasksBindingSource2.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource2.DataSource = this.bd_kidsDataSetFOR_TESTING_TASKS;
+            // 
+            // t04_view_testing_tasksTableAdapter2
+            // 
+            this.t04_view_testing_tasksTableAdapter2.ClearBeforeFill = true;
+            // 
+            // t04_view_testing_tasksTableAdapter3
+            // 
+            this.t04_view_testing_tasksTableAdapter3.ClearBeforeFill = true;
             // 
             // Tests
             // 
@@ -671,19 +785,27 @@
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetFOR_TESTS)).EndInit();
             this.T04_testing_tasks.ResumeLayout(false);
             this.T04_testing_tasks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet_TESTING_TASKS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdkidsDataSet2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t01personalitiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetFOR_TESTING_TASKS)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -748,6 +870,18 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label12;
+        private bd_kidsDataSet9 bd_kidsDataSet9;
+        private System.Windows.Forms.BindingSource t02viewtestsBindingSource1;
+        private bd_kidsDataSet9TableAdapters.T02_view_testsTableAdapter t02_view_testsTableAdapter1;
+        private bd_kidsDataSetFOR_TESTS bd_kidsDataSetFOR_TESTS;
+        private System.Windows.Forms.BindingSource t02viewtestsBindingSource2;
+        private bd_kidsDataSetFOR_TESTSTableAdapters.T02_view_testsTableAdapter t02_view_testsTableAdapter2;
+        private bd_kidsDataSetFOR_TESTING_TASKS bd_kidsDataSetFOR_TESTING_TASKS;
+        private System.Windows.Forms.BindingSource t04viewtestingtasksBindingSource2;
+        private bd_kidsDataSetFOR_TESTING_TASKSTableAdapters.T04_view_testing_tasksTableAdapter t04_view_testing_tasksTableAdapter2;
+        private bd_kidsDataSet_TESTING_TASKS bd_kidsDataSet_TESTING_TASKS;
+        private System.Windows.Forms.BindingSource t04viewtestingtasksBindingSource3;
+        private bd_kidsDataSet_TESTING_TASKSTableAdapters.T04_view_testing_tasksTableAdapter t04_view_testing_tasksTableAdapter3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idtaskDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nametaskDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn1;
@@ -755,5 +889,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn datecorrectDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn nametypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button T02addButton;
+        private System.Windows.Forms.Button T02changeButton;
+        private System.Windows.Forms.Button T02deleteButton;
     }
 }

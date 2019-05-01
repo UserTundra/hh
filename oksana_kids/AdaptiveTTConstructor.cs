@@ -12,9 +12,17 @@ namespace oksana_kids
 {
     public partial class AdaptiveTTConstructor : Form
     {
-        public AdaptiveTTConstructor()
+        public string name = "";
+
+        public AdaptiveTTConstructor(string taskName)
         {
+            name = taskName;
             InitializeComponent();
+        }
+
+        private void AdaptiveTTConstructor_Load(object sender, EventArgs e)
+        {
+            selectedTT.Text = name;
         }
     }
 }

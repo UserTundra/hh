@@ -17,7 +17,7 @@ namespace oksana_kids
         public long id_result { get; set; }
         public Nullable<long> id_person { get; set; }
         public Nullable<long> id_test { get; set; }
-        public Nullable<System.DateTime> date_testing { get; set; }
+        public string date_testing { get; set; }
         public string time_start { get; set; }
         public string time_end { get; set; }
         public Nullable<long> code_end_reason { get; set; }

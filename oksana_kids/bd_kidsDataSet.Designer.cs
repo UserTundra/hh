@@ -10,8 +10,6 @@
 
 #pragma warning disable 1591
 
-using System;
-
 namespace oksana_kids {
     
     
@@ -7784,7 +7782,7 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public T01_personalitiesRow AddT01_personalitiesRow(string surname, string name, string patronymic, string date_birth, long gender, R01_people_categoryRow parentR01_people_categoryRowByFK_T01_personalities_1_0, T10_organizationsRow parentT10_organizationsRowByFK_T01_personalities_2_0, R02_pupils_classesRow parentR02_pupils_classesRowByFK_T01_personalities_0_0, string login, string password, System.DateTime date_updating, string note) {
+            public T01_personalitiesRow AddT01_personalitiesRow(string surname, string name, string patronymic, string date_birth, long gender, R01_people_categoryRow parentR01_people_categoryRowByFK_T01_personalities_1_0, T10_organizationsRow parentT10_organizationsRowByFK_T01_personalities_2_0, R02_pupils_classesRow parentR02_pupils_classesRowByFK_T01_personalities_0_0, string login, string password, string date_updating, string note) {
                 T01_personalitiesRow rowT01_personalitiesRow = ((T01_personalitiesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -8188,7 +8186,7 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public T02_testsRow AddT02_testsRow(string name_test, R07_methodical_materialsRow parentR07_methodical_materialsRowByFK_T02_tests_2_0, T01_personalitiesRow parentT01_personalitiesRowByFK_T02_tests_1_0, System.DateTime date_create, System.DateTime date_correct, long max_passing_duration_sec, string note, T06_teaching_materialsRow parentT06_teaching_materialsRowByFK_T02_tests_0_0) {
+            public T02_testsRow AddT02_testsRow(string name_test, R07_methodical_materialsRow parentR07_methodical_materialsRowByFK_T02_tests_2_0, T01_personalitiesRow parentT01_personalitiesRowByFK_T02_tests_1_0, string date_create, string date_correct, long max_passing_duration_sec, string note, T06_teaching_materialsRow parentT06_teaching_materialsRowByFK_T02_tests_0_0) {
                 T02_testsRow rowT02_testsRow = ((T02_testsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -8260,9 +8258,9 @@ namespace oksana_kids {
                 base.Columns.Add(this.columnid_method_material);
                 this.columnid_author = new global::System.Data.DataColumn("id_author", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_author);
-                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_create);
-                this.columndate_correct = new global::System.Data.DataColumn("date_correct", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndate_correct = new global::System.Data.DataColumn("date_correct", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_correct);
                 this.columnmax_passing_duration_sec = new global::System.Data.DataColumn("max_passing_duration_sec", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnmax_passing_duration_sec);
@@ -8985,7 +8983,7 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public T04_testing_tasksRow AddT04_testing_tasksRow(string name_task, T01_personalitiesRow parentT01_personalitiesRowByFK_T04_testing_tasks_1_0, System.DateTime date_create, System.DateTime date_correct, R03_testing_typesRow parentR03_testing_typesRowByFK_T04_testing_tasks_0_0, string file_location, string note) {
+            public T04_testing_tasksRow AddT04_testing_tasksRow(string name_task, T01_personalitiesRow parentT01_personalitiesRowByFK_T04_testing_tasks_1_0, string date_create, string date_correct, R03_testing_typesRow parentR03_testing_typesRowByFK_T04_testing_tasks_0_0, string file_location, string note) {
                 T04_testing_tasksRow rowT04_testing_tasksRow = ((T04_testing_tasksRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -9050,9 +9048,9 @@ namespace oksana_kids {
                 base.Columns.Add(this.columnname_task);
                 this.columnid_author = new global::System.Data.DataColumn("id_author", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_author);
-                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_create);
-                this.columndate_correct = new global::System.Data.DataColumn("date_correct", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndate_correct = new global::System.Data.DataColumn("date_correct", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_correct);
                 this.columncode_type = new global::System.Data.DataColumn("code_type", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncode_type);
@@ -9383,7 +9381,7 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public T05_test_passing_resultsRow AddT05_test_passing_resultsRow(T01_personalitiesRow parentT01_personalitiesRowByFK_T05_test_passing_results_2_0, T02_testsRow parentT02_testsRowByFK_T05_test_passing_results_1_0, System.DateTime date_testing, string time_start, string time_end, R04_end_testing_reasonsRow parentR04_end_testing_reasonsRowByFK_T05_test_passing_results_0_0, long amount_passing_tests, double perc_totally_right, double perc_partially_right, string note) {
+            public T05_test_passing_resultsRow AddT05_test_passing_resultsRow(T01_personalitiesRow parentT01_personalitiesRowByFK_T05_test_passing_results_2_0, T02_testsRow parentT02_testsRowByFK_T05_test_passing_results_1_0, string date_testing, string time_start, string time_end, R04_end_testing_reasonsRow parentR04_end_testing_reasonsRowByFK_T05_test_passing_results_0_0, long amount_passing_tests, double perc_totally_right, double perc_partially_right, string note) {
                 T05_test_passing_resultsRow rowT05_test_passing_resultsRow = ((T05_test_passing_resultsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -9457,7 +9455,7 @@ namespace oksana_kids {
                 base.Columns.Add(this.columnid_person);
                 this.columnid_test = new global::System.Data.DataColumn("id_test", typeof(long), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnid_test);
-                this.columndate_testing = new global::System.Data.DataColumn("date_testing", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndate_testing = new global::System.Data.DataColumn("date_testing", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_testing);
                 this.columntime_start = new global::System.Data.DataColumn("time_start", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columntime_start);
@@ -10459,7 +10457,7 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public T08_audio_video_tracksRow AddT08_audio_video_tracksRow(string name_av_track, R14_track_typesRow parentR14_track_typesRowByFK_T08_audio_video_tracks_0_0, string author, long duration_sec, string source, string image_size_pix, string filesize, System.DateTime date_create, string note) {
+            public T08_audio_video_tracksRow AddT08_audio_video_tracksRow(string name_av_track, R14_track_typesRow parentR14_track_typesRowByFK_T08_audio_video_tracks_0_0, string author, long duration_sec, string source, string image_size_pix, string filesize, string date_create, string note) {
                 T08_audio_video_tracksRow rowT08_audio_video_tracksRow = ((T08_audio_video_tracksRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -10535,7 +10533,7 @@ namespace oksana_kids {
                 base.Columns.Add(this.columnimage_size_pix);
                 this.columnfilesize = new global::System.Data.DataColumn("filesize", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfilesize);
-                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                this.columndate_create = new global::System.Data.DataColumn("date_create", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndate_create);
                 this.columnnote = new global::System.Data.DataColumn("note", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnote);
@@ -14564,10 +14562,10 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_create {
+            public string date_create {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableT02_tests.date_createColumn]));
+                        return ((string)(this[this.tableT02_tests.date_createColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'date_create\' в таблице \'T02_tests\' равно DBNull.", e);
@@ -14580,10 +14578,10 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_correct {
+            public string date_correct {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableT02_tests.date_correctColumn]));
+                        return ((string)(this[this.tableT02_tests.date_correctColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'date_correct\' в таблице \'T02_tests\' равно DBNull.", e);
@@ -15268,10 +15266,10 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_create {
+            public string date_create {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableT04_testing_tasks.date_createColumn]));
+                        return ((string)(this[this.tableT04_testing_tasks.date_createColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'date_create\' в таблице \'T04_testing_tasks\' равно DBNull.", e);
@@ -15284,10 +15282,10 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_correct {
+            public string date_correct {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableT04_testing_tasks.date_correctColumn]));
+                        return ((string)(this[this.tableT04_testing_tasks.date_correctColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'date_correct\' в таблице \'T04_testing_tasks\' равно DBNull.", e);
@@ -15547,10 +15545,10 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_testing {
+            public string date_testing {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableT05_test_passing_results.date_testingColumn]));
+                        return ((string)(this[this.tableT05_test_passing_results.date_testingColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'date_testing\' в таблице \'T05_test_passing_results\' равно DB" +
@@ -16344,10 +16342,10 @@ namespace oksana_kids {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public System.DateTime date_create {
+            public string date_create {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableT08_audio_video_tracks.date_createColumn]));
+                        return ((string)(this[this.tableT08_audio_video_tracks.date_createColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("Значение для столбца \'date_create\' в таблице \'T08_audio_video_tracks\' равно DBNul" +
@@ -27737,7 +27735,6 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_birth";
             param.DbType = global::System.Data.DbType.String;
-            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_birth";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -27839,8 +27836,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_updating";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_updating";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -27880,7 +27876,6 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_birth";
             param.DbType = global::System.Data.DbType.String;
-            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_birth";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -27919,8 +27914,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_updating";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_updating";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -27950,7 +27944,6 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_birth";
             param.DbType = global::System.Data.DbType.String;
-            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_birth";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -27989,8 +27982,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_updating";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_updating";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -28058,7 +28050,6 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_birth";
             param.DbType = global::System.Data.DbType.String;
-            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_birth";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -28160,8 +28151,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_updating";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_updating";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -28257,7 +28247,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_id_person, string Original_surname, string Original_name, string Original_patronymic,string Original_date_birth, global::System.Nullable<long> Original_gender, global::System.Nullable<long> Original_code_category, global::System.Nullable<long> Original_id_org, global::System.Nullable<long> Original_code_class, string Original_login, string Original_password, global::System.Nullable<global::System.DateTime> Original_date_updating, string Original_note) {
+        public virtual int Delete(long Original_id_person, string Original_surname, string Original_name, string Original_patronymic, string Original_date_birth, global::System.Nullable<long> Original_gender, global::System.Nullable<long> Original_code_category, global::System.Nullable<long> Original_id_org, global::System.Nullable<long> Original_code_class, string Original_login, string Original_password, string Original_date_updating, string Original_note) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id_person));
             if ((Original_surname == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -28339,13 +28329,13 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[19].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[20].Value = ((string)(Original_password));
             }
-            if ((Original_date_updating.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[22].Value = ((System.DateTime)(Original_date_updating.Value));
-            }
-            else {
+            if ((Original_date_updating == null)) {
                 this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[22].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[21].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[22].Value = ((string)(Original_date_updating));
             }
             if ((Original_note == null)) {
                 this.Adapter.DeleteCommand.Parameters[23].Value = ((object)(1));
@@ -28375,7 +28365,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string surname, string name, string patronymic, string date_birth, global::System.Nullable<long> gender, global::System.Nullable<long> code_category, global::System.Nullable<long> id_org, global::System.Nullable<long> code_class, string login, string password, global::System.Nullable<global::System.DateTime> date_updating, string note) {
+        public virtual int Insert(string surname, string name, string patronymic, string date_birth, global::System.Nullable<long> gender, global::System.Nullable<long> code_category, global::System.Nullable<long> id_org, global::System.Nullable<long> code_class, string login, string password, string date_updating, string note) {
             if ((surname == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -28436,11 +28426,11 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[9].Value = ((string)(password));
             }
-            if ((date_updating.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[10].Value = ((System.DateTime)(date_updating.Value));
+            if ((date_updating == null)) {
+                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[10].Value = ((string)(date_updating));
             }
             if ((note == null)) {
                 this.Adapter.InsertCommand.Parameters[11].Value = global::System.DBNull.Value;
@@ -28479,7 +28469,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                     global::System.Nullable<long> code_class, 
                     string login, 
                     string password, 
-                    global::System.Nullable<global::System.DateTime> date_updating, 
+                    string date_updating, 
                     string note, 
                     long Original_id_person, 
                     string Original_surname, 
@@ -28492,7 +28482,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                     global::System.Nullable<long> Original_code_class, 
                     string Original_login, 
                     string Original_password, 
-                    global::System.Nullable<global::System.DateTime> Original_date_updating, 
+                    string Original_date_updating, 
                     string Original_note) {
             if ((surname == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -28554,11 +28544,11 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[9].Value = ((string)(password));
             }
-            if ((date_updating.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[10].Value = ((System.DateTime)(date_updating.Value));
+            if ((date_updating == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((string)(date_updating));
             }
             if ((note == null)) {
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
@@ -28647,13 +28637,13 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[31].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[32].Value = ((string)(Original_password));
             }
-            if ((Original_date_updating.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[34].Value = ((System.DateTime)(Original_date_updating.Value));
-            }
-            else {
+            if ((Original_date_updating == null)) {
                 this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[34].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[33].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[34].Value = ((string)(Original_date_updating));
             }
             if ((Original_note == null)) {
                 this.Adapter.UpdateCommand.Parameters[35].Value = ((object)(1));
@@ -28876,8 +28866,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -28891,8 +28880,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -28963,14 +28951,12 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -29013,14 +28999,12 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -29101,8 +29085,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -29116,8 +29099,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -29243,7 +29225,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_id_test, string Original_name_test, global::System.Nullable<long> Original_id_method_material, global::System.Nullable<long> Original_id_author, global::System.Nullable<global::System.DateTime> Original_date_create, global::System.Nullable<global::System.DateTime> Original_date_correct, global::System.Nullable<long> Original_max_passing_duration_sec, string Original_note, global::System.Nullable<long> Original_id_teach_material) {
+        public virtual int Delete(long Original_id_test, string Original_name_test, global::System.Nullable<long> Original_id_method_material, global::System.Nullable<long> Original_id_author, string Original_date_create, string Original_date_correct, global::System.Nullable<long> Original_max_passing_duration_sec, string Original_note, global::System.Nullable<long> Original_id_teach_material) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id_test));
             if ((Original_name_test == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -29269,21 +29251,21 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_create.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_date_create.Value));
-            }
-            else {
+            if ((Original_date_create == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_correct.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[10].Value = ((System.DateTime)(Original_date_correct.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_date_create));
+            }
+            if ((Original_date_correct == null)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[10].Value = ((string)(Original_date_correct));
             }
             if ((Original_max_passing_duration_sec.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[11].Value = ((object)(0));
@@ -29329,7 +29311,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name_test, global::System.Nullable<long> id_method_material, global::System.Nullable<long> id_author, global::System.Nullable<global::System.DateTime> date_create, global::System.Nullable<global::System.DateTime> date_correct, global::System.Nullable<long> max_passing_duration_sec, string note, global::System.Nullable<long> id_teach_material) {
+        public virtual int Insert(string name_test, global::System.Nullable<long> id_method_material, global::System.Nullable<long> id_author, string date_create, string date_correct, global::System.Nullable<long> max_passing_duration_sec, string note, global::System.Nullable<long> id_teach_material) {
             if ((name_test == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -29348,17 +29330,17 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((date_create.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(date_create.Value));
-            }
-            else {
+            if ((date_create == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((date_correct.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(date_correct.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(date_create));
+            }
+            if ((date_correct == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(date_correct));
             }
             if ((max_passing_duration_sec.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[5].Value = ((long)(max_passing_duration_sec.Value));
@@ -29402,8 +29384,8 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                     string name_test, 
                     global::System.Nullable<long> id_method_material, 
                     global::System.Nullable<long> id_author, 
-                    global::System.Nullable<global::System.DateTime> date_create, 
-                    global::System.Nullable<global::System.DateTime> date_correct, 
+                    string date_create, 
+                    string date_correct, 
                     global::System.Nullable<long> max_passing_duration_sec, 
                     string note, 
                     global::System.Nullable<long> id_teach_material, 
@@ -29411,8 +29393,8 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                     string Original_name_test, 
                     global::System.Nullable<long> Original_id_method_material, 
                     global::System.Nullable<long> Original_id_author, 
-                    global::System.Nullable<global::System.DateTime> Original_date_create, 
-                    global::System.Nullable<global::System.DateTime> Original_date_correct, 
+                    string Original_date_create, 
+                    string Original_date_correct, 
                     global::System.Nullable<long> Original_max_passing_duration_sec, 
                     string Original_note, 
                     global::System.Nullable<long> Original_id_teach_material) {
@@ -29434,17 +29416,17 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((date_create.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(date_create.Value));
-            }
-            else {
+            if ((date_create == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((date_correct.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(date_correct.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(date_create));
+            }
+            if ((date_correct == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(date_correct));
             }
             if ((max_passing_duration_sec.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[5].Value = ((long)(max_passing_duration_sec.Value));
@@ -29489,21 +29471,21 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_create.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_date_create.Value));
-            }
-            else {
+            if ((Original_date_create == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_correct.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[18].Value = ((System.DateTime)(Original_date_correct.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_date_create));
+            }
+            if ((Original_date_correct == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[18].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[18].Value = ((string)(Original_date_correct));
             }
             if ((Original_max_passing_duration_sec.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[19].Value = ((object)(0));
@@ -30761,8 +30743,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -30776,8 +30757,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -30844,14 +30824,12 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -30887,14 +30865,12 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -30959,8 +30935,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -30974,8 +30949,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_correct";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_correct";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -31099,7 +31073,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_id_task, string Original_name_task, global::System.Nullable<long> Original_id_author, global::System.Nullable<global::System.DateTime> Original_date_create, global::System.Nullable<global::System.DateTime> Original_date_correct, global::System.Nullable<long> Original_code_type, string Original_file_location, string Original_note) {
+        public virtual int Delete(long Original_id_task, string Original_name_task, global::System.Nullable<long> Original_id_author, string Original_date_create, string Original_date_correct, global::System.Nullable<long> Original_code_type, string Original_file_location, string Original_note) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id_task));
             if ((Original_name_task == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -31117,21 +31091,21 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_create.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_date_create.Value));
-            }
-            else {
+            if ((Original_date_create == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_correct.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(Original_date_correct.Value));
-            }
             else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_date_create));
+            }
+            if ((Original_date_correct == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_date_correct));
             }
             if ((Original_code_type.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[9].Value = ((object)(0));
@@ -31177,7 +31151,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name_task, global::System.Nullable<long> id_author, global::System.Nullable<global::System.DateTime> date_create, global::System.Nullable<global::System.DateTime> date_correct, global::System.Nullable<long> code_type, string file_location, string note) {
+        public virtual int Insert(string name_task, global::System.Nullable<long> id_author, string date_create, string date_correct, global::System.Nullable<long> code_type, string file_location, string note) {
             if ((name_task == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -31190,17 +31164,17 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((date_create.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(date_create.Value));
-            }
-            else {
+            if ((date_create == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((date_correct.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(date_correct.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(date_create));
+            }
+            if ((date_correct == null)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[3].Value = ((string)(date_correct));
             }
             if ((code_type.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = ((long)(code_type.Value));
@@ -31240,7 +31214,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string name_task, global::System.Nullable<long> id_author, global::System.Nullable<global::System.DateTime> date_create, global::System.Nullable<global::System.DateTime> date_correct, global::System.Nullable<long> code_type, string file_location, string note, long Original_id_task, string Original_name_task, global::System.Nullable<long> Original_id_author, global::System.Nullable<global::System.DateTime> Original_date_create, global::System.Nullable<global::System.DateTime> Original_date_correct, global::System.Nullable<long> Original_code_type, string Original_file_location, string Original_note) {
+        public virtual int Update(string name_task, global::System.Nullable<long> id_author, string date_create, string date_correct, global::System.Nullable<long> code_type, string file_location, string note, long Original_id_task, string Original_name_task, global::System.Nullable<long> Original_id_author, string Original_date_create, string Original_date_correct, global::System.Nullable<long> Original_code_type, string Original_file_location, string Original_note) {
             if ((name_task == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -31253,17 +31227,17 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((date_create.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(date_create.Value));
-            }
-            else {
+            if ((date_create == null)) {
                 this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((date_correct.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(date_correct.Value));
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(date_create));
+            }
+            if ((date_correct == null)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(date_correct));
             }
             if ((code_type.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[4].Value = ((long)(code_type.Value));
@@ -31300,21 +31274,21 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_create.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(Original_date_create.Value));
-            }
-            else {
+            if ((Original_date_create == null)) {
                 this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_correct.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((System.DateTime)(Original_date_correct.Value));
-            }
             else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((string)(Original_date_create));
+            }
+            if ((Original_date_correct == null)) {
                 this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[15].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((string)(Original_date_correct));
             }
             if ((Original_code_type.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[16].Value = ((object)(0));
@@ -31541,8 +31515,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_testing";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_testing";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -31666,8 +31639,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_testing";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_testing";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -31727,8 +31699,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_testing";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_testing";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -31817,8 +31788,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_testing";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_testing";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -32002,7 +31972,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_id_result, global::System.Nullable<long> Original_id_person, global::System.Nullable<long> Original_id_test, global::System.Nullable<global::System.DateTime> Original_date_testing, string Original_time_start, string Original_time_end, global::System.Nullable<long> Original_code_end_reason, global::System.Nullable<long> Original_amount_passing_tests, global::System.Nullable<double> Original_perc_totally_right, global::System.Nullable<double> Original_perc_partially_right, string Original_note) {
+        public virtual int Delete(long Original_id_result, global::System.Nullable<long> Original_id_person, global::System.Nullable<long> Original_id_test, string Original_date_testing, string Original_time_start, string Original_time_end, global::System.Nullable<long> Original_code_end_reason, global::System.Nullable<long> Original_amount_passing_tests, global::System.Nullable<double> Original_perc_totally_right, global::System.Nullable<double> Original_perc_partially_right, string Original_note) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id_result));
             if ((Original_id_person.HasValue == true)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
@@ -32020,13 +31990,13 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_testing.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(Original_date_testing.Value));
-            }
-            else {
+            if ((Original_date_testing == null)) {
                 this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_date_testing));
             }
             if ((Original_time_start == null)) {
                 this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
@@ -32104,7 +32074,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(global::System.Nullable<long> id_person, global::System.Nullable<long> id_test, global::System.Nullable<global::System.DateTime> date_testing, string time_start, string time_end, global::System.Nullable<long> code_end_reason, global::System.Nullable<long> amount_passing_tests, global::System.Nullable<double> perc_totally_right, global::System.Nullable<double> perc_partially_right, string note) {
+        public virtual int Insert(global::System.Nullable<long> id_person, global::System.Nullable<long> id_test, string date_testing, string time_start, string time_end, global::System.Nullable<long> code_end_reason, global::System.Nullable<long> amount_passing_tests, global::System.Nullable<double> perc_totally_right, global::System.Nullable<double> perc_partially_right, string note) {
             if ((id_person.HasValue == true)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((long)(id_person.Value));
             }
@@ -32117,11 +32087,11 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((date_testing.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((System.DateTime)(date_testing.Value));
+            if ((date_testing == null)) {
+                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(date_testing));
             }
             if ((time_start == null)) {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -32188,7 +32158,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         public virtual int Update(
                     global::System.Nullable<long> id_person, 
                     global::System.Nullable<long> id_test, 
-                    global::System.Nullable<global::System.DateTime> date_testing, 
+                    string date_testing, 
                     string time_start, 
                     string time_end, 
                     global::System.Nullable<long> code_end_reason, 
@@ -32199,7 +32169,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                     long Original_id_result, 
                     global::System.Nullable<long> Original_id_person, 
                     global::System.Nullable<long> Original_id_test, 
-                    global::System.Nullable<global::System.DateTime> Original_date_testing, 
+                    string Original_date_testing, 
                     string Original_time_start, 
                     string Original_time_end, 
                     global::System.Nullable<long> Original_code_end_reason, 
@@ -32219,11 +32189,11 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
-            if ((date_testing.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((System.DateTime)(date_testing.Value));
+            if ((date_testing == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(date_testing));
             }
             if ((time_start == null)) {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
@@ -32284,13 +32254,13 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
             }
-            if ((Original_date_testing.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[16].Value = ((System.DateTime)(Original_date_testing.Value));
-            }
-            else {
+            if ((Original_date_testing == null)) {
                 this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[16].Value = ((string)(Original_date_testing));
             }
             if ((Original_time_start == null)) {
                 this.Adapter.UpdateCommand.Parameters[17].Value = ((object)(1));
@@ -33876,8 +33846,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
@@ -33938,8 +33907,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -33990,8 +33958,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
@@ -34116,8 +34083,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::System.Data.SQLite.SQLiteParameter();
             param.ParameterName = "@Original_date_create";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.DbType = global::System.Data.DbType.DateTime;
+            param.DbType = global::System.Data.DbType.String;
             param.SourceColumn = "date_create";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
@@ -34213,7 +34179,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(long Original_id_av_track, string Original_name_av_track, global::System.Nullable<long> Original_code_type, string Original_author, global::System.Nullable<long> Original_duration_sec, string Original_source, string Original_image_size_pix, string Original_filesize, global::System.Nullable<global::System.DateTime> Original_date_create, string Original_note) {
+        public virtual int Delete(long Original_id_av_track, string Original_name_av_track, global::System.Nullable<long> Original_code_type, string Original_author, global::System.Nullable<long> Original_duration_sec, string Original_source, string Original_image_size_pix, string Original_filesize, string Original_date_create, string Original_note) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((long)(Original_id_av_track));
             if ((Original_name_av_track == null)) {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
@@ -34271,13 +34237,13 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.DeleteCommand.Parameters[13].Value = ((object)(0));
                 this.Adapter.DeleteCommand.Parameters[14].Value = ((string)(Original_filesize));
             }
-            if ((Original_date_create.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[16].Value = ((System.DateTime)(Original_date_create.Value));
-            }
-            else {
+            if ((Original_date_create == null)) {
                 this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(1));
                 this.Adapter.DeleteCommand.Parameters[16].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[15].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[16].Value = ((string)(Original_date_create));
             }
             if ((Original_note == null)) {
                 this.Adapter.DeleteCommand.Parameters[17].Value = ((object)(1));
@@ -34307,7 +34273,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string name_av_track, global::System.Nullable<long> code_type, string author, global::System.Nullable<long> duration_sec, string source, string image_size_pix, string filesize, global::System.Nullable<global::System.DateTime> date_create, string note) {
+        public virtual int Insert(string name_av_track, global::System.Nullable<long> code_type, string author, global::System.Nullable<long> duration_sec, string source, string image_size_pix, string filesize, string date_create, string note) {
             if ((name_av_track == null)) {
                 this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
@@ -34350,11 +34316,11 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.InsertCommand.Parameters[6].Value = ((string)(filesize));
             }
-            if ((date_create.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[7].Value = ((System.DateTime)(date_create.Value));
+            if ((date_create == null)) {
+                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[7].Value = ((string)(date_create));
             }
             if ((note == null)) {
                 this.Adapter.InsertCommand.Parameters[8].Value = global::System.DBNull.Value;
@@ -34390,7 +34356,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                     string source, 
                     string image_size_pix, 
                     string filesize, 
-                    global::System.Nullable<global::System.DateTime> date_create, 
+                    string date_create, 
                     string note, 
                     long Original_id_av_track, 
                     string Original_name_av_track, 
@@ -34400,7 +34366,7 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                     string Original_source, 
                     string Original_image_size_pix, 
                     string Original_filesize, 
-                    global::System.Nullable<global::System.DateTime> Original_date_create, 
+                    string Original_date_create, 
                     string Original_note) {
             if ((name_av_track == null)) {
                 this.Adapter.UpdateCommand.Parameters[0].Value = global::System.DBNull.Value;
@@ -34444,11 +34410,11 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(filesize));
             }
-            if ((date_create.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(date_create.Value));
+            if ((date_create == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[7].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(date_create));
             }
             if ((note == null)) {
                 this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
@@ -34513,13 +34479,13 @@ namespace oksana_kids.bd_kidsDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[22].Value = ((object)(0));
                 this.Adapter.UpdateCommand.Parameters[23].Value = ((string)(Original_filesize));
             }
-            if ((Original_date_create.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[25].Value = ((System.DateTime)(Original_date_create.Value));
-            }
-            else {
+            if ((Original_date_create == null)) {
                 this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[25].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[24].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[25].Value = ((string)(Original_date_create));
             }
             if ((Original_note == null)) {
                 this.Adapter.UpdateCommand.Parameters[26].Value = ((object)(1));

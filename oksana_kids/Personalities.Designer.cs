@@ -372,7 +372,7 @@
             // T01addButton
             // 
             this.T01addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T01addButton.Location = new System.Drawing.Point(263, 310);
+            this.T01addButton.Location = new System.Drawing.Point(263, 393);
             this.T01addButton.Name = "T01addButton";
             this.T01addButton.Size = new System.Drawing.Size(123, 47);
             this.T01addButton.TabIndex = 4;
@@ -383,7 +383,7 @@
             // T01changeButton
             // 
             this.T01changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T01changeButton.Location = new System.Drawing.Point(263, 363);
+            this.T01changeButton.Location = new System.Drawing.Point(263, 446);
             this.T01changeButton.Name = "T01changeButton";
             this.T01changeButton.Size = new System.Drawing.Size(123, 47);
             this.T01changeButton.TabIndex = 5;
@@ -393,7 +393,7 @@
             // T01deleteButton
             // 
             this.T01deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T01deleteButton.Location = new System.Drawing.Point(263, 416);
+            this.T01deleteButton.Location = new System.Drawing.Point(263, 499);
             this.T01deleteButton.Name = "T01deleteButton";
             this.T01deleteButton.Size = new System.Drawing.Size(123, 47);
             this.T01deleteButton.TabIndex = 6;
@@ -735,6 +735,7 @@
             this.Controls.Add(this.T01deleteButton);
             this.Controls.Add(this.gridViewOthers);
             this.Controls.Add(this.gridViewPupils);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Personalities";
             this.Text = "Физические лица";
             this.Load += new System.EventHandler(this.Personalities_Load);

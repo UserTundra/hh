@@ -25,8 +25,8 @@ namespace oksana_kids
         public long id_task { get; set; }
         public string name_task { get; set; }
         public Nullable<long> id_author { get; set; }
-        public Nullable<System.DateTime> date_create { get; set; }
-        public Nullable<System.DateTime> date_correct { get; set; }
+        public string date_create { get; set; }
+        public string date_correct { get; set; }
         public Nullable<long> code_type { get; set; }
         public string file_location { get; set; }
         public string note { get; set; }

@@ -15,7 +15,7 @@ namespace oksana_kids
 {
     public partial class PupilSelectionWindow : Form
     {
-        bd_kidsEntitiesConn bd = new bd_kidsEntitiesConn();
+        bd_kidsEntities1 bd = new bd_kidsEntities1();
         public string currentTest;
         
 

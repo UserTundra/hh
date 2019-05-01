@@ -124,6 +124,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_kidsDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +164,21 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSetFOR_TESTING_TASKS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSetFOR_TESTING_TASKS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSetFOR_TESTS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSetFOR_TESTS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_kidsDataSetGender.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -174,6 +194,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSetPupils.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet_TESTING_TASKS.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet_TESTING_TASKS.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FileParser.cs" />
     <Compile Include="AuthorisationForm.cs">
       <SubType>Form</SubType>
@@ -181,19 +206,12 @@
     <Compile Include="AuthorisationForm.Designer.cs">
       <DependentUpon>AuthorisationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="PupilSelectionWindow.cs">
+    <Compile Include="MethodicalMaterials.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PupilSelectionWindow.Designer.cs">
-      <DependentUpon>PupilSelectionWindow.cs</DependentUpon>
+    <Compile Include="MethodicalMaterials.Designer.cs">
+      <DependentUpon>MethodicalMaterials.cs</DependentUpon>
     </Compile>
-    <Compile Include="TeacherSelectionWindow.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TeacherSelectionWindow.Designer.cs">
-      <DependentUpon>TeacherSelectionWindow.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LinqWork.cs" />
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -209,20 +227,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Personalities.cs">
+    <Compile Include="PupilSelectionWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Personalities.Designer.cs">
-      <DependentUpon>Personalities.cs</DependentUpon>
+    <Compile Include="PupilSelectionWindow.Designer.cs">
+      <DependentUpon>PupilSelectionWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pictures.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pictures.Designer.cs">
-      <DependentUpon>Pictures.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="R00_decode.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -271,12 +281,6 @@
     <Compile Include="R15_task_key_words.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="References.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="References.Designer.cs">
-      <DependentUpon>References.cs</DependentUpon>
-    </Compile>
     <Compile Include="T01_1_pupils.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -289,10 +293,16 @@
     <Compile Include="T02_tests.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="T02_view_tests.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="T03_testing_task_modules.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="T04_testing_tasks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T04_view_testing_tasks.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="T05_test_passing_results.cs">
@@ -315,6 +325,33 @@
     </Compile>
     <Compile Include="T11_task_answers.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherSelectionWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeacherSelectionWindow.Designer.cs">
+      <DependentUpon>TeacherSelectionWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LinqWork.cs" />
+    <Compile Include="Personalities.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Personalities.Designer.cs">
+      <DependentUpon>Personalities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pictures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pictures.Designer.cs">
+      <DependentUpon>Pictures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="References.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="References.Designer.cs">
+      <DependentUpon>References.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests.cs">
       <SubType>Form</SubType>
@@ -375,6 +412,9 @@
     <EmbeddedResource Include="AuthorisationForm.resx">
       <DependentUpon>AuthorisationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MethodicalMaterials.resx">
+      <DependentUpon>MethodicalMaterials.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PupilSelectionWindow.resx">
       <DependentUpon>PupilSelectionWindow.cs</DependentUpon>
     </EmbeddedResource>
@@ -421,13 +461,7 @@
     <EmbeddedResource Include="Zoom.resx">
       <DependentUpon>Zoom.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="bd_kids.db">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <EntityDeploy Include="Model1.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
+    <None Include="bd_kids.db" />
     <None Include="bd_kidsDataOthers.xsc">
       <DependentUpon>bd_kidsDataOthers.xsd</DependentUpon>
     </None>
@@ -471,6 +505,17 @@
     </None>
     <None Include="bd_kidsDataSet1.xss">
       <DependentUpon>bd_kidsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet10.xsc">
+      <DependentUpon>bd_kidsDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet10.xss">
+      <DependentUpon>bd_kidsDataSet10.xsd</DependentUpon>
     </None>
     <None Include="bd_kidsDataSet2.xsc">
       <DependentUpon>bd_kidsDataSet2.xsd</DependentUpon>
@@ -549,6 +594,39 @@
     <None Include="bd_kidsDataSet8.xss">
       <DependentUpon>bd_kidsDataSet8.xsd</DependentUpon>
     </None>
+    <None Include="bd_kidsDataSet9.xsc">
+      <DependentUpon>bd_kidsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet9.xss">
+      <DependentUpon>bd_kidsDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetFOR_TESTING_TASKS.xsc">
+      <DependentUpon>bd_kidsDataSetFOR_TESTING_TASKS.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetFOR_TESTING_TASKS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSetFOR_TESTING_TASKS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSetFOR_TESTING_TASKS.xss">
+      <DependentUpon>bd_kidsDataSetFOR_TESTING_TASKS.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetFOR_TESTS.xsc">
+      <DependentUpon>bd_kidsDataSetFOR_TESTS.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSetFOR_TESTS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSetFOR_TESTS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSetFOR_TESTS.xss">
+      <DependentUpon>bd_kidsDataSetFOR_TESTS.xsd</DependentUpon>
+    </None>
     <None Include="bd_kidsDataSetGender.xsc">
       <DependentUpon>bd_kidsDataSetGender.xsd</DependentUpon>
     </None>
@@ -582,9 +660,23 @@
     <None Include="bd_kidsDataSetPupils.xss">
       <DependentUpon>bd_kidsDataSetPupils.xsd</DependentUpon>
     </None>
+    <None Include="bd_kidsDataSet_TESTING_TASKS.xsc">
+      <DependentUpon>bd_kidsDataSet_TESTING_TASKS.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet_TESTING_TASKS.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet_TESTING_TASKS.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet_TESTING_TASKS.xss">
+      <DependentUpon>bd_kidsDataSet_TESTING_TASKS.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
     <None Include="Model1.edmx.diagram">
       <DependentUpon>Model1.edmx</DependentUpon>
-      <SubType>Designer</SubType>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

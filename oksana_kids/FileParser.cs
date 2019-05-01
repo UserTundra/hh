@@ -11,7 +11,7 @@ namespace oksana_kids
     class FileParser
     {
 
-        bd_kidsEntitiesConn bd = new bd_kidsEntitiesConn();
+        bd_kidsEntities1 bd = new bd_kidsEntities1();
         List<string> picsAnswer = new List<string>();
         List<string> picsQuestion = new List<string>();
         string add = @"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\";

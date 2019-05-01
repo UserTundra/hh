@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище bd_kidsModelContainer" CdmEntityContainer="bd_kidsEntitiesConn">
+  <EntityContainerMapping StorageEntityContainer="Хранилище bd_kidsModelContainer" CdmEntityContainer="bd_kidsEntities1">
     <EntitySetMapping Name="B01_testing_aims_to_tests">
       <EntityTypeMapping TypeName="bd_kidsModel.B01_testing_aims_to_tests">
         <MappingFragment StoreEntitySet="B01_testing_aims_to_tests">
@@ -52,6 +52,15 @@
           <ScalarProperty Name="id_module" ColumnName="id_module" />
           <ScalarProperty Name="serial_number_module" ColumnName="serial_number_module" />
           <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="R00_decode">
+      <EntityTypeMapping TypeName="bd_kidsModel.R00_decode">
+        <MappingFragment StoreEntitySet="R00_decode">
+          <ScalarProperty Name="code_decode" ColumnName="code_decode" />
+          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+          <ScalarProperty Name="full_name_decode" ColumnName="full_name_decode" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -196,11 +205,11 @@
     <EntitySetMapping Name="T01_personalities">
       <EntityTypeMapping TypeName="bd_kidsModel.T01_personalities">
         <MappingFragment StoreEntitySet="T01_personalities">
-          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
           <ScalarProperty Name="id_person" ColumnName="id_person" />
           <ScalarProperty Name="surname" ColumnName="surname" />
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="patronymic" ColumnName="patronymic" />
+          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
           <ScalarProperty Name="gender" ColumnName="gender" />
           <ScalarProperty Name="code_category" ColumnName="code_category" />
           <ScalarProperty Name="id_org" ColumnName="id_org" />
@@ -354,49 +363,58 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="R00_decode">
-      <EntityTypeMapping TypeName="bd_kidsModel.R00_decode">
-        <MappingFragment StoreEntitySet="R00_decode">
-          <ScalarProperty Name="full_name_decode" ColumnName="full_name_decode" />
-          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
-          <ScalarProperty Name="code_decode" ColumnName="code_decode" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="T01_1_pupils">
       <EntityTypeMapping TypeName="bd_kidsModel.T01_1_pupils">
         <MappingFragment StoreEntitySet="T01_1_pupils">
-          <ScalarProperty Name="note" ColumnName="note" />
-          <ScalarProperty Name="date_updating" ColumnName="date_updating" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="login" ColumnName="login" />
-          <ScalarProperty Name="short_name" ColumnName="short_name" />
-          <ScalarProperty Name="name_class" ColumnName="name_class" />
-          <ScalarProperty Name="name_category" ColumnName="name_category" />
-          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
-          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
-          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="surname" ColumnName="surname" />
           <ScalarProperty Name="id_person" ColumnName="id_person" />
+          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+          <ScalarProperty Name="name_category" ColumnName="name_category" />
+          <ScalarProperty Name="name_class" ColumnName="name_class" />
+          <ScalarProperty Name="short_name" ColumnName="short_name" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+          <ScalarProperty Name="note" ColumnName="note" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="T01_2_others">
       <EntityTypeMapping TypeName="bd_kidsModel.T01_2_others">
         <MappingFragment StoreEntitySet="T01_2_others">
-          <ScalarProperty Name="note" ColumnName="note" />
-          <ScalarProperty Name="date_updating" ColumnName="date_updating" />
-          <ScalarProperty Name="password" ColumnName="password" />
-          <ScalarProperty Name="login" ColumnName="login" />
-          <ScalarProperty Name="short_name" ColumnName="short_name" />
-          <ScalarProperty Name="name_category" ColumnName="name_category" />
-          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
-          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
-          <ScalarProperty Name="patronymic" ColumnName="patronymic" />
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="surname" ColumnName="surname" />
           <ScalarProperty Name="id_person" ColumnName="id_person" />
+          <ScalarProperty Name="date_birth" ColumnName="date_birth" />
+          <ScalarProperty Name="name_decode" ColumnName="name_decode" />
+          <ScalarProperty Name="name_category" ColumnName="name_category" />
+          <ScalarProperty Name="short_name" ColumnName="short_name" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="date_updating" ColumnName="date_updating" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T02_view_tests">
+      <EntityTypeMapping TypeName="bd_kidsModel.T02_view_tests">
+        <MappingFragment StoreEntitySet="T02_view_tests">
+          <ScalarProperty Name="id_test" ColumnName="id_test" />
+          <ScalarProperty Name="name_test" ColumnName="name_test" />
+          <ScalarProperty Name="date_create" ColumnName="date_create" />
+          <ScalarProperty Name="date_correct" ColumnName="date_correct" />
+          <ScalarProperty Name="max_passing_duration_sec" ColumnName="max_passing_duration_sec" />
+          <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T04_view_testing_tasks">
+      <EntityTypeMapping TypeName="bd_kidsModel.T04_view_testing_tasks">
+        <MappingFragment StoreEntitySet="T04_view_testing_tasks">
+          <ScalarProperty Name="id_task" ColumnName="id_task" />
+          <ScalarProperty Name="name_task" ColumnName="name_task" />
+          <ScalarProperty Name="date_create" ColumnName="date_create" />
+          <ScalarProperty Name="date_correct" ColumnName="date_correct" />
+          <ScalarProperty Name="name_type" ColumnName="name_type" />
+          <ScalarProperty Name="note" ColumnName="note" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

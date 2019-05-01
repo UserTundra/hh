@@ -26,8 +26,8 @@ namespace oksana_kids
         public string name_test { get; set; }
         public Nullable<long> id_method_material { get; set; }
         public Nullable<long> id_author { get; set; }
-        public Nullable<System.DateTime> date_create { get; set; }
-        public Nullable<System.DateTime> date_correct { get; set; }
+        public string date_create { get; set; }
+        public string date_correct { get; set; }
         public Nullable<long> max_passing_duration_sec { get; set; }
         public string note { get; set; }
         public Nullable<long> id_teach_material { get; set; }

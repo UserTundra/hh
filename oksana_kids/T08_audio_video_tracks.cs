@@ -28,7 +28,7 @@ namespace oksana_kids
         public string source { get; set; }
         public string image_size_pix { get; set; }
         public string filesize { get; set; }
-        public Nullable<System.DateTime> date_create { get; set; }
+        public Nullable<long> date_create { get; set; }
         public string note { get; set; }
     
         public virtual R14_track_types R14_track_types { get; set; }

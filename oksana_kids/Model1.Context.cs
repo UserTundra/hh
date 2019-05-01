@@ -13,10 +13,10 @@ namespace oksana_kids
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class bd_kidsEntitiesConn : DbContext
+    public partial class bd_kidsEntities1 : DbContext
     {
-        public bd_kidsEntitiesConn()
-            : base("name=bd_kidsEntitiesConn")
+        public bd_kidsEntities1()
+            : base("name=bd_kidsEntities1")
         {
         }
     
@@ -30,6 +30,7 @@ namespace oksana_kids
         public virtual DbSet<B03_study_subjects_to_courses> B03_study_subjects_to_courses { get; set; }
         public virtual DbSet<B04_test_tasks_to_study_subjects> B04_test_tasks_to_study_subjects { get; set; }
         public virtual DbSet<B05_testing_task_modules_to_tests> B05_testing_task_modules_to_tests { get; set; }
+        public virtual DbSet<R00_decode> R00_decode { get; set; }
         public virtual DbSet<R01_people_category> R01_people_category { get; set; }
         public virtual DbSet<R02_pupils_classes> R02_pupils_classes { get; set; }
         public virtual DbSet<R03_testing_types> R03_testing_types { get; set; }
@@ -56,8 +57,9 @@ namespace oksana_kids
         public virtual DbSet<T09_comment_variants_on_passing_tasks> T09_comment_variants_on_passing_tasks { get; set; }
         public virtual DbSet<T10_organizations> T10_organizations { get; set; }
         public virtual DbSet<T11_task_answers> T11_task_answers { get; set; }
-        public virtual DbSet<R00_decode> R00_decode { get; set; }
         public virtual DbSet<T01_1_pupils> T01_1_pupils { get; set; }
         public virtual DbSet<T01_2_others> T01_2_others { get; set; }
+        public virtual DbSet<T02_view_tests> T02_view_tests { get; set; }
+        public virtual DbSet<T04_view_testing_tasks> T04_view_testing_tasks { get; set; }
     }
 }

@@ -15,7 +15,7 @@ namespace oksana_kids
     {
         public int tabIndex;
 
-        bd_kidsEntitiesConn bd = new bd_kidsEntitiesConn();
+        bd_kidsEntities1 bd = new bd_kidsEntities1();
 
         public References(int index)
         {

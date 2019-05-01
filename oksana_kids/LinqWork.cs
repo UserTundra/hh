@@ -9,7 +9,7 @@ namespace oksana_kids
 {
     class LinqWork
     {
-        bd_kidsEntitiesConn bd = new bd_kidsEntitiesConn();
+        bd_kidsEntities1 bd = new bd_kidsEntities1();
 
         Dictionary<int, int> codes = new Dictionary<int, int>();
 

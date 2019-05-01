@@ -15,9 +15,6 @@ namespace oksana_kids
     public partial class T01_2_others
     {
         public long id_person { get; set; }
-        public string surname { get; set; }
-        public string name { get; set; }
-        public string patronymic { get; set; }
         public string date_birth { get; set; }
         public string name_decode { get; set; }
         public string name_category { get; set; }

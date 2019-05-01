@@ -17,7 +17,7 @@ namespace oksana_kids
             InitializeComponent();
         }
 
-        bd_kidsEntitiesConn bd = new bd_kidsEntitiesConn();
+        bd_kidsEntities1 bd = new bd_kidsEntities1();
 
         private void Personalities_Load(object sender, EventArgs e)
         {
@@ -119,7 +119,7 @@ namespace oksana_kids
                 //birth_date.CustomFormat = "dd.mm.yyyy";
 
                 //row.date_birth = birth_date.Value; 
-                    row.date_birth = birth_date.Value.ToShortDateString();
+                    row.date_birth = birth_date.Value.ToString("dd.MM.yyyy");
 
                     row.gender = (long)gender.SelectedValue;
                     row.code_category = (long)human_category.SelectedValue;
@@ -135,7 +135,7 @@ namespace oksana_kids
                     }
                     row.login = login.Text;
                     row.password = password.Text;
-                    row.date_updating = null;
+                    row.date_updating = "null";
 
                 
                     row.note = note.Text == " " ? " " : note.Text;
