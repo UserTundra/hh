@@ -336,6 +336,7 @@
             this.name_test.Name = "name_test";
             this.name_test.Size = new System.Drawing.Size(199, 20);
             this.name_test.TabIndex = 4;
+            this.name_test.TextChanged += new System.EventHandler(this.name_test_TextChanged);
             // 
             // label2
             // 

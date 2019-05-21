@@ -45,7 +45,7 @@ namespace oksana_kids
             //string login = tlogin.Text;
             //string password = tpassword.Text;
 
-            //string login = "anpilova.k";
+            //string login = "anpilova.k"; // VOT EOT DLYATESTOV!1111
             //string password = "anpilova.k";
 
             string login = "admin";

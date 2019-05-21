@@ -29,7 +29,8 @@ namespace oksana_kids
 
         }
 
-        public Tests() {
+        public Tests()
+        {
 
         }
 
@@ -72,10 +73,10 @@ namespace oksana_kids
             AdaptiveTestConstructor a = new AdaptiveTestConstructor(testName);
             a.Show();
         }
-        
+
         private void dataGridView1_Enter(object sender, EventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
@@ -138,42 +139,47 @@ namespace oksana_kids
             else
             {
                 //try
+                ////{
+                //bd_kidsDataSet.T02_testsRow row;
+                //row = (new bd_kidsDataSet()).T02_tests.NewT02_testsRow();
+
+                //row.name_test = name_test.Text;
+
+                ////birth_date.Format = DateTimePickerFormat.Custom;
+                ////birth_date.CustomFormat = "dd.mm.yyyy";
+
+                ////row.date_birth = birth_date.Value; 
+                //row.date_birth = birth_date.Value.ToString("dd.MM.yyyy");
+
+                //row.gender = (long)gender.SelectedValue;
+                //row.code_category = (long)human_category.SelectedValue;
+                //row.id_org = (long)place_work_study.SelectedValue;
+                //if (human_category.SelectedValue.ToString() == "2")
                 //{
-                bd_kidsDataSet.T02_testsRow row;
-                row = bd_kidsDataSet.T02_tests.NewT02_testsRow();
-                row.name_test = name_test.Text;
-                row.name = name.Text;
-                row.patronymic = patronymic.Text;
-
-                //birth_date.Format = DateTimePickerFormat.Custom;
-                //birth_date.CustomFormat = "dd.mm.yyyy";
-
-                //row.date_birth = birth_date.Value; 
-                row.date_birth = birth_date.Value.ToString("dd.MM.yyyy");
-
-                row.gender = (long)gender.SelectedValue;
-                row.code_category = (long)human_category.SelectedValue;
-                row.id_org = (long)place_work_study.SelectedValue;
-                if (human_category.SelectedValue.ToString() == "2")
-                {
-                    row.code_class = int.Parse(study_class.SelectedValue.ToString());
-                }
-                else
-                {
+                //    row.code_class = int.Parse(study_class.SelectedValue.ToString());
+                //}
+                //else
+                //{
 
 
-                }
-                row.login = login.Text;
-                row.password = password.Text;
-                row.date_updating = "null";
+                //}
+                //row.login = login.Text;
+                //row.password = password.Text;
+                //row.date_updating = "null";
 
 
-                row.note = note.Text == " " ? " " : note.Text;
+                //row.note = note.Text == " " ? " " : note.Text;
 
-                this.bd_kidsDataSet.T01_personalities.Rows.Add(row);
-                this.t01_personalitiesTableAdapter.Update(this.bd_kidsDataSet.T01_personalities);
+                //this.bd_kidsDataSet.T01_personalities.Rows.Add(row);
+                //this.t01_personalitiesTableAdapter.Update(this.bd_kidsDataSet.T01_personalities);
 
-                gridViewPupils.DataSource = t011pupilsBindingSource1;
+                //gridViewPupils.DataSource = t011pupilsBindingSource1;
             }
+        }
+
+        private void name_test_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -240,3 +240,44 @@ C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master �
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master — копия\oksana_kids\bin\Debug\System.Data.SQLite.xml
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master — копия\oksana_kids\bin\Debug\Interop.WMPLib.dll
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master — копия\oksana_kids\bin\Debug\AxInterop.WMPLib.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csprojAssemblyReference.cache
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\Interop.WMPLib.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\AxInterop.WMPLib.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.ResolveComReference.cache
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AdaptiveTestConstructor.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AdaptiveTTConstructor.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AskToLeaveForm.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AuthorisationForm.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.MethodicalMaterials.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.PupilSelectionWindow.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.TeacherSelectionMindow.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Personalities.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Pictures.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Properties.Resources.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.References.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Tests.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Test.TestForm3.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Test.TestForm.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Test.TestForm2.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Test.TestParent.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Videos.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Zoom.resources
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.GenerateResource.cache
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CoreCompileInputs.cache
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.exe
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.pdb
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\oksana_kids.exe.config
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\oksana_kids.exe
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\oksana_kids.pdb
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\EntityFramework.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\EntityFramework.SqlServer.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.EF6.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.Linq.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\EntityFramework.xml
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\EntityFramework.SqlServer.xml
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.xml
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.dll.config
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\Interop.WMPLib.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\AxInterop.WMPLib.dll
+C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CopyComplete
