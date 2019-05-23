@@ -49,7 +49,7 @@ namespace oksana_kids
             //string password = "anpilova.k";
 
             //string login = "admin";
-            //string password = "admin";
+            // password = "admin";
 
             string who = "";
             DateTime localDate = DateTime.Now;

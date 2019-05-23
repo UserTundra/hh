@@ -128,7 +128,6 @@ C:\учеба\oksana\oksanas_kids\oksana_kids\obj\Debug\oksana_kids.csproj.CopyC
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\oksana_kids.exe.config
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.exe
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.pdb
-C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\bd_kids.db
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\oksana_kids.exe
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\oksana_kids.pdb
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\EntityFramework.dll
@@ -281,3 +280,4 @@ C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.dll.con
 C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\Interop.WMPLib.dll
 C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\AxInterop.WMPLib.dll
 C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CopyComplete
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.MethodicalMaterials.resources
