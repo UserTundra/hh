@@ -19,27 +19,12 @@ namespace oksana_kids
 
         bd_kidsEntities1 bd = new bd_kidsEntities1();
 
+
+
         private void Personalities_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSetOthers.T01_2_others". При необходимости она может быть перемещена или удалена.
-            this.t01_2_othersTableAdapter2.Fill(this.bd_kidsDataSetOthers.T01_2_others);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataPupils.T01_1_pupils". При необходимости она может быть перемещена или удалена.
-            this.t01_1_pupilsTableAdapter1.Fill(this.bd_kidsDataPupils.T01_1_pupils);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet6.T01_2_others". При необходимости она может быть перемещена или удалена.
-            this.t01_2_othersTableAdapter1.Fill(this.bd_kidsDataSet6.T01_2_others);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet.T01_personalities". При необходимости она может быть перемещена или удалена.
-            this.t01_personalitiesTableAdapter.Fill(this.bd_kidsDataSet.T01_personalities);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet.T10_organizations". При необходимости она может быть перемещена или удалена.
-            this.t10_organizationsTableAdapter.Fill(this.bd_kidsDataSet.T10_organizations);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet.R02_pupils_classes". При необходимости она может быть перемещена или удалена.
-            this.r02_pupils_classesTableAdapter.Fill(this.bd_kidsDataSet.R02_pupils_classes);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet.R01_people_category". При необходимости она может быть перемещена или удалена.
-            this.r01_people_categoryTableAdapter.Fill(this.bd_kidsDataSet.R01_people_category);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSetGender.R00_decode". При необходимости она может быть перемещена или удалена.
-            this.r00_decodeTableAdapter.Fill(this.bd_kidsDataSetGender.R00_decode);
-            
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSetPupils.T01_1_pupils". При необходимости она может быть перемещена или удалена.
-            this.t01_1_pupilsTableAdapter.Fill(this.bd_kidsDataSetPupils.T01_1_pupils);
+            UpdateDataGrids();
+            UpdateComboboxes();
 
             study_class.Enabled = false;
             study_years.Enabled = false;
@@ -53,6 +38,40 @@ namespace oksana_kids
             place_work_study.DropDownStyle = ComboBoxStyle.DropDownList;
 
 
+        }
+
+        private void UpdateDataGrids()
+        {
+            var pupilsData = bd.T01_1_pupils;
+            gridViewPupils.DataSource = pupilsData.ToList();
+
+            var otherData = bd.T01_2_others;
+            gridViewOthers.DataSource = otherData.ToList();
+        }
+
+        private void UpdateComboboxes()
+        {
+            var genderList = bd.R00_decode.Select(x => new { Key =x.name_decode, Value = x.code_decode }).ToList();
+            gender.DataSource = genderList;
+            gender.DisplayMember = "Key";
+            gender.ValueMember = "Value";
+
+            var categoryList = bd.R01_people_category.Select(x => new { Key = x.name_category, Value = x.code_category }).ToList();
+            human_category.DataSource = categoryList;
+            human_category.DisplayMember = "Key";
+            human_category.ValueMember = "Value";
+
+            var peopleClassList = bd.R02_pupils_classes.Select(x => new { Key = x.name_class, Value = x.code_class }).ToList();
+            study_class.DataSource = peopleClassList;
+            study_class.DisplayMember = "Key";
+            study_class.ValueMember = "Value";
+
+            var placeWorkStudy = bd.T10_organizations.Select(x => new { Key = x.short_name, Value = x.id_org }).ToList();
+            place_work_study.DataSource = placeWorkStudy;
+            place_work_study.DisplayMember = "Key";
+            place_work_study.ValueMember = "Value";
+            
+            //human_kategory
         }
 
         private void loadStudyYears()
@@ -101,57 +120,27 @@ namespace oksana_kids
 
         private void T01addButton_Click(object sender, EventArgs e)
         {
-            if (surname.Text == "" || name.Text == "" || patronymic.Text == "" || login.Text == "" || password.Text == "")
+            int codeClass = 0;
+            if (human_category.SelectedValue.ToString() == "2")
+                codeClass = int.Parse(study_class.SelectedValue.ToString());
+            var person = new T01_personalities()
             {
-                MessageBox.Show("Заполните поля!");
-            }
-            else
-            {
-                //try
-                //{
-                    bd_kidsDataSet.T01_personalitiesRow row;
-                    row = bd_kidsDataSet.T01_personalities.NewT01_personalitiesRow();
-                    row.surname = surname.Text;
-                    row.name = name.Text;
-                    row.patronymic = patronymic.Text;
-
-                //birth_date.Format = DateTimePickerFormat.Custom;
-                //birth_date.CustomFormat = "dd.mm.yyyy";
-
-                //row.date_birth = birth_date.Value; 
-                    row.date_birth = birth_date.Value.ToString("dd.MM.yyyy");
-
-                    row.gender = (long)gender.SelectedValue;
-                    row.code_category = (long)human_category.SelectedValue;
-                    row.id_org = (long)place_work_study.SelectedValue;
-                    if (human_category.SelectedValue.ToString() == "2")
-                    {
-                        row.code_class = int.Parse(study_class.SelectedValue.ToString());
-                    }
-                    else
-                    {
-                        
-
-                    }
-                    row.login = login.Text;
-                    row.password = password.Text;
-                    row.date_updating = "null";
-
-                
-                    row.note = note.Text == " " ? " " : note.Text;
-
-                    this.bd_kidsDataSet.T01_personalities.Rows.Add(row);
-                    this.t01_personalitiesTableAdapter.Update(this.bd_kidsDataSet.T01_personalities);
-
-                    gridViewPupils.DataSource = t011pupilsBindingSource1;
-                //}
-                //catch (Exception ee)
-                //{
-                //    MessageBox.Show(ee.Message);
-                //}
-
-
-            }
+                surname = surname.Text,
+                name = name.Text,
+                patronymic = patronymic.Text,
+                date_birth = birth_date.Value.ToString("dd.MM.YYYY"),
+                gender = (long)gender.SelectedValue,
+                code_category = (long)human_category.SelectedValue,
+                id_org = (long)place_work_study.SelectedValue,
+                code_class = codeClass,
+                login = login.Text,
+                password = password.Text,
+                date_updating = "null",
+                note = note.Text == "" ? " " : note.Text
+            };
+            bd.T01_personalities.Add(person);
+            bd.SaveChanges();
+            UpdateDataGrids();
         }
 
         private void study_class_SelectedIndexChanged(object sender, EventArgs e)
