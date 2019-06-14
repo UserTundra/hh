@@ -19,7 +19,7 @@ namespace oksana_kids
         {
             this.B04_test_tasks_to_study_subjects = new HashSet<B04_test_tasks_to_study_subjects>();
             this.T03_testing_task_modules = new HashSet<T03_testing_task_modules>();
-            this.T11_task_answers = new HashSet<T11_task_answers>();
+            this.T11_test_answers = new HashSet<T11_test_answers>();
         }
     
         public long id_task { get; set; }
@@ -38,6 +38,6 @@ namespace oksana_kids
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T03_testing_task_modules> T03_testing_task_modules { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<T11_task_answers> T11_task_answers { get; set; }
+        public virtual ICollection<T11_test_answers> T11_test_answers { get; set; }
     }
 }

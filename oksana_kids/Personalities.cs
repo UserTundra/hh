@@ -18,12 +18,18 @@ namespace oksana_kids
         }
 
         bd_kidsEntities1 bd = new bd_kidsEntities1();
+        int peopleId;
 
 
 
         private void Personalities_Load(object sender, EventArgs e)
         {
-            UpdateDataGrids();
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet14.T01_2_others". При необходимости она может быть перемещена или удалена.
+            this.t01_2_othersTableAdapter.Fill(this.bd_kidsDataSet14.T01_2_others);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet13.T01_1_pupils". При необходимости она может быть перемещена или удалена.
+            this.t01_1_pupilsTableAdapter.Fill(this.bd_kidsDataSet13.T01_1_pupils);
+
+            //UpdateDataGrids();
             UpdateComboboxes();
 
             study_class.Enabled = false;
@@ -42,10 +48,41 @@ namespace oksana_kids
 
         private void UpdateDataGrids()
         {
-            var pupilsData = bd.T01_1_pupils;
+            var pupilsData = bd.T01_1_pupils.Join(
+            bd.T01_personalities,
+            x => x.id_person,
+            y => y.id_person,
+            (p, w) => new {
+                fio = w.surname + " " + w.name + " " + w.patronymic,
+                w.date_birth,
+                p.name_decode,
+                p.name_category,
+                p.name_class,
+                p.short_name,
+                p.login,
+                p.password,
+                p.date_updating,
+                p.note
+            });
+
             gridViewPupils.DataSource = pupilsData.ToList();
 
-            var otherData = bd.T01_2_others;
+            var otherData = bd.T01_2_others.Join(
+            bd.T01_personalities,
+            x => x.id_person,
+            y => y.id_person,
+            (p, w) => new {
+                fio = w.surname + " " + w.name + " " + w.patronymic,
+                w.date_birth,
+                p.name_decode,
+                p.name_category,
+                p.short_name,
+                p.login,
+                p.password,
+                p.date_updating,
+                p.note
+            });
+
             gridViewOthers.DataSource = otherData.ToList();
         }
 
@@ -71,7 +108,7 @@ namespace oksana_kids
             place_work_study.DisplayMember = "Key";
             place_work_study.ValueMember = "Value";
             
-            //human_kategory
+            
         }
 
         private void loadStudyYears()
@@ -95,7 +132,7 @@ namespace oksana_kids
 
         private void study_class_TextChanged(object sender, EventArgs e)
         {
-            loadStudyYears();
+            
         }
 
         private void human_category_TextChanged(object sender, EventArgs e)
@@ -128,26 +165,56 @@ namespace oksana_kids
                 surname = surname.Text,
                 name = name.Text,
                 patronymic = patronymic.Text,
-                date_birth = birth_date.Value.ToString("dd.MM.YYYY"),
+                date_birth = birth_date.Value.ToString("dd.MM.yyyy"),
                 gender = (long)gender.SelectedValue,
                 code_category = (long)human_category.SelectedValue,
                 id_org = (long)place_work_study.SelectedValue,
                 code_class = codeClass,
                 login = login.Text,
                 password = password.Text,
-                date_updating = "null",
+                date_updating = " ",
                 note = note.Text == "" ? " " : note.Text
             };
             bd.T01_personalities.Add(person);
             bd.SaveChanges();
+            
             UpdateDataGrids();
         }
 
         private void study_class_SelectedIndexChanged(object sender, EventArgs e)
         {
+            loadStudyYears();
+        }
+
+        private void gridViewPupils_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            peopleId = (int)gridViewPupils.CurrentRow.Cells["id_person"].Value;
+        }
+
+        private void gridViewOthers_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            peopleId = (int)gridViewOthers.CurrentRow.Cells["id_person"].Value;
+        }
+
+        private void T01changeButtonPupil_Click(object sender, EventArgs e)
+        {
+            var row = bd.T01_personalities.Where(x => x.id_person == peopleId).FirstOrDefault();
+            if (row == null) return;
+            
+            row.date_birth = (string)gridViewPupils.CurrentRow.Cells["date_birth"].Value;
+            row.date_updating = DateTime.Now.ToString();
+            row.login = (string)gridViewPupils.CurrentRow.Cells["login"].Value;
+            row.password = (string)gridViewPupils.CurrentRow.Cells["password"].Value;
+            row.note = (string)gridViewPupils.CurrentRow.Cells["note"].Value;
+
+            bd.SaveChanges();
+            
 
         }
 
-        
+        private void T01changeButtonOthers_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -140,7 +140,6 @@ C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\ok
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\System.Data.SQLite.xml
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\Interop.WMPLib.dll
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\bin\Debug\AxInterop.WMPLib.dll
-C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\Interop.WMPLib.dll
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.csproj.ResolveComReference.cache
@@ -280,4 +279,5 @@ C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\System.Data.SQLite.dll.con
 C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\Interop.WMPLib.dll
 C:\учеба\new_new_oksana\hh\oksana_kids\bin\Debug\AxInterop.WMPLib.dll
 C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CopyComplete
-C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.MethodicalMaterials.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.MethodicalMaterialBind.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache

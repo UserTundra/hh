@@ -55,7 +55,7 @@ namespace oksana_kids
 
                 foreach (var it in item.Key)
                 {
-                    var linq = bd.T11_task_answers
+                    var linq = bd.T11_test_answers
                                     .Where(x => x.id_task == it.Key)
                                     .Select(x => new
                                     {

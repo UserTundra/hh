@@ -349,20 +349,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="T11_task_answers">
-      <EntityTypeMapping TypeName="bd_kidsModel.T11_task_answers">
-        <MappingFragment StoreEntitySet="T11_task_answers">
-          <ScalarProperty Name="id" ColumnName="id" />
-          <ScalarProperty Name="id_task" ColumnName="id_task" />
-          <ScalarProperty Name="code_key_word" ColumnName="code_key_word" />
-          <ScalarProperty Name="string_value" ColumnName="string_value" />
-          <ScalarProperty Name="image_value" ColumnName="image_value" />
-          <ScalarProperty Name="sound_value" ColumnName="sound_value" />
-          <ScalarProperty Name="is_correct" ColumnName="is_correct" />
-          <ScalarProperty Name="group_no" ColumnName="group_no" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="T01_1_pupils">
       <EntityTypeMapping TypeName="bd_kidsModel.T01_1_pupils">
         <MappingFragment StoreEntitySet="T01_1_pupils">
@@ -415,6 +401,20 @@
           <ScalarProperty Name="date_correct" ColumnName="date_correct" />
           <ScalarProperty Name="name_type" ColumnName="name_type" />
           <ScalarProperty Name="note" ColumnName="note" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T11_test_answersSet">
+      <EntityTypeMapping TypeName="bd_kidsModel.T11_test_answers">
+        <MappingFragment StoreEntitySet="T11_test_answers">
+          <ScalarProperty Name="group_no" ColumnName="group_no" />
+          <ScalarProperty Name="is_correct" ColumnName="is_correct" />
+          <ScalarProperty Name="sound_value" ColumnName="sound_value" />
+          <ScalarProperty Name="image_value" ColumnName="image_value" />
+          <ScalarProperty Name="string_value" ColumnName="string_value" />
+          <ScalarProperty Name="code_key_word" ColumnName="code_key_word" />
+          <ScalarProperty Name="id_task" ColumnName="id_task" />
+          <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

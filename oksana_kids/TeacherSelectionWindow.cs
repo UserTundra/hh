@@ -62,6 +62,7 @@ namespace oksana_kids
             names.Add("T08_audio_video_tracks", "Аудио/видео ролики");
             names.Add("T09_comment_variants_on_passing_tasks", "Варианты комментария по результатам выполнения тестового задания");
             names.Add("T10_organizations", "Организации");
+            names.Add("T11_test_answers", "Варианты отвеов для тестовых заданий");
         }
 
         private void getListToFill(string symbolType)

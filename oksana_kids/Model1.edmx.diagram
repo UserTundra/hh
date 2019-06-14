@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dacf1ec96faf4d6a8d553c57a0f19cef" Name="Diagram1" ZoomLevel="17">
+      <Diagram DiagramId="dacf1ec96faf4d6a8d553c57a0f19cef" Name="Diagram1" ZoomLevel="86">
         <EntityTypeShape EntityType="bd_kidsModel.B01_testing_aims_to_tests" Width="1.5" PointX="13.5" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.B02_study_courses_to_pupils_classes" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.B03_study_subjects_to_courses" Width="1.5" PointX="16.5" PointY="18.75" IsExpanded="true" />
@@ -36,7 +36,6 @@
         <EntityTypeShape EntityType="bd_kidsModel.T08_audio_video_tracks" Width="1.5" PointX="11.25" PointY="28" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.T09_comment_variants_on_passing_tasks" Width="1.5" PointX="11.25" PointY="32" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.T10_organizations" Width="1.5" PointX="3.75" PointY="19.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="bd_kidsModel.T11_task_answers" Width="1.5" PointX="16.5" PointY="11" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.T01_1_pupils" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.T01_2_others" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.T02_view_tests" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
@@ -62,7 +61,6 @@
         <AssociationConnector Association="bd_kidsModel.FK_T03_testing_task_modules_0_0" ManuallyRouted="false" />
         <AssociationConnector Association="bd_kidsModel.FK_T09_comment_variants_on_passing_tasks_0_0" ManuallyRouted="false" />
         <AssociationConnector Association="bd_kidsModel.FK_T08_audio_video_tracks_0_0" ManuallyRouted="false" />
-        <AssociationConnector Association="bd_kidsModel.FK_T11_task_answers_1_0" ManuallyRouted="false" />
         <AssociationConnector Association="bd_kidsModel.FK_T01_personalities_2_0" ManuallyRouted="false" />
         <AssociationConnector Association="bd_kidsModel.FK_T02_tests_0_0" ManuallyRouted="false" />
         <AssociationConnector Association="bd_kidsModel.FK_T04_testing_tasks_0_0" ManuallyRouted="false" />
@@ -74,8 +72,10 @@
         <AssociationConnector Association="bd_kidsModel.FK_T03_testing_task_modules_3_0" ManuallyRouted="false" />
         <AssociationConnector Association="bd_kidsModel.FK_T03_testing_task_modules_4_0" ManuallyRouted="false" />
         <AssociationConnector Association="bd_kidsModel.FK_T03_testing_task_modules_5_0" ManuallyRouted="false" />
-        <AssociationConnector Association="bd_kidsModel.FK_T11_task_answers_0_0" ManuallyRouted="false" />
-      </Diagram>
+        <EntityTypeShape EntityType="bd_kidsModel.T11_test_answers" Width="2.5" PointX="19.5" PointY="11.5" />
+        <AssociationConnector Association="bd_kidsModel.FK_T11_test_answers_1_0" />
+        <AssociationConnector Association="bd_kidsModel.FK_T11_test_answers_0_0" />
+        </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

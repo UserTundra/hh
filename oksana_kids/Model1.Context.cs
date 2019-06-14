@@ -56,10 +56,10 @@ namespace oksana_kids
         public virtual DbSet<T08_audio_video_tracks> T08_audio_video_tracks { get; set; }
         public virtual DbSet<T09_comment_variants_on_passing_tasks> T09_comment_variants_on_passing_tasks { get; set; }
         public virtual DbSet<T10_organizations> T10_organizations { get; set; }
-        public virtual DbSet<T11_task_answers> T11_task_answers { get; set; }
         public virtual DbSet<T01_1_pupils> T01_1_pupils { get; set; }
         public virtual DbSet<T01_2_others> T01_2_others { get; set; }
         public virtual DbSet<T02_view_tests> T02_view_tests { get; set; }
         public virtual DbSet<T04_view_testing_tasks> T04_view_testing_tasks { get; set; }
+        public virtual DbSet<T11_test_answers> T11_test_answers { get; set; }
     }
 }

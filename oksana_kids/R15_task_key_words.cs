@@ -17,7 +17,7 @@ namespace oksana_kids
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public R15_task_key_words()
         {
-            this.T11_task_answers = new HashSet<T11_task_answers>();
+            this.T11_test_answers = new HashSet<T11_test_answers>();
         }
     
         public long code_key_word { get; set; }
@@ -25,6 +25,6 @@ namespace oksana_kids
         public string note { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<T11_task_answers> T11_task_answers { get; set; }
+        public virtual ICollection<T11_test_answers> T11_test_answers { get; set; }
     }
 }

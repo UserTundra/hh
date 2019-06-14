@@ -12,7 +12,7 @@ namespace oksana_kids
     using System;
     using System.Collections.Generic;
     
-    public partial class T11_task_answers
+    public partial class T11_test_answers
     {
         public long id { get; set; }
         public Nullable<long> id_task { get; set; }
