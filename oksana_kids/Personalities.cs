@@ -188,12 +188,12 @@ namespace oksana_kids
 
         private void gridViewPupils_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            peopleId = (int)gridViewPupils.CurrentRow.Cells["id_person"].Value;
+            peopleId = int .Parse(gridViewPupils.CurrentRow.Cells[0].Value.ToString());
         }
 
         private void gridViewOthers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            peopleId = (int)gridViewOthers.CurrentRow.Cells["id_person"].Value;
+            peopleId = int.Parse(gridViewOthers.CurrentRow.Cells[0].Value.ToString());
         }
 
         private void T01changeButtonPupil_Click(object sender, EventArgs e)
@@ -201,11 +201,11 @@ namespace oksana_kids
             var row = bd.T01_personalities.Where(x => x.id_person == peopleId).FirstOrDefault();
             if (row == null) return;
             
-            row.date_birth = (string)gridViewPupils.CurrentRow.Cells["date_birth"].Value;
+            row.date_birth = gridViewPupils.CurrentRow.Cells[2].Value.ToString();
             row.date_updating = DateTime.Now.ToString();
-            row.login = (string)gridViewPupils.CurrentRow.Cells["login"].Value;
-            row.password = (string)gridViewPupils.CurrentRow.Cells["password"].Value;
-            row.note = (string)gridViewPupils.CurrentRow.Cells["note"].Value;
+            row.login = gridViewPupils.CurrentRow.Cells[6].Value.ToString();
+            row.password = (string)gridViewPupils.CurrentRow.Cells[7].Value;
+            row.note = (string)gridViewPupils.CurrentRow.Cells[9].Value;
 
             bd.SaveChanges();
             
@@ -213,6 +213,11 @@ namespace oksana_kids
         }
 
         private void T01changeButtonOthers_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridViewPupils_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
