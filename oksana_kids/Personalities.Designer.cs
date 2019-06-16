@@ -30,30 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.gridViewPupils = new System.Windows.Forms.DataGridView();
-            this.idpersonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datebirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namedecodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namecategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shortnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateupdatingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.t011pupilsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSet13 = new oksana_kids.bd_kidsDataSet13();
             this.gridViewOthers = new System.Windows.Forms.DataGridView();
-            this.idpersonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datebirthDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namedecodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.namecategoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.shortnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.loginDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateupdatingDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.t012othersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSet14 = new oksana_kids.bd_kidsDataSet14();
             this.T01addButton = new System.Windows.Forms.Button();
@@ -91,6 +70,27 @@
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.T01changeButtonOthers = new System.Windows.Forms.Button();
             this.T01deleteButtonOthers = new System.Windows.Forms.Button();
+            this.idpersonDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datebirthDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namedecodeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namecategoryDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shortnameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateupdatingDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idpersonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datebirthDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namedecodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namecategoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.shortnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateupdatingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewPupils)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t011pupilsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet13)).BeginInit();
@@ -124,88 +124,6 @@
             this.gridViewPupils.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewPupils_CellClick);
             this.gridViewPupils.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewPupils_CellContentClick);
             // 
-            // idpersonDataGridViewTextBoxColumn
-            // 
-            this.idpersonDataGridViewTextBoxColumn.DataPropertyName = "id_person";
-            this.idpersonDataGridViewTextBoxColumn.HeaderText = "id_person";
-            this.idpersonDataGridViewTextBoxColumn.Name = "idpersonDataGridViewTextBoxColumn";
-            this.idpersonDataGridViewTextBoxColumn.Visible = false;
-            this.idpersonDataGridViewTextBoxColumn.Width = 78;
-            // 
-            // fioDataGridViewTextBoxColumn
-            // 
-            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn.HeaderText = "Ф.И.О.";
-            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
-            this.fioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fioDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // datebirthDataGridViewTextBoxColumn
-            // 
-            this.datebirthDataGridViewTextBoxColumn.DataPropertyName = "date_birth";
-            this.datebirthDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
-            this.datebirthDataGridViewTextBoxColumn.Name = "datebirthDataGridViewTextBoxColumn";
-            this.datebirthDataGridViewTextBoxColumn.Width = 102;
-            // 
-            // namedecodeDataGridViewTextBoxColumn
-            // 
-            this.namedecodeDataGridViewTextBoxColumn.DataPropertyName = "name_decode";
-            this.namedecodeDataGridViewTextBoxColumn.HeaderText = "Пол";
-            this.namedecodeDataGridViewTextBoxColumn.Name = "namedecodeDataGridViewTextBoxColumn";
-            this.namedecodeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namedecodeDataGridViewTextBoxColumn.Width = 52;
-            // 
-            // namecategoryDataGridViewTextBoxColumn
-            // 
-            this.namecategoryDataGridViewTextBoxColumn.DataPropertyName = "name_category";
-            this.namecategoryDataGridViewTextBoxColumn.HeaderText = "Категория";
-            this.namecategoryDataGridViewTextBoxColumn.Name = "namecategoryDataGridViewTextBoxColumn";
-            this.namecategoryDataGridViewTextBoxColumn.ReadOnly = true;
-            this.namecategoryDataGridViewTextBoxColumn.Width = 85;
-            // 
-            // nameclassDataGridViewTextBoxColumn
-            // 
-            this.nameclassDataGridViewTextBoxColumn.DataPropertyName = "name_class";
-            this.nameclassDataGridViewTextBoxColumn.HeaderText = "Класс";
-            this.nameclassDataGridViewTextBoxColumn.Name = "nameclassDataGridViewTextBoxColumn";
-            this.nameclassDataGridViewTextBoxColumn.Width = 63;
-            // 
-            // shortnameDataGridViewTextBoxColumn
-            // 
-            this.shortnameDataGridViewTextBoxColumn.DataPropertyName = "short_name";
-            this.shortnameDataGridViewTextBoxColumn.HeaderText = "Организация";
-            this.shortnameDataGridViewTextBoxColumn.Name = "shortnameDataGridViewTextBoxColumn";
-            this.shortnameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.shortnameDataGridViewTextBoxColumn.Width = 99;
-            // 
-            // loginDataGridViewTextBoxColumn
-            // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.Width = 63;
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Пароль";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            this.passwordDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // dateupdatingDataGridViewTextBoxColumn
-            // 
-            this.dateupdatingDataGridViewTextBoxColumn.DataPropertyName = "date_updating";
-            this.dateupdatingDataGridViewTextBoxColumn.HeaderText = "Дата обновления";
-            this.dateupdatingDataGridViewTextBoxColumn.Name = "dateupdatingDataGridViewTextBoxColumn";
-            this.dateupdatingDataGridViewTextBoxColumn.Width = 111;
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            this.noteDataGridViewTextBoxColumn.Width = 95;
-            // 
             // t011pupilsBindingSource
             // 
             this.t011pupilsBindingSource.DataMember = "T01_1_pupils";
@@ -238,76 +156,6 @@
             this.gridViewOthers.Size = new System.Drawing.Size(596, 209);
             this.gridViewOthers.TabIndex = 1;
             this.gridViewOthers.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridViewOthers_CellClick);
-            // 
-            // idpersonDataGridViewTextBoxColumn1
-            // 
-            this.idpersonDataGridViewTextBoxColumn1.DataPropertyName = "id_person";
-            this.idpersonDataGridViewTextBoxColumn1.HeaderText = "id_person";
-            this.idpersonDataGridViewTextBoxColumn1.Name = "idpersonDataGridViewTextBoxColumn1";
-            this.idpersonDataGridViewTextBoxColumn1.Visible = false;
-            this.idpersonDataGridViewTextBoxColumn1.Width = 78;
-            // 
-            // fioDataGridViewTextBoxColumn1
-            // 
-            this.fioDataGridViewTextBoxColumn1.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn1.HeaderText = "fio";
-            this.fioDataGridViewTextBoxColumn1.Name = "fioDataGridViewTextBoxColumn1";
-            this.fioDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.fioDataGridViewTextBoxColumn1.Width = 43;
-            // 
-            // datebirthDataGridViewTextBoxColumn1
-            // 
-            this.datebirthDataGridViewTextBoxColumn1.DataPropertyName = "date_birth";
-            this.datebirthDataGridViewTextBoxColumn1.HeaderText = "date_birth";
-            this.datebirthDataGridViewTextBoxColumn1.Name = "datebirthDataGridViewTextBoxColumn1";
-            this.datebirthDataGridViewTextBoxColumn1.Width = 79;
-            // 
-            // namedecodeDataGridViewTextBoxColumn1
-            // 
-            this.namedecodeDataGridViewTextBoxColumn1.DataPropertyName = "name_decode";
-            this.namedecodeDataGridViewTextBoxColumn1.HeaderText = "name_decode";
-            this.namedecodeDataGridViewTextBoxColumn1.Name = "namedecodeDataGridViewTextBoxColumn1";
-            // 
-            // namecategoryDataGridViewTextBoxColumn1
-            // 
-            this.namecategoryDataGridViewTextBoxColumn1.DataPropertyName = "name_category";
-            this.namecategoryDataGridViewTextBoxColumn1.HeaderText = "name_category";
-            this.namecategoryDataGridViewTextBoxColumn1.Name = "namecategoryDataGridViewTextBoxColumn1";
-            this.namecategoryDataGridViewTextBoxColumn1.Width = 105;
-            // 
-            // shortnameDataGridViewTextBoxColumn1
-            // 
-            this.shortnameDataGridViewTextBoxColumn1.DataPropertyName = "short_name";
-            this.shortnameDataGridViewTextBoxColumn1.HeaderText = "short_name";
-            this.shortnameDataGridViewTextBoxColumn1.Name = "shortnameDataGridViewTextBoxColumn1";
-            this.shortnameDataGridViewTextBoxColumn1.Width = 87;
-            // 
-            // loginDataGridViewTextBoxColumn1
-            // 
-            this.loginDataGridViewTextBoxColumn1.DataPropertyName = "login";
-            this.loginDataGridViewTextBoxColumn1.HeaderText = "login";
-            this.loginDataGridViewTextBoxColumn1.Name = "loginDataGridViewTextBoxColumn1";
-            this.loginDataGridViewTextBoxColumn1.Width = 54;
-            // 
-            // passwordDataGridViewTextBoxColumn1
-            // 
-            this.passwordDataGridViewTextBoxColumn1.DataPropertyName = "password";
-            this.passwordDataGridViewTextBoxColumn1.HeaderText = "password";
-            this.passwordDataGridViewTextBoxColumn1.Name = "passwordDataGridViewTextBoxColumn1";
-            this.passwordDataGridViewTextBoxColumn1.Width = 77;
-            // 
-            // dateupdatingDataGridViewTextBoxColumn1
-            // 
-            this.dateupdatingDataGridViewTextBoxColumn1.DataPropertyName = "date_updating";
-            this.dateupdatingDataGridViewTextBoxColumn1.HeaderText = "date_updating";
-            this.dateupdatingDataGridViewTextBoxColumn1.Name = "dateupdatingDataGridViewTextBoxColumn1";
-            // 
-            // noteDataGridViewTextBoxColumn1
-            // 
-            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn1.HeaderText = "note";
-            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
-            this.noteDataGridViewTextBoxColumn1.Width = 53;
             // 
             // t012othersBindingSource
             // 
@@ -350,6 +198,7 @@
             this.T01deleteButtonPupil.TabIndex = 6;
             this.T01deleteButtonPupil.Text = "Удалить";
             this.T01deleteButtonPupil.UseVisualStyleBackColor = true;
+            this.T01deleteButtonPupil.Click += new System.EventHandler(this.T01deleteButtonPupil_Click);
             // 
             // label1
             // 
@@ -628,6 +477,161 @@
             this.T01deleteButtonOthers.TabIndex = 39;
             this.T01deleteButtonOthers.Text = "Удалить";
             this.T01deleteButtonOthers.UseVisualStyleBackColor = true;
+            this.T01deleteButtonOthers.Click += new System.EventHandler(this.T01deleteButtonOthers_Click);
+            // 
+            // idpersonDataGridViewTextBoxColumn1
+            // 
+            this.idpersonDataGridViewTextBoxColumn1.DataPropertyName = "id_person";
+            this.idpersonDataGridViewTextBoxColumn1.HeaderText = "id_person";
+            this.idpersonDataGridViewTextBoxColumn1.Name = "idpersonDataGridViewTextBoxColumn1";
+            this.idpersonDataGridViewTextBoxColumn1.Visible = false;
+            this.idpersonDataGridViewTextBoxColumn1.Width = 78;
+            // 
+            // fioDataGridViewTextBoxColumn1
+            // 
+            this.fioDataGridViewTextBoxColumn1.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn1.HeaderText = "Ф.И.О.";
+            this.fioDataGridViewTextBoxColumn1.Name = "fioDataGridViewTextBoxColumn1";
+            this.fioDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.fioDataGridViewTextBoxColumn1.Width = 68;
+            // 
+            // datebirthDataGridViewTextBoxColumn1
+            // 
+            this.datebirthDataGridViewTextBoxColumn1.DataPropertyName = "date_birth";
+            this.datebirthDataGridViewTextBoxColumn1.HeaderText = "Дата рождения";
+            this.datebirthDataGridViewTextBoxColumn1.Name = "datebirthDataGridViewTextBoxColumn1";
+            this.datebirthDataGridViewTextBoxColumn1.Width = 102;
+            // 
+            // namedecodeDataGridViewTextBoxColumn1
+            // 
+            this.namedecodeDataGridViewTextBoxColumn1.DataPropertyName = "name_decode";
+            this.namedecodeDataGridViewTextBoxColumn1.HeaderText = "Пол";
+            this.namedecodeDataGridViewTextBoxColumn1.Name = "namedecodeDataGridViewTextBoxColumn1";
+            this.namedecodeDataGridViewTextBoxColumn1.Width = 52;
+            // 
+            // namecategoryDataGridViewTextBoxColumn1
+            // 
+            this.namecategoryDataGridViewTextBoxColumn1.DataPropertyName = "name_category";
+            this.namecategoryDataGridViewTextBoxColumn1.HeaderText = "Категория ФЛ";
+            this.namecategoryDataGridViewTextBoxColumn1.Name = "namecategoryDataGridViewTextBoxColumn1";
+            this.namecategoryDataGridViewTextBoxColumn1.Width = 98;
+            // 
+            // shortnameDataGridViewTextBoxColumn1
+            // 
+            this.shortnameDataGridViewTextBoxColumn1.DataPropertyName = "short_name";
+            this.shortnameDataGridViewTextBoxColumn1.HeaderText = "Организация";
+            this.shortnameDataGridViewTextBoxColumn1.Name = "shortnameDataGridViewTextBoxColumn1";
+            this.shortnameDataGridViewTextBoxColumn1.Width = 99;
+            // 
+            // loginDataGridViewTextBoxColumn1
+            // 
+            this.loginDataGridViewTextBoxColumn1.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn1.HeaderText = "Логин";
+            this.loginDataGridViewTextBoxColumn1.Name = "loginDataGridViewTextBoxColumn1";
+            this.loginDataGridViewTextBoxColumn1.Width = 63;
+            // 
+            // passwordDataGridViewTextBoxColumn1
+            // 
+            this.passwordDataGridViewTextBoxColumn1.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn1.HeaderText = "Пароль";
+            this.passwordDataGridViewTextBoxColumn1.Name = "passwordDataGridViewTextBoxColumn1";
+            this.passwordDataGridViewTextBoxColumn1.Width = 70;
+            // 
+            // dateupdatingDataGridViewTextBoxColumn1
+            // 
+            this.dateupdatingDataGridViewTextBoxColumn1.DataPropertyName = "date_updating";
+            this.dateupdatingDataGridViewTextBoxColumn1.HeaderText = "Дата обновления";
+            this.dateupdatingDataGridViewTextBoxColumn1.Name = "dateupdatingDataGridViewTextBoxColumn1";
+            this.dateupdatingDataGridViewTextBoxColumn1.Width = 111;
+            // 
+            // noteDataGridViewTextBoxColumn1
+            // 
+            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            this.noteDataGridViewTextBoxColumn1.Width = 95;
+            // 
+            // idpersonDataGridViewTextBoxColumn
+            // 
+            this.idpersonDataGridViewTextBoxColumn.DataPropertyName = "id_person";
+            this.idpersonDataGridViewTextBoxColumn.HeaderText = "id_person";
+            this.idpersonDataGridViewTextBoxColumn.Name = "idpersonDataGridViewTextBoxColumn";
+            this.idpersonDataGridViewTextBoxColumn.Visible = false;
+            this.idpersonDataGridViewTextBoxColumn.Width = 78;
+            // 
+            // fioDataGridViewTextBoxColumn
+            // 
+            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn.HeaderText = "Ф.И.О.";
+            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
+            this.fioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fioDataGridViewTextBoxColumn.Width = 68;
+            // 
+            // datebirthDataGridViewTextBoxColumn
+            // 
+            this.datebirthDataGridViewTextBoxColumn.DataPropertyName = "date_birth";
+            this.datebirthDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
+            this.datebirthDataGridViewTextBoxColumn.Name = "datebirthDataGridViewTextBoxColumn";
+            this.datebirthDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // namedecodeDataGridViewTextBoxColumn
+            // 
+            this.namedecodeDataGridViewTextBoxColumn.DataPropertyName = "name_decode";
+            this.namedecodeDataGridViewTextBoxColumn.HeaderText = "Пол";
+            this.namedecodeDataGridViewTextBoxColumn.Name = "namedecodeDataGridViewTextBoxColumn";
+            this.namedecodeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namedecodeDataGridViewTextBoxColumn.Width = 52;
+            // 
+            // namecategoryDataGridViewTextBoxColumn
+            // 
+            this.namecategoryDataGridViewTextBoxColumn.DataPropertyName = "name_category";
+            this.namecategoryDataGridViewTextBoxColumn.HeaderText = "Категория ФЛ";
+            this.namecategoryDataGridViewTextBoxColumn.Name = "namecategoryDataGridViewTextBoxColumn";
+            this.namecategoryDataGridViewTextBoxColumn.ReadOnly = true;
+            this.namecategoryDataGridViewTextBoxColumn.Width = 98;
+            // 
+            // nameclassDataGridViewTextBoxColumn
+            // 
+            this.nameclassDataGridViewTextBoxColumn.DataPropertyName = "name_class";
+            this.nameclassDataGridViewTextBoxColumn.HeaderText = "Класс";
+            this.nameclassDataGridViewTextBoxColumn.Name = "nameclassDataGridViewTextBoxColumn";
+            this.nameclassDataGridViewTextBoxColumn.Width = 63;
+            // 
+            // shortnameDataGridViewTextBoxColumn
+            // 
+            this.shortnameDataGridViewTextBoxColumn.DataPropertyName = "short_name";
+            this.shortnameDataGridViewTextBoxColumn.HeaderText = "Организация";
+            this.shortnameDataGridViewTextBoxColumn.Name = "shortnameDataGridViewTextBoxColumn";
+            this.shortnameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.shortnameDataGridViewTextBoxColumn.Width = 99;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Логин";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.Width = 63;
+            // 
+            // passwordDataGridViewTextBoxColumn
+            // 
+            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "password";
+            this.passwordDataGridViewTextBoxColumn.HeaderText = "Пароль";
+            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
+            this.passwordDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // dateupdatingDataGridViewTextBoxColumn
+            // 
+            this.dateupdatingDataGridViewTextBoxColumn.DataPropertyName = "date_updating";
+            this.dateupdatingDataGridViewTextBoxColumn.HeaderText = "Дата обновления";
+            this.dateupdatingDataGridViewTextBoxColumn.Name = "dateupdatingDataGridViewTextBoxColumn";
+            this.dateupdatingDataGridViewTextBoxColumn.Width = 111;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.Width = 95;
             // 
             // Personalities
             // 
@@ -721,16 +725,6 @@
         private bd_kidsDataSet14TableAdapters.T01_2_othersTableAdapter t01_2_othersTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idpersonDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datebirthDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namedecodeDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn namecategoryDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn shortnameDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dateupdatingDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
         private System.Windows.Forms.Button T01changeButtonOthers;
         private System.Windows.Forms.Button T01deleteButtonOthers;
         private System.Windows.Forms.DataGridViewTextBoxColumn idpersonDataGridViewTextBoxColumn;
@@ -744,5 +738,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateupdatingDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idpersonDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datebirthDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namedecodeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namecategoryDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn shortnameDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateupdatingDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
     }
 }

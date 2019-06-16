@@ -214,12 +214,43 @@ namespace oksana_kids
 
         private void T01changeButtonOthers_Click(object sender, EventArgs e)
         {
+            var row = bd.T01_personalities.Where(x => x.id_person == peopleId).FirstOrDefault();
+            if (row == null) return;
 
+            row.date_birth = gridViewOthers.CurrentRow.Cells[2].Value.ToString();
+            row.date_updating = DateTime.Now.ToString();
+            row.login = gridViewOthers.CurrentRow.Cells[6].Value.ToString();
+            row.password = (string)gridViewOthers.CurrentRow.Cells[7].Value;
+            row.note = (string)gridViewOthers.CurrentRow.Cells[9].Value;
+
+            bd.SaveChanges();
         }
 
         private void gridViewPupils_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void T01deleteButtonPupil_Click(object sender, EventArgs e)
+        {
+            var row = bd.T01_personalities.Where(x => x.id_person == peopleId).FirstOrDefault();
+            if (row == null) return;
+
+            bd.T01_personalities.Remove(row);
+            bd.SaveChanges();
+
+            UpdateDataGrids();
+        }
+
+        private void T01deleteButtonOthers_Click(object sender, EventArgs e)
+        {
+            var row = bd.T01_personalities.Where(x => x.id_person == peopleId).FirstOrDefault();
+            if (row == null) return;
+
+            bd.T01_personalities.Remove(row);
+            bd.SaveChanges();
+
+            UpdateDataGrids();
         }
     }
 }

@@ -10,6 +10,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Speech.Synthesis;
 
 namespace oksana_kids
 {
@@ -24,6 +25,17 @@ namespace oksana_kids
         {
             InitializeComponent();
             getTestList();
+        }
+
+        public void setSpeech(string text)
+        {
+            SpeechSynthesizer speechSynth = new SpeechSynthesizer(); 
+
+            speechSynth.Volume = 100; 
+            speechSynth.Speak(text); 
+                       
+            speechSynth.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Teen); 
+            
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -71,8 +83,11 @@ namespace oksana_kids
                 foreach (var item in linq)
                 {
                     duration.Text = item.duration.ToString();
+                    //setSpeech(item.duration.ToString());
                     countTZ.Text = item.count.ToString();
+                    //setSpeech(item.count.ToString());
                     methodMaterial.Text = item.material.ToString();
+                    //setSpeech(item.material.ToString());
                 }
             }
             catch (Exception e)
@@ -83,6 +98,7 @@ namespace oksana_kids
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
+            setSpeech("Хочешь завершить работу");
             if (e.CloseReason == CloseReason.UserClosing)
             {
 
@@ -103,7 +119,11 @@ namespace oksana_kids
 
         public string getTestName()
         {
-            if (testList.SelectedItem.ToString() == "") MessageBox.Show("Выберите тест!");
+            if (testList.SelectedItem.ToString() == "")
+            {
+                MessageBox.Show("Выбери тест!");
+                setSpeech("Выбери тест");
+            }
             else
             {
                 currentTest = testList.SelectedItem.ToString();
@@ -148,10 +168,13 @@ namespace oksana_kids
 
         private void button1_Click(object sender, EventArgs e)
         {
+            setSpeech("Начать тестирование");
             //var attempts = new FileParser().IMages((int)this.getTestID());
             this.Hide();
+            setSpeech("Тест первый");
             var test_case = new List<SimplyTest>()
             {
+                
                 new SimplyTest()
                 {
                     TestType = "OneWrong",
@@ -360,6 +383,7 @@ namespace oksana_kids
 
         private void button3_Click(object sender, EventArgs e)
         {
+            setSpeech("Обучающий материал");
             string item = imageOrVideoDecider(getItemPath());
             if (item == "image")
             {
@@ -450,6 +474,12 @@ namespace oksana_kids
 
         private void label4_Click(object sender, EventArgs e)
         {
+            if (duration.Text != "")
+            {
+                setSpeech("Тест будет длиться");
+                setSpeech(duration.Text + "секунд");
+            }
+            
             Label label4 = sender as Label;
 
             if (label4 != null)
@@ -470,6 +500,7 @@ namespace oksana_kids
 
         private void zoomButton_Click(object sender, EventArgs e)
         {
+            setSpeech("Экранная лупа");
             string s = Clipboard.GetText();
             Zoom z = new Zoom(s);
             z.Show();
@@ -478,6 +509,11 @@ namespace oksana_kids
 
         private void label5_Click(object sender, EventArgs e)
         {
+            if (countTZ.Text != "")
+            {
+                setSpeech("В тесте будет");
+                setSpeech(countTZ.Text + "заданий");
+            }
             Label label5 = sender as Label;
 
             if (label5 != null)
@@ -498,6 +534,7 @@ namespace oksana_kids
 
         private void label3_Click(object sender, EventArgs e)
         {
+            setSpeech("Характеристики теста");
             Label label3 = sender as Label;
 
             if (label3 != null)
@@ -518,6 +555,7 @@ namespace oksana_kids
 
         private void label2_Click(object sender, EventArgs e)
         {
+            setSpeech("Выбери тему тестирования");
             Label label2 = sender as Label;
 
             if (label2 != null)
@@ -562,9 +600,12 @@ namespace oksana_kids
 
             if (testList.SelectedItem.ToString() != null)
             {
+                setSpeech(testList.SelectedItem.ToString());
                 string s = testList.SelectedItem.ToString();
                 Clipboard.SetText(s, TextDataFormat.UnicodeText);
             }
         }
+
+        
     }
 }
