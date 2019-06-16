@@ -208,7 +208,7 @@
             this.buttonNext.Text = "buttonNext";
             this.buttonNext.UseVisualStyleBackColor = true;
             // 
-            // FormForm3
+            // TestForm3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,8 +229,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelQuestionBody);
             this.Controls.Add(this.labelQuestionTitle);
-            this.Name = "FormForm3";
+            this.Name = "TestForm3";
             this.Text = "FormForm3";
+            this.Load += new System.EventHandler(this.TestForm3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

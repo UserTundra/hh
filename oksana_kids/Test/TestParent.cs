@@ -13,14 +13,15 @@ namespace oksana_kids.Test
 
     public partial class TestParent : Form
     {
-        
-        
+
+        public int time;
         public int SummaryRightAnswers = 0;
 
         private TestFormsArgument Condition;
 
-        public TestParent(TestFormsArgument cond)
+        public TestParent(TestFormsArgument cond, int time = 999999)
         {
+            this.time = time;
             this.Condition = cond;
             InitializeComponent();
         }
@@ -48,7 +49,7 @@ namespace oksana_kids.Test
             if(this.Condition.IdxCurrentTest == 0)
             {
                 this.IsMdiContainer = true;
-                TestForm first = new TestForm(this.Condition.CurrentTest, this, this.Width, this.Height);
+                TestForm first = new TestForm(this.Condition.CurrentTest, this, this.Width, this.Height, 1, time);
                 InitChildForm(first);
                 first.Show();
             }
@@ -58,6 +59,12 @@ namespace oksana_kids.Test
                 second.Show();
             }
         }
+
+        public void showMenu()
+        {
+            this.Condition.Callback.Show();
+        }
+        
 
         private void InitChildForm(Form form)
         {

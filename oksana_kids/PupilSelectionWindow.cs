@@ -376,7 +376,8 @@ namespace oksana_kids
             //var imageSwapper = new TestForm2(simplyQuestion, this);
             //imageSwapper.Show();
             var args = new TestFormsArgument(new List<List<SimplyTest>>() { test_case, simplyQuestion }, this);
-            var parent = new TestParent(args);
+            var timeTest = int.Parse(duration.Text);
+            var parent = new TestParent(args,timeTest);
             parent.Show();
 
         }
@@ -606,6 +607,9 @@ namespace oksana_kids
             }
         }
 
-        
+        private void countTZ_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

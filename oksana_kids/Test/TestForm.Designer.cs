@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelQuestionBody = new System.Windows.Forms.Label();
             this.labelQuestionTitle = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
@@ -48,6 +49,8 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -257,11 +260,28 @@
             this.pictureBox8.TabIndex = 18;
             this.pictureBox8.TabStop = false;
             // 
+            // timeLabel
+            // 
+            this.timeLabel.AutoSize = true;
+            this.timeLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeLabel.Location = new System.Drawing.Point(413, 11);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(167, 21);
+            this.timeLabel.TabIndex = 20;
+            this.timeLabel.Text = "Осталось времени: ";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // TestForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(840, 710);
+            this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.pictureBoxQuestion1);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.checkBox8);
@@ -323,5 +343,7 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }

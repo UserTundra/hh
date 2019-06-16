@@ -16,6 +16,17 @@ namespace oksana_kids.Test
         public const string NEXT_TASK_STRING = "Следующий вопрос";
         public const int MAX_BLOCKS_SIZE = 8;
 
+        public int MAX_FAILS = 44;
+        private int _ElapsedTime;
+        public int ElapsedTime {
+            get { return _ElapsedTime; }
+            set
+            {
+                _ElapsedTime = value;
+                this.timeLabel.Text = "Осталось времени: " + _ElapsedTime.ToString();
+            }
+        }
+
         public TestParent callback;
 
         public int SelectedCheckBoxIdx = 0;
@@ -89,13 +100,16 @@ namespace oksana_kids.Test
 
         public int AnswersCount { get; set; }
 
-        public TestForm(List<SimplyTest> tests, TestParent callback, int width, int height)
+        public TestForm(List<SimplyTest> tests, TestParent callback, int width, int height, int max_fails=44, int time = 999999)
         {
+            InitializeComponent();
+
             this.Width = width;
             this.Height = height;
             this.callback = callback;
+            this.MAX_FAILS = max_fails;
+            this.ElapsedTime = time;
 
-            InitializeComponent();
             this.testCollection = tests;
             this.CurrentTest = this.testCollection.FirstOrDefault();
         }
@@ -127,7 +141,8 @@ namespace oksana_kids.Test
                     SummaryFailCount++;
                 _selectedCheckBox.Visible = false;
                 _selectedPicture.Visible = false;
-                return;
+                if(SummaryFailCount < MAX_FAILS)
+                    return;
             }
             if (currentTestIndex < testCollection.Count - 1) {
                 this.CurrentTest = testCollection[++currentTestIndex];
@@ -211,6 +226,20 @@ namespace oksana_kids.Test
         private void TestForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             //Application.OpenForms[1].Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ElapsedTime--;
+            this.callback.time--;
+            if (ElapsedTime == 0)
+            {
+                this.callback.SummaryRightAnswers += this.RightAnswersCount;
+                this.Hide();
+                this.callback.showMenu();
+                this.callback.preClose();
+                
+            }
         }
     }
 }

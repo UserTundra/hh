@@ -44,19 +44,29 @@ namespace oksana_kids.Test
 
         private PictureBox _selected;
         private bool _dragging = false;
-
-
+        private int _ElapsedTime = 999999;
+        public int ElapsedTime
+        {
+            get { return _ElapsedTime; }
+            set
+            {
+                _ElapsedTime = value;
+                this.timeLabel1.Text = "Осталось времени: " + _ElapsedTime.ToString();
+            }
+        }
         public TestForm2()
         {
             InitializeComponent();
         }
 
-        public TestForm2(List<SimplyTest> tests, PupilSelectionWindow callback, TestParent parent)
+        public TestForm2(List<SimplyTest> tests, PupilSelectionWindow callback, TestParent parent, int time = 999999)
         {
             this.callback = callback;
             this.parent = parent;
             
+            
             InitializeComponent();
+            this.ElapsedTime = this.parent.time;
             this.testCollection = tests;
             this.CurrentTest = this.testCollection.FirstOrDefault();
         }
@@ -244,6 +254,20 @@ namespace oksana_kids.Test
         private void pictureBoxAnswer1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            ElapsedTime--;
+            this.parent.time--;
+            if (ElapsedTime == 0)
+            {
+                this.parent.SummaryRightAnswers += this.RightAnswersCount;
+                this.Hide();
+                this.parent.showMenu();
+                this.parent.preClose();
+
+            }
         }
     }
 }

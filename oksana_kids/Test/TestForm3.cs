@@ -16,5 +16,10 @@ namespace oksana_kids.Test
         {
             InitializeComponent();
         }
+
+        private void TestForm3_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

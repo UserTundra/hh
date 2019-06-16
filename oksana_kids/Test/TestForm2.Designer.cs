@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.labelQuestionTitle = new System.Windows.Forms.Label();
             this.labelQuestionBody = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +52,8 @@
             this.pictureBoxAnswer1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timeLabel1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAnswer8)).BeginInit();
@@ -282,12 +285,29 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timeLabel1
+            // 
+            this.timeLabel1.AutoSize = true;
+            this.timeLabel1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeLabel1.Location = new System.Drawing.Point(13, 13);
+            this.timeLabel1.Name = "timeLabel1";
+            this.timeLabel1.Size = new System.Drawing.Size(167, 21);
+            this.timeLabel1.TabIndex = 32;
+            this.timeLabel1.Text = "Осталось времени: ";
+            // 
             // TestForm2
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(824, 672);
+            this.Controls.Add(this.timeLabel1);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.labelAnswer6);
             this.Controls.Add(this.pictureBoxAnswer6);
@@ -355,5 +375,7 @@
         private System.Windows.Forms.Label labelAnswer6;
         private System.Windows.Forms.PictureBox pictureBoxAnswer7;
         private System.Windows.Forms.PictureBox pictureBoxAnswer6;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label timeLabel1;
     }
 }

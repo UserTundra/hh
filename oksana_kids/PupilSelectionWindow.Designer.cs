@@ -145,6 +145,7 @@
             this.duration.Name = "duration";
             this.duration.Size = new System.Drawing.Size(106, 29);
             this.duration.TabIndex = 9;
+            this.duration.Text = "99999";
             this.duration.Click += new System.EventHandler(this.duration_Click);
             // 
             // countTZ
@@ -155,6 +156,7 @@
             this.countTZ.Size = new System.Drawing.Size(106, 29);
             this.countTZ.TabIndex = 10;
             this.countTZ.Click += new System.EventHandler(this.countTZ_Click);
+            this.countTZ.TextChanged += new System.EventHandler(this.countTZ_TextChanged);
             // 
             // methodMaterial
             // 
