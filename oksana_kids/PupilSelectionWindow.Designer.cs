@@ -114,7 +114,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(218, 75);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Максимальная \r\nпродолжительность \r\nтеста (сек) :";
+            this.label4.Text = "Максимальная \r\nпродолжительность \r\nтеста (мин) :";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
@@ -144,9 +144,9 @@
             this.duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.duration.Location = new System.Drawing.Point(796, 156);
             this.duration.Name = "duration";
+            this.duration.ReadOnly = true;
             this.duration.Size = new System.Drawing.Size(106, 29);
             this.duration.TabIndex = 9;
-            this.duration.Text = "99999";
             this.duration.Click += new System.EventHandler(this.duration_Click);
             // 
             // countTZ
@@ -154,6 +154,7 @@
             this.countTZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.countTZ.Location = new System.Drawing.Point(796, 240);
             this.countTZ.Name = "countTZ";
+            this.countTZ.ReadOnly = true;
             this.countTZ.Size = new System.Drawing.Size(106, 29);
             this.countTZ.TabIndex = 10;
             this.countTZ.Click += new System.EventHandler(this.countTZ_Click);
@@ -165,6 +166,7 @@
             this.methodMaterial.Location = new System.Drawing.Point(571, 318);
             this.methodMaterial.Multiline = true;
             this.methodMaterial.Name = "methodMaterial";
+            this.methodMaterial.ReadOnly = true;
             this.methodMaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.methodMaterial.Size = new System.Drawing.Size(558, 74);
             this.methodMaterial.TabIndex = 11;

@@ -50,10 +50,6 @@
             this.R02changeButton = new System.Windows.Forms.Button();
             this.R02deleteButton = new System.Windows.Forms.Button();
             this.R02 = new System.Windows.Forms.DataGridView();
-            this.nameclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studyyearsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.r02pupilsclassesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSet17 = new oksana_kids.bd_kidsDataSet17();
             this.R02_study_years = new System.Windows.Forms.TextBox();
@@ -201,6 +197,19 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.R12_instructions_to_test_tasks_types = new System.Windows.Forms.TabPage();
+            this.R12addButton = new System.Windows.Forms.Button();
+            this.R12changeButton = new System.Windows.Forms.Button();
+            this.R12deleteButton = new System.Windows.Forms.Button();
+            this.R12 = new System.Windows.Forms.DataGridView();
+            this.nameinstructionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeinstructionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r12instructionstotesttaskstypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet27 = new oksana_kids.bd_kidsDataSet27();
+            this.R12_note = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.R12_name_instruction = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.R13_play_result_variants = new System.Windows.Forms.TabPage();
             this.R14_track_types = new System.Windows.Forms.TabPage();
             this.R15_task_key_words = new System.Windows.Forms.TabPage();
@@ -217,20 +226,11 @@
             this.r07_methodical_materialsTableAdapter = new oksana_kids.bd_kidsDataSet24TableAdapters.R07_methodical_materialsTableAdapter();
             this.r09_study_subjectsTableAdapter = new oksana_kids.bd_kidsDataSet25TableAdapters.R09_study_subjectsTableAdapter();
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet26TableAdapters.R10_next_action_variantsTableAdapter();
-            this.R12addButton = new System.Windows.Forms.Button();
-            this.R12changeButton = new System.Windows.Forms.Button();
-            this.R12deleteButton = new System.Windows.Forms.Button();
-            this.R12 = new System.Windows.Forms.DataGridView();
-            this.R12_note = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.R12_name_instruction = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.bd_kidsDataSet27 = new oksana_kids.bd_kidsDataSet27();
-            this.r12instructionstotesttaskstypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r12_instructions_to_test_tasks_typesTableAdapter = new oksana_kids.bd_kidsDataSet27TableAdapters.R12_instructions_to_test_tasks_typesTableAdapter();
-            this.nameinstructionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeinstructionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studyyearsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.R01_people_category.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.R01)).BeginInit();
@@ -277,11 +277,11 @@
             this.R11_variants_of_passing_tasks_results_analysis.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.R12_instructions_to_test_tasks_types.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.r05legalownershipformsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -373,6 +373,7 @@
             this.R01.Name = "R01";
             this.R01.Size = new System.Drawing.Size(442, 283);
             this.R01.TabIndex = 4;
+            this.R01.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R01_CellClick);
             // 
             // codecategoryDataGridViewTextBoxColumn
             // 
@@ -472,6 +473,7 @@
             this.R02addButton.TabIndex = 11;
             this.R02addButton.Text = "Добавить";
             this.R02addButton.UseVisualStyleBackColor = true;
+            this.R02addButton.Click += new System.EventHandler(this.R02addButton_Click);
             // 
             // R02changeButton
             // 
@@ -482,6 +484,7 @@
             this.R02changeButton.TabIndex = 12;
             this.R02changeButton.Text = "Изменить";
             this.R02changeButton.UseVisualStyleBackColor = true;
+            this.R02changeButton.Click += new System.EventHandler(this.R02changeButton_Click);
             // 
             // R02deleteButton
             // 
@@ -492,6 +495,7 @@
             this.R02deleteButton.TabIndex = 13;
             this.R02deleteButton.Text = "Удалить";
             this.R02deleteButton.UseVisualStyleBackColor = true;
+            this.R02deleteButton.Click += new System.EventHandler(this.R02deleteButton_Click);
             // 
             // R02
             // 
@@ -508,31 +512,7 @@
             this.R02.Name = "R02";
             this.R02.Size = new System.Drawing.Size(459, 284);
             this.R02.TabIndex = 10;
-            // 
-            // nameclassDataGridViewTextBoxColumn
-            // 
-            this.nameclassDataGridViewTextBoxColumn.DataPropertyName = "name_class";
-            this.nameclassDataGridViewTextBoxColumn.HeaderText = "Класс обучающегося";
-            this.nameclassDataGridViewTextBoxColumn.Name = "nameclassDataGridViewTextBoxColumn";
-            // 
-            // studyyearsDataGridViewTextBoxColumn
-            // 
-            this.studyyearsDataGridViewTextBoxColumn.DataPropertyName = "study_years";
-            this.studyyearsDataGridViewTextBoxColumn.HeaderText = "Годы обучения";
-            this.studyyearsDataGridViewTextBoxColumn.Name = "studyyearsDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn1
-            // 
-            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
-            // 
-            // codeclassDataGridViewTextBoxColumn
-            // 
-            this.codeclassDataGridViewTextBoxColumn.DataPropertyName = "code_class";
-            this.codeclassDataGridViewTextBoxColumn.HeaderText = "code_class";
-            this.codeclassDataGridViewTextBoxColumn.Name = "codeclassDataGridViewTextBoxColumn";
-            this.codeclassDataGridViewTextBoxColumn.Visible = false;
+            this.R02.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R02_CellClick);
             // 
             // r02pupilsclassesBindingSource
             // 
@@ -778,6 +758,7 @@
             this.CBchoose.TabIndex = 0;
             this.CBchoose.Text = "выбор из предопределенного набора";
             this.CBchoose.UseVisualStyleBackColor = true;
+            this.CBchoose.Click += new System.EventHandler(this.CBchoose_Click);
             // 
             // R04_end_testing_reasons
             // 
@@ -1882,6 +1863,116 @@
             this.R12_instructions_to_test_tasks_types.Text = "Типы указаний к выполнению тестового задания";
             this.R12_instructions_to_test_tasks_types.UseVisualStyleBackColor = true;
             // 
+            // R12addButton
+            // 
+            this.R12addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R12addButton.Location = new System.Drawing.Point(351, 296);
+            this.R12addButton.Name = "R12addButton";
+            this.R12addButton.Size = new System.Drawing.Size(123, 47);
+            this.R12addButton.TabIndex = 52;
+            this.R12addButton.Text = "Добавить";
+            this.R12addButton.UseVisualStyleBackColor = true;
+            // 
+            // R12changeButton
+            // 
+            this.R12changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R12changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R12changeButton.Name = "R12changeButton";
+            this.R12changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R12changeButton.TabIndex = 53;
+            this.R12changeButton.Text = "Изменить";
+            this.R12changeButton.UseVisualStyleBackColor = true;
+            // 
+            // R12deleteButton
+            // 
+            this.R12deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R12deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R12deleteButton.Name = "R12deleteButton";
+            this.R12deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R12deleteButton.TabIndex = 54;
+            this.R12deleteButton.Text = "Удалить";
+            this.R12deleteButton.UseVisualStyleBackColor = true;
+            // 
+            // R12
+            // 
+            this.R12.AutoGenerateColumns = false;
+            this.R12.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameinstructionDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn10,
+            this.codeinstructionDataGridViewTextBoxColumn});
+            this.R12.DataSource = this.r12instructionstotesttaskstypesBindingSource;
+            this.R12.Location = new System.Drawing.Point(351, 11);
+            this.R12.Name = "R12";
+            this.R12.Size = new System.Drawing.Size(446, 279);
+            this.R12.TabIndex = 51;
+            // 
+            // nameinstructionDataGridViewTextBoxColumn
+            // 
+            this.nameinstructionDataGridViewTextBoxColumn.DataPropertyName = "name_instruction";
+            this.nameinstructionDataGridViewTextBoxColumn.HeaderText = "Тип указания";
+            this.nameinstructionDataGridViewTextBoxColumn.Name = "nameinstructionDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn10
+            // 
+            this.noteDataGridViewTextBoxColumn10.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn10.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn10.Name = "noteDataGridViewTextBoxColumn10";
+            // 
+            // codeinstructionDataGridViewTextBoxColumn
+            // 
+            this.codeinstructionDataGridViewTextBoxColumn.DataPropertyName = "code_instruction";
+            this.codeinstructionDataGridViewTextBoxColumn.HeaderText = "code_instruction";
+            this.codeinstructionDataGridViewTextBoxColumn.Name = "codeinstructionDataGridViewTextBoxColumn";
+            this.codeinstructionDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // r12instructionstotesttaskstypesBindingSource
+            // 
+            this.r12instructionstotesttaskstypesBindingSource.DataMember = "R12_instructions_to_test_tasks_types";
+            this.r12instructionstotesttaskstypesBindingSource.DataSource = this.bd_kidsDataSet27;
+            // 
+            // bd_kidsDataSet27
+            // 
+            this.bd_kidsDataSet27.DataSetName = "bd_kidsDataSet27";
+            this.bd_kidsDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // R12_note
+            // 
+            this.R12_note.Location = new System.Drawing.Point(105, 59);
+            this.R12_note.Multiline = true;
+            this.R12_note.Name = "R12_note";
+            this.R12_note.Size = new System.Drawing.Size(240, 20);
+            this.R12_note.TabIndex = 50;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(8, 63);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(91, 16);
+            this.label26.TabIndex = 49;
+            this.label26.Text = "Примечание";
+            // 
+            // R12_name_instruction
+            // 
+            this.R12_name_instruction.Location = new System.Drawing.Point(105, 11);
+            this.R12_name_instruction.Multiline = true;
+            this.R12_name_instruction.Name = "R12_name_instruction";
+            this.R12_name_instruction.Size = new System.Drawing.Size(240, 42);
+            this.R12_name_instruction.TabIndex = 48;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label27.Location = new System.Drawing.Point(8, 12);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(72, 16);
+            this.label27.TabIndex = 47;
+            this.label27.Text = "Указание";
+            // 
             // R13_play_result_variants
             // 
             this.R13_play_result_variants.Location = new System.Drawing.Point(4, 22);
@@ -1963,119 +2054,34 @@
             // 
             this.r10_next_action_variantsTableAdapter.ClearBeforeFill = true;
             // 
-            // R12addButton
-            // 
-            this.R12addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R12addButton.Location = new System.Drawing.Point(351, 296);
-            this.R12addButton.Name = "R12addButton";
-            this.R12addButton.Size = new System.Drawing.Size(123, 47);
-            this.R12addButton.TabIndex = 52;
-            this.R12addButton.Text = "Добавить";
-            this.R12addButton.UseVisualStyleBackColor = true;
-            // 
-            // R12changeButton
-            // 
-            this.R12changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R12changeButton.Location = new System.Drawing.Point(513, 296);
-            this.R12changeButton.Name = "R12changeButton";
-            this.R12changeButton.Size = new System.Drawing.Size(123, 47);
-            this.R12changeButton.TabIndex = 53;
-            this.R12changeButton.Text = "Изменить";
-            this.R12changeButton.UseVisualStyleBackColor = true;
-            // 
-            // R12deleteButton
-            // 
-            this.R12deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R12deleteButton.Location = new System.Drawing.Point(671, 296);
-            this.R12deleteButton.Name = "R12deleteButton";
-            this.R12deleteButton.Size = new System.Drawing.Size(123, 47);
-            this.R12deleteButton.TabIndex = 54;
-            this.R12deleteButton.Text = "Удалить";
-            this.R12deleteButton.UseVisualStyleBackColor = true;
-            // 
-            // R12
-            // 
-            this.R12.AutoGenerateColumns = false;
-            this.R12.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.R12.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.R12.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameinstructionDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn10,
-            this.codeinstructionDataGridViewTextBoxColumn});
-            this.R12.DataSource = this.r12instructionstotesttaskstypesBindingSource;
-            this.R12.Location = new System.Drawing.Point(351, 11);
-            this.R12.Name = "R12";
-            this.R12.Size = new System.Drawing.Size(446, 279);
-            this.R12.TabIndex = 51;
-            // 
-            // R12_note
-            // 
-            this.R12_note.Location = new System.Drawing.Point(105, 59);
-            this.R12_note.Multiline = true;
-            this.R12_note.Name = "R12_note";
-            this.R12_note.Size = new System.Drawing.Size(240, 20);
-            this.R12_note.TabIndex = 50;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label26.Location = new System.Drawing.Point(8, 63);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(91, 16);
-            this.label26.TabIndex = 49;
-            this.label26.Text = "Примечание";
-            // 
-            // R12_name_instruction
-            // 
-            this.R12_name_instruction.Location = new System.Drawing.Point(105, 11);
-            this.R12_name_instruction.Multiline = true;
-            this.R12_name_instruction.Name = "R12_name_instruction";
-            this.R12_name_instruction.Size = new System.Drawing.Size(240, 42);
-            this.R12_name_instruction.TabIndex = 48;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label27.Location = new System.Drawing.Point(8, 12);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(72, 16);
-            this.label27.TabIndex = 47;
-            this.label27.Text = "Указание";
-            // 
-            // bd_kidsDataSet27
-            // 
-            this.bd_kidsDataSet27.DataSetName = "bd_kidsDataSet27";
-            this.bd_kidsDataSet27.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r12instructionstotesttaskstypesBindingSource
-            // 
-            this.r12instructionstotesttaskstypesBindingSource.DataMember = "R12_instructions_to_test_tasks_types";
-            this.r12instructionstotesttaskstypesBindingSource.DataSource = this.bd_kidsDataSet27;
-            // 
             // r12_instructions_to_test_tasks_typesTableAdapter
             // 
             this.r12_instructions_to_test_tasks_typesTableAdapter.ClearBeforeFill = true;
             // 
-            // nameinstructionDataGridViewTextBoxColumn
+            // nameclassDataGridViewTextBoxColumn
             // 
-            this.nameinstructionDataGridViewTextBoxColumn.DataPropertyName = "name_instruction";
-            this.nameinstructionDataGridViewTextBoxColumn.HeaderText = "Тип указания";
-            this.nameinstructionDataGridViewTextBoxColumn.Name = "nameinstructionDataGridViewTextBoxColumn";
+            this.nameclassDataGridViewTextBoxColumn.DataPropertyName = "name_class";
+            this.nameclassDataGridViewTextBoxColumn.HeaderText = "Класс обучающегося";
+            this.nameclassDataGridViewTextBoxColumn.Name = "nameclassDataGridViewTextBoxColumn";
             // 
-            // noteDataGridViewTextBoxColumn10
+            // studyyearsDataGridViewTextBoxColumn
             // 
-            this.noteDataGridViewTextBoxColumn10.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn10.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn10.Name = "noteDataGridViewTextBoxColumn10";
+            this.studyyearsDataGridViewTextBoxColumn.DataPropertyName = "study_years";
+            this.studyyearsDataGridViewTextBoxColumn.HeaderText = "Годы обучения";
+            this.studyyearsDataGridViewTextBoxColumn.Name = "studyyearsDataGridViewTextBoxColumn";
             // 
-            // codeinstructionDataGridViewTextBoxColumn
+            // noteDataGridViewTextBoxColumn1
             // 
-            this.codeinstructionDataGridViewTextBoxColumn.DataPropertyName = "code_instruction";
-            this.codeinstructionDataGridViewTextBoxColumn.HeaderText = "code_instruction";
-            this.codeinstructionDataGridViewTextBoxColumn.Name = "codeinstructionDataGridViewTextBoxColumn";
-            this.codeinstructionDataGridViewTextBoxColumn.Visible = false;
+            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            // 
+            // codeclassDataGridViewTextBoxColumn
+            // 
+            this.codeclassDataGridViewTextBoxColumn.DataPropertyName = "code_class";
+            this.codeclassDataGridViewTextBoxColumn.HeaderText = "code_class";
+            this.codeclassDataGridViewTextBoxColumn.Name = "codeclassDataGridViewTextBoxColumn";
+            this.codeclassDataGridViewTextBoxColumn.Visible = false;
             // 
             // References
             // 
@@ -2147,11 +2153,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.R12_instructions_to_test_tasks_types.ResumeLayout(false);
             this.R12_instructions_to_test_tasks_types.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.r05legalownershipformsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2279,10 +2285,6 @@
         private bd_kidsDataSet24 bd_kidsDataSet24;
         private System.Windows.Forms.BindingSource r07methodicalmaterialsBindingSource;
         private bd_kidsDataSet24TableAdapters.R07_methodical_materialsTableAdapter r07_methodical_materialsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameclassDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studyyearsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeclassDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nametypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn codetypeDataGridViewTextBoxColumn;
@@ -2360,5 +2362,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nameinstructionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeinstructionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameclassDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn studyyearsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeclassDataGridViewTextBoxColumn;
     }
 }

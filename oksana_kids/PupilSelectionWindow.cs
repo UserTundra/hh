@@ -75,7 +75,7 @@ namespace oksana_kids
                             where a.id_test == test_id
                             select new
                             {
-                                duration = a.max_passing_duration_sec,
+                                duration = a.max_passing_duration_sec/60,
                                 material = d.description,
                                 count = bd.B05_testing_task_modules_to_tests.Select(x => x.id_module).Count()
                             }).ToList();
@@ -478,7 +478,7 @@ namespace oksana_kids
             if (duration.Text != "")
             {
                 setSpeech("Тест будет длиться");
-                setSpeech(duration.Text + "секунд");
+                setSpeech(duration.Text + "минут");
             }
             
             Label label4 = sender as Label;
