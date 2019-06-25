@@ -611,5 +611,10 @@ namespace oksana_kids
         {
 
         }
+
+        private void testList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

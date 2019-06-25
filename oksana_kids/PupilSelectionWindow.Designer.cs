@@ -78,6 +78,7 @@
             this.testList.Size = new System.Drawing.Size(530, 323);
             this.testList.TabIndex = 2;
             this.testList.Click += new System.EventHandler(this.testList_Click);
+            this.testList.SelectedIndexChanged += new System.EventHandler(this.testList_SelectedIndexChanged);
             this.testList.DoubleClick += new System.EventHandler(this.testList_DoubleClick);
             // 
             // button1
