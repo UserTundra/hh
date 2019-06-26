@@ -30,24 +30,24 @@
         {
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.R07addButton = new System.Windows.Forms.Button();
-            this.bd_kidsDataSet15 = new oksana_kids.bd_kidsDataSet15();
-            this.r07methodicalmaterialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.r07_methodical_materialsTableAdapter = new oksana_kids.bd_kidsDataSet15TableAdapters.R07_methodical_materialsTableAdapter();
+            this.T02_name_test = new System.Windows.Forms.ComboBox();
+            this.t02testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet16 = new oksana_kids.bd_kidsDataSet16();
+            this.R07toT02 = new System.Windows.Forms.DataGridView();
             this.idmethodmaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filelocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bd_kidsDataSet16 = new oksana_kids.bd_kidsDataSet16();
-            this.t02testsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.r07methodicalmaterialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet15 = new oksana_kids.bd_kidsDataSet15();
+            this.R07addButton = new System.Windows.Forms.Button();
+            this.r07_methodical_materialsTableAdapter = new oksana_kids.bd_kidsDataSet15TableAdapters.R07_methodical_materialsTableAdapter();
             this.t02_testsTableAdapter = new oksana_kids.bd_kidsDataSet16TableAdapters.T02_testsTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r07methodicalmaterialsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02testsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R07toT02)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r07methodicalmaterialsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet15)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -60,56 +60,42 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Тест";
             // 
-            // comboBox1
+            // T02_name_test
             // 
-            this.comboBox1.DataSource = this.t02testsBindingSource;
-            this.comboBox1.DisplayMember = "name_test";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(57, 8);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(377, 21);
-            this.comboBox1.TabIndex = 15;
-            this.comboBox1.ValueMember = "id_test";
+            this.T02_name_test.DataSource = this.t02testsBindingSource;
+            this.T02_name_test.DisplayMember = "name_test";
+            this.T02_name_test.FormattingEnabled = true;
+            this.T02_name_test.Location = new System.Drawing.Point(57, 8);
+            this.T02_name_test.Name = "T02_name_test";
+            this.T02_name_test.Size = new System.Drawing.Size(377, 21);
+            this.T02_name_test.TabIndex = 15;
+            this.T02_name_test.ValueMember = "id_test";
             // 
-            // dataGridView1
+            // t02testsBindingSource
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.t02testsBindingSource.DataMember = "T02_tests";
+            this.t02testsBindingSource.DataSource = this.bd_kidsDataSet16;
+            // 
+            // bd_kidsDataSet16
+            // 
+            this.bd_kidsDataSet16.DataSetName = "bd_kidsDataSet16";
+            this.bd_kidsDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // R07toT02
+            // 
+            this.R07toT02.AutoGenerateColumns = false;
+            this.R07toT02.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R07toT02.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R07toT02.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idmethodmaterialDataGridViewTextBoxColumn,
             this.descriptionDataGridViewTextBoxColumn,
             this.filelocationDataGridViewTextBoxColumn,
             this.noteDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.r07methodicalmaterialsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 35);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(419, 150);
-            this.dataGridView1.TabIndex = 16;
-            // 
-            // R07addButton
-            // 
-            this.R07addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R07addButton.Location = new System.Drawing.Point(311, 191);
-            this.R07addButton.Name = "R07addButton";
-            this.R07addButton.Size = new System.Drawing.Size(123, 47);
-            this.R07addButton.TabIndex = 20;
-            this.R07addButton.Text = "Добавить";
-            this.R07addButton.UseVisualStyleBackColor = true;
-            // 
-            // bd_kidsDataSet15
-            // 
-            this.bd_kidsDataSet15.DataSetName = "bd_kidsDataSet15";
-            this.bd_kidsDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r07methodicalmaterialsBindingSource
-            // 
-            this.r07methodicalmaterialsBindingSource.DataMember = "R07_methodical_materials";
-            this.r07methodicalmaterialsBindingSource.DataSource = this.bd_kidsDataSet15;
-            // 
-            // r07_methodical_materialsTableAdapter
-            // 
-            this.r07_methodical_materialsTableAdapter.ClearBeforeFill = true;
+            this.R07toT02.DataSource = this.r07methodicalmaterialsBindingSource;
+            this.R07toT02.Location = new System.Drawing.Point(15, 35);
+            this.R07toT02.Name = "R07toT02";
+            this.R07toT02.Size = new System.Drawing.Size(419, 150);
+            this.R07toT02.TabIndex = 16;
             // 
             // idmethodmaterialDataGridViewTextBoxColumn
             // 
@@ -138,15 +124,30 @@
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             this.noteDataGridViewTextBoxColumn.Visible = false;
             // 
-            // bd_kidsDataSet16
+            // r07methodicalmaterialsBindingSource
             // 
-            this.bd_kidsDataSet16.DataSetName = "bd_kidsDataSet16";
-            this.bd_kidsDataSet16.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.r07methodicalmaterialsBindingSource.DataMember = "R07_methodical_materials";
+            this.r07methodicalmaterialsBindingSource.DataSource = this.bd_kidsDataSet15;
             // 
-            // t02testsBindingSource
+            // bd_kidsDataSet15
             // 
-            this.t02testsBindingSource.DataMember = "T02_tests";
-            this.t02testsBindingSource.DataSource = this.bd_kidsDataSet16;
+            this.bd_kidsDataSet15.DataSetName = "bd_kidsDataSet15";
+            this.bd_kidsDataSet15.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // R07addButton
+            // 
+            this.R07addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R07addButton.Location = new System.Drawing.Point(311, 191);
+            this.R07addButton.Name = "R07addButton";
+            this.R07addButton.Size = new System.Drawing.Size(123, 47);
+            this.R07addButton.TabIndex = 20;
+            this.R07addButton.Text = "Добавить";
+            this.R07addButton.UseVisualStyleBackColor = true;
+            this.R07addButton.Click += new System.EventHandler(this.R07addButton_Click);
+            // 
+            // r07_methodical_materialsTableAdapter
+            // 
+            this.r07_methodical_materialsTableAdapter.ClearBeforeFill = true;
             // 
             // t02_testsTableAdapter
             // 
@@ -158,18 +159,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 247);
             this.Controls.Add(this.R07addButton);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.R07toT02);
+            this.Controls.Add(this.T02_name_test);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "MethodicalMaterialBind";
             this.Text = "Добавить методический материал к тесту";
             this.Load += new System.EventHandler(this.MethodicalMaterialBind_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r07methodicalmaterialsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02testsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R07toT02)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r07methodicalmaterialsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet15)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -178,8 +179,8 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.ComboBox T02_name_test;
+        private System.Windows.Forms.DataGridView R07toT02;
         private System.Windows.Forms.Button R07addButton;
         private bd_kidsDataSet15 bd_kidsDataSet15;
         private System.Windows.Forms.BindingSource r07methodicalmaterialsBindingSource;

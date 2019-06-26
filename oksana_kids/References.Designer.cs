@@ -50,6 +50,10 @@
             this.R02changeButton = new System.Windows.Forms.Button();
             this.R02deleteButton = new System.Windows.Forms.Button();
             this.R02 = new System.Windows.Forms.DataGridView();
+            this.nameclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.studyyearsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.r02pupilsclassesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSet17 = new oksana_kids.bd_kidsDataSet17();
             this.R02_study_years = new System.Windows.Forms.TextBox();
@@ -227,10 +231,7 @@
             this.r09_study_subjectsTableAdapter = new oksana_kids.bd_kidsDataSet25TableAdapters.R09_study_subjectsTableAdapter();
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet26TableAdapters.R10_next_action_variantsTableAdapter();
             this.r12_instructions_to_test_tasks_typesTableAdapter = new oksana_kids.bd_kidsDataSet27TableAdapters.R12_instructions_to_test_tasks_typesTableAdapter();
-            this.nameclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studyyearsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeclassDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.R01_people_category.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.R01)).BeginInit();
@@ -514,6 +515,31 @@
             this.R02.TabIndex = 10;
             this.R02.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R02_CellClick);
             // 
+            // nameclassDataGridViewTextBoxColumn
+            // 
+            this.nameclassDataGridViewTextBoxColumn.DataPropertyName = "name_class";
+            this.nameclassDataGridViewTextBoxColumn.HeaderText = "Класс обучающегося";
+            this.nameclassDataGridViewTextBoxColumn.Name = "nameclassDataGridViewTextBoxColumn";
+            // 
+            // studyyearsDataGridViewTextBoxColumn
+            // 
+            this.studyyearsDataGridViewTextBoxColumn.DataPropertyName = "study_years";
+            this.studyyearsDataGridViewTextBoxColumn.HeaderText = "Годы обучения";
+            this.studyyearsDataGridViewTextBoxColumn.Name = "studyyearsDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn1
+            // 
+            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            // 
+            // codeclassDataGridViewTextBoxColumn
+            // 
+            this.codeclassDataGridViewTextBoxColumn.DataPropertyName = "code_class";
+            this.codeclassDataGridViewTextBoxColumn.HeaderText = "code_class";
+            this.codeclassDataGridViewTextBoxColumn.Name = "codeclassDataGridViewTextBoxColumn";
+            this.codeclassDataGridViewTextBoxColumn.Visible = false;
+            // 
             // r02pupilsclassesBindingSource
             // 
             this.r02pupilsclassesBindingSource.DataMember = "R02_pupils_classes";
@@ -598,22 +624,24 @@
             // R03addButton
             // 
             this.R03addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R03addButton.Location = new System.Drawing.Point(368, 301);
+            this.R03addButton.Location = new System.Drawing.Point(317, 301);
             this.R03addButton.Name = "R03addButton";
             this.R03addButton.Size = new System.Drawing.Size(123, 47);
             this.R03addButton.TabIndex = 9;
             this.R03addButton.Text = "Добавить";
             this.R03addButton.UseVisualStyleBackColor = true;
+            this.R03addButton.Click += new System.EventHandler(this.R03addButton_Click);
             // 
             // R03changeButton
             // 
             this.R03changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R03changeButton.Location = new System.Drawing.Point(524, 301);
+            this.R03changeButton.Location = new System.Drawing.Point(501, 301);
             this.R03changeButton.Name = "R03changeButton";
             this.R03changeButton.Size = new System.Drawing.Size(123, 47);
             this.R03changeButton.TabIndex = 10;
             this.R03changeButton.Text = "Изменить";
             this.R03changeButton.UseVisualStyleBackColor = true;
+            this.R03changeButton.Click += new System.EventHandler(this.R03changeButton_Click);
             // 
             // R03deleteButton
             // 
@@ -624,6 +652,7 @@
             this.R03deleteButton.TabIndex = 11;
             this.R03deleteButton.Text = "Удалить";
             this.R03deleteButton.UseVisualStyleBackColor = true;
+            this.R03deleteButton.Click += new System.EventHandler(this.R03deleteButton_Click);
             // 
             // R03
             // 
@@ -635,10 +664,11 @@
             this.noteDataGridViewTextBoxColumn2,
             this.codetypeDataGridViewTextBoxColumn});
             this.R03.DataSource = this.r03testingtypesBindingSource;
-            this.R03.Location = new System.Drawing.Point(368, 8);
+            this.R03.Location = new System.Drawing.Point(317, 8);
             this.R03.Name = "R03";
-            this.R03.Size = new System.Drawing.Size(430, 287);
+            this.R03.Size = new System.Drawing.Size(481, 287);
             this.R03.TabIndex = 8;
+            this.R03.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R03_CellClick);
             // 
             // nametypeDataGridViewTextBoxColumn
             // 
@@ -674,7 +704,7 @@
             this.R03_note.Location = new System.Drawing.Point(101, 195);
             this.R03_note.Multiline = true;
             this.R03_note.Name = "R03_note";
-            this.R03_note.Size = new System.Drawing.Size(261, 20);
+            this.R03_note.Size = new System.Drawing.Size(210, 20);
             this.R03_note.TabIndex = 7;
             // 
             // label6
@@ -692,7 +722,7 @@
             this.R03_name_type.Location = new System.Drawing.Point(101, 140);
             this.R03_name_type.Multiline = true;
             this.R03_name_type.Name = "R03_name_type";
-            this.R03_name_type.Size = new System.Drawing.Size(261, 49);
+            this.R03_name_type.Size = new System.Drawing.Size(210, 49);
             this.R03_name_type.TabIndex = 5;
             // 
             // label7
@@ -748,6 +778,7 @@
             this.CBcorrelate.TabIndex = 1;
             this.CBcorrelate.Text = "соответствие";
             this.CBcorrelate.UseVisualStyleBackColor = true;
+            this.CBcorrelate.MouseEnter += new System.EventHandler(this.CBcorrelate_MouseEnter);
             // 
             // CBchoose
             // 
@@ -759,6 +790,7 @@
             this.CBchoose.Text = "выбор из предопределенного набора";
             this.CBchoose.UseVisualStyleBackColor = true;
             this.CBchoose.Click += new System.EventHandler(this.CBchoose_Click);
+            this.CBchoose.MouseEnter += new System.EventHandler(this.CBchoose_MouseEnter);
             // 
             // R04_end_testing_reasons
             // 
@@ -786,6 +818,7 @@
             this.R04addButton.TabIndex = 12;
             this.R04addButton.Text = "Добавить";
             this.R04addButton.UseVisualStyleBackColor = true;
+            this.R04addButton.Click += new System.EventHandler(this.R04addButton_Click);
             // 
             // R04chagebutton
             // 
@@ -796,6 +829,7 @@
             this.R04chagebutton.TabIndex = 13;
             this.R04chagebutton.Text = "Изменить";
             this.R04chagebutton.UseVisualStyleBackColor = true;
+            this.R04chagebutton.Click += new System.EventHandler(this.R04chagebutton_Click);
             // 
             // R04deleteButton
             // 
@@ -806,6 +840,7 @@
             this.R04deleteButton.TabIndex = 14;
             this.R04deleteButton.Text = "Удалить";
             this.R04deleteButton.UseVisualStyleBackColor = true;
+            this.R04deleteButton.Click += new System.EventHandler(this.R04deleteButton_Click);
             // 
             // R04
             // 
@@ -821,6 +856,7 @@
             this.R04.Name = "R04";
             this.R04.Size = new System.Drawing.Size(446, 283);
             this.R04.TabIndex = 8;
+            this.R04.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R04_CellClick);
             // 
             // nameendreasonDataGridViewTextBoxColumn
             // 
@@ -912,6 +948,7 @@
             this.R05addButton.TabIndex = 20;
             this.R05addButton.Text = "Добавить";
             this.R05addButton.UseVisualStyleBackColor = true;
+            this.R05addButton.Click += new System.EventHandler(this.R05addButton_Click);
             // 
             // R05changeButton
             // 
@@ -922,6 +959,7 @@
             this.R05changeButton.TabIndex = 21;
             this.R05changeButton.Text = "Изменить";
             this.R05changeButton.UseVisualStyleBackColor = true;
+            this.R05changeButton.Click += new System.EventHandler(this.R05changeButton_Click);
             // 
             // R05deleteButton
             // 
@@ -932,6 +970,7 @@
             this.R05deleteButton.TabIndex = 22;
             this.R05deleteButton.Text = "Удалить";
             this.R05deleteButton.UseVisualStyleBackColor = true;
+            this.R05deleteButton.Click += new System.EventHandler(this.R05deleteButton_Click);
             // 
             // R05
             // 
@@ -947,6 +986,7 @@
             this.R05.Name = "R05";
             this.R05.Size = new System.Drawing.Size(446, 283);
             this.R05.TabIndex = 19;
+            this.R05.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R05_CellClick);
             // 
             // nameownershipDataGridViewTextBoxColumn
             // 
@@ -979,10 +1019,10 @@
             // 
             // R05_note
             // 
-            this.R05_note.Location = new System.Drawing.Point(166, 47);
+            this.R05_note.Location = new System.Drawing.Point(157, 47);
             this.R05_note.Multiline = true;
             this.R05_note.Name = "R05_note";
-            this.R05_note.Size = new System.Drawing.Size(179, 20);
+            this.R05_note.Size = new System.Drawing.Size(188, 20);
             this.R05_note.TabIndex = 18;
             // 
             // label10
@@ -997,9 +1037,9 @@
             // 
             // R05_name_ownership
             // 
-            this.R05_name_ownership.Location = new System.Drawing.Point(166, 13);
+            this.R05_name_ownership.Location = new System.Drawing.Point(157, 13);
             this.R05_name_ownership.Name = "R05_name_ownership";
-            this.R05_name_ownership.Size = new System.Drawing.Size(179, 20);
+            this.R05_name_ownership.Size = new System.Drawing.Size(188, 20);
             this.R05_name_ownership.TabIndex = 16;
             // 
             // label11
@@ -1038,6 +1078,7 @@
             this.R06addButton.TabIndex = 28;
             this.R06addButton.Text = "Добавить";
             this.R06addButton.UseVisualStyleBackColor = true;
+            this.R06addButton.Click += new System.EventHandler(this.R06addButton_Click);
             // 
             // R06changeButton
             // 
@@ -1048,6 +1089,7 @@
             this.R06changeButton.TabIndex = 29;
             this.R06changeButton.Text = "Изменить";
             this.R06changeButton.UseVisualStyleBackColor = true;
+            this.R06changeButton.Click += new System.EventHandler(this.R06changeButton_Click);
             // 
             // R06deleteButton
             // 
@@ -1058,6 +1100,7 @@
             this.R06deleteButton.TabIndex = 30;
             this.R06deleteButton.Text = "Удалить";
             this.R06deleteButton.UseVisualStyleBackColor = true;
+            this.R06deleteButton.Click += new System.EventHandler(this.R06deleteButton_Click);
             // 
             // R06
             // 
@@ -1073,6 +1116,7 @@
             this.R06.Name = "R06";
             this.R06.Size = new System.Drawing.Size(446, 253);
             this.R06.TabIndex = 27;
+            this.R06.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R06_CellClick);
             // 
             // nameaimDataGridViewTextBoxColumn
             // 
@@ -1178,6 +1222,7 @@
             this.R07addButton.TabIndex = 30;
             this.R07addButton.Text = "Добавить";
             this.R07addButton.UseVisualStyleBackColor = true;
+            this.R07addButton.Click += new System.EventHandler(this.R07addButton_Click);
             // 
             // R07changeButton
             // 
@@ -1188,6 +1233,7 @@
             this.R07changeButton.TabIndex = 31;
             this.R07changeButton.Text = "Изменить";
             this.R07changeButton.UseVisualStyleBackColor = true;
+            this.R07changeButton.Click += new System.EventHandler(this.R07changeButton_Click);
             // 
             // R07deleteButton
             // 
@@ -1198,12 +1244,13 @@
             this.R07deleteButton.TabIndex = 32;
             this.R07deleteButton.Text = "Удалить";
             this.R07deleteButton.UseVisualStyleBackColor = true;
+            this.R07deleteButton.Click += new System.EventHandler(this.R07deleteButton_Click);
             // 
             // R07_note
             // 
-            this.R07_note.Location = new System.Drawing.Point(141, 87);
+            this.R07_note.Location = new System.Drawing.Point(112, 87);
             this.R07_note.Name = "R07_note";
-            this.R07_note.Size = new System.Drawing.Size(211, 20);
+            this.R07_note.Size = new System.Drawing.Size(240, 20);
             this.R07_note.TabIndex = 29;
             // 
             // label14
@@ -1218,9 +1265,9 @@
             // 
             // R07_file_location
             // 
-            this.R07_file_location.Location = new System.Drawing.Point(141, 61);
+            this.R07_file_location.Location = new System.Drawing.Point(112, 61);
             this.R07_file_location.Name = "R07_file_location";
-            this.R07_file_location.Size = new System.Drawing.Size(211, 20);
+            this.R07_file_location.Size = new System.Drawing.Size(240, 20);
             this.R07_file_location.TabIndex = 27;
             // 
             // label15
@@ -1235,10 +1282,10 @@
             // 
             // R07_description
             // 
-            this.R07_description.Location = new System.Drawing.Point(141, 11);
+            this.R07_description.Location = new System.Drawing.Point(112, 11);
             this.R07_description.Multiline = true;
             this.R07_description.Name = "R07_description";
-            this.R07_description.Size = new System.Drawing.Size(657, 44);
+            this.R07_description.Size = new System.Drawing.Size(686, 44);
             this.R07_description.TabIndex = 25;
             // 
             // label16
@@ -1266,6 +1313,7 @@
             this.R07.Name = "R07";
             this.R07.Size = new System.Drawing.Size(440, 232);
             this.R07.TabIndex = 23;
+            this.R07.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R07_CellClick);
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
@@ -1329,6 +1377,7 @@
             this.B03study_subjects_to_courses.TabIndex = 39;
             this.B03study_subjects_to_courses.Text = "Добавить темы к курсу";
             this.B03study_subjects_to_courses.UseVisualStyleBackColor = true;
+            this.B03study_subjects_to_courses.Click += new System.EventHandler(this.B03study_subjects_to_courses_Click);
             // 
             // R08addButton
             // 
@@ -1339,6 +1388,7 @@
             this.R08addButton.TabIndex = 36;
             this.R08addButton.Text = "Добавить";
             this.R08addButton.UseVisualStyleBackColor = true;
+            this.R08addButton.Click += new System.EventHandler(this.R08addButton_Click);
             // 
             // R08changeButton
             // 
@@ -1349,6 +1399,7 @@
             this.R08changeButton.TabIndex = 37;
             this.R08changeButton.Text = "Изменить";
             this.R08changeButton.UseVisualStyleBackColor = true;
+            this.R08changeButton.Click += new System.EventHandler(this.R08changeButton_Click);
             // 
             // R08deleteButton
             // 
@@ -1359,6 +1410,7 @@
             this.R08deleteButton.TabIndex = 38;
             this.R08deleteButton.Text = "Удалить";
             this.R08deleteButton.UseVisualStyleBackColor = true;
+            this.R08deleteButton.Click += new System.EventHandler(this.R08deleteButton_Click);
             // 
             // R08
             // 
@@ -1374,6 +1426,7 @@
             this.R08.Name = "R08";
             this.R08.Size = new System.Drawing.Size(446, 279);
             this.R08.TabIndex = 35;
+            this.R08.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R08_CellClick);
             // 
             // namecourseDataGridViewTextBoxColumn
             // 
@@ -1406,10 +1459,10 @@
             // 
             // R08_note
             // 
-            this.R08_note.Location = new System.Drawing.Point(149, 57);
+            this.R08_note.Location = new System.Drawing.Point(129, 57);
             this.R08_note.Multiline = true;
             this.R08_note.Name = "R08_note";
-            this.R08_note.Size = new System.Drawing.Size(196, 20);
+            this.R08_note.Size = new System.Drawing.Size(216, 20);
             this.R08_note.TabIndex = 34;
             // 
             // label17
@@ -1424,10 +1477,10 @@
             // 
             // R08_name_course
             // 
-            this.R08_name_course.Location = new System.Drawing.Point(149, 11);
+            this.R08_name_course.Location = new System.Drawing.Point(129, 11);
             this.R08_name_course.Multiline = true;
             this.R08_name_course.Name = "R08_name_course";
-            this.R08_name_course.Size = new System.Drawing.Size(196, 40);
+            this.R08_name_course.Size = new System.Drawing.Size(216, 40);
             this.R08_name_course.TabIndex = 32;
             // 
             // label18
@@ -1570,10 +1623,10 @@
             // 
             // R09_note
             // 
-            this.R09_note.Location = new System.Drawing.Point(149, 105);
+            this.R09_note.Location = new System.Drawing.Point(124, 105);
             this.R09_note.Multiline = true;
             this.R09_note.Name = "R09_note";
-            this.R09_note.Size = new System.Drawing.Size(196, 20);
+            this.R09_note.Size = new System.Drawing.Size(221, 20);
             this.R09_note.TabIndex = 42;
             // 
             // label19
@@ -1588,10 +1641,10 @@
             // 
             // R09_name_subject
             // 
-            this.R09_name_subject.Location = new System.Drawing.Point(149, 11);
+            this.R09_name_subject.Location = new System.Drawing.Point(124, 11);
             this.R09_name_subject.Multiline = true;
             this.R09_name_subject.Name = "R09_name_subject";
-            this.R09_name_subject.Size = new System.Drawing.Size(196, 50);
+            this.R09_name_subject.Size = new System.Drawing.Size(221, 50);
             this.R09_name_subject.TabIndex = 40;
             // 
             // label20
@@ -2058,31 +2111,6 @@
             // 
             this.r12_instructions_to_test_tasks_typesTableAdapter.ClearBeforeFill = true;
             // 
-            // nameclassDataGridViewTextBoxColumn
-            // 
-            this.nameclassDataGridViewTextBoxColumn.DataPropertyName = "name_class";
-            this.nameclassDataGridViewTextBoxColumn.HeaderText = "Класс обучающегося";
-            this.nameclassDataGridViewTextBoxColumn.Name = "nameclassDataGridViewTextBoxColumn";
-            // 
-            // studyyearsDataGridViewTextBoxColumn
-            // 
-            this.studyyearsDataGridViewTextBoxColumn.DataPropertyName = "study_years";
-            this.studyyearsDataGridViewTextBoxColumn.HeaderText = "Годы обучения";
-            this.studyyearsDataGridViewTextBoxColumn.Name = "studyyearsDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn1
-            // 
-            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
-            // 
-            // codeclassDataGridViewTextBoxColumn
-            // 
-            this.codeclassDataGridViewTextBoxColumn.DataPropertyName = "code_class";
-            this.codeclassDataGridViewTextBoxColumn.HeaderText = "code_class";
-            this.codeclassDataGridViewTextBoxColumn.Name = "codeclassDataGridViewTextBoxColumn";
-            this.codeclassDataGridViewTextBoxColumn.Visible = false;
-            // 
             // References
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2366,5 +2394,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn studyyearsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeclassDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
