@@ -16,6 +16,8 @@ namespace oksana_kids
         public string testName = "";
         public string taskName = "";
 
+        public long testID = 0;
+
         List<string> fio = new List<string>();
         Dictionary<int, string> fio_dict = new Dictionary<int, string>();
 
@@ -70,7 +72,7 @@ namespace oksana_kids
 
         private void test_construct_button_Click(object sender, EventArgs e)
         {
-            AdaptiveTestConstructor a = new AdaptiveTestConstructor(testName);
+            AdaptiveTestConstructor a = new AdaptiveTestConstructor(testName, testID);
             a.Show();
         }
 
@@ -88,12 +90,14 @@ namespace oksana_kids
                        where i.id_test == testID
                        select new
                        {
-                           name = i.name_test
+                           name = i.name_test,
+                           i.id_test
                        };
 
             foreach (var item in linq)
             {
                 testName = item.name;
+                this.testID = testID;
             }
 
             test_construct_button.Enabled = true;
