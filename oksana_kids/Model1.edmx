@@ -336,6 +336,18 @@
           <Property Name="group_no" Type="integer" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.B03_bind_view" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="B03_bind_view">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="code_course" Type="integer" />
+          <Property Name="serial_number_subject" Type="integer" />
+          <Property Name="name_subject" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
 предупреждение 6005: Тип данных "" в настоящее время не поддерживается для целевой версии платформы Entity Framework; столбец "fio" в таблице "main.T01_1_pupils" был исключен.
 предупреждение 6002: В таблице или представлении "main.T01_1_pupils" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="T01_1_pupils">
@@ -839,6 +851,15 @@
           <EntitySet Name="T09_comment_variants_on_passing_tasks" EntityType="Self.T09_comment_variants_on_passing_tasks" store:Type="Tables" />
           <EntitySet Name="T10_organizations" EntityType="Self.T10_organizations" store:Type="Tables" />
           <EntitySet Name="T11_test_answers" EntityType="Self.T11_test_answers" store:Type="Tables" />
+          <EntitySet Name="B03_bind_view" EntityType="Self.B03_bind_view" store:Type="Views">
+            <DefiningQuery>SELECT 
+[B03_bind_view].[id] AS [id], 
+[B03_bind_view].[code_course] AS [code_course], 
+[B03_bind_view].[serial_number_subject] AS [serial_number_subject], 
+[B03_bind_view].[name_subject] AS [name_subject], 
+[B03_bind_view].[note] AS [note]
+FROM [B03_bind_view] AS [B03_bind_view]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="T01_1_pupils" EntityType="Self.T01_1_pupils" store:Type="Views">
             <DefiningQuery>SELECT 
 [T01_1_pupils].[id_person] AS [id_person], 
@@ -2009,15 +2030,16 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
             <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
             <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
           </AssociationSet>
-          <EntitySet Name="T11_test_answersSet" EntityType="bd_kidsModel.T11_test_answers" />
+          <EntitySet Name="T11_test_answers" EntityType="bd_kidsModel.T11_test_answers" />
           <AssociationSet Name="FK_T11_test_answers_1_0" Association="bd_kidsModel.FK_T11_test_answers_1_0">
             <End Role="R15_task_key_words" EntitySet="R15_task_key_words" />
-            <End Role="T11_test_answers1" EntitySet="T11_test_answersSet" />
+            <End Role="T11_test_answers1" EntitySet="T11_test_answers" />
           </AssociationSet>
           <AssociationSet Name="FK_T11_test_answers_0_0" Association="bd_kidsModel.FK_T11_test_answers_0_0">
             <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
-            <End Role="T11_test_answers1" EntitySet="T11_test_answersSet" />
+            <End Role="T11_test_answers1" EntitySet="T11_test_answers" />
           </AssociationSet>
+          <EntitySet Name="B03_bind_view" EntityType="bd_kidsModel.B03_bind_view" />
           </EntityContainer>
         <EntityType Name="T11_test_answers">
           <Key>
@@ -2058,6 +2080,16 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="B03_bind_view">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="code_course" Type="Int64" />
+          <Property Name="serial_number_subject" Type="Int64" />
+          <Property Name="name_subject" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2467,7 +2499,7 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="T11_test_answersSet">
+          <EntitySetMapping Name="T11_test_answers">
             <EntityTypeMapping TypeName="bd_kidsModel.T11_test_answers">
               <MappingFragment StoreEntitySet="T11_test_answers">
                 <ScalarProperty Name="group_no" ColumnName="group_no" />
@@ -2477,6 +2509,17 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
                 <ScalarProperty Name="string_value" ColumnName="string_value" />
                 <ScalarProperty Name="code_key_word" ColumnName="code_key_word" />
                 <ScalarProperty Name="id_task" ColumnName="id_task" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="B03_bind_view">
+            <EntityTypeMapping TypeName="bd_kidsModel.B03_bind_view">
+              <MappingFragment StoreEntitySet="B03_bind_view">
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="name_subject" ColumnName="name_subject" />
+                <ScalarProperty Name="serial_number_subject" ColumnName="serial_number_subject" />
+                <ScalarProperty Name="code_course" ColumnName="code_course" />
                 <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>

@@ -61,5 +61,6 @@ namespace oksana_kids
         public virtual DbSet<T02_view_tests> T02_view_tests { get; set; }
         public virtual DbSet<T04_view_testing_tasks> T04_view_testing_tasks { get; set; }
         public virtual DbSet<T11_test_answers> T11_test_answers { get; set; }
+        public virtual DbSet<B03_bind_view> B03_bind_view { get; set; }
     }
 }

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bd_kidsDataSet30" targetNamespace="http://tempuri.org/bd_kidsDataSet30.xsd" xmlns:mstns="http://tempuri.org/bd_kidsDataSet30.xsd" xmlns="http://tempuri.org/bd_kidsDataSet30.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bd_kidsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bd_kidsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.oksana_kids.Properties.Settings.GlobalReference.Default.bd_kidsConnectionString" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="B03_bind_viewTableAdapter" GeneratorDataComponentClassName="B03_bind_viewTableAdapter" Name="B03_bind_view" UserDataComponentName="B03_bind_viewTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_kidsConnectionString (Settings)" DbObjectName="main.B03_bind_view" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [id], [code_course], [serial_number_subject], [name_subject], [note] FROM [B03_bind_view]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id" DataSetColumn="id" />
+              <Mapping SourceColumn="code_course" DataSetColumn="code_course" />
+              <Mapping SourceColumn="serial_number_subject" DataSetColumn="serial_number_subject" />
+              <Mapping SourceColumn="name_subject" DataSetColumn="name_subject" />
+              <Mapping SourceColumn="note" DataSetColumn="note" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bd_kidsDataSet30" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bd_kidsDataSet30" msprop:Generator_UserDSName="bd_kidsDataSet30">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="B03_bind_view" msprop:Generator_TableClassName="B03_bind_viewDataTable" msprop:Generator_TableVarName="tableB03_bind_view" msprop:Generator_TablePropName="B03_bind_view" msprop:Generator_RowDeletingName="B03_bind_viewRowDeleting" msprop:Generator_RowChangingName="B03_bind_viewRowChanging" msprop:Generator_RowEvHandlerName="B03_bind_viewRowChangeEventHandler" msprop:Generator_RowDeletedName="B03_bind_viewRowDeleted" msprop:Generator_UserTableName="B03_bind_view" msprop:Generator_RowChangedName="B03_bind_viewRowChanged" msprop:Generator_RowEvArgName="B03_bind_viewRowChangeEvent" msprop:Generator_RowClassName="B03_bind_viewRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:long" />
+              <xs:element name="code_course" msprop:Generator_ColumnVarNameInTable="columncode_course" msprop:Generator_ColumnPropNameInRow="code_course" msprop:Generator_ColumnPropNameInTable="code_courseColumn" msprop:Generator_UserColumnName="code_course" type="xs:long" minOccurs="0" />
+              <xs:element name="serial_number_subject" msprop:Generator_ColumnVarNameInTable="columnserial_number_subject" msprop:Generator_ColumnPropNameInRow="serial_number_subject" msprop:Generator_ColumnPropNameInTable="serial_number_subjectColumn" msprop:Generator_UserColumnName="serial_number_subject" type="xs:long" minOccurs="0" />
+              <xs:element name="name_subject" msprop:Generator_ColumnVarNameInTable="columnname_subject" msprop:Generator_ColumnPropNameInRow="name_subject" msprop:Generator_ColumnPropNameInTable="name_subjectColumn" msprop:Generator_UserColumnName="name_subject" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="note" msprop:Generator_ColumnVarNameInTable="columnnote" msprop:Generator_ColumnPropNameInRow="note" msprop:Generator_ColumnPropNameInTable="noteColumn" msprop:Generator_UserColumnName="note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

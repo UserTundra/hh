@@ -75,6 +75,7 @@
         <EntityTypeShape EntityType="bd_kidsModel.T11_test_answers" Width="2.5" PointX="19.5" PointY="11.5" />
         <AssociationConnector Association="bd_kidsModel.FK_T11_test_answers_1_0" />
         <AssociationConnector Association="bd_kidsModel.FK_T11_test_answers_0_0" />
+        <EntityTypeShape EntityType="bd_kidsModel.B03_bind_view" Width="1.5" PointX="5.375" PointY="4.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

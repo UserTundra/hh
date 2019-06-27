@@ -982,15 +982,16 @@
       <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
       <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
     </AssociationSet>
-    <EntitySet Name="T11_test_answersSet" EntityType="bd_kidsModel.T11_test_answers" />
+    <EntitySet Name="T11_test_answers" EntityType="bd_kidsModel.T11_test_answers" />
     <AssociationSet Name="FK_T11_test_answers_1_0" Association="bd_kidsModel.FK_T11_test_answers_1_0">
       <End Role="R15_task_key_words" EntitySet="R15_task_key_words" />
-      <End Role="T11_test_answers1" EntitySet="T11_test_answersSet" />
+      <End Role="T11_test_answers1" EntitySet="T11_test_answers" />
     </AssociationSet>
     <AssociationSet Name="FK_T11_test_answers_0_0" Association="bd_kidsModel.FK_T11_test_answers_0_0">
       <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
-      <End Role="T11_test_answers1" EntitySet="T11_test_answersSet" />
+      <End Role="T11_test_answers1" EntitySet="T11_test_answers" />
     </AssociationSet>
+    <EntitySet Name="B03_bind_view" EntityType="bd_kidsModel.B03_bind_view" />
   </EntityContainer>
   <EntityType Name="T11_test_answers">
     <Key>
@@ -1031,4 +1032,14 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="B03_bind_view">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code_course" Type="Int64" />
+    <Property Name="serial_number_subject" Type="Int64" />
+    <Property Name="name_subject" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

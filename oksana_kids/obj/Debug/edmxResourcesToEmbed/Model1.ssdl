@@ -331,6 +331,18 @@
     <Property Name="group_no" Type="integer" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.B03_bind_view" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="B03_bind_view">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code_course" Type="integer" />
+    <Property Name="serial_number_subject" Type="integer" />
+    <Property Name="name_subject" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
 предупреждение 6005: Тип данных "" в настоящее время не поддерживается для целевой версии платформы Entity Framework; столбец "fio" в таблице "main.T01_1_pupils" был исключен.
 предупреждение 6002: В таблице или представлении "main.T01_1_pupils" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="T01_1_pupils">
@@ -834,6 +846,15 @@
     <EntitySet Name="T09_comment_variants_on_passing_tasks" EntityType="Self.T09_comment_variants_on_passing_tasks" store:Type="Tables" />
     <EntitySet Name="T10_organizations" EntityType="Self.T10_organizations" store:Type="Tables" />
     <EntitySet Name="T11_test_answers" EntityType="Self.T11_test_answers" store:Type="Tables" />
+    <EntitySet Name="B03_bind_view" EntityType="Self.B03_bind_view" store:Type="Views">
+      <DefiningQuery>SELECT 
+[B03_bind_view].[id] AS [id], 
+[B03_bind_view].[code_course] AS [code_course], 
+[B03_bind_view].[serial_number_subject] AS [serial_number_subject], 
+[B03_bind_view].[name_subject] AS [name_subject], 
+[B03_bind_view].[note] AS [note]
+FROM [B03_bind_view] AS [B03_bind_view]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="T01_1_pupils" EntityType="Self.T01_1_pupils" store:Type="Views">
       <DefiningQuery>SELECT 
 [T01_1_pupils].[id_person] AS [id_person], 
