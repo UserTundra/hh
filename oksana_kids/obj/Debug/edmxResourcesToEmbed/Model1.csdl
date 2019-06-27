@@ -252,6 +252,8 @@
     <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T02_tests_0_0" FromRole="T02_tests" ToRole="T01_personalities" />
     <NavigationProperty Name="T06_teaching_materials" Relationship="Self.FK_T02_tests_2_0" FromRole="T02_tests" ToRole="T06_teaching_materials" />
     <NavigationProperty Name="T05_test_passing_results" Relationship="Self.FK_T05_test_passing_results_0_0" FromRole="T02_tests" ToRole="T05_test_passing_results" />
+    <Property Name="max_count_TT_not_done_full_try" Type="Int64" />
+    <Property Name="max_count_TT_bcause_time_limit" Type="Int64" />
   </EntityType>
   <EntityType Name="T03_testing_task_modules">
     <Key>
@@ -294,6 +296,8 @@
     <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T04_testing_tasks_0_0" FromRole="T04_testing_tasks" ToRole="T01_personalities" />
     <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_3_0" FromRole="T04_testing_tasks" ToRole="T03_testing_task_modules" />
     <NavigationProperty Name="T11_test_answers" Relationship="bd_kidsModel.FK_T11_test_answers_0_0" FromRole="T04_testing_tasks" ToRole="T11_test_answers1" />
+    <Property Name="max_count_TT_try" Type="Int64" />
+    <Property Name="unique_adaptive_constraint" Type="Int64" />
   </EntityType>
   <EntityType Name="T05_test_passing_results">
     <Key>

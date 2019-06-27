@@ -30,6 +30,8 @@ namespace oksana_kids
         public Nullable<long> code_type { get; set; }
         public string file_location { get; set; }
         public string note { get; set; }
+        public Nullable<long> max_count_TT_try { get; set; }
+        public Nullable<long> unique_adaptive_constraint { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<B04_test_tasks_to_study_subjects> B04_test_tasks_to_study_subjects { get; set; }

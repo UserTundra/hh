@@ -224,6 +224,8 @@
     <EntitySetMapping Name="T02_tests">
       <EntityTypeMapping TypeName="bd_kidsModel.T02_tests">
         <MappingFragment StoreEntitySet="T02_tests">
+          <ScalarProperty Name="max_count_TT_bcause_time_limit" ColumnName="max_count_TT_bcause_time_limit" />
+          <ScalarProperty Name="max_count_TT_not_done_full_try" ColumnName="max_count_TT_not_done_full_try" />
           <ScalarProperty Name="id_test" ColumnName="id_test" />
           <ScalarProperty Name="name_test" ColumnName="name_test" />
           <ScalarProperty Name="id_method_material" ColumnName="id_method_material" />
@@ -256,6 +258,8 @@
     <EntitySetMapping Name="T04_testing_tasks">
       <EntityTypeMapping TypeName="bd_kidsModel.T04_testing_tasks">
         <MappingFragment StoreEntitySet="T04_testing_tasks">
+          <ScalarProperty Name="unique_adaptive_constraint" ColumnName="unique_adaptive_constraint" />
+          <ScalarProperty Name="max_count_TT_try" ColumnName="max_count_TT_try" />
           <ScalarProperty Name="id_task" ColumnName="id_task" />
           <ScalarProperty Name="name_task" ColumnName="name_task" />
           <ScalarProperty Name="id_author" ColumnName="id_author" />

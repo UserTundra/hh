@@ -216,6 +216,8 @@
           <Property Name="max_passing_duration_sec" Type="integer" />
           <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="id_teach_material" Type="integer" />
+          <Property Name="max_count_TT_not_done_full_try" Type="integer" />
+          <Property Name="max_count_TT_bcause_time_limit" Type="integer" />
         </EntityType>
         <EntityType Name="T03_testing_task_modules">
           <Key>
@@ -245,6 +247,8 @@
           <Property Name="code_type" Type="integer" />
           <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="max_count_TT_try" Type="integer" />
+          <Property Name="unique_adaptive_constraint" Type="integer" />
         </EntityType>
         <EntityType Name="T05_test_passing_results">
           <Key>
@@ -567,18 +571,6 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_T02_tests_0_0">
-          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
-          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="T01_personalities">
-              <PropertyRef Name="id_person" />
-            </Principal>
-            <Dependent Role="T02_tests">
-              <PropertyRef Name="id_author" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_T02_tests_1_0">
           <End Role="R07_methodical_materials" Type="Self.R07_methodical_materials" Multiplicity="0..1" />
           <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
           <ReferentialConstraint>
@@ -587,6 +579,18 @@
             </Principal>
             <Dependent Role="T02_tests">
               <PropertyRef Name="id_method_material" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T02_tests_1_0">
+          <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
+          <End Role="T02_tests" Type="Self.T02_tests" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T01_personalities">
+              <PropertyRef Name="id_person" />
+            </Principal>
+            <Dependent Role="T02_tests">
+              <PropertyRef Name="id_author" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -687,18 +691,6 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_T04_testing_tasks_0_0">
-          <End Role="R03_testing_types" Type="Self.R03_testing_types" Multiplicity="0..1" />
-          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="R03_testing_types">
-              <PropertyRef Name="code_type" />
-            </Principal>
-            <Dependent Role="T04_testing_tasks">
-              <PropertyRef Name="code_type" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_T04_testing_tasks_1_0">
           <End Role="T01_personalities" Type="Self.T01_personalities" Multiplicity="0..1" />
           <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="*" />
           <ReferentialConstraint>
@@ -707,6 +699,18 @@
             </Principal>
             <Dependent Role="T04_testing_tasks">
               <PropertyRef Name="id_author" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T04_testing_tasks_1_0">
+          <End Role="R03_testing_types" Type="Self.R03_testing_types" Multiplicity="0..1" />
+          <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R03_testing_types">
+              <PropertyRef Name="code_type" />
+            </Principal>
+            <Dependent Role="T04_testing_tasks">
+              <PropertyRef Name="code_type" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -960,11 +964,11 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
             <End Role="T01_personalities" EntitySet="T01_personalities" />
           </AssociationSet>
           <AssociationSet Name="FK_T02_tests_0_0" Association="Self.FK_T02_tests_0_0">
-            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="R07_methodical_materials" EntitySet="R07_methodical_materials" />
             <End Role="T02_tests" EntitySet="T02_tests" />
           </AssociationSet>
           <AssociationSet Name="FK_T02_tests_1_0" Association="Self.FK_T02_tests_1_0">
-            <End Role="R07_methodical_materials" EntitySet="R07_methodical_materials" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
             <End Role="T02_tests" EntitySet="T02_tests" />
           </AssociationSet>
           <AssociationSet Name="FK_T02_tests_2_0" Association="Self.FK_T02_tests_2_0">
@@ -1000,11 +1004,11 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
             <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
           </AssociationSet>
           <AssociationSet Name="FK_T04_testing_tasks_0_0" Association="Self.FK_T04_testing_tasks_0_0">
-            <End Role="R03_testing_types" EntitySet="R03_testing_types" />
+            <End Role="T01_personalities" EntitySet="T01_personalities" />
             <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
           </AssociationSet>
           <AssociationSet Name="FK_T04_testing_tasks_1_0" Association="Self.FK_T04_testing_tasks_1_0">
-            <End Role="T01_personalities" EntitySet="T01_personalities" />
+            <End Role="R03_testing_types" EntitySet="R03_testing_types" />
             <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
           </AssociationSet>
           <AssociationSet Name="FK_T05_test_passing_results_0_0" Association="Self.FK_T05_test_passing_results_0_0">
@@ -1300,6 +1304,8 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
           <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T02_tests_0_0" FromRole="T02_tests" ToRole="T01_personalities" />
           <NavigationProperty Name="T06_teaching_materials" Relationship="Self.FK_T02_tests_2_0" FromRole="T02_tests" ToRole="T06_teaching_materials" />
           <NavigationProperty Name="T05_test_passing_results" Relationship="Self.FK_T05_test_passing_results_0_0" FromRole="T02_tests" ToRole="T05_test_passing_results" />
+          <Property Name="max_count_TT_not_done_full_try" Type="Int64" />
+          <Property Name="max_count_TT_bcause_time_limit" Type="Int64" />
         </EntityType>
         <EntityType Name="T03_testing_task_modules">
           <Key>
@@ -1342,6 +1348,8 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
           <NavigationProperty Name="T01_personalities" Relationship="Self.FK_T04_testing_tasks_0_0" FromRole="T04_testing_tasks" ToRole="T01_personalities" />
           <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_3_0" FromRole="T04_testing_tasks" ToRole="T03_testing_task_modules" />
           <NavigationProperty Name="T11_test_answers" Relationship="bd_kidsModel.FK_T11_test_answers_0_0" FromRole="T04_testing_tasks" ToRole="T11_test_answers1" />
+          <Property Name="max_count_TT_try" Type="Int64" />
+          <Property Name="unique_adaptive_constraint" Type="Int64" />
         </EntityType>
         <EntityType Name="T05_test_passing_results">
           <Key>
@@ -2319,6 +2327,8 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
           <EntitySetMapping Name="T02_tests">
             <EntityTypeMapping TypeName="bd_kidsModel.T02_tests">
               <MappingFragment StoreEntitySet="T02_tests">
+                <ScalarProperty Name="max_count_TT_bcause_time_limit" ColumnName="max_count_TT_bcause_time_limit" />
+                <ScalarProperty Name="max_count_TT_not_done_full_try" ColumnName="max_count_TT_not_done_full_try" />
                 <ScalarProperty Name="id_test" ColumnName="id_test" />
                 <ScalarProperty Name="name_test" ColumnName="name_test" />
                 <ScalarProperty Name="id_method_material" ColumnName="id_method_material" />
@@ -2351,6 +2361,8 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
           <EntitySetMapping Name="T04_testing_tasks">
             <EntityTypeMapping TypeName="bd_kidsModel.T04_testing_tasks">
               <MappingFragment StoreEntitySet="T04_testing_tasks">
+                <ScalarProperty Name="unique_adaptive_constraint" ColumnName="unique_adaptive_constraint" />
+                <ScalarProperty Name="max_count_TT_try" ColumnName="max_count_TT_try" />
                 <ScalarProperty Name="id_task" ColumnName="id_task" />
                 <ScalarProperty Name="name_task" ColumnName="name_task" />
                 <ScalarProperty Name="id_author" ColumnName="id_author" />
