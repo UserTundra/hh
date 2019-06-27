@@ -324,3 +324,6 @@ C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.Cor
 C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CopyComplete
 C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.exe
 C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.pdb
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.TestTasksToStudySubjectsBind.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.StudyCourcesToPupilsClassesBind.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.Files.resources

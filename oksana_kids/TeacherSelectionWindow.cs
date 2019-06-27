@@ -57,12 +57,12 @@ namespace oksana_kids
             names.Add("T03_testing_task_modules", "Модули спецификации использования тз");
             names.Add("T04_testing_tasks", "Тестовые задания");
             names.Add("T05_test_passing_results", "Результаты прохождения тестов");
-            names.Add("T06_teaching_materials", "Обучающие материалы к отдельным тестовым заданиям");
+            names.Add("T06_teaching_materials", "Обучающие материалы");
             names.Add("T07_soundtracks", "Звуковые сопровождения");
             names.Add("T08_audio_video_tracks", "Аудио/видео ролики");
-            names.Add("T09_comment_variants_on_passing_tasks", "Варианты комментария по результатам выполнения тестового задания");
+            names.Add("T09_comment_variants_on_passing_tasks", "Варианты комментария по результатам выполнения ТЗ");
             names.Add("T10_organizations", "Организации");
-            names.Add("T11_test_answers", "Варианты отвеов для тестовых заданий");
+            //names.Add("T11_test_answers", "Варианты ответов для тестовых заданий");
         }
 
         private void getListToFill(string symbolType)
@@ -137,7 +137,7 @@ namespace oksana_kids
         {
             shower.Items.Clear();
             shower.Items.Add("Организации");
-            shower.Items.Add("Варианты комментария по результатам выполнения тестового задания");
+            shower.Items.Add("Варианты комментария по результатам выполнения ТЗ");
             
         }
 
@@ -146,7 +146,7 @@ namespace oksana_kids
             shower.Items.Clear();
             shower.Items.Add("Аудио/видео ролики");
             shower.Items.Add("Звуковые сопровождения");
-            shower.Items.Add("Обучающие материалы к отдельным тестовым заданиям");
+            shower.Items.Add("Обучающие материалы");
         }
 
         private void goToButton_Click(object sender, EventArgs e)
@@ -168,7 +168,12 @@ namespace oksana_kids
             else if (whatTableIs().StartsWith("T02") || whatTableIs().StartsWith("T03") || whatTableIs().StartsWith("T04") || whatTableIs().StartsWith("T05"))
             {
                 Tests t = new Tests(shower.SelectedIndex);
-                 t.Show();
+                t.Show();
+            }
+            else if (whatTableIs().StartsWith("T06") || whatTableIs().StartsWith("T07") || whatTableIs().StartsWith("T08"))
+            {
+                Files f = new Files(shower.SelectedIndex);
+                f.Show();
             }
             
             

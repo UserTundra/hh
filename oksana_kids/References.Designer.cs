@@ -46,6 +46,7 @@
             this.R01_name_category = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.R02_pupils_classes = new System.Windows.Forms.TabPage();
+            this.B02study_cources_to_pupils_classes = new System.Windows.Forms.Button();
             this.R02addButton = new System.Windows.Forms.Button();
             this.R02changeButton = new System.Windows.Forms.Button();
             this.R02deleteButton = new System.Windows.Forms.Button();
@@ -189,16 +190,16 @@
             this.R10_name_action = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.R11_variants_of_passing_tasks_results_analysis = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.R11addButton = new System.Windows.Forms.Button();
+            this.R11changeButton = new System.Windows.Forms.Button();
+            this.R11deleteButton = new System.Windows.Forms.Button();
+            this.R11 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.R11_note = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.R11_name_variant = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.R12_instructions_to_test_tasks_types = new System.Windows.Forms.TabPage();
             this.R12addButton = new System.Windows.Forms.Button();
@@ -232,6 +233,49 @@
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet26TableAdapters.R10_next_action_variantsTableAdapter();
             this.r12_instructions_to_test_tasks_typesTableAdapter = new oksana_kids.bd_kidsDataSet27TableAdapters.R12_instructions_to_test_tasks_typesTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.R13addButton = new System.Windows.Forms.Button();
+            this.R13changeButton = new System.Windows.Forms.Button();
+            this.R13deleteButton = new System.Windows.Forms.Button();
+            this.R13 = new System.Windows.Forms.DataGridView();
+            this.R13_note = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.R13_name_play_result = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.bd_kidsDataSet41 = new oksana_kids.bd_kidsDataSet41();
+            this.bd_kidsDataSet42 = new oksana_kids.bd_kidsDataSet42();
+            this.r13playresultvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.r13_play_result_variantsTableAdapter = new oksana_kids.bd_kidsDataSet42TableAdapters.R13_play_result_variantsTableAdapter();
+            this.nameplayresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeplayresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.R14addButton = new System.Windows.Forms.Button();
+            this.R14changeButton = new System.Windows.Forms.Button();
+            this.R14deleteButton = new System.Windows.Forms.Button();
+            this.R14 = new System.Windows.Forms.DataGridView();
+            this.R14_note = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.R14_name_type = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.bd_kidsDataSet43 = new oksana_kids.bd_kidsDataSet43();
+            this.r14tracktypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.r14_track_typesTableAdapter = new oksana_kids.bd_kidsDataSet43TableAdapters.R14_track_typesTableAdapter();
+            this.nametypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codetypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.R15addButton = new System.Windows.Forms.Button();
+            this.R15changeButton = new System.Windows.Forms.Button();
+            this.R15deleteButton = new System.Windows.Forms.Button();
+            this.R15 = new System.Windows.Forms.DataGridView();
+            this.R15_note = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.R15_name_key_word = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.bd_kidsDataSet44 = new oksana_kids.bd_kidsDataSet44();
+            this.r15taskkeywordsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.r15_task_key_wordsTableAdapter = new oksana_kids.bd_kidsDataSet44TableAdapters.R15_task_key_wordsTableAdapter();
+            this.namekeywordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codekeywordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.R01_people_category.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.R01)).BeginInit();
@@ -276,13 +320,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.r10nextactionvariantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet26)).BeginInit();
             this.R11_variants_of_passing_tasks_results_analysis.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R11)).BeginInit();
             this.R12_instructions_to_test_tasks_types.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.R12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).BeginInit();
+            this.R13_play_result_variants.SuspendLayout();
+            this.R14_track_types.SuspendLayout();
+            this.R15_task_key_words.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.r05legalownershipformsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r13playresultvariantsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r14tracktypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r15taskkeywordsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -447,6 +504,7 @@
             // 
             // R02_pupils_classes
             // 
+            this.R02_pupils_classes.Controls.Add(this.B02study_cources_to_pupils_classes);
             this.R02_pupils_classes.Controls.Add(this.R02addButton);
             this.R02_pupils_classes.Controls.Add(this.R02changeButton);
             this.R02_pupils_classes.Controls.Add(this.R02deleteButton);
@@ -464,6 +522,17 @@
             this.R02_pupils_classes.TabIndex = 1;
             this.R02_pupils_classes.Text = "Классы обучающихся лиц";
             this.R02_pupils_classes.UseVisualStyleBackColor = true;
+            // 
+            // B02study_cources_to_pupils_classes
+            // 
+            this.B02study_cources_to_pupils_classes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.B02study_cources_to_pupils_classes.Location = new System.Drawing.Point(6, 99);
+            this.B02study_cources_to_pupils_classes.Name = "B02study_cources_to_pupils_classes";
+            this.B02study_cources_to_pupils_classes.Size = new System.Drawing.Size(327, 47);
+            this.B02study_cources_to_pupils_classes.TabIndex = 40;
+            this.B02study_cources_to_pupils_classes.Text = "Добавить учебные курсы к классам";
+            this.B02study_cources_to_pupils_classes.UseVisualStyleBackColor = true;
+            this.B02study_cources_to_pupils_classes.Click += new System.EventHandler(this.B02study_cources_to_pupils_classes_Click);
             // 
             // R02addButton
             // 
@@ -1375,7 +1444,7 @@
             this.B03study_subjects_to_courses.Name = "B03study_subjects_to_courses";
             this.B03study_subjects_to_courses.Size = new System.Drawing.Size(338, 47);
             this.B03study_subjects_to_courses.TabIndex = 39;
-            this.B03study_subjects_to_courses.Text = "Добавить темы к курсу";
+            this.B03study_subjects_to_courses.Text = "Добавить учебные темы к курсу";
             this.B03study_subjects_to_courses.UseVisualStyleBackColor = true;
             this.B03study_subjects_to_courses.Click += new System.EventHandler(this.B03study_subjects_to_courses_Click);
             // 
@@ -1522,6 +1591,7 @@
             this.B04_test_tasks_to_study_subjects.TabIndex = 49;
             this.B04_test_tasks_to_study_subjects.Text = "Добавить тестовые задания к теме ";
             this.B04_test_tasks_to_study_subjects.UseVisualStyleBackColor = true;
+            this.B04_test_tasks_to_study_subjects.Click += new System.EventHandler(this.B04_test_tasks_to_study_subjects_Click);
             // 
             // R09_academ_hours
             // 
@@ -1549,6 +1619,7 @@
             this.R09addButton.TabIndex = 44;
             this.R09addButton.Text = "Добавить";
             this.R09addButton.UseVisualStyleBackColor = true;
+            this.R09addButton.Click += new System.EventHandler(this.R09addButton_Click);
             // 
             // R09changeButton
             // 
@@ -1559,6 +1630,7 @@
             this.R09changeButton.TabIndex = 45;
             this.R09changeButton.Text = "Изменить";
             this.R09changeButton.UseVisualStyleBackColor = true;
+            this.R09changeButton.Click += new System.EventHandler(this.R09changeButton_Click);
             // 
             // R09deleteButton
             // 
@@ -1569,6 +1641,7 @@
             this.R09deleteButton.TabIndex = 46;
             this.R09deleteButton.Text = "Удалить";
             this.R09deleteButton.UseVisualStyleBackColor = true;
+            this.R09deleteButton.Click += new System.EventHandler(this.R09deleteButton_Click);
             // 
             // R09
             // 
@@ -1585,6 +1658,7 @@
             this.R09.Name = "R09";
             this.R09.Size = new System.Drawing.Size(446, 279);
             this.R09.TabIndex = 43;
+            this.R09.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R09_CellClick);
             // 
             // namesubjectDataGridViewTextBoxColumn
             // 
@@ -1683,6 +1757,7 @@
             this.R10addButton.TabIndex = 36;
             this.R10addButton.Text = "Добавить";
             this.R10addButton.UseVisualStyleBackColor = true;
+            this.R10addButton.Click += new System.EventHandler(this.R10addButton_Click);
             // 
             // R10changeButton
             // 
@@ -1693,6 +1768,7 @@
             this.R10changeButton.TabIndex = 37;
             this.R10changeButton.Text = "Изменить";
             this.R10changeButton.UseVisualStyleBackColor = true;
+            this.R10changeButton.Click += new System.EventHandler(this.R10changeButton_Click);
             // 
             // R10deleteButton
             // 
@@ -1703,6 +1779,7 @@
             this.R10deleteButton.TabIndex = 38;
             this.R10deleteButton.Text = "Удалить";
             this.R10deleteButton.UseVisualStyleBackColor = true;
+            this.R10deleteButton.Click += new System.EventHandler(this.R10deleteButton_Click);
             // 
             // R10
             // 
@@ -1718,6 +1795,7 @@
             this.R10.Name = "R10";
             this.R10.Size = new System.Drawing.Size(446, 279);
             this.R10.TabIndex = 35;
+            this.R10.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R10_CellClick);
             // 
             // nameactionDataGridViewTextBoxColumn
             // 
@@ -1728,7 +1806,7 @@
             // noteDataGridViewTextBoxColumn9
             // 
             this.noteDataGridViewTextBoxColumn9.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn9.HeaderText = "Примечане";
+            this.noteDataGridViewTextBoxColumn9.HeaderText = "Примечание";
             this.noteDataGridViewTextBoxColumn9.Name = "noteDataGridViewTextBoxColumn9";
             // 
             // codeactionDataGridViewTextBoxColumn
@@ -1785,13 +1863,13 @@
             // 
             // R11_variants_of_passing_tasks_results_analysis
             // 
-            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.button1);
-            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.button2);
-            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.button3);
-            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.dataGridView1);
-            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.textBox1);
+            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.R11addButton);
+            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.R11changeButton);
+            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.R11deleteButton);
+            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.R11);
+            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.R11_note);
             this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.label24);
-            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.textBox2);
+            this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.R11_name_variant);
             this.R11_variants_of_passing_tasks_results_analysis.Controls.Add(this.label25);
             this.R11_variants_of_passing_tasks_results_analysis.Location = new System.Drawing.Point(4, 22);
             this.R11_variants_of_passing_tasks_results_analysis.Name = "R11_variants_of_passing_tasks_results_analysis";
@@ -1800,50 +1878,54 @@
             this.R11_variants_of_passing_tasks_results_analysis.Text = "Варианты оценки результатов выполненияТЗ";
             this.R11_variants_of_passing_tasks_results_analysis.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // R11addButton
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(351, 296);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 47);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Добавить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.R11addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R11addButton.Location = new System.Drawing.Point(351, 296);
+            this.R11addButton.Name = "R11addButton";
+            this.R11addButton.Size = new System.Drawing.Size(123, 47);
+            this.R11addButton.TabIndex = 44;
+            this.R11addButton.Text = "Добавить";
+            this.R11addButton.UseVisualStyleBackColor = true;
+            this.R11addButton.Click += new System.EventHandler(this.R11addButton_Click);
             // 
-            // button2
+            // R11changeButton
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(513, 296);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 47);
-            this.button2.TabIndex = 45;
-            this.button2.Text = "Изменить";
-            this.button2.UseVisualStyleBackColor = true;
+            this.R11changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R11changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R11changeButton.Name = "R11changeButton";
+            this.R11changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R11changeButton.TabIndex = 45;
+            this.R11changeButton.Text = "Изменить";
+            this.R11changeButton.UseVisualStyleBackColor = true;
+            this.R11changeButton.Click += new System.EventHandler(this.R11changeButton_Click);
             // 
-            // button3
+            // R11deleteButton
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(671, 296);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(123, 47);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "Удалить";
-            this.button3.UseVisualStyleBackColor = true;
+            this.R11deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R11deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R11deleteButton.Name = "R11deleteButton";
+            this.R11deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R11deleteButton.TabIndex = 46;
+            this.R11deleteButton.Text = "Удалить";
+            this.R11deleteButton.UseVisualStyleBackColor = true;
+            this.R11deleteButton.Click += new System.EventHandler(this.R11deleteButton_Click);
             // 
-            // dataGridView1
+            // R11
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.R11.AutoGenerateColumns = false;
+            this.R11.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R11.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R11.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3});
-            this.dataGridView1.DataSource = this.r10nextactionvariantsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(351, 11);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(446, 279);
-            this.dataGridView1.TabIndex = 43;
+            this.R11.DataSource = this.r10nextactionvariantsBindingSource;
+            this.R11.Location = new System.Drawing.Point(351, 11);
+            this.R11.Name = "R11";
+            this.R11.Size = new System.Drawing.Size(446, 279);
+            this.R11.TabIndex = 43;
+            this.R11.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R11_CellClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -1854,7 +1936,7 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.DataPropertyName = "note";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Примечане";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Примечание";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
             // dataGridViewTextBoxColumn3
@@ -1864,13 +1946,13 @@
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.Visible = false;
             // 
-            // textBox1
+            // R11_note
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 45);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(217, 20);
-            this.textBox1.TabIndex = 42;
+            this.R11_note.Location = new System.Drawing.Point(128, 45);
+            this.R11_note.Multiline = true;
+            this.R11_note.Name = "R11_note";
+            this.R11_note.Size = new System.Drawing.Size(217, 20);
+            this.R11_note.TabIndex = 42;
             // 
             // label24
             // 
@@ -1882,12 +1964,12 @@
             this.label24.TabIndex = 41;
             this.label24.Text = "Примечание";
             // 
-            // textBox2
+            // R11_name_variant
             // 
-            this.textBox2.Location = new System.Drawing.Point(128, 11);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(217, 20);
-            this.textBox2.TabIndex = 40;
+            this.R11_name_variant.Location = new System.Drawing.Point(128, 11);
+            this.R11_name_variant.Name = "R11_name_variant";
+            this.R11_name_variant.Size = new System.Drawing.Size(217, 20);
+            this.R11_name_variant.TabIndex = 40;
             // 
             // label25
             // 
@@ -1925,6 +2007,7 @@
             this.R12addButton.TabIndex = 52;
             this.R12addButton.Text = "Добавить";
             this.R12addButton.UseVisualStyleBackColor = true;
+            this.R12addButton.Click += new System.EventHandler(this.R12addButton_Click);
             // 
             // R12changeButton
             // 
@@ -1935,6 +2018,7 @@
             this.R12changeButton.TabIndex = 53;
             this.R12changeButton.Text = "Изменить";
             this.R12changeButton.UseVisualStyleBackColor = true;
+            this.R12changeButton.Click += new System.EventHandler(this.R12changeButton_Click);
             // 
             // R12deleteButton
             // 
@@ -1945,6 +2029,7 @@
             this.R12deleteButton.TabIndex = 54;
             this.R12deleteButton.Text = "Удалить";
             this.R12deleteButton.UseVisualStyleBackColor = true;
+            this.R12deleteButton.Click += new System.EventHandler(this.R12deleteButton_Click);
             // 
             // R12
             // 
@@ -1960,6 +2045,7 @@
             this.R12.Name = "R12";
             this.R12.Size = new System.Drawing.Size(446, 279);
             this.R12.TabIndex = 51;
+            this.R12.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R12_CellClick);
             // 
             // nameinstructionDataGridViewTextBoxColumn
             // 
@@ -1992,7 +2078,7 @@
             // 
             // R12_note
             // 
-            this.R12_note.Location = new System.Drawing.Point(105, 59);
+            this.R12_note.Location = new System.Drawing.Point(105, 62);
             this.R12_note.Multiline = true;
             this.R12_note.Name = "R12_note";
             this.R12_note.Size = new System.Drawing.Size(240, 20);
@@ -2028,6 +2114,14 @@
             // 
             // R13_play_result_variants
             // 
+            this.R13_play_result_variants.Controls.Add(this.R13addButton);
+            this.R13_play_result_variants.Controls.Add(this.R13changeButton);
+            this.R13_play_result_variants.Controls.Add(this.R13deleteButton);
+            this.R13_play_result_variants.Controls.Add(this.R13);
+            this.R13_play_result_variants.Controls.Add(this.R13_note);
+            this.R13_play_result_variants.Controls.Add(this.label28);
+            this.R13_play_result_variants.Controls.Add(this.R13_name_play_result);
+            this.R13_play_result_variants.Controls.Add(this.label29);
             this.R13_play_result_variants.Location = new System.Drawing.Point(4, 22);
             this.R13_play_result_variants.Name = "R13_play_result_variants";
             this.R13_play_result_variants.Size = new System.Drawing.Size(804, 354);
@@ -2037,6 +2131,14 @@
             // 
             // R14_track_types
             // 
+            this.R14_track_types.Controls.Add(this.R14addButton);
+            this.R14_track_types.Controls.Add(this.R14changeButton);
+            this.R14_track_types.Controls.Add(this.R14deleteButton);
+            this.R14_track_types.Controls.Add(this.R14);
+            this.R14_track_types.Controls.Add(this.R14_note);
+            this.R14_track_types.Controls.Add(this.label30);
+            this.R14_track_types.Controls.Add(this.R14_name_type);
+            this.R14_track_types.Controls.Add(this.label31);
             this.R14_track_types.Location = new System.Drawing.Point(4, 22);
             this.R14_track_types.Name = "R14_track_types";
             this.R14_track_types.Size = new System.Drawing.Size(804, 354);
@@ -2046,6 +2148,14 @@
             // 
             // R15_task_key_words
             // 
+            this.R15_task_key_words.Controls.Add(this.R15addButton);
+            this.R15_task_key_words.Controls.Add(this.R15changeButton);
+            this.R15_task_key_words.Controls.Add(this.R15deleteButton);
+            this.R15_task_key_words.Controls.Add(this.R15);
+            this.R15_task_key_words.Controls.Add(this.R15_note);
+            this.R15_task_key_words.Controls.Add(this.label32);
+            this.R15_task_key_words.Controls.Add(this.R15_name_key_word);
+            this.R15_task_key_words.Controls.Add(this.label33);
             this.R15_task_key_words.Location = new System.Drawing.Point(4, 22);
             this.R15_task_key_words.Name = "R15_task_key_words";
             this.R15_task_key_words.Size = new System.Drawing.Size(804, 354);
@@ -2111,6 +2221,368 @@
             // 
             this.r12_instructions_to_test_tasks_typesTableAdapter.ClearBeforeFill = true;
             // 
+            // R13addButton
+            // 
+            this.R13addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R13addButton.Location = new System.Drawing.Point(351, 296);
+            this.R13addButton.Name = "R13addButton";
+            this.R13addButton.Size = new System.Drawing.Size(123, 47);
+            this.R13addButton.TabIndex = 60;
+            this.R13addButton.Text = "Добавить";
+            this.R13addButton.UseVisualStyleBackColor = true;
+            this.R13addButton.Click += new System.EventHandler(this.R13addButton_Click);
+            // 
+            // R13changeButton
+            // 
+            this.R13changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R13changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R13changeButton.Name = "R13changeButton";
+            this.R13changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R13changeButton.TabIndex = 61;
+            this.R13changeButton.Text = "Изменить";
+            this.R13changeButton.UseVisualStyleBackColor = true;
+            this.R13changeButton.Click += new System.EventHandler(this.R13changeButton_Click);
+            // 
+            // R13deleteButton
+            // 
+            this.R13deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R13deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R13deleteButton.Name = "R13deleteButton";
+            this.R13deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R13deleteButton.TabIndex = 62;
+            this.R13deleteButton.Text = "Удалить";
+            this.R13deleteButton.UseVisualStyleBackColor = true;
+            this.R13deleteButton.Click += new System.EventHandler(this.R13deleteButton_Click);
+            // 
+            // R13
+            // 
+            this.R13.AllowUserToOrderColumns = true;
+            this.R13.AutoGenerateColumns = false;
+            this.R13.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameplayresultDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn11,
+            this.codeplayresultDataGridViewTextBoxColumn});
+            this.R13.DataSource = this.r13playresultvariantsBindingSource;
+            this.R13.Location = new System.Drawing.Point(351, 11);
+            this.R13.Name = "R13";
+            this.R13.Size = new System.Drawing.Size(446, 279);
+            this.R13.TabIndex = 59;
+            this.R13.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R13_CellClick);
+            // 
+            // R13_note
+            // 
+            this.R13_note.Location = new System.Drawing.Point(105, 71);
+            this.R13_note.Multiline = true;
+            this.R13_note.Name = "R13_note";
+            this.R13_note.Size = new System.Drawing.Size(240, 20);
+            this.R13_note.TabIndex = 58;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(8, 72);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(91, 16);
+            this.label28.TabIndex = 57;
+            this.label28.Text = "Примечание";
+            // 
+            // R13_name_play_result
+            // 
+            this.R13_name_play_result.Location = new System.Drawing.Point(143, 11);
+            this.R13_name_play_result.Multiline = true;
+            this.R13_name_play_result.Name = "R13_name_play_result";
+            this.R13_name_play_result.Size = new System.Drawing.Size(202, 54);
+            this.R13_name_play_result.TabIndex = 56;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(8, 12);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(129, 48);
+            this.label29.TabIndex = 55;
+            this.label29.Text = "Вариант \r\nвоспроизведения \r\nрезультата";
+            // 
+            // bd_kidsDataSet41
+            // 
+            this.bd_kidsDataSet41.DataSetName = "bd_kidsDataSet41";
+            this.bd_kidsDataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // bd_kidsDataSet42
+            // 
+            this.bd_kidsDataSet42.DataSetName = "bd_kidsDataSet42";
+            this.bd_kidsDataSet42.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // r13playresultvariantsBindingSource
+            // 
+            this.r13playresultvariantsBindingSource.DataMember = "R13_play_result_variants";
+            this.r13playresultvariantsBindingSource.DataSource = this.bd_kidsDataSet42;
+            // 
+            // r13_play_result_variantsTableAdapter
+            // 
+            this.r13_play_result_variantsTableAdapter.ClearBeforeFill = true;
+            // 
+            // nameplayresultDataGridViewTextBoxColumn
+            // 
+            this.nameplayresultDataGridViewTextBoxColumn.DataPropertyName = "name_play_result";
+            this.nameplayresultDataGridViewTextBoxColumn.HeaderText = "Вариант воспроизведения";
+            this.nameplayresultDataGridViewTextBoxColumn.Name = "nameplayresultDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn11
+            // 
+            this.noteDataGridViewTextBoxColumn11.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn11.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn11.Name = "noteDataGridViewTextBoxColumn11";
+            // 
+            // codeplayresultDataGridViewTextBoxColumn
+            // 
+            this.codeplayresultDataGridViewTextBoxColumn.DataPropertyName = "code_play_result";
+            this.codeplayresultDataGridViewTextBoxColumn.HeaderText = "code_play_result";
+            this.codeplayresultDataGridViewTextBoxColumn.Name = "codeplayresultDataGridViewTextBoxColumn";
+            this.codeplayresultDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // R14addButton
+            // 
+            this.R14addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R14addButton.Location = new System.Drawing.Point(351, 296);
+            this.R14addButton.Name = "R14addButton";
+            this.R14addButton.Size = new System.Drawing.Size(123, 47);
+            this.R14addButton.TabIndex = 68;
+            this.R14addButton.Text = "Добавить";
+            this.R14addButton.UseVisualStyleBackColor = true;
+            this.R14addButton.Click += new System.EventHandler(this.R14addButton_Click);
+            // 
+            // R14changeButton
+            // 
+            this.R14changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R14changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R14changeButton.Name = "R14changeButton";
+            this.R14changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R14changeButton.TabIndex = 69;
+            this.R14changeButton.Text = "Изменить";
+            this.R14changeButton.UseVisualStyleBackColor = true;
+            this.R14changeButton.Click += new System.EventHandler(this.R14changeButton_Click);
+            // 
+            // R14deleteButton
+            // 
+            this.R14deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R14deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R14deleteButton.Name = "R14deleteButton";
+            this.R14deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R14deleteButton.TabIndex = 70;
+            this.R14deleteButton.Text = "Удалить";
+            this.R14deleteButton.UseVisualStyleBackColor = true;
+            this.R14deleteButton.Click += new System.EventHandler(this.R14deleteButton_Click);
+            // 
+            // R14
+            // 
+            this.R14.AllowUserToOrderColumns = true;
+            this.R14.AutoGenerateColumns = false;
+            this.R14.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nametypeDataGridViewTextBoxColumn1,
+            this.noteDataGridViewTextBoxColumn12,
+            this.codetypeDataGridViewTextBoxColumn1});
+            this.R14.DataSource = this.r14tracktypesBindingSource;
+            this.R14.Location = new System.Drawing.Point(351, 11);
+            this.R14.Name = "R14";
+            this.R14.Size = new System.Drawing.Size(446, 279);
+            this.R14.TabIndex = 67;
+            this.R14.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R14_CellClick);
+            // 
+            // R14_note
+            // 
+            this.R14_note.Location = new System.Drawing.Point(105, 60);
+            this.R14_note.Multiline = true;
+            this.R14_note.Name = "R14_note";
+            this.R14_note.Size = new System.Drawing.Size(240, 20);
+            this.R14_note.TabIndex = 66;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Location = new System.Drawing.Point(8, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(91, 16);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "Примечание";
+            // 
+            // R14_name_type
+            // 
+            this.R14_name_type.Location = new System.Drawing.Point(143, 11);
+            this.R14_name_type.Multiline = true;
+            this.R14_name_type.Name = "R14_name_type";
+            this.R14_name_type.Size = new System.Drawing.Size(202, 42);
+            this.R14_name_type.TabIndex = 64;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(8, 12);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(119, 32);
+            this.label31.TabIndex = 63;
+            this.label31.Text = "Тип файла\r\nспопровождения";
+            // 
+            // bd_kidsDataSet43
+            // 
+            this.bd_kidsDataSet43.DataSetName = "bd_kidsDataSet43";
+            this.bd_kidsDataSet43.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // r14tracktypesBindingSource
+            // 
+            this.r14tracktypesBindingSource.DataMember = "R14_track_types";
+            this.r14tracktypesBindingSource.DataSource = this.bd_kidsDataSet43;
+            // 
+            // r14_track_typesTableAdapter
+            // 
+            this.r14_track_typesTableAdapter.ClearBeforeFill = true;
+            // 
+            // nametypeDataGridViewTextBoxColumn1
+            // 
+            this.nametypeDataGridViewTextBoxColumn1.DataPropertyName = "name_type";
+            this.nametypeDataGridViewTextBoxColumn1.HeaderText = "Тип файла";
+            this.nametypeDataGridViewTextBoxColumn1.Name = "nametypeDataGridViewTextBoxColumn1";
+            // 
+            // noteDataGridViewTextBoxColumn12
+            // 
+            this.noteDataGridViewTextBoxColumn12.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn12.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn12.Name = "noteDataGridViewTextBoxColumn12";
+            // 
+            // codetypeDataGridViewTextBoxColumn1
+            // 
+            this.codetypeDataGridViewTextBoxColumn1.DataPropertyName = "code_type";
+            this.codetypeDataGridViewTextBoxColumn1.HeaderText = "code_type";
+            this.codetypeDataGridViewTextBoxColumn1.Name = "codetypeDataGridViewTextBoxColumn1";
+            this.codetypeDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // R15addButton
+            // 
+            this.R15addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R15addButton.Location = new System.Drawing.Point(351, 296);
+            this.R15addButton.Name = "R15addButton";
+            this.R15addButton.Size = new System.Drawing.Size(123, 47);
+            this.R15addButton.TabIndex = 76;
+            this.R15addButton.Text = "Добавить";
+            this.R15addButton.UseVisualStyleBackColor = true;
+            this.R15addButton.Click += new System.EventHandler(this.R15addButton_Click);
+            // 
+            // R15changeButton
+            // 
+            this.R15changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R15changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R15changeButton.Name = "R15changeButton";
+            this.R15changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R15changeButton.TabIndex = 77;
+            this.R15changeButton.Text = "Изменить";
+            this.R15changeButton.UseVisualStyleBackColor = true;
+            this.R15changeButton.Click += new System.EventHandler(this.R15changeButton_Click);
+            // 
+            // R15deleteButton
+            // 
+            this.R15deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R15deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R15deleteButton.Name = "R15deleteButton";
+            this.R15deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R15deleteButton.TabIndex = 78;
+            this.R15deleteButton.Text = "Удалить";
+            this.R15deleteButton.UseVisualStyleBackColor = true;
+            this.R15deleteButton.Click += new System.EventHandler(this.R15deleteButton_Click);
+            // 
+            // R15
+            // 
+            this.R15.AllowUserToOrderColumns = true;
+            this.R15.AutoGenerateColumns = false;
+            this.R15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.namekeywordDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn13,
+            this.codekeywordDataGridViewTextBoxColumn});
+            this.R15.DataSource = this.r15taskkeywordsBindingSource;
+            this.R15.Location = new System.Drawing.Point(351, 11);
+            this.R15.Name = "R15";
+            this.R15.Size = new System.Drawing.Size(446, 279);
+            this.R15.TabIndex = 75;
+            this.R15.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R15_CellClick);
+            // 
+            // R15_note
+            // 
+            this.R15_note.Location = new System.Drawing.Point(130, 37);
+            this.R15_note.Multiline = true;
+            this.R15_note.Name = "R15_note";
+            this.R15_note.Size = new System.Drawing.Size(202, 20);
+            this.R15_note.TabIndex = 74;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(8, 38);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(91, 16);
+            this.label32.TabIndex = 73;
+            this.label32.Text = "Примечание";
+            // 
+            // R15_name_key_word
+            // 
+            this.R15_name_key_word.Location = new System.Drawing.Point(130, 11);
+            this.R15_name_key_word.Multiline = true;
+            this.R15_name_key_word.Name = "R15_name_key_word";
+            this.R15_name_key_word.Size = new System.Drawing.Size(202, 20);
+            this.R15_name_key_word.TabIndex = 72;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(8, 12);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(116, 16);
+            this.label33.TabIndex = 71;
+            this.label33.Text = "Ключевое слово";
+            // 
+            // bd_kidsDataSet44
+            // 
+            this.bd_kidsDataSet44.DataSetName = "bd_kidsDataSet44";
+            this.bd_kidsDataSet44.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // r15taskkeywordsBindingSource
+            // 
+            this.r15taskkeywordsBindingSource.DataMember = "R15_task_key_words";
+            this.r15taskkeywordsBindingSource.DataSource = this.bd_kidsDataSet44;
+            // 
+            // r15_task_key_wordsTableAdapter
+            // 
+            this.r15_task_key_wordsTableAdapter.ClearBeforeFill = true;
+            // 
+            // namekeywordDataGridViewTextBoxColumn
+            // 
+            this.namekeywordDataGridViewTextBoxColumn.DataPropertyName = "name_key_word";
+            this.namekeywordDataGridViewTextBoxColumn.HeaderText = "Ключевое слово";
+            this.namekeywordDataGridViewTextBoxColumn.Name = "namekeywordDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn13
+            // 
+            this.noteDataGridViewTextBoxColumn13.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn13.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn13.Name = "noteDataGridViewTextBoxColumn13";
+            // 
+            // codekeywordDataGridViewTextBoxColumn
+            // 
+            this.codekeywordDataGridViewTextBoxColumn.DataPropertyName = "code_key_word";
+            this.codekeywordDataGridViewTextBoxColumn.HeaderText = "code_key_word";
+            this.codekeywordDataGridViewTextBoxColumn.Name = "codekeywordDataGridViewTextBoxColumn";
+            this.codekeywordDataGridViewTextBoxColumn.Visible = false;
+            // 
             // References
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2119,7 +2591,7 @@
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "References";
-            this.Text = "Справочнки";
+            this.Text = "Справочники";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.References_FormClosing);
             this.Load += new System.EventHandler(this.References_Load);
             this.tabControl1.ResumeLayout(false);
@@ -2178,14 +2650,30 @@
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet26)).EndInit();
             this.R11_variants_of_passing_tasks_results_analysis.ResumeLayout(false);
             this.R11_variants_of_passing_tasks_results_analysis.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R11)).EndInit();
             this.R12_instructions_to_test_tasks_types.ResumeLayout(false);
             this.R12_instructions_to_test_tasks_types.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.R12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).EndInit();
+            this.R13_play_result_variants.ResumeLayout(false);
+            this.R13_play_result_variants.PerformLayout();
+            this.R14_track_types.ResumeLayout(false);
+            this.R14_track_types.PerformLayout();
+            this.R15_task_key_words.ResumeLayout(false);
+            this.R15_task_key_words.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.r05legalownershipformsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r13playresultvariantsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r14tracktypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.R15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r15taskkeywordsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2362,20 +2850,14 @@
         private bd_kidsDataSet26 bd_kidsDataSet26;
         private System.Windows.Forms.BindingSource r10nextactionvariantsBindingSource;
         private bd_kidsDataSet26TableAdapters.R10_next_action_variantsTableAdapter r10_next_action_variantsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameactionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codeactionDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button R11addButton;
+        private System.Windows.Forms.Button R11changeButton;
+        private System.Windows.Forms.Button R11deleteButton;
+        private System.Windows.Forms.DataGridView R11;
+        private System.Windows.Forms.TextBox R11_note;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox R11_name_variant;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.Button R12addButton;
         private System.Windows.Forms.Button R12changeButton;
         private System.Windows.Forms.Button R12deleteButton;
@@ -2395,5 +2877,55 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn codeclassDataGridViewTextBoxColumn;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button B02study_cources_to_pupils_classes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameactionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeactionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.Button R13addButton;
+        private System.Windows.Forms.Button R13changeButton;
+        private System.Windows.Forms.Button R13deleteButton;
+        private System.Windows.Forms.DataGridView R13;
+        private System.Windows.Forms.TextBox R13_note;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.TextBox R13_name_play_result;
+        private System.Windows.Forms.Label label29;
+        private bd_kidsDataSet41 bd_kidsDataSet41;
+        private bd_kidsDataSet42 bd_kidsDataSet42;
+        private System.Windows.Forms.BindingSource r13playresultvariantsBindingSource;
+        private bd_kidsDataSet42TableAdapters.R13_play_result_variantsTableAdapter r13_play_result_variantsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameplayresultDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeplayresultDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button R14addButton;
+        private System.Windows.Forms.Button R14changeButton;
+        private System.Windows.Forms.Button R14deleteButton;
+        private System.Windows.Forms.DataGridView R14;
+        private System.Windows.Forms.TextBox R14_note;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox R14_name_type;
+        private System.Windows.Forms.Label label31;
+        private bd_kidsDataSet43 bd_kidsDataSet43;
+        private System.Windows.Forms.BindingSource r14tracktypesBindingSource;
+        private bd_kidsDataSet43TableAdapters.R14_track_typesTableAdapter r14_track_typesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nametypeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codetypeDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button R15addButton;
+        private System.Windows.Forms.Button R15changeButton;
+        private System.Windows.Forms.Button R15deleteButton;
+        private System.Windows.Forms.DataGridView R15;
+        private System.Windows.Forms.TextBox R15_note;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.TextBox R15_name_key_word;
+        private System.Windows.Forms.Label label33;
+        private bd_kidsDataSet44 bd_kidsDataSet44;
+        private System.Windows.Forms.BindingSource r15taskkeywordsBindingSource;
+        private bd_kidsDataSet44TableAdapters.R15_task_key_wordsTableAdapter r15_task_key_wordsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namekeywordDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codekeywordDataGridViewTextBoxColumn;
     }
 }

@@ -27,6 +27,12 @@ namespace oksana_kids
 
         private void References_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet44.R15_task_key_words". При необходимости она может быть перемещена или удалена.
+            this.r15_task_key_wordsTableAdapter.Fill(this.bd_kidsDataSet44.R15_task_key_words);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet43.R14_track_types". При необходимости она может быть перемещена или удалена.
+            this.r14_track_typesTableAdapter.Fill(this.bd_kidsDataSet43.R14_track_types);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet42.R13_play_result_variants". При необходимости она может быть перемещена или удалена.
+            this.r13_play_result_variantsTableAdapter.Fill(this.bd_kidsDataSet42.R13_play_result_variants);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet27.R12_instructions_to_test_tasks_types". При необходимости она может быть перемещена или удалена.
             this.r12_instructions_to_test_tasks_typesTableAdapter.Fill(this.bd_kidsDataSet27.R12_instructions_to_test_tasks_types);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet26.R10_next_action_variants". При необходимости она может быть перемещена или удалена.
@@ -134,7 +140,6 @@ namespace oksana_kids
             MethodicalMaterialBind m = new MethodicalMaterialBind();
             m.Show();
         }
-
    
         private void CBchoose_Click(object sender, EventArgs e)
         {
@@ -169,6 +174,12 @@ namespace oksana_kids
         }
 
         #region R02
+
+        private void B02study_cources_to_pupils_classes_Click(object sender, EventArgs e)
+        {
+            StudyCourcesToPupilsClassesBind s = new StudyCourcesToPupilsClassesBind();
+            s.Show();
+        }
 
         private void R02_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -544,6 +555,8 @@ namespace oksana_kids
 
         #endregion
 
+        #region R08
+
         private void R08_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             id = int.Parse(R08.CurrentRow.Cells[2].Value.ToString());
@@ -605,6 +618,437 @@ namespace oksana_kids
             StudySubjectsToCourcesBind b = new StudySubjectsToCourcesBind();
             b.Show();
         }
+
+        #endregion
+
+        #region R09
+
+        private void R09_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(R09.CurrentRow.Cells[3].Value.ToString());
+        }
+
+        private void updateR09()
+        {
+            var data = bd.R09_study_subjects.Select(x => new { x.code_subject, x.name_subject, x.academ_hours, x.note });
+            R09.DataSource = data.ToList();
+        }
+
+        private void R09addButton_Click(object sender, EventArgs e)
+        {
+            if (R09_name_subject.Text == "" || R09_academ_hours.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new R09_study_subjects()
+                {
+                    name_subject = R09_name_subject.Text,
+                    academ_hours = int.Parse(R09_academ_hours.Text),
+                    note = R09_note.Text == "" ? " " : R09_note.Text
+                };
+                bd.R09_study_subjects.Add(person);
+                bd.SaveChanges();
+
+            }
+
+            R09_name_subject.Clear();
+            R09_academ_hours.Clear();
+            R09_note.Clear();
+            updateR09();
+        }
+
+        private void R09changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R09_study_subjects.Where(x => x.code_subject == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_subject = R09.CurrentRow.Cells[0].Value.ToString();
+            row.academ_hours = int.Parse(R09.CurrentRow.Cells[1].Value.ToString());
+            row.note = R09.CurrentRow.Cells[2].Value.ToString();
+
+            bd.SaveChanges();
+        }
+
+        private void R09deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R09_study_subjects.Where(x => x.code_subject == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.R09_study_subjects.Remove(row);
+            bd.SaveChanges();
+
+            updateR09();
+        }
+
+        private void B04_test_tasks_to_study_subjects_Click(object sender, EventArgs e)
+        {
+            TestTasksToStudySubjectsBind t = new TestTasksToStudySubjectsBind();
+            t.Show();
+        }
+
+        #endregion
+
+        #region R10
+
+        private void R10_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(R10.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void updateR10()
+        {
+            var data = bd.R10_next_action_variants.Select(x => new { x.code_action, x.name_action, x.note });
+            R10.DataSource = data.ToList();
+        }
+
+        private void R10addButton_Click(object sender, EventArgs e)
+        {
+            if (R10_name_action.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new R10_next_action_variants()
+                {
+                    name_action = R10_name_action.Text,
+                    note = R10_note.Text == "" ? " " : R10_note.Text
+                };
+                bd.R10_next_action_variants.Add(person);
+                bd.SaveChanges();
+
+            }
+
+            R10_name_action.Clear();
+            R10_note.Clear();
+            updateR10();
+        }
+
+        private void R10changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R10_next_action_variants.Where(x => x.code_action == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_action = R10.CurrentRow.Cells[0].Value.ToString();
+            row.note = R10.CurrentRow.Cells[1].Value.ToString();
+
+            bd.SaveChanges();
+        }
+
+        private void R10deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R10_next_action_variants.Where(x => x.code_action == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.R10_next_action_variants.Remove(row);
+            bd.SaveChanges();
+
+            updateR10();
+        }
+
+        #endregion
+
+        #region R11
+
+        private void R11_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(R11.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void updateR11()
+        {
+            var data = bd.R11_variants_of_passing_tasks_results_analysis.Select(x => new { x.code_variant, x.name_variant, x.note });
+            R11.DataSource = data.ToList();
+        }
+
+        private void R11addButton_Click(object sender, EventArgs e)
+        {
+            if (R11_name_variant.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new R11_variants_of_passing_tasks_results_analysis()
+                {
+                    name_variant = R11_name_variant.Text,
+                    note = R11_note.Text == "" ? " " : R11_note.Text
+                };
+                bd.R11_variants_of_passing_tasks_results_analysis.Add(person);
+                bd.SaveChanges();
+
+            }
+
+            R11_name_variant.Clear();
+            R11_note.Clear();
+            updateR11();
+        }
+
+        private void R11changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R11_variants_of_passing_tasks_results_analysis.Where(x => x.code_variant == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_variant = R11.CurrentRow.Cells[0].Value.ToString();
+            row.note = R11.CurrentRow.Cells[1].Value.ToString();
+
+            bd.SaveChanges();
+        }
+
+        private void R11deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R11_variants_of_passing_tasks_results_analysis.Where(x => x.code_variant == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.R11_variants_of_passing_tasks_results_analysis.Remove(row);
+            bd.SaveChanges();
+
+            updateR11();
+        }
+
+        #endregion
+
+        #region R12
+
+        private void R12_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(R12.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void updateR12()
+        {
+            var data = bd.R12_instructions_to_test_tasks_types.Select(x => new { x.code_instruction, x.name_instruction, x.note });
+            R12.DataSource = data.ToList();
+        }
+
+        private void R12addButton_Click(object sender, EventArgs e)
+        {
+            if (R12_name_instruction.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new R12_instructions_to_test_tasks_types()
+                {
+                    name_instruction = R12_name_instruction.Text,
+                    note = R12_note.Text == "" ? " " : R12_note.Text
+                };
+                bd.R12_instructions_to_test_tasks_types.Add(person);
+                bd.SaveChanges();
+
+            }
+
+            R12_name_instruction.Clear();
+            R12_note.Clear();
+            updateR12();
+        }
+
+        private void R12changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R12_instructions_to_test_tasks_types.Where(x => x.code_instruction == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_instruction = R12.CurrentRow.Cells[0].Value.ToString();
+            row.note = R12.CurrentRow.Cells[1].Value.ToString();
+
+            bd.SaveChanges();
+        }
+
+        private void R12deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R12_instructions_to_test_tasks_types.Where(x => x.code_instruction == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.R12_instructions_to_test_tasks_types.Remove(row);
+            bd.SaveChanges();
+
+            updateR12();
+        }
+
+        #endregion
+
+        #region R13
+
+        private void R13_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(R13.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void updateR13()
+        {
+            var data = bd.R13_play_result_variants.Select(x => new { x.code_play_result, x.name_play_result, x.note });
+            R13.DataSource = data.ToList();
+        }
+
+        private void R13addButton_Click(object sender, EventArgs e)
+        {
+            if (R13_name_play_result.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new R13_play_result_variants()
+                {
+                    name_play_result = R13_name_play_result.Text,
+                    note = R13_note.Text == "" ? " " : R13_note.Text
+                };
+                bd.R13_play_result_variants.Add(person);
+                bd.SaveChanges();
+
+            }
+
+            R13_name_play_result.Clear();
+            R13_note.Clear();
+            updateR13();
+        }
+
+        private void R13changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R13_play_result_variants.Where(x => x.code_play_result == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_play_result = R13.CurrentRow.Cells[0].Value.ToString();
+            row.note = R13.CurrentRow.Cells[1].Value.ToString();
+
+            bd.SaveChanges();
+        }
+
+        private void R13deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R13_play_result_variants.Where(x => x.code_play_result == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.R13_play_result_variants.Remove(row);
+            bd.SaveChanges();
+
+            updateR13();
+        }
+        
+        #endregion
+
+        #region R14
+
+        private void R14_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(R14.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void updateR14()
+        {
+            var data = bd.R14_track_types.Select(x => new { x.code_type, x.name_type, x.note });
+            R14.DataSource = data.ToList();
+        }
+
+        private void R14addButton_Click(object sender, EventArgs e)
+        {
+            if (R14_name_type.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new R14_track_types()
+                {
+                    name_type = R14_name_type.Text,
+                    note = R14_note.Text == "" ? " " : R14_note.Text
+                };
+                bd.R14_track_types.Add(person);
+                bd.SaveChanges();
+
+            }
+
+            R14_name_type.Clear();
+            R14_note.Clear();
+            updateR14();
+        }
+
+        private void R14changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R14_track_types.Where(x => x.code_type == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_type = R14.CurrentRow.Cells[0].Value.ToString();
+            row.note = R14.CurrentRow.Cells[1].Value.ToString();
+
+            bd.SaveChanges();
+        }
+
+        private void R14deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R14_track_types.Where(x => x.code_type == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.R14_track_types.Remove(row);
+            bd.SaveChanges();
+
+            updateR14();
+        }
+
+        #endregion
+
+        #region R15
+
+        private void R15_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(R15.CurrentRow.Cells[2].Value.ToString());
+        }
+
+        private void updateR15()
+        {
+            var data = bd.R15_task_key_words.Select(x => new { x.code_key_word, x.name_key_word, x.note });
+            R15.DataSource = data.ToList();
+        }
+
+        private void R15addButton_Click(object sender, EventArgs e)
+        {
+            if (R15_name_key_word.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new R15_task_key_words()
+                {
+                    name_key_word = R15_name_key_word.Text,
+                    note = R15_note.Text == "" ? " " : R15_note.Text
+                };
+                bd.R15_task_key_words.Add(person);
+                bd.SaveChanges();
+
+            }
+
+            R15_name_key_word.Clear();
+            R15_note.Clear();
+            updateR15();
+        }
+
+        private void R15changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R15_task_key_words.Where(x => x.code_key_word == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_key_word = R15.CurrentRow.Cells[0].Value.ToString();
+            row.note = R15.CurrentRow.Cells[1].Value.ToString();
+
+            bd.SaveChanges();
+        }
+
+        private void R15deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.R15_task_key_words.Where(x => x.code_key_word == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.R15_task_key_words.Remove(row);
+            bd.SaveChanges();
+
+            updateR15();
+        }
+
+        #endregion
     }
 
 }

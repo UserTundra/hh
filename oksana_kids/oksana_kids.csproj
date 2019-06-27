@@ -93,6 +93,9 @@
     <Compile Include="B01_testing_aims_to_tests.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="B02_bind_view.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="B02_study_courses_to_pupils_classes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -100,6 +103,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="B03_study_subjects_to_courses.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B04_bind_view.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="B04_test_tasks_to_study_subjects.cs">
@@ -243,10 +249,90 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet30.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet31.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet31.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet32.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet32.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet33.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet33.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet34.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet34.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet35.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet35.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet36.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet36.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet37.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet37.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet38.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet38.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet39.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet39.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_kidsDataSet4.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet40.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet40.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet41.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet41.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet42.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet42.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet43.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet43.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet44.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet44.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet45.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet45.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet46.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet46.xsd</DependentUpon>
     </Compile>
     <Compile Include="bd_kidsDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -309,6 +395,12 @@
     </Compile>
     <Compile Include="AuthorisationForm.Designer.cs">
       <DependentUpon>AuthorisationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Files.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Files.Designer.cs">
+      <DependentUpon>Files.cs</DependentUpon>
     </Compile>
     <Compile Include="MethodicalMaterialBind.cs">
       <SubType>Form</SubType>
@@ -384,6 +476,12 @@
     </Compile>
     <Compile Include="R15_task_key_words.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StudyCourcesToPupilsClassesBind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StudyCourcesToPupilsClassesBind.Designer.cs">
+      <DependentUpon>StudyCourcesToPupilsClassesBind.cs</DependentUpon>
     </Compile>
     <Compile Include="StudySubjectsToCourcesBind.cs">
       <SubType>Form</SubType>
@@ -469,6 +567,12 @@
     <Compile Include="Tests.Designer.cs">
       <DependentUpon>Tests.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestTasksToStudySubjectsBind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestTasksToStudySubjectsBind.Designer.cs">
+      <DependentUpon>TestTasksToStudySubjectsBind.cs</DependentUpon>
+    </Compile>
     <Compile Include="Test\AbstractTest.cs" />
     <Compile Include="Test\TestForm3.cs">
       <SubType>Form</SubType>
@@ -522,11 +626,17 @@
     <EmbeddedResource Include="AuthorisationForm.resx">
       <DependentUpon>AuthorisationForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Files.resx">
+      <DependentUpon>Files.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MethodicalMaterialBind.resx">
       <DependentUpon>MethodicalMaterialBind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PupilSelectionWindow.resx">
       <DependentUpon>PupilSelectionWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StudyCourcesToPupilsClassesBind.resx">
+      <DependentUpon>StudyCourcesToPupilsClassesBind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudySubjectsToCourcesBind.resx">
       <DependentUpon>StudySubjectsToCourcesBind.cs</DependentUpon>
@@ -555,6 +665,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tests.resx">
       <DependentUpon>Tests.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestTasksToStudySubjectsBind.resx">
+      <DependentUpon>TestTasksToStudySubjectsBind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Test\TestForm3.resx">
       <DependentUpon>TestForm3.cs</DependentUpon>
@@ -872,6 +985,105 @@
     <None Include="bd_kidsDataSet30.xss">
       <DependentUpon>bd_kidsDataSet30.xsd</DependentUpon>
     </None>
+    <None Include="bd_kidsDataSet31.xsc">
+      <DependentUpon>bd_kidsDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet31.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet31.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet31.xss">
+      <DependentUpon>bd_kidsDataSet31.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet32.xsc">
+      <DependentUpon>bd_kidsDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet32.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet32.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet32.xss">
+      <DependentUpon>bd_kidsDataSet32.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet33.xsc">
+      <DependentUpon>bd_kidsDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet33.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet33.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet33.xss">
+      <DependentUpon>bd_kidsDataSet33.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet34.xsc">
+      <DependentUpon>bd_kidsDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet34.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet34.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet34.xss">
+      <DependentUpon>bd_kidsDataSet34.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet35.xsc">
+      <DependentUpon>bd_kidsDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet35.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet35.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet35.xss">
+      <DependentUpon>bd_kidsDataSet35.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet36.xsc">
+      <DependentUpon>bd_kidsDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet36.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet36.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet36.xss">
+      <DependentUpon>bd_kidsDataSet36.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet37.xsc">
+      <DependentUpon>bd_kidsDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet37.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet37.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet37.xss">
+      <DependentUpon>bd_kidsDataSet37.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet38.xsc">
+      <DependentUpon>bd_kidsDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet38.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet38.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet38.xss">
+      <DependentUpon>bd_kidsDataSet38.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet39.xsc">
+      <DependentUpon>bd_kidsDataSet39.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet39.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet39.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet39.xss">
+      <DependentUpon>bd_kidsDataSet39.xsd</DependentUpon>
+    </None>
     <None Include="bd_kidsDataSet4.xsc">
       <DependentUpon>bd_kidsDataSet4.xsd</DependentUpon>
     </None>
@@ -882,6 +1094,83 @@
     </None>
     <None Include="bd_kidsDataSet4.xss">
       <DependentUpon>bd_kidsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet40.xsc">
+      <DependentUpon>bd_kidsDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet40.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet40.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet40.xss">
+      <DependentUpon>bd_kidsDataSet40.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet41.xsc">
+      <DependentUpon>bd_kidsDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet41.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet41.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet41.xss">
+      <DependentUpon>bd_kidsDataSet41.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet42.xsc">
+      <DependentUpon>bd_kidsDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet42.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet42.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet42.xss">
+      <DependentUpon>bd_kidsDataSet42.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet43.xsc">
+      <DependentUpon>bd_kidsDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet43.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet43.xss">
+      <DependentUpon>bd_kidsDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet44.xsc">
+      <DependentUpon>bd_kidsDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet44.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet44.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet44.xss">
+      <DependentUpon>bd_kidsDataSet44.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet45.xsc">
+      <DependentUpon>bd_kidsDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet45.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet45.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet45.xss">
+      <DependentUpon>bd_kidsDataSet45.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet46.xsc">
+      <DependentUpon>bd_kidsDataSet46.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet46.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet46.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet46.xss">
+      <DependentUpon>bd_kidsDataSet46.xsd</DependentUpon>
     </None>
     <None Include="bd_kidsDataSet5.xsc">
       <DependentUpon>bd_kidsDataSet5.xsd</DependentUpon>

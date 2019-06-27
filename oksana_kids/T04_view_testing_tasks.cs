@@ -20,5 +20,6 @@ namespace oksana_kids
         public string date_correct { get; set; }
         public string name_type { get; set; }
         public string note { get; set; }
+        public string file_location { get; set; }
     }
 }

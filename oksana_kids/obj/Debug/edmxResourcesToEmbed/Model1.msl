@@ -241,6 +241,7 @@
     <EntitySetMapping Name="T03_testing_task_modules">
       <EntityTypeMapping TypeName="bd_kidsModel.T03_testing_task_modules">
         <MappingFragment StoreEntitySet="T03_testing_task_modules">
+          <ScalarProperty Name="additional_teaching_material" ColumnName="additional_teaching_material" />
           <ScalarProperty Name="id_module" ColumnName="id_module" />
           <ScalarProperty Name="id_track" ColumnName="id_track" />
           <ScalarProperty Name="id_av_track" ColumnName="id_av_track" />
@@ -399,6 +400,7 @@
     <EntitySetMapping Name="T04_view_testing_tasks">
       <EntityTypeMapping TypeName="bd_kidsModel.T04_view_testing_tasks">
         <MappingFragment StoreEntitySet="T04_view_testing_tasks">
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
           <ScalarProperty Name="id_task" ColumnName="id_task" />
           <ScalarProperty Name="name_task" ColumnName="name_task" />
           <ScalarProperty Name="date_create" ColumnName="date_create" />
@@ -429,6 +431,27 @@
           <ScalarProperty Name="name_subject" ColumnName="name_subject" />
           <ScalarProperty Name="serial_number_subject" ColumnName="serial_number_subject" />
           <ScalarProperty Name="code_course" ColumnName="code_course" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B04_bind_view">
+      <EntityTypeMapping TypeName="bd_kidsModel.B04_bind_view">
+        <MappingFragment StoreEntitySet="B04_bind_view">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="equvivalent_perc" ColumnName="equvivalent_perc" />
+          <ScalarProperty Name="name_task" ColumnName="name_task" />
+          <ScalarProperty Name="code_subject" ColumnName="code_subject" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B02_bind_view">
+      <EntityTypeMapping TypeName="bd_kidsModel.B02_bind_view">
+        <MappingFragment StoreEntitySet="B02_bind_view">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="name_course" ColumnName="name_course" />
+          <ScalarProperty Name="code_class" ColumnName="code_class" />
           <ScalarProperty Name="id" ColumnName="id" />
         </MappingFragment>
       </EntityTypeMapping>

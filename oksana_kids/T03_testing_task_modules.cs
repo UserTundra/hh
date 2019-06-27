@@ -31,6 +31,7 @@ namespace oksana_kids
         public Nullable<long> max_passing_duration_sec { get; set; }
         public Nullable<long> code_action { get; set; }
         public string note { get; set; }
+        public string additional_teaching_material { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<B05_testing_task_modules_to_tests> B05_testing_task_modules_to_tests { get; set; }

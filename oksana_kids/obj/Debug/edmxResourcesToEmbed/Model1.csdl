@@ -278,6 +278,7 @@
     <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_T03_testing_task_modules_3_0" FromRole="T03_testing_task_modules" ToRole="T04_testing_tasks" />
     <NavigationProperty Name="T08_audio_video_tracks" Relationship="Self.FK_T03_testing_task_modules_4_0" FromRole="T03_testing_task_modules" ToRole="T08_audio_video_tracks" />
     <NavigationProperty Name="T09_comment_variants_on_passing_tasks" Relationship="Self.FK_T03_testing_task_modules_5_0" FromRole="T03_testing_task_modules" ToRole="T09_comment_variants_on_passing_tasks" />
+    <Property Name="additional_teaching_material" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="T04_testing_tasks">
     <Key>
@@ -437,6 +438,7 @@
     <Property Name="date_correct" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="name_type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_B01_testing_aims_to_tests_0_0">
     <End Role="R06_testing_aims" Type="Self.R06_testing_aims" Multiplicity="0..1" />
@@ -996,6 +998,8 @@
       <End Role="T11_test_answers1" EntitySet="T11_test_answers" />
     </AssociationSet>
     <EntitySet Name="B03_bind_view" EntityType="bd_kidsModel.B03_bind_view" />
+    <EntitySet Name="B04_bind_view" EntityType="bd_kidsModel.B04_bind_view" />
+    <EntitySet Name="B02_bind_view" EntityType="bd_kidsModel.B02_bind_view" />
   </EntityContainer>
   <EntityType Name="T11_test_answers">
     <Key>
@@ -1044,6 +1048,27 @@
     <Property Name="code_course" Type="Int64" />
     <Property Name="serial_number_subject" Type="Int64" />
     <Property Name="name_subject" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="B04_bind_view">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="code_subject" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code_subject" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_task" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="equvivalent_perc" Type="Int64" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="B02_bind_view">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="code_class" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="code_class" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_course" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

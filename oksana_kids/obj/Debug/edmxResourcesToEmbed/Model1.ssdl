@@ -229,6 +229,7 @@
     <Property Name="max_passing_duration_sec" Type="integer" />
     <Property Name="code_action" Type="integer" />
     <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="additional_teaching_material" Type="nvarchar" MaxLength="2147483647" />
   </EntityType>
   <EntityType Name="T04_testing_tasks">
     <Key>
@@ -335,6 +336,18 @@
     <Property Name="group_no" Type="integer" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.B02_bind_view" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="B02_bind_view">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="code_class" />
+    </Key>
+    <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code_class" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_course" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "main.B03_bind_view" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="B03_bind_view">
     <Key>
@@ -344,6 +357,19 @@
     <Property Name="code_course" Type="integer" />
     <Property Name="serial_number_subject" Type="integer" />
     <Property Name="name_subject" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.B04_bind_view" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="B04_bind_view">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="code_subject" />
+    </Key>
+    <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="code_subject" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name_task" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="equvivalent_perc" Type="integer" />
     <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
@@ -407,6 +433,7 @@
     <Property Name="date_create" Type="nvarchar" MaxLength="2147483647" />
     <Property Name="date_correct" Type="nvarchar" MaxLength="2147483647" />
     <Property Name="name_type" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
     <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
   </EntityType>
   <Association Name="FK_B01_testing_aims_to_tests_0_0">
@@ -602,18 +629,6 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_T03_testing_task_modules_0_0">
-    <End Role="R12_instructions_to_test_tasks_types" Type="Self.R12_instructions_to_test_tasks_types" Multiplicity="0..1" />
-    <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="R12_instructions_to_test_tasks_types">
-        <PropertyRef Name="code_instruction" />
-      </Principal>
-      <Dependent Role="T03_testing_task_modules">
-        <PropertyRef Name="code_instruction" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_T03_testing_task_modules_1_0">
     <End Role="R11_variants_of_passing_tasks_results_analysis" Type="Self.R11_variants_of_passing_tasks_results_analysis" Multiplicity="0..1" />
     <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
     <ReferentialConstraint>
@@ -625,7 +640,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_T03_testing_task_modules_2_0">
+  <Association Name="FK_T03_testing_task_modules_1_0">
     <End Role="T07_soundtracks" Type="Self.T07_soundtracks" Multiplicity="0..1" />
     <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
     <ReferentialConstraint>
@@ -637,7 +652,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_T03_testing_task_modules_3_0">
+  <Association Name="FK_T03_testing_task_modules_2_0">
     <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
     <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
     <ReferentialConstraint>
@@ -649,19 +664,19 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_T03_testing_task_modules_4_0">
-    <End Role="T08_audio_video_tracks" Type="Self.T08_audio_video_tracks" Multiplicity="0..1" />
+  <Association Name="FK_T03_testing_task_modules_3_0">
+    <End Role="R10_next_action_variants" Type="Self.R10_next_action_variants" Multiplicity="0..1" />
     <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="T08_audio_video_tracks">
-        <PropertyRef Name="id_av_track" />
+      <Principal Role="R10_next_action_variants">
+        <PropertyRef Name="code_action" />
       </Principal>
       <Dependent Role="T03_testing_task_modules">
-        <PropertyRef Name="id_av_track" />
+        <PropertyRef Name="code_action" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_T03_testing_task_modules_5_0">
+  <Association Name="FK_T03_testing_task_modules_4_0">
     <End Role="T09_comment_variants_on_passing_tasks" Type="Self.T09_comment_variants_on_passing_tasks" Multiplicity="0..1" />
     <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
     <ReferentialConstraint>
@@ -673,15 +688,27 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_T03_testing_task_modules_6_0">
-    <End Role="R10_next_action_variants" Type="Self.R10_next_action_variants" Multiplicity="0..1" />
+  <Association Name="FK_T03_testing_task_modules_5_0">
+    <End Role="T08_audio_video_tracks" Type="Self.T08_audio_video_tracks" Multiplicity="0..1" />
     <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="R10_next_action_variants">
-        <PropertyRef Name="code_action" />
+      <Principal Role="T08_audio_video_tracks">
+        <PropertyRef Name="id_av_track" />
       </Principal>
       <Dependent Role="T03_testing_task_modules">
-        <PropertyRef Name="code_action" />
+        <PropertyRef Name="id_av_track" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_T03_testing_task_modules_6_0">
+    <End Role="R12_instructions_to_test_tasks_types" Type="Self.R12_instructions_to_test_tasks_types" Multiplicity="0..1" />
+    <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R12_instructions_to_test_tasks_types">
+        <PropertyRef Name="code_instruction" />
+      </Principal>
+      <Dependent Role="T03_testing_task_modules">
+        <PropertyRef Name="code_instruction" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -850,6 +877,14 @@
     <EntitySet Name="T09_comment_variants_on_passing_tasks" EntityType="Self.T09_comment_variants_on_passing_tasks" store:Type="Tables" />
     <EntitySet Name="T10_organizations" EntityType="Self.T10_organizations" store:Type="Tables" />
     <EntitySet Name="T11_test_answers" EntityType="Self.T11_test_answers" store:Type="Tables" />
+    <EntitySet Name="B02_bind_view" EntityType="Self.B02_bind_view" store:Type="Views">
+      <DefiningQuery>SELECT 
+[B02_bind_view].[id] AS [id], 
+[B02_bind_view].[code_class] AS [code_class], 
+[B02_bind_view].[name_course] AS [name_course], 
+[B02_bind_view].[note] AS [note]
+FROM [B02_bind_view] AS [B02_bind_view]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="B03_bind_view" EntityType="Self.B03_bind_view" store:Type="Views">
       <DefiningQuery>SELECT 
 [B03_bind_view].[id] AS [id], 
@@ -858,6 +893,15 @@
 [B03_bind_view].[name_subject] AS [name_subject], 
 [B03_bind_view].[note] AS [note]
 FROM [B03_bind_view] AS [B03_bind_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="B04_bind_view" EntityType="Self.B04_bind_view" store:Type="Views">
+      <DefiningQuery>SELECT 
+[B04_bind_view].[id] AS [id], 
+[B04_bind_view].[code_subject] AS [code_subject], 
+[B04_bind_view].[name_task] AS [name_task], 
+[B04_bind_view].[equvivalent_perc] AS [equvivalent_perc], 
+[B04_bind_view].[note] AS [note]
+FROM [B04_bind_view] AS [B04_bind_view]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="T01_1_pupils" EntityType="Self.T01_1_pupils" store:Type="Views">
       <DefiningQuery>SELECT 
@@ -903,6 +947,7 @@ FROM [T02_view_tests] AS [T02_view_tests]</DefiningQuery>
 [T04_view_testing_tasks].[date_create] AS [date_create], 
 [T04_view_testing_tasks].[date_correct] AS [date_correct], 
 [T04_view_testing_tasks].[name_type] AS [name_type], 
+[T04_view_testing_tasks].[file_location] AS [file_location], 
 [T04_view_testing_tasks].[note] AS [note]
 FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
     </EntitySet>
@@ -971,31 +1016,31 @@ FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
       <End Role="T02_tests" EntitySet="T02_tests" />
     </AssociationSet>
     <AssociationSet Name="FK_T03_testing_task_modules_0_0" Association="Self.FK_T03_testing_task_modules_0_0">
-      <End Role="R12_instructions_to_test_tasks_types" EntitySet="R12_instructions_to_test_tasks_types" />
-      <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
-    </AssociationSet>
-    <AssociationSet Name="FK_T03_testing_task_modules_1_0" Association="Self.FK_T03_testing_task_modules_1_0">
       <End Role="R11_variants_of_passing_tasks_results_analysis" EntitySet="R11_variants_of_passing_tasks_results_analysis" />
       <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
     </AssociationSet>
-    <AssociationSet Name="FK_T03_testing_task_modules_2_0" Association="Self.FK_T03_testing_task_modules_2_0">
+    <AssociationSet Name="FK_T03_testing_task_modules_1_0" Association="Self.FK_T03_testing_task_modules_1_0">
       <End Role="T07_soundtracks" EntitySet="T07_soundtracks" />
       <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
     </AssociationSet>
-    <AssociationSet Name="FK_T03_testing_task_modules_3_0" Association="Self.FK_T03_testing_task_modules_3_0">
+    <AssociationSet Name="FK_T03_testing_task_modules_2_0" Association="Self.FK_T03_testing_task_modules_2_0">
       <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
       <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
     </AssociationSet>
-    <AssociationSet Name="FK_T03_testing_task_modules_4_0" Association="Self.FK_T03_testing_task_modules_4_0">
-      <End Role="T08_audio_video_tracks" EntitySet="T08_audio_video_tracks" />
+    <AssociationSet Name="FK_T03_testing_task_modules_3_0" Association="Self.FK_T03_testing_task_modules_3_0">
+      <End Role="R10_next_action_variants" EntitySet="R10_next_action_variants" />
       <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
     </AssociationSet>
-    <AssociationSet Name="FK_T03_testing_task_modules_5_0" Association="Self.FK_T03_testing_task_modules_5_0">
+    <AssociationSet Name="FK_T03_testing_task_modules_4_0" Association="Self.FK_T03_testing_task_modules_4_0">
       <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
       <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
     </AssociationSet>
+    <AssociationSet Name="FK_T03_testing_task_modules_5_0" Association="Self.FK_T03_testing_task_modules_5_0">
+      <End Role="T08_audio_video_tracks" EntitySet="T08_audio_video_tracks" />
+      <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+    </AssociationSet>
     <AssociationSet Name="FK_T03_testing_task_modules_6_0" Association="Self.FK_T03_testing_task_modules_6_0">
-      <End Role="R10_next_action_variants" EntitySet="R10_next_action_variants" />
+      <End Role="R12_instructions_to_test_tasks_types" EntitySet="R12_instructions_to_test_tasks_types" />
       <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
     </AssociationSet>
     <AssociationSet Name="FK_T04_testing_tasks_0_0" Association="Self.FK_T04_testing_tasks_0_0">
