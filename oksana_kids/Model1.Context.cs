@@ -64,5 +64,8 @@ namespace oksana_kids
         public virtual DbSet<B03_bind_view> B03_bind_view { get; set; }
         public virtual DbSet<B04_bind_view> B04_bind_view { get; set; }
         public virtual DbSet<B02_bind_view> B02_bind_view { get; set; }
+        public virtual DbSet<T08_view_audio_video_tracks> T08_view_audio_video_tracks { get; set; }
+        public virtual DbSet<T07_view_soundtracks> T07_view_soundtracks { get; set; }
+        public virtual DbSet<T06_view_teaching_materials> T06_view_teaching_materials { get; set; }
     }
 }

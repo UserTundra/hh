@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="dacf1ec96faf4d6a8d553c57a0f19cef" Name="Diagram1" ZoomLevel="86">
+      <Diagram DiagramId="dacf1ec96faf4d6a8d553c57a0f19cef" Name="Diagram1" ZoomLevel="12">
         <EntityTypeShape EntityType="bd_kidsModel.B01_testing_aims_to_tests" Width="1.5" PointX="13.5" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.B02_study_courses_to_pupils_classes" Width="1.5" PointX="3" PointY="15.375" IsExpanded="true" />
         <EntityTypeShape EntityType="bd_kidsModel.B03_study_subjects_to_courses" Width="1.5" PointX="16.5" PointY="18.75" IsExpanded="true" />
@@ -78,6 +78,9 @@
         <EntityTypeShape EntityType="bd_kidsModel.B03_bind_view" Width="1.5" PointX="5.375" PointY="4.75" />
         <EntityTypeShape EntityType="bd_kidsModel.B04_bind_view" Width="1.5" PointX="7.375" PointY="0.75" />
         <EntityTypeShape EntityType="bd_kidsModel.B02_bind_view" Width="1.5" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="bd_kidsModel.T08_view_audio_video_tracks" Width="1.5" PointX="7.375" PointY="3.75" />
+        <EntityTypeShape EntityType="bd_kidsModel.T07_view_soundtracks" Width="1.5" PointX="5.375" PointY="7.75" />
+        <EntityTypeShape EntityType="bd_kidsModel.T06_view_teaching_materials" Width="1.5" PointX="7.375" PointY="7.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

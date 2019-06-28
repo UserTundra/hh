@@ -84,6 +84,12 @@
     <Compile Include="AdaptiveTTConstructor.Designer.cs">
       <DependentUpon>AdaptiveTTConstructor.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdditionalTeachingMaterial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdditionalTeachingMaterial.Designer.cs">
+      <DependentUpon>AdditionalTeachingMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="AskToLeaveForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -334,10 +340,70 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet46.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet47.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet47.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet48.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet48.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet49.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet49.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_kidsDataSet5.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet50.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet50.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet51.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet52.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet52.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet53.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet53.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet54.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet54.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet55.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet55.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet56.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet56.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet57.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet57.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet58.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet58.xsd</DependentUpon>
     </Compile>
     <Compile Include="bd_kidsDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -519,10 +585,19 @@
     <Compile Include="T06_teaching_materials.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="T06_view_teaching_materials.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="T07_soundtracks.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="T07_view_soundtracks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="T08_audio_video_tracks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T08_view_audio_video_tracks.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="T09_comment_variants_on_passing_tasks.cs">
@@ -619,6 +694,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdaptiveTTConstructor.resx">
       <DependentUpon>AdaptiveTTConstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdditionalTeachingMaterial.resx">
+      <DependentUpon>AdditionalTeachingMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AskToLeaveForm.resx">
       <DependentUpon>AskToLeaveForm.cs</DependentUpon>
@@ -1172,6 +1250,39 @@
     <None Include="bd_kidsDataSet46.xss">
       <DependentUpon>bd_kidsDataSet46.xsd</DependentUpon>
     </None>
+    <None Include="bd_kidsDataSet47.xsc">
+      <DependentUpon>bd_kidsDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet47.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet47.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet47.xss">
+      <DependentUpon>bd_kidsDataSet47.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet48.xsc">
+      <DependentUpon>bd_kidsDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet48.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet48.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet48.xss">
+      <DependentUpon>bd_kidsDataSet48.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet49.xsc">
+      <DependentUpon>bd_kidsDataSet49.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet49.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet49.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet49.xss">
+      <DependentUpon>bd_kidsDataSet49.xsd</DependentUpon>
+    </None>
     <None Include="bd_kidsDataSet5.xsc">
       <DependentUpon>bd_kidsDataSet5.xsd</DependentUpon>
     </None>
@@ -1182,6 +1293,105 @@
     </None>
     <None Include="bd_kidsDataSet5.xss">
       <DependentUpon>bd_kidsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet50.xsc">
+      <DependentUpon>bd_kidsDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet50.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet50.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet50.xss">
+      <DependentUpon>bd_kidsDataSet50.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet51.xsc">
+      <DependentUpon>bd_kidsDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet51.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet51.xss">
+      <DependentUpon>bd_kidsDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet52.xsc">
+      <DependentUpon>bd_kidsDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet52.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet52.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet52.xss">
+      <DependentUpon>bd_kidsDataSet52.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet53.xsc">
+      <DependentUpon>bd_kidsDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet53.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet53.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet53.xss">
+      <DependentUpon>bd_kidsDataSet53.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet54.xsc">
+      <DependentUpon>bd_kidsDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet54.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet54.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet54.xss">
+      <DependentUpon>bd_kidsDataSet54.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet55.xsc">
+      <DependentUpon>bd_kidsDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet55.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet55.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet55.xss">
+      <DependentUpon>bd_kidsDataSet55.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet56.xsc">
+      <DependentUpon>bd_kidsDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet56.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet56.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet56.xss">
+      <DependentUpon>bd_kidsDataSet56.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet57.xsc">
+      <DependentUpon>bd_kidsDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet57.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet57.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet57.xss">
+      <DependentUpon>bd_kidsDataSet57.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet58.xsc">
+      <DependentUpon>bd_kidsDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet58.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet58.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet58.xss">
+      <DependentUpon>bd_kidsDataSet58.xsd</DependentUpon>
     </None>
     <None Include="bd_kidsDataSet6.xsc">
       <DependentUpon>bd_kidsDataSet6.xsd</DependentUpon>

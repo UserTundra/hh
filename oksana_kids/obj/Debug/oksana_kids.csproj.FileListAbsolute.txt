@@ -281,7 +281,6 @@ C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csproj.CopyCom
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.MethodicalMaterialBind.resources
 C:\учеба\new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.MethodicalMaterialBind.resources
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.StudySubjectsToCourcesBind.resources
-C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
 C:\учеба\new_new_new_oksana\hh\oksana_kids\bin\Debug\oksana_kids.exe.config
 C:\учеба\new_new_new_oksana\hh\oksana_kids\bin\Debug\oksana_kids.exe
 C:\учеба\new_new_new_oksana\hh\oksana_kids\bin\Debug\oksana_kids.pdb
@@ -329,3 +328,5 @@ C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\ok
 C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Files.resources
 C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.StudyCourcesToPupilsClassesBind.resources
 C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.TestTasksToStudySubjectsBind.resources
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
+C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.AdditionalTeachingMaterial.resources

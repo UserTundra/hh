@@ -65,6 +65,9 @@
             this.t02viewtestsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSetFOR_TESTS = new oksana_kids.bd_kidsDataSetFOR_TESTS();
             this.T03_testing_task_modules = new System.Windows.Forms.TabPage();
+            this.T03_additional_teaching_material_add = new System.Windows.Forms.Button();
+            this.label26 = new System.Windows.Forms.Label();
+            this.T03_additional_teaching_material = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.T03addButton = new System.Windows.Forms.Button();
@@ -91,6 +94,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.T04_testing_tasks = new System.Windows.Forms.TabPage();
+            this.T04_show_file_location = new System.Windows.Forms.TextBox();
             this.T04_file_location = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.T04addButton = new System.Windows.Forms.Button();
@@ -98,6 +102,8 @@
             this.T04deleteButton = new System.Windows.Forms.Button();
             this.T11_test_answers_add = new System.Windows.Forms.Button();
             this.T04_code_type = new System.Windows.Forms.ComboBox();
+            this.r03testingtypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet45 = new oksana_kids.bd_kidsDataSet45();
             this.label13 = new System.Windows.Forms.Label();
             this.T04_date_correct = new System.Windows.Forms.DateTimePicker();
             this.T04_date_create = new System.Windows.Forms.DateTimePicker();
@@ -110,6 +116,16 @@
             this.T04_name_task = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.T04 = new System.Windows.Forms.DataGridView();
+            this.nametaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecreateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datecorrectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nametypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filelocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idtaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t04viewtestingtasksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet46 = new oksana_kids.bd_kidsDataSet46();
             this.TT_constructor_button = new System.Windows.Forms.Button();
             this.T05_test_passing_results = new System.Windows.Forms.TabPage();
             this.t02viewtestsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -129,21 +145,26 @@
             this.t02viewtestsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.t02_view_testsTableAdapter1 = new oksana_kids.bd_kidsDataSet9TableAdapters.T02_view_testsTableAdapter();
             this.t02_view_testsTableAdapter2 = new oksana_kids.bd_kidsDataSetFOR_TESTSTableAdapters.T02_view_testsTableAdapter();
-            this.bd_kidsDataSet45 = new oksana_kids.bd_kidsDataSet45();
-            this.r03testingtypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r03_testing_typesTableAdapter = new oksana_kids.bd_kidsDataSet45TableAdapters.R03_testing_typesTableAdapter();
-            this.bd_kidsDataSet46 = new oksana_kids.bd_kidsDataSet46();
-            this.t04viewtestingtasksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.t04_view_testing_tasksTableAdapter1 = new oksana_kids.bd_kidsDataSet46TableAdapters.T04_view_testing_tasksTableAdapter();
-            this.nametaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fioDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecreateDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datecorrectDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nametypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filelocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idtaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.T04_show_file_location = new System.Windows.Forms.TextBox();
+            this.bd_kidsDataSet53 = new oksana_kids.bd_kidsDataSet53();
+            this.t07soundtracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t07_soundtracksTableAdapter = new oksana_kids.bd_kidsDataSet53TableAdapters.T07_soundtracksTableAdapter();
+            this.bd_kidsDataSet54 = new oksana_kids.bd_kidsDataSet54();
+            this.t08audiovideotracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t08_audio_video_tracksTableAdapter = new oksana_kids.bd_kidsDataSet54TableAdapters.T08_audio_video_tracksTableAdapter();
+            this.bd_kidsDataSet55 = new oksana_kids.bd_kidsDataSet55();
+            this.r12instructionstotesttaskstypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.r12_instructions_to_test_tasks_typesTableAdapter = new oksana_kids.bd_kidsDataSet55TableAdapters.R12_instructions_to_test_tasks_typesTableAdapter();
+            this.bd_kidsDataSet56 = new oksana_kids.bd_kidsDataSet56();
+            this.r11variantsofpassingtasksresultsanalysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.r11_variants_of_passing_tasks_results_analysisTableAdapter = new oksana_kids.bd_kidsDataSet56TableAdapters.R11_variants_of_passing_tasks_results_analysisTableAdapter();
+            this.bd_kidsDataSet57 = new oksana_kids.bd_kidsDataSet57();
+            this.t09commentvariantsonpassingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.t09_comment_variants_on_passing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet57TableAdapters.T09_comment_variants_on_passing_tasksTableAdapter();
+            this.bd_kidsDataSet58 = new oksana_kids.bd_kidsDataSet58();
+            this.r10nextactionvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet58TableAdapters.R10_next_action_variantsTableAdapter();
             this.tabControl1.SuspendLayout();
             this.T02_tests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
@@ -154,7 +175,11 @@
             this.T03_testing_task_modules.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.T03)).BeginInit();
             this.T04_testing_tasks.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.r03testingtypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet45)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.T04)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet46)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).BeginInit();
@@ -166,10 +191,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r03testingtypesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet46)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet55)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet56)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r11variantsofpassingtasksresultsanalysisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t09commentvariantsonpassingtasksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet58)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r10nextactionvariantsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -259,7 +292,7 @@
             // T02addButton
             // 
             this.T02addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T02addButton.Location = new System.Drawing.Point(360, 348);
+            this.T02addButton.Location = new System.Drawing.Point(535, 348);
             this.T02addButton.Name = "T02addButton";
             this.T02addButton.Size = new System.Drawing.Size(123, 47);
             this.T02addButton.TabIndex = 17;
@@ -270,7 +303,7 @@
             // T02changeButton
             // 
             this.T02changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T02changeButton.Location = new System.Drawing.Point(583, 349);
+            this.T02changeButton.Location = new System.Drawing.Point(664, 349);
             this.T02changeButton.Name = "T02changeButton";
             this.T02changeButton.Size = new System.Drawing.Size(123, 47);
             this.T02changeButton.TabIndex = 18;
@@ -446,6 +479,7 @@
             this.T02.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.T02.Size = new System.Drawing.Size(556, 326);
             this.T02.TabIndex = 0;
+            this.T02.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.T02_CellClick);
             this.T02.Click += new System.EventHandler(this.T02_Click);
             // 
             // idtestDataGridViewTextBoxColumn
@@ -508,6 +542,9 @@
             // 
             // T03_testing_task_modules
             // 
+            this.T03_testing_task_modules.Controls.Add(this.T03_additional_teaching_material_add);
+            this.T03_testing_task_modules.Controls.Add(this.label26);
+            this.T03_testing_task_modules.Controls.Add(this.T03_additional_teaching_material);
             this.T03_testing_task_modules.Controls.Add(this.label24);
             this.T03_testing_task_modules.Controls.Add(this.label16);
             this.T03_testing_task_modules.Controls.Add(this.T03addButton);
@@ -541,6 +578,34 @@
             this.T03_testing_task_modules.Text = "Модули спецификации использования тз";
             this.T03_testing_task_modules.UseVisualStyleBackColor = true;
             // 
+            // T03_additional_teaching_material_add
+            // 
+            this.T03_additional_teaching_material_add.Location = new System.Drawing.Point(121, 315);
+            this.T03_additional_teaching_material_add.Name = "T03_additional_teaching_material_add";
+            this.T03_additional_teaching_material_add.Size = new System.Drawing.Size(93, 23);
+            this.T03_additional_teaching_material_add.TabIndex = 47;
+            this.T03_additional_teaching_material_add.Text = "Выбрать";
+            this.T03_additional_teaching_material_add.UseVisualStyleBackColor = true;
+            this.T03_additional_teaching_material_add.Click += new System.EventHandler(this.T03_additional_teaching_material_add_Click);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label26.Location = new System.Drawing.Point(6, 311);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(114, 32);
+            this.label26.TabIndex = 40;
+            this.label26.Text = "Доп.обучающий \r\nматериал";
+            // 
+            // T03_additional_teaching_material
+            // 
+            this.T03_additional_teaching_material.Enabled = false;
+            this.T03_additional_teaching_material.Location = new System.Drawing.Point(220, 317);
+            this.T03_additional_teaching_material.Name = "T03_additional_teaching_material";
+            this.T03_additional_teaching_material.Size = new System.Drawing.Size(188, 20);
+            this.T03_additional_teaching_material.TabIndex = 39;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -564,7 +629,7 @@
             // T03addButton
             // 
             this.T03addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T03addButton.Location = new System.Drawing.Point(414, 349);
+            this.T03addButton.Location = new System.Drawing.Point(535, 349);
             this.T03addButton.Name = "T03addButton";
             this.T03addButton.Size = new System.Drawing.Size(123, 47);
             this.T03addButton.TabIndex = 34;
@@ -574,7 +639,7 @@
             // T03changeButton
             // 
             this.T03changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T03changeButton.Location = new System.Drawing.Point(605, 349);
+            this.T03changeButton.Location = new System.Drawing.Point(664, 349);
             this.T03changeButton.Name = "T03changeButton";
             this.T03changeButton.Size = new System.Drawing.Size(123, 47);
             this.T03changeButton.TabIndex = 35;
@@ -601,7 +666,7 @@
             // 
             // T03_note
             // 
-            this.T03_note.Location = new System.Drawing.Point(239, 284);
+            this.T03_note.Location = new System.Drawing.Point(239, 287);
             this.T03_note.Name = "T03_note";
             this.T03_note.Size = new System.Drawing.Size(169, 20);
             this.T03_note.TabIndex = 32;
@@ -622,27 +687,36 @@
             // 
             // T03_id_track
             // 
+            this.T03_id_track.DataSource = this.t07soundtracksBindingSource;
+            this.T03_id_track.DisplayMember = "name_track";
             this.T03_id_track.FormattingEnabled = true;
-            this.T03_id_track.Location = new System.Drawing.Point(239, 35);
+            this.T03_id_track.Location = new System.Drawing.Point(191, 35);
             this.T03_id_track.Name = "T03_id_track";
-            this.T03_id_track.Size = new System.Drawing.Size(169, 21);
+            this.T03_id_track.Size = new System.Drawing.Size(217, 21);
             this.T03_id_track.TabIndex = 29;
+            this.T03_id_track.ValueMember = "id_track";
             // 
             // T03_id_av_track
             // 
+            this.T03_id_av_track.DataSource = this.t08audiovideotracksBindingSource;
+            this.T03_id_av_track.DisplayMember = "name_av_track";
             this.T03_id_av_track.FormattingEnabled = true;
-            this.T03_id_av_track.Location = new System.Drawing.Point(239, 59);
+            this.T03_id_av_track.Location = new System.Drawing.Point(191, 59);
             this.T03_id_av_track.Name = "T03_id_av_track";
-            this.T03_id_av_track.Size = new System.Drawing.Size(169, 21);
+            this.T03_id_av_track.Size = new System.Drawing.Size(217, 21);
             this.T03_id_av_track.TabIndex = 28;
+            this.T03_id_av_track.ValueMember = "id_av_track";
             // 
             // T03_code_instruction
             // 
+            this.T03_code_instruction.DataSource = this.r12instructionstotesttaskstypesBindingSource;
+            this.T03_code_instruction.DisplayMember = "name_instruction";
             this.T03_code_instruction.FormattingEnabled = true;
-            this.T03_code_instruction.Location = new System.Drawing.Point(239, 84);
+            this.T03_code_instruction.Location = new System.Drawing.Point(220, 84);
             this.T03_code_instruction.Name = "T03_code_instruction";
-            this.T03_code_instruction.Size = new System.Drawing.Size(169, 21);
+            this.T03_code_instruction.Size = new System.Drawing.Size(188, 21);
             this.T03_code_instruction.TabIndex = 27;
+            this.T03_code_instruction.ValueMember = "code_instruction";
             // 
             // T03_id_task
             // 
@@ -655,27 +729,35 @@
             // 
             // T03_code_variant
             // 
+            this.T03_code_variant.DataSource = this.r11variantsofpassingtasksresultsanalysisBindingSource;
+            this.T03_code_variant.DisplayMember = "name_variant";
             this.T03_code_variant.FormattingEnabled = true;
-            this.T03_code_variant.Location = new System.Drawing.Point(239, 120);
+            this.T03_code_variant.Location = new System.Drawing.Point(220, 120);
             this.T03_code_variant.Name = "T03_code_variant";
-            this.T03_code_variant.Size = new System.Drawing.Size(169, 21);
+            this.T03_code_variant.Size = new System.Drawing.Size(188, 21);
             this.T03_code_variant.TabIndex = 25;
+            this.T03_code_variant.ValueMember = "code_variant";
             // 
             // T03_id_comment
             // 
+            this.T03_id_comment.DataSource = this.t09commentvariantsonpassingtasksBindingSource;
+            this.T03_id_comment.Enabled = false;
             this.T03_id_comment.FormattingEnabled = true;
-            this.T03_id_comment.Location = new System.Drawing.Point(239, 160);
+            this.T03_id_comment.Location = new System.Drawing.Point(220, 160);
             this.T03_id_comment.Name = "T03_id_comment";
-            this.T03_id_comment.Size = new System.Drawing.Size(169, 21);
+            this.T03_id_comment.Size = new System.Drawing.Size(188, 21);
             this.T03_id_comment.TabIndex = 24;
             // 
             // T03_code_action
             // 
+            this.T03_code_action.DataSource = this.r10nextactionvariantsBindingSource;
+            this.T03_code_action.DisplayMember = "name_action";
             this.T03_code_action.FormattingEnabled = true;
             this.T03_code_action.Location = new System.Drawing.Point(239, 260);
             this.T03_code_action.Name = "T03_code_action";
             this.T03_code_action.Size = new System.Drawing.Size(169, 21);
             this.T03_code_action.TabIndex = 23;
+            this.T03_code_action.ValueMember = "code_action";
             // 
             // label23
             // 
@@ -733,9 +815,9 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label15.Location = new System.Drawing.Point(6, 113);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(206, 32);
+            this.label15.Size = new System.Drawing.Size(205, 32);
             this.label15.TabIndex = 17;
-            this.label15.Text = "Вариант анализа резльтатов \r\nвыполнения ТЗ";
+            this.label15.Text = "Вариант оценки результатов \r\nвыполнения ТЗ";
             // 
             // label17
             // 
@@ -797,6 +879,14 @@
             this.T04_testing_tasks.Text = "Тестовые задания";
             this.T04_testing_tasks.UseVisualStyleBackColor = true;
             // 
+            // T04_show_file_location
+            // 
+            this.T04_show_file_location.Enabled = false;
+            this.T04_show_file_location.Location = new System.Drawing.Point(152, 118);
+            this.T04_show_file_location.Name = "T04_show_file_location";
+            this.T04_show_file_location.Size = new System.Drawing.Size(199, 20);
+            this.T04_show_file_location.TabIndex = 47;
+            // 
             // T04_file_location
             // 
             this.T04_file_location.Location = new System.Drawing.Point(53, 116);
@@ -820,7 +910,7 @@
             // T04addButton
             // 
             this.T04addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T04addButton.Location = new System.Drawing.Point(354, 346);
+            this.T04addButton.Location = new System.Drawing.Point(529, 346);
             this.T04addButton.Name = "T04addButton";
             this.T04addButton.Size = new System.Drawing.Size(123, 47);
             this.T04addButton.TabIndex = 42;
@@ -831,12 +921,13 @@
             // T04changeButton
             // 
             this.T04changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.T04changeButton.Location = new System.Drawing.Point(577, 347);
+            this.T04changeButton.Location = new System.Drawing.Point(658, 346);
             this.T04changeButton.Name = "T04changeButton";
             this.T04changeButton.Size = new System.Drawing.Size(123, 47);
             this.T04changeButton.TabIndex = 43;
             this.T04changeButton.Text = "Изменить";
             this.T04changeButton.UseVisualStyleBackColor = true;
+            this.T04changeButton.Click += new System.EventHandler(this.T04changeButton_Click);
             // 
             // T04deleteButton
             // 
@@ -847,6 +938,7 @@
             this.T04deleteButton.TabIndex = 44;
             this.T04deleteButton.Text = "Удалить";
             this.T04deleteButton.UseVisualStyleBackColor = true;
+            this.T04deleteButton.Click += new System.EventHandler(this.T04deleteButton_Click);
             // 
             // T11_test_answers_add
             // 
@@ -868,6 +960,16 @@
             this.T04_code_type.Size = new System.Drawing.Size(493, 21);
             this.T04_code_type.TabIndex = 31;
             this.T04_code_type.ValueMember = "code_type";
+            // 
+            // r03testingtypesBindingSource
+            // 
+            this.r03testingtypesBindingSource.DataMember = "R03_testing_types";
+            this.r03testingtypesBindingSource.DataSource = this.bd_kidsDataSet45;
+            // 
+            // bd_kidsDataSet45
+            // 
+            this.bd_kidsDataSet45.DataSetName = "bd_kidsDataSet45";
+            this.bd_kidsDataSet45.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label13
             // 
@@ -991,6 +1093,67 @@
             this.T04.TabIndex = 18;
             this.T04.Click += new System.EventHandler(this.T04_Click);
             // 
+            // nametaskDataGridViewTextBoxColumn
+            // 
+            this.nametaskDataGridViewTextBoxColumn.DataPropertyName = "name_task";
+            this.nametaskDataGridViewTextBoxColumn.HeaderText = "Название ТЗ";
+            this.nametaskDataGridViewTextBoxColumn.Name = "nametaskDataGridViewTextBoxColumn";
+            // 
+            // fioDataGridViewTextBoxColumn1
+            // 
+            this.fioDataGridViewTextBoxColumn1.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn1.HeaderText = "ФИО автора";
+            this.fioDataGridViewTextBoxColumn1.Name = "fioDataGridViewTextBoxColumn1";
+            this.fioDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // datecreateDataGridViewTextBoxColumn1
+            // 
+            this.datecreateDataGridViewTextBoxColumn1.DataPropertyName = "date_create";
+            this.datecreateDataGridViewTextBoxColumn1.HeaderText = "Дата создания";
+            this.datecreateDataGridViewTextBoxColumn1.Name = "datecreateDataGridViewTextBoxColumn1";
+            // 
+            // datecorrectDataGridViewTextBoxColumn1
+            // 
+            this.datecorrectDataGridViewTextBoxColumn1.DataPropertyName = "date_correct";
+            this.datecorrectDataGridViewTextBoxColumn1.HeaderText = "Дата корректировки";
+            this.datecorrectDataGridViewTextBoxColumn1.Name = "datecorrectDataGridViewTextBoxColumn1";
+            // 
+            // nametypeDataGridViewTextBoxColumn
+            // 
+            this.nametypeDataGridViewTextBoxColumn.DataPropertyName = "name_type";
+            this.nametypeDataGridViewTextBoxColumn.HeaderText = "Тип ТЗ";
+            this.nametypeDataGridViewTextBoxColumn.Name = "nametypeDataGridViewTextBoxColumn";
+            this.nametypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // filelocationDataGridViewTextBoxColumn
+            // 
+            this.filelocationDataGridViewTextBoxColumn.DataPropertyName = "file_location";
+            this.filelocationDataGridViewTextBoxColumn.HeaderText = "Путь к файлу ТЗ";
+            this.filelocationDataGridViewTextBoxColumn.Name = "filelocationDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn1
+            // 
+            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            // 
+            // idtaskDataGridViewTextBoxColumn
+            // 
+            this.idtaskDataGridViewTextBoxColumn.DataPropertyName = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.HeaderText = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.Name = "idtaskDataGridViewTextBoxColumn";
+            this.idtaskDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // t04viewtestingtasksBindingSource1
+            // 
+            this.t04viewtestingtasksBindingSource1.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource1.DataSource = this.bd_kidsDataSet46;
+            // 
+            // bd_kidsDataSet46
+            // 
+            this.bd_kidsDataSet46.DataSetName = "bd_kidsDataSet46";
+            this.bd_kidsDataSet46.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // TT_constructor_button
             // 
             this.TT_constructor_button.Enabled = false;
@@ -1091,90 +1254,97 @@
             // 
             this.t02_view_testsTableAdapter2.ClearBeforeFill = true;
             // 
-            // bd_kidsDataSet45
-            // 
-            this.bd_kidsDataSet45.DataSetName = "bd_kidsDataSet45";
-            this.bd_kidsDataSet45.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r03testingtypesBindingSource
-            // 
-            this.r03testingtypesBindingSource.DataMember = "R03_testing_types";
-            this.r03testingtypesBindingSource.DataSource = this.bd_kidsDataSet45;
-            // 
             // r03_testing_typesTableAdapter
             // 
             this.r03_testing_typesTableAdapter.ClearBeforeFill = true;
-            // 
-            // bd_kidsDataSet46
-            // 
-            this.bd_kidsDataSet46.DataSetName = "bd_kidsDataSet46";
-            this.bd_kidsDataSet46.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t04viewtestingtasksBindingSource1
-            // 
-            this.t04viewtestingtasksBindingSource1.DataMember = "T04_view_testing_tasks";
-            this.t04viewtestingtasksBindingSource1.DataSource = this.bd_kidsDataSet46;
             // 
             // t04_view_testing_tasksTableAdapter1
             // 
             this.t04_view_testing_tasksTableAdapter1.ClearBeforeFill = true;
             // 
-            // nametaskDataGridViewTextBoxColumn
+            // bd_kidsDataSet53
             // 
-            this.nametaskDataGridViewTextBoxColumn.DataPropertyName = "name_task";
-            this.nametaskDataGridViewTextBoxColumn.HeaderText = "Название ТЗ";
-            this.nametaskDataGridViewTextBoxColumn.Name = "nametaskDataGridViewTextBoxColumn";
+            this.bd_kidsDataSet53.DataSetName = "bd_kidsDataSet53";
+            this.bd_kidsDataSet53.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // fioDataGridViewTextBoxColumn1
+            // t07soundtracksBindingSource
             // 
-            this.fioDataGridViewTextBoxColumn1.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn1.HeaderText = "ФИО автора";
-            this.fioDataGridViewTextBoxColumn1.Name = "fioDataGridViewTextBoxColumn1";
+            this.t07soundtracksBindingSource.DataMember = "T07_soundtracks";
+            this.t07soundtracksBindingSource.DataSource = this.bd_kidsDataSet53;
             // 
-            // datecreateDataGridViewTextBoxColumn1
+            // t07_soundtracksTableAdapter
             // 
-            this.datecreateDataGridViewTextBoxColumn1.DataPropertyName = "date_create";
-            this.datecreateDataGridViewTextBoxColumn1.HeaderText = "Дата создания";
-            this.datecreateDataGridViewTextBoxColumn1.Name = "datecreateDataGridViewTextBoxColumn1";
+            this.t07_soundtracksTableAdapter.ClearBeforeFill = true;
             // 
-            // datecorrectDataGridViewTextBoxColumn1
+            // bd_kidsDataSet54
             // 
-            this.datecorrectDataGridViewTextBoxColumn1.DataPropertyName = "date_correct";
-            this.datecorrectDataGridViewTextBoxColumn1.HeaderText = "Дата корректировки";
-            this.datecorrectDataGridViewTextBoxColumn1.Name = "datecorrectDataGridViewTextBoxColumn1";
+            this.bd_kidsDataSet54.DataSetName = "bd_kidsDataSet54";
+            this.bd_kidsDataSet54.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // nametypeDataGridViewTextBoxColumn
+            // t08audiovideotracksBindingSource
             // 
-            this.nametypeDataGridViewTextBoxColumn.DataPropertyName = "name_type";
-            this.nametypeDataGridViewTextBoxColumn.HeaderText = "Тип ТЗ";
-            this.nametypeDataGridViewTextBoxColumn.Name = "nametypeDataGridViewTextBoxColumn";
+            this.t08audiovideotracksBindingSource.DataMember = "T08_audio_video_tracks";
+            this.t08audiovideotracksBindingSource.DataSource = this.bd_kidsDataSet54;
             // 
-            // filelocationDataGridViewTextBoxColumn
+            // t08_audio_video_tracksTableAdapter
             // 
-            this.filelocationDataGridViewTextBoxColumn.DataPropertyName = "file_location";
-            this.filelocationDataGridViewTextBoxColumn.HeaderText = "Путь к файлу ТЗ";
-            this.filelocationDataGridViewTextBoxColumn.Name = "filelocationDataGridViewTextBoxColumn";
+            this.t08_audio_video_tracksTableAdapter.ClearBeforeFill = true;
             // 
-            // noteDataGridViewTextBoxColumn1
+            // bd_kidsDataSet55
             // 
-            this.noteDataGridViewTextBoxColumn1.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn1.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn1.Name = "noteDataGridViewTextBoxColumn1";
+            this.bd_kidsDataSet55.DataSetName = "bd_kidsDataSet55";
+            this.bd_kidsDataSet55.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // idtaskDataGridViewTextBoxColumn
+            // r12instructionstotesttaskstypesBindingSource
             // 
-            this.idtaskDataGridViewTextBoxColumn.DataPropertyName = "id_task";
-            this.idtaskDataGridViewTextBoxColumn.HeaderText = "id_task";
-            this.idtaskDataGridViewTextBoxColumn.Name = "idtaskDataGridViewTextBoxColumn";
-            this.idtaskDataGridViewTextBoxColumn.Visible = false;
+            this.r12instructionstotesttaskstypesBindingSource.DataMember = "R12_instructions_to_test_tasks_types";
+            this.r12instructionstotesttaskstypesBindingSource.DataSource = this.bd_kidsDataSet55;
             // 
-            // T04_show_file_location
+            // r12_instructions_to_test_tasks_typesTableAdapter
             // 
-            this.T04_show_file_location.Enabled = false;
-            this.T04_show_file_location.Location = new System.Drawing.Point(152, 118);
-            this.T04_show_file_location.Name = "T04_show_file_location";
-            this.T04_show_file_location.Size = new System.Drawing.Size(199, 20);
-            this.T04_show_file_location.TabIndex = 47;
+            this.r12_instructions_to_test_tasks_typesTableAdapter.ClearBeforeFill = true;
+            // 
+            // bd_kidsDataSet56
+            // 
+            this.bd_kidsDataSet56.DataSetName = "bd_kidsDataSet56";
+            this.bd_kidsDataSet56.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // r11variantsofpassingtasksresultsanalysisBindingSource
+            // 
+            this.r11variantsofpassingtasksresultsanalysisBindingSource.DataMember = "R11_variants_of_passing_tasks_results_analysis";
+            this.r11variantsofpassingtasksresultsanalysisBindingSource.DataSource = this.bd_kidsDataSet56;
+            // 
+            // r11_variants_of_passing_tasks_results_analysisTableAdapter
+            // 
+            this.r11_variants_of_passing_tasks_results_analysisTableAdapter.ClearBeforeFill = true;
+            // 
+            // bd_kidsDataSet57
+            // 
+            this.bd_kidsDataSet57.DataSetName = "bd_kidsDataSet57";
+            this.bd_kidsDataSet57.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // t09commentvariantsonpassingtasksBindingSource
+            // 
+            this.t09commentvariantsonpassingtasksBindingSource.DataMember = "T09_comment_variants_on_passing_tasks";
+            this.t09commentvariantsonpassingtasksBindingSource.DataSource = this.bd_kidsDataSet57;
+            // 
+            // t09_comment_variants_on_passing_tasksTableAdapter
+            // 
+            this.t09_comment_variants_on_passing_tasksTableAdapter.ClearBeforeFill = true;
+            // 
+            // bd_kidsDataSet58
+            // 
+            this.bd_kidsDataSet58.DataSetName = "bd_kidsDataSet58";
+            this.bd_kidsDataSet58.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // r10nextactionvariantsBindingSource
+            // 
+            this.r10nextactionvariantsBindingSource.DataMember = "R10_next_action_variants";
+            this.r10nextactionvariantsBindingSource.DataSource = this.bd_kidsDataSet58;
+            // 
+            // r10_next_action_variantsTableAdapter
+            // 
+            this.r10_next_action_variantsTableAdapter.ClearBeforeFill = true;
             // 
             // Tests
             // 
@@ -1199,7 +1369,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.T03)).EndInit();
             this.T04_testing_tasks.ResumeLayout(false);
             this.T04_testing_tasks.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.r03testingtypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet45)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.T04)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet46)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet8)).EndInit();
@@ -1211,10 +1385,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r03testingtypesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet46)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet55)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet56)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r11variantsofpassingtasksresultsanalysisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t09commentvariantsonpassingtasksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet58)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r10nextactionvariantsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1327,6 +1509,7 @@
         private bd_kidsDataSet46 bd_kidsDataSet46;
         private System.Windows.Forms.BindingSource t04viewtestingtasksBindingSource1;
         private bd_kidsDataSet46TableAdapters.T04_view_testing_tasksTableAdapter t04_view_testing_tasksTableAdapter1;
+        private System.Windows.Forms.TextBox T04_show_file_location;
         private System.Windows.Forms.DataGridViewTextBoxColumn nametaskDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn datecreateDataGridViewTextBoxColumn1;
@@ -1335,6 +1518,26 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn filelocationDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idtaskDataGridViewTextBoxColumn;
-        private System.Windows.Forms.TextBox T04_show_file_location;
+        private System.Windows.Forms.Button T03_additional_teaching_material_add;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox T03_additional_teaching_material;
+        private bd_kidsDataSet53 bd_kidsDataSet53;
+        private System.Windows.Forms.BindingSource t07soundtracksBindingSource;
+        private bd_kidsDataSet53TableAdapters.T07_soundtracksTableAdapter t07_soundtracksTableAdapter;
+        private bd_kidsDataSet54 bd_kidsDataSet54;
+        private System.Windows.Forms.BindingSource t08audiovideotracksBindingSource;
+        private bd_kidsDataSet54TableAdapters.T08_audio_video_tracksTableAdapter t08_audio_video_tracksTableAdapter;
+        private bd_kidsDataSet55 bd_kidsDataSet55;
+        private System.Windows.Forms.BindingSource r12instructionstotesttaskstypesBindingSource;
+        private bd_kidsDataSet55TableAdapters.R12_instructions_to_test_tasks_typesTableAdapter r12_instructions_to_test_tasks_typesTableAdapter;
+        private bd_kidsDataSet56 bd_kidsDataSet56;
+        private System.Windows.Forms.BindingSource r11variantsofpassingtasksresultsanalysisBindingSource;
+        private bd_kidsDataSet56TableAdapters.R11_variants_of_passing_tasks_results_analysisTableAdapter r11_variants_of_passing_tasks_results_analysisTableAdapter;
+        private bd_kidsDataSet57 bd_kidsDataSet57;
+        private System.Windows.Forms.BindingSource t09commentvariantsonpassingtasksBindingSource;
+        private bd_kidsDataSet57TableAdapters.T09_comment_variants_on_passing_tasksTableAdapter t09_comment_variants_on_passing_tasksTableAdapter;
+        private bd_kidsDataSet58 bd_kidsDataSet58;
+        private System.Windows.Forms.BindingSource r10nextactionvariantsBindingSource;
+        private bd_kidsDataSet58TableAdapters.R10_next_action_variantsTableAdapter r10_next_action_variantsTableAdapter;
     }
 }

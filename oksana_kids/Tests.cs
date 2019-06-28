@@ -17,7 +17,7 @@ namespace oksana_kids
         public string testName = "";
         public string taskName = "";
 
-        public long testID = 0;
+        public int testID;
 
         List<string> fio = new List<string>();
         Dictionary<int, string> fio_dict = new Dictionary<int, string>();
@@ -40,6 +40,18 @@ namespace oksana_kids
 
         private void Tests_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet58.R10_next_action_variants". При необходимости она может быть перемещена или удалена.
+            this.r10_next_action_variantsTableAdapter.Fill(this.bd_kidsDataSet58.R10_next_action_variants);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet57.T09_comment_variants_on_passing_tasks". При необходимости она может быть перемещена или удалена.
+            this.t09_comment_variants_on_passing_tasksTableAdapter.Fill(this.bd_kidsDataSet57.T09_comment_variants_on_passing_tasks);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet56.R11_variants_of_passing_tasks_results_analysis". При необходимости она может быть перемещена или удалена.
+            this.r11_variants_of_passing_tasks_results_analysisTableAdapter.Fill(this.bd_kidsDataSet56.R11_variants_of_passing_tasks_results_analysis);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet55.R12_instructions_to_test_tasks_types". При необходимости она может быть перемещена или удалена.
+            this.r12_instructions_to_test_tasks_typesTableAdapter.Fill(this.bd_kidsDataSet55.R12_instructions_to_test_tasks_types);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet54.T08_audio_video_tracks". При необходимости она может быть перемещена или удалена.
+            this.t08_audio_video_tracksTableAdapter.Fill(this.bd_kidsDataSet54.T08_audio_video_tracks);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet53.T07_soundtracks". При необходимости она может быть перемещена или удалена.
+            this.t07_soundtracksTableAdapter.Fill(this.bd_kidsDataSet53.T07_soundtracks);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet46.T04_view_testing_tasks". При необходимости она может быть перемещена или удалена.
             this.t04_view_testing_tasksTableAdapter1.Fill(this.bd_kidsDataSet46.T04_view_testing_tasks);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet45.R03_testing_types". При необходимости она может быть перемещена или удалена.
@@ -62,6 +74,11 @@ namespace oksana_kids
 
         #region T02
 
+        private void T02_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(T02.CurrentRow.Cells[0].Value.ToString());
+        }
+
         private void test_construct_button_Click(object sender, EventArgs e)
         {
             AdaptiveTestConstructor a = new AdaptiveTestConstructor(testName, testID);
@@ -70,8 +87,6 @@ namespace oksana_kids
 
         private void T02_Click(object sender, EventArgs e)
         {
-            id = int.Parse(T02.CurrentRow.Cells[0].Value.ToString());
-
             var linq = from i in bd.T02_tests
                        where i.id_test == id
                        select new
@@ -83,6 +98,7 @@ namespace oksana_kids
             foreach (var item in linq)
             {
                 testName = item.name;
+                testID = (int)item.id_test;
             }
 
             test_construct_button.Enabled = true;
@@ -208,7 +224,20 @@ namespace oksana_kids
 
         private void updateT04()
         {
-
+            var data = from d in bd.T01_personalities
+                       join c in bd.T04_testing_tasks on d.id_person equals c.id_author
+                       join s in bd.R03_testing_types on c.code_type equals s.code_type
+                       select new
+                       {
+                             name_task = c.name_task,
+                             fio = d.surname + " " + d.name.Substring(0, 1) + ". " + d.patronymic.Substring(0, 1) + ".",
+                             date_create = c.date_create,
+                             date_correct = c.date_correct,
+                             name_type = s.name_type,
+                             file_location = c.file_location,
+                             note = c.note
+                       };
+            T04.DataSource = data.ToList();
         }
         
         private void T04_file_location_Click(object sender, EventArgs e)
@@ -218,9 +247,9 @@ namespace oksana_kids
             OpenFileDialog OPF = new OpenFileDialog();
             if (OPF.ShowDialog() == DialogResult.OK)
             {
-                var match = Regex.Match(OPF.FileName, @"\\t{1}.*(.txt)").ToString();
+                var match = Regex.Match(OPF.FileName, @"te{1}.*(.txt)").ToString();
                 //MessageBox.Show(match.ToString());
-                filePath += match.ToString();
+                filePath = match.ToString();
                 T04_show_file_location.Clear();
                 T04_show_file_location.Text = filePath;
             }
@@ -251,9 +280,53 @@ namespace oksana_kids
             T04_name_task.Clear();
             T04_note.Clear();
 
-            //updateT04();
+            updateT04();
+        }
+
+        private void T04changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.T04_testing_tasks.Where(x => x.id_task == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.name_task = T04.CurrentRow.Cells[0].Value.ToString();
+            row.date_create = T04.CurrentRow.Cells[2].Value.ToString();
+            row.date_correct = DateTime.Now.ToString("dd.MM.yyy");
+            row.file_location = T04.CurrentRow.Cells[5].Value.ToString();
+            row.note = T04.CurrentRow.Cells[6].Value.ToString();
+
+            bd.SaveChanges();
+
+            updateT04();
+        }
+
+        private void T04deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.T04_testing_tasks.Where(x => x.id_task == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.T04_testing_tasks.Remove(row);
+            bd.SaveChanges();
+
+            updateT04();
         }
 
         #endregion
+
+        #region T03
+
+        private int addTM;
+        
+
+        private void T03_additional_teaching_material_add_Click(object sender, EventArgs e)
+        {
+            AdditionalTeachingMaterial a = new AdditionalTeachingMaterial();
+            a.Show();
+            addTM = a.getID();
+            T03_additional_teaching_material.Text = a.getName();
+        }
+
+        #endregion
+
+
     }
 }

@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bd_kidsDataSet47" targetNamespace="http://tempuri.org/bd_kidsDataSet47.xsd" xmlns:mstns="http://tempuri.org/bd_kidsDataSet47.xsd" xmlns="http://tempuri.org/bd_kidsDataSet47.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bd_kidsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bd_kidsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.oksana_kids.Properties.Settings.GlobalReference.Default.bd_kidsConnectionString" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="T08_view_audio_video_tracksTableAdapter" GeneratorDataComponentClassName="T08_view_audio_video_tracksTableAdapter" Name="T08_view_audio_video_tracks" UserDataComponentName="T08_view_audio_video_tracksTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_kidsConnectionString (Settings)" DbObjectName="main.T08_view_audio_video_tracks" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [id_av_track], [name_av_track], [name_type], [author], [duration_sec], [source], [image_size_pix], [filesize], [date_create], [note] FROM [T08_view_audio_video_tracks]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_av_track" DataSetColumn="id_av_track" />
+              <Mapping SourceColumn="name_av_track" DataSetColumn="name_av_track" />
+              <Mapping SourceColumn="name_type" DataSetColumn="name_type" />
+              <Mapping SourceColumn="author" DataSetColumn="author" />
+              <Mapping SourceColumn="duration_sec" DataSetColumn="duration_sec" />
+              <Mapping SourceColumn="source" DataSetColumn="source" />
+              <Mapping SourceColumn="image_size_pix" DataSetColumn="image_size_pix" />
+              <Mapping SourceColumn="filesize" DataSetColumn="filesize" />
+              <Mapping SourceColumn="date_create" DataSetColumn="date_create" />
+              <Mapping SourceColumn="note" DataSetColumn="note" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bd_kidsDataSet47" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bd_kidsDataSet47" msprop:Generator_UserDSName="bd_kidsDataSet47">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="T08_view_audio_video_tracks" msprop:Generator_TableClassName="T08_view_audio_video_tracksDataTable" msprop:Generator_TableVarName="tableT08_view_audio_video_tracks" msprop:Generator_TablePropName="T08_view_audio_video_tracks" msprop:Generator_RowDeletingName="T08_view_audio_video_tracksRowDeleting" msprop:Generator_RowChangingName="T08_view_audio_video_tracksRowChanging" msprop:Generator_RowEvHandlerName="T08_view_audio_video_tracksRowChangeEventHandler" msprop:Generator_RowDeletedName="T08_view_audio_video_tracksRowDeleted" msprop:Generator_UserTableName="T08_view_audio_video_tracks" msprop:Generator_RowChangedName="T08_view_audio_video_tracksRowChanged" msprop:Generator_RowEvArgName="T08_view_audio_video_tracksRowChangeEvent" msprop:Generator_RowClassName="T08_view_audio_video_tracksRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_av_track" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_av_track" msprop:Generator_ColumnPropNameInRow="id_av_track" msprop:Generator_ColumnPropNameInTable="id_av_trackColumn" msprop:Generator_UserColumnName="id_av_track" type="xs:long" />
+              <xs:element name="name_av_track" msprop:Generator_ColumnVarNameInTable="columnname_av_track" msprop:Generator_ColumnPropNameInRow="name_av_track" msprop:Generator_ColumnPropNameInTable="name_av_trackColumn" msprop:Generator_UserColumnName="name_av_track" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_type" msprop:Generator_ColumnVarNameInTable="columnname_type" msprop:Generator_ColumnPropNameInRow="name_type" msprop:Generator_ColumnPropNameInTable="name_typeColumn" msprop:Generator_UserColumnName="name_type" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="author" msprop:Generator_ColumnVarNameInTable="columnauthor" msprop:Generator_ColumnPropNameInRow="author" msprop:Generator_ColumnPropNameInTable="authorColumn" msprop:Generator_UserColumnName="author" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="duration_sec" msprop:Generator_ColumnVarNameInTable="columnduration_sec" msprop:Generator_ColumnPropNameInRow="duration_sec" msprop:Generator_ColumnPropNameInTable="duration_secColumn" msprop:Generator_UserColumnName="duration_sec" type="xs:long" minOccurs="0" />
+              <xs:element name="source" msprop:Generator_ColumnVarNameInTable="columnsource" msprop:Generator_ColumnPropNameInRow="source" msprop:Generator_ColumnPropNameInTable="sourceColumn" msprop:Generator_UserColumnName="source" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="image_size_pix" msprop:Generator_ColumnVarNameInTable="columnimage_size_pix" msprop:Generator_ColumnPropNameInRow="image_size_pix" msprop:Generator_ColumnPropNameInTable="image_size_pixColumn" msprop:Generator_UserColumnName="image_size_pix" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="filesize" msprop:Generator_ColumnVarNameInTable="columnfilesize" msprop:Generator_ColumnPropNameInRow="filesize" msprop:Generator_ColumnPropNameInTable="filesizeColumn" msprop:Generator_UserColumnName="filesize" type="xs:long" minOccurs="0" />
+              <xs:element name="date_create" msprop:Generator_ColumnVarNameInTable="columndate_create" msprop:Generator_ColumnPropNameInRow="date_create" msprop:Generator_ColumnPropNameInTable="date_createColumn" msprop:Generator_UserColumnName="date_create" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="note" msprop:Generator_ColumnVarNameInTable="columnnote" msprop:Generator_ColumnPropNameInRow="note" msprop:Generator_ColumnPropNameInTable="noteColumn" msprop:Generator_UserColumnName="note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

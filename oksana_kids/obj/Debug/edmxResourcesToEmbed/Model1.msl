@@ -456,5 +456,44 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="T08_view_audio_video_tracks">
+      <EntityTypeMapping TypeName="bd_kidsModel.T08_view_audio_video_tracks">
+        <MappingFragment StoreEntitySet="T08_view_audio_video_tracks">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="date_create" ColumnName="date_create" />
+          <ScalarProperty Name="filesize" ColumnName="filesize" />
+          <ScalarProperty Name="image_size_pix" ColumnName="image_size_pix" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="duration_sec" ColumnName="duration_sec" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="name_type" ColumnName="name_type" />
+          <ScalarProperty Name="name_av_track" ColumnName="name_av_track" />
+          <ScalarProperty Name="id_av_track" ColumnName="id_av_track" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T07_view_soundtracks">
+      <EntityTypeMapping TypeName="bd_kidsModel.T07_view_soundtracks">
+        <MappingFragment StoreEntitySet="T07_view_soundtracks">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="duration_sec" ColumnName="duration_sec" />
+          <ScalarProperty Name="name_track" ColumnName="name_track" />
+          <ScalarProperty Name="id_track" ColumnName="id_track" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T06_view_teaching_materials">
+      <EntityTypeMapping TypeName="bd_kidsModel.T06_view_teaching_materials">
+        <MappingFragment StoreEntitySet="T06_view_teaching_materials">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="source" ColumnName="source" />
+          <ScalarProperty Name="author" ColumnName="author" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="id_teach_material" ColumnName="id_teach_material" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

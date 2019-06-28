@@ -355,8 +355,8 @@
     <Property Name="duration_sec" Type="Int64" />
     <Property Name="source" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="image_size_pix" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
-    <Property Name="filesize" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
-    <Property Name="date_create" Type="Int64" />
+    <Property Name="filesize" Type="Int64" />
+    <Property Name="date_create" Type="String" />
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="R14_track_types" Relationship="Self.FK_T08_audio_video_tracks_0_0" FromRole="T08_audio_video_tracks" ToRole="R14_track_types" />
     <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_4_0" FromRole="T08_audio_video_tracks" ToRole="T03_testing_task_modules" />
@@ -1000,6 +1000,9 @@
     <EntitySet Name="B03_bind_view" EntityType="bd_kidsModel.B03_bind_view" />
     <EntitySet Name="B04_bind_view" EntityType="bd_kidsModel.B04_bind_view" />
     <EntitySet Name="B02_bind_view" EntityType="bd_kidsModel.B02_bind_view" />
+    <EntitySet Name="T08_view_audio_video_tracks" EntityType="bd_kidsModel.T08_view_audio_video_tracks" />
+    <EntitySet Name="T07_view_soundtracks" EntityType="bd_kidsModel.T07_view_soundtracks" />
+    <EntitySet Name="T06_view_teaching_materials" EntityType="bd_kidsModel.T06_view_teaching_materials" />
   </EntityContainer>
   <EntityType Name="T11_test_answers">
     <Key>
@@ -1069,6 +1072,42 @@
     <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="code_class" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name_course" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T08_view_audio_video_tracks">
+    <Key>
+      <PropertyRef Name="id_av_track" />
+    </Key>
+    <Property Name="id_av_track" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_av_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="name_type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="duration_sec" Type="Int64" />
+    <Property Name="source" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="image_size_pix" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="filesize" Type="Int64" />
+    <Property Name="date_create" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T07_view_soundtracks">
+    <Key>
+      <PropertyRef Name="id_track" />
+    </Key>
+    <Property Name="id_track" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="duration_sec" Type="Int64" />
+    <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T06_view_teaching_materials">
+    <Key>
+      <PropertyRef Name="id_teach_material" />
+    </Key>
+    <Property Name="id_teach_material" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="source" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

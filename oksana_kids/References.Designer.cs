@@ -216,8 +216,47 @@
             this.R12_name_instruction = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.R13_play_result_variants = new System.Windows.Forms.TabPage();
+            this.R13addButton = new System.Windows.Forms.Button();
+            this.R13changeButton = new System.Windows.Forms.Button();
+            this.R13deleteButton = new System.Windows.Forms.Button();
+            this.R13 = new System.Windows.Forms.DataGridView();
+            this.nameplayresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeplayresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r13playresultvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet42 = new oksana_kids.bd_kidsDataSet42();
+            this.R13_note = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.R13_name_play_result = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.R14_track_types = new System.Windows.Forms.TabPage();
+            this.R14addButton = new System.Windows.Forms.Button();
+            this.R14changeButton = new System.Windows.Forms.Button();
+            this.R14deleteButton = new System.Windows.Forms.Button();
+            this.R14 = new System.Windows.Forms.DataGridView();
+            this.nametypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codetypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r14tracktypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet43 = new oksana_kids.bd_kidsDataSet43();
+            this.R14_note = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.R14_name_type = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
             this.R15_task_key_words = new System.Windows.Forms.TabPage();
+            this.R15addButton = new System.Windows.Forms.Button();
+            this.R15changeButton = new System.Windows.Forms.Button();
+            this.R15deleteButton = new System.Windows.Forms.Button();
+            this.R15 = new System.Windows.Forms.DataGridView();
+            this.namekeywordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codekeywordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.r15taskkeywordsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet44 = new oksana_kids.bd_kidsDataSet44();
+            this.R15_note = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.R15_name_key_word = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
             this.r01_people_categoryTableAdapter = new oksana_kids.bd_kidsDataSetTableAdapters.R01_people_categoryTableAdapter();
             this.r02_pupils_classesTableAdapter = new oksana_kids.bd_kidsDataSet17TableAdapters.R02_pupils_classesTableAdapter();
             this.r03_testing_typesTableAdapter = new oksana_kids.bd_kidsDataSet18TableAdapters.R03_testing_typesTableAdapter();
@@ -233,49 +272,10 @@
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet26TableAdapters.R10_next_action_variantsTableAdapter();
             this.r12_instructions_to_test_tasks_typesTableAdapter = new oksana_kids.bd_kidsDataSet27TableAdapters.R12_instructions_to_test_tasks_typesTableAdapter();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.R13addButton = new System.Windows.Forms.Button();
-            this.R13changeButton = new System.Windows.Forms.Button();
-            this.R13deleteButton = new System.Windows.Forms.Button();
-            this.R13 = new System.Windows.Forms.DataGridView();
-            this.R13_note = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.R13_name_play_result = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
             this.bd_kidsDataSet41 = new oksana_kids.bd_kidsDataSet41();
-            this.bd_kidsDataSet42 = new oksana_kids.bd_kidsDataSet42();
-            this.r13playresultvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r13_play_result_variantsTableAdapter = new oksana_kids.bd_kidsDataSet42TableAdapters.R13_play_result_variantsTableAdapter();
-            this.nameplayresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codeplayresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.R14addButton = new System.Windows.Forms.Button();
-            this.R14changeButton = new System.Windows.Forms.Button();
-            this.R14deleteButton = new System.Windows.Forms.Button();
-            this.R14 = new System.Windows.Forms.DataGridView();
-            this.R14_note = new System.Windows.Forms.TextBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.R14_name_type = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.bd_kidsDataSet43 = new oksana_kids.bd_kidsDataSet43();
-            this.r14tracktypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r14_track_typesTableAdapter = new oksana_kids.bd_kidsDataSet43TableAdapters.R14_track_typesTableAdapter();
-            this.nametypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codetypeDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.R15addButton = new System.Windows.Forms.Button();
-            this.R15changeButton = new System.Windows.Forms.Button();
-            this.R15deleteButton = new System.Windows.Forms.Button();
-            this.R15 = new System.Windows.Forms.DataGridView();
-            this.R15_note = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.R15_name_key_word = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.bd_kidsDataSet44 = new oksana_kids.bd_kidsDataSet44();
-            this.r15taskkeywordsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r15_task_key_wordsTableAdapter = new oksana_kids.bd_kidsDataSet44TableAdapters.R15_task_key_wordsTableAdapter();
-            this.namekeywordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codekeywordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.R01_people_category.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.R01)).BeginInit();
@@ -326,20 +326,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).BeginInit();
             this.R13_play_result_variants.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r13playresultvariantsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet42)).BeginInit();
             this.R14_track_types.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r14tracktypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet43)).BeginInit();
             this.R15_task_key_words.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r15taskkeywordsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet44)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet20)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.r05legalownershipformsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r13playresultvariantsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r14tracktypesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r15taskkeywordsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -386,7 +386,7 @@
             // R01addButton
             // 
             this.R01addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R01addButton.Location = new System.Drawing.Point(356, 301);
+            this.R01addButton.Location = new System.Drawing.Point(417, 301);
             this.R01addButton.Name = "R01addButton";
             this.R01addButton.Size = new System.Drawing.Size(123, 47);
             this.R01addButton.TabIndex = 1;
@@ -397,7 +397,7 @@
             // R01changeButton
             // 
             this.R01changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R01changeButton.Location = new System.Drawing.Point(514, 301);
+            this.R01changeButton.Location = new System.Drawing.Point(546, 301);
             this.R01changeButton.Name = "R01changeButton";
             this.R01changeButton.Size = new System.Drawing.Size(123, 47);
             this.R01changeButton.TabIndex = 2;
@@ -537,7 +537,7 @@
             // R02addButton
             // 
             this.R02addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R02addButton.Location = new System.Drawing.Point(339, 301);
+            this.R02addButton.Location = new System.Drawing.Point(417, 301);
             this.R02addButton.Name = "R02addButton";
             this.R02addButton.Size = new System.Drawing.Size(123, 47);
             this.R02addButton.TabIndex = 11;
@@ -548,7 +548,7 @@
             // R02changeButton
             // 
             this.R02changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R02changeButton.Location = new System.Drawing.Point(514, 301);
+            this.R02changeButton.Location = new System.Drawing.Point(546, 301);
             this.R02changeButton.Name = "R02changeButton";
             this.R02changeButton.Size = new System.Drawing.Size(123, 47);
             this.R02changeButton.TabIndex = 12;
@@ -693,7 +693,7 @@
             // R03addButton
             // 
             this.R03addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R03addButton.Location = new System.Drawing.Point(317, 301);
+            this.R03addButton.Location = new System.Drawing.Point(417, 301);
             this.R03addButton.Name = "R03addButton";
             this.R03addButton.Size = new System.Drawing.Size(123, 47);
             this.R03addButton.TabIndex = 9;
@@ -704,7 +704,7 @@
             // R03changeButton
             // 
             this.R03changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R03changeButton.Location = new System.Drawing.Point(501, 301);
+            this.R03changeButton.Location = new System.Drawing.Point(546, 301);
             this.R03changeButton.Name = "R03changeButton";
             this.R03changeButton.Size = new System.Drawing.Size(123, 47);
             this.R03changeButton.TabIndex = 10;
@@ -881,7 +881,7 @@
             // R04addButton
             // 
             this.R04addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R04addButton.Location = new System.Drawing.Point(355, 301);
+            this.R04addButton.Location = new System.Drawing.Point(417, 301);
             this.R04addButton.Name = "R04addButton";
             this.R04addButton.Size = new System.Drawing.Size(123, 47);
             this.R04addButton.TabIndex = 12;
@@ -892,7 +892,7 @@
             // R04chagebutton
             // 
             this.R04chagebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R04chagebutton.Location = new System.Drawing.Point(517, 301);
+            this.R04chagebutton.Location = new System.Drawing.Point(546, 301);
             this.R04chagebutton.Name = "R04chagebutton";
             this.R04chagebutton.Size = new System.Drawing.Size(123, 47);
             this.R04chagebutton.TabIndex = 13;
@@ -1011,7 +1011,7 @@
             // R05addButton
             // 
             this.R05addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R05addButton.Location = new System.Drawing.Point(351, 298);
+            this.R05addButton.Location = new System.Drawing.Point(413, 298);
             this.R05addButton.Name = "R05addButton";
             this.R05addButton.Size = new System.Drawing.Size(123, 47);
             this.R05addButton.TabIndex = 20;
@@ -1022,7 +1022,7 @@
             // R05changeButton
             // 
             this.R05changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R05changeButton.Location = new System.Drawing.Point(513, 298);
+            this.R05changeButton.Location = new System.Drawing.Point(542, 298);
             this.R05changeButton.Name = "R05changeButton";
             this.R05changeButton.Size = new System.Drawing.Size(123, 47);
             this.R05changeButton.TabIndex = 21;
@@ -1141,7 +1141,7 @@
             // R06addButton
             // 
             this.R06addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R06addButton.Location = new System.Drawing.Point(351, 298);
+            this.R06addButton.Location = new System.Drawing.Point(413, 298);
             this.R06addButton.Name = "R06addButton";
             this.R06addButton.Size = new System.Drawing.Size(123, 47);
             this.R06addButton.TabIndex = 28;
@@ -1152,7 +1152,7 @@
             // R06changeButton
             // 
             this.R06changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R06changeButton.Location = new System.Drawing.Point(513, 298);
+            this.R06changeButton.Location = new System.Drawing.Point(542, 298);
             this.R06changeButton.Name = "R06changeButton";
             this.R06changeButton.Size = new System.Drawing.Size(123, 47);
             this.R06changeButton.TabIndex = 29;
@@ -1285,7 +1285,7 @@
             // R07addButton
             // 
             this.R07addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R07addButton.Location = new System.Drawing.Point(358, 300);
+            this.R07addButton.Location = new System.Drawing.Point(417, 300);
             this.R07addButton.Name = "R07addButton";
             this.R07addButton.Size = new System.Drawing.Size(123, 47);
             this.R07addButton.TabIndex = 30;
@@ -1296,7 +1296,7 @@
             // R07changeButton
             // 
             this.R07changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R07changeButton.Location = new System.Drawing.Point(524, 300);
+            this.R07changeButton.Location = new System.Drawing.Point(546, 300);
             this.R07changeButton.Name = "R07changeButton";
             this.R07changeButton.Size = new System.Drawing.Size(123, 47);
             this.R07changeButton.TabIndex = 31;
@@ -1451,7 +1451,7 @@
             // R08addButton
             // 
             this.R08addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R08addButton.Location = new System.Drawing.Point(351, 296);
+            this.R08addButton.Location = new System.Drawing.Point(413, 296);
             this.R08addButton.Name = "R08addButton";
             this.R08addButton.Size = new System.Drawing.Size(123, 47);
             this.R08addButton.TabIndex = 36;
@@ -1462,7 +1462,7 @@
             // R08changeButton
             // 
             this.R08changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R08changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R08changeButton.Location = new System.Drawing.Point(542, 296);
             this.R08changeButton.Name = "R08changeButton";
             this.R08changeButton.Size = new System.Drawing.Size(123, 47);
             this.R08changeButton.TabIndex = 37;
@@ -1613,7 +1613,7 @@
             // R09addButton
             // 
             this.R09addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R09addButton.Location = new System.Drawing.Point(351, 296);
+            this.R09addButton.Location = new System.Drawing.Point(413, 296);
             this.R09addButton.Name = "R09addButton";
             this.R09addButton.Size = new System.Drawing.Size(123, 47);
             this.R09addButton.TabIndex = 44;
@@ -1624,7 +1624,7 @@
             // R09changeButton
             // 
             this.R09changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R09changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R09changeButton.Location = new System.Drawing.Point(542, 296);
             this.R09changeButton.Name = "R09changeButton";
             this.R09changeButton.Size = new System.Drawing.Size(123, 47);
             this.R09changeButton.TabIndex = 45;
@@ -1751,7 +1751,7 @@
             // R10addButton
             // 
             this.R10addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R10addButton.Location = new System.Drawing.Point(351, 296);
+            this.R10addButton.Location = new System.Drawing.Point(413, 296);
             this.R10addButton.Name = "R10addButton";
             this.R10addButton.Size = new System.Drawing.Size(123, 47);
             this.R10addButton.TabIndex = 36;
@@ -1762,7 +1762,7 @@
             // R10changeButton
             // 
             this.R10changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R10changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R10changeButton.Location = new System.Drawing.Point(542, 296);
             this.R10changeButton.Name = "R10changeButton";
             this.R10changeButton.Size = new System.Drawing.Size(123, 47);
             this.R10changeButton.TabIndex = 37;
@@ -1881,7 +1881,7 @@
             // R11addButton
             // 
             this.R11addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R11addButton.Location = new System.Drawing.Point(351, 296);
+            this.R11addButton.Location = new System.Drawing.Point(413, 296);
             this.R11addButton.Name = "R11addButton";
             this.R11addButton.Size = new System.Drawing.Size(123, 47);
             this.R11addButton.TabIndex = 44;
@@ -1892,7 +1892,7 @@
             // R11changeButton
             // 
             this.R11changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R11changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R11changeButton.Location = new System.Drawing.Point(542, 296);
             this.R11changeButton.Name = "R11changeButton";
             this.R11changeButton.Size = new System.Drawing.Size(123, 47);
             this.R11changeButton.TabIndex = 45;
@@ -1948,7 +1948,7 @@
             // 
             // R11_note
             // 
-            this.R11_note.Location = new System.Drawing.Point(128, 45);
+            this.R11_note.Location = new System.Drawing.Point(128, 48);
             this.R11_note.Multiline = true;
             this.R11_note.Name = "R11_note";
             this.R11_note.Size = new System.Drawing.Size(217, 20);
@@ -1966,7 +1966,7 @@
             // 
             // R11_name_variant
             // 
-            this.R11_name_variant.Location = new System.Drawing.Point(128, 11);
+            this.R11_name_variant.Location = new System.Drawing.Point(128, 16);
             this.R11_name_variant.Name = "R11_name_variant";
             this.R11_name_variant.Size = new System.Drawing.Size(217, 20);
             this.R11_name_variant.TabIndex = 40;
@@ -2001,7 +2001,7 @@
             // R12addButton
             // 
             this.R12addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R12addButton.Location = new System.Drawing.Point(351, 296);
+            this.R12addButton.Location = new System.Drawing.Point(413, 296);
             this.R12addButton.Name = "R12addButton";
             this.R12addButton.Size = new System.Drawing.Size(123, 47);
             this.R12addButton.TabIndex = 52;
@@ -2012,7 +2012,7 @@
             // R12changeButton
             // 
             this.R12changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R12changeButton.Location = new System.Drawing.Point(513, 296);
+            this.R12changeButton.Location = new System.Drawing.Point(542, 296);
             this.R12changeButton.Name = "R12changeButton";
             this.R12changeButton.Size = new System.Drawing.Size(123, 47);
             this.R12changeButton.TabIndex = 53;
@@ -2129,6 +2129,121 @@
             this.R13_play_result_variants.Text = "Типы вариантов воспроизведения результатов теста";
             this.R13_play_result_variants.UseVisualStyleBackColor = true;
             // 
+            // R13addButton
+            // 
+            this.R13addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R13addButton.Location = new System.Drawing.Point(413, 296);
+            this.R13addButton.Name = "R13addButton";
+            this.R13addButton.Size = new System.Drawing.Size(123, 47);
+            this.R13addButton.TabIndex = 60;
+            this.R13addButton.Text = "Добавить";
+            this.R13addButton.UseVisualStyleBackColor = true;
+            this.R13addButton.Click += new System.EventHandler(this.R13addButton_Click);
+            // 
+            // R13changeButton
+            // 
+            this.R13changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R13changeButton.Location = new System.Drawing.Point(542, 296);
+            this.R13changeButton.Name = "R13changeButton";
+            this.R13changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R13changeButton.TabIndex = 61;
+            this.R13changeButton.Text = "Изменить";
+            this.R13changeButton.UseVisualStyleBackColor = true;
+            this.R13changeButton.Click += new System.EventHandler(this.R13changeButton_Click);
+            // 
+            // R13deleteButton
+            // 
+            this.R13deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R13deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R13deleteButton.Name = "R13deleteButton";
+            this.R13deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R13deleteButton.TabIndex = 62;
+            this.R13deleteButton.Text = "Удалить";
+            this.R13deleteButton.UseVisualStyleBackColor = true;
+            this.R13deleteButton.Click += new System.EventHandler(this.R13deleteButton_Click);
+            // 
+            // R13
+            // 
+            this.R13.AllowUserToOrderColumns = true;
+            this.R13.AutoGenerateColumns = false;
+            this.R13.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nameplayresultDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn11,
+            this.codeplayresultDataGridViewTextBoxColumn});
+            this.R13.DataSource = this.r13playresultvariantsBindingSource;
+            this.R13.Location = new System.Drawing.Point(351, 11);
+            this.R13.Name = "R13";
+            this.R13.Size = new System.Drawing.Size(446, 279);
+            this.R13.TabIndex = 59;
+            this.R13.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R13_CellClick);
+            // 
+            // nameplayresultDataGridViewTextBoxColumn
+            // 
+            this.nameplayresultDataGridViewTextBoxColumn.DataPropertyName = "name_play_result";
+            this.nameplayresultDataGridViewTextBoxColumn.HeaderText = "Вариант воспроизведения";
+            this.nameplayresultDataGridViewTextBoxColumn.Name = "nameplayresultDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn11
+            // 
+            this.noteDataGridViewTextBoxColumn11.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn11.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn11.Name = "noteDataGridViewTextBoxColumn11";
+            // 
+            // codeplayresultDataGridViewTextBoxColumn
+            // 
+            this.codeplayresultDataGridViewTextBoxColumn.DataPropertyName = "code_play_result";
+            this.codeplayresultDataGridViewTextBoxColumn.HeaderText = "code_play_result";
+            this.codeplayresultDataGridViewTextBoxColumn.Name = "codeplayresultDataGridViewTextBoxColumn";
+            this.codeplayresultDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // r13playresultvariantsBindingSource
+            // 
+            this.r13playresultvariantsBindingSource.DataMember = "R13_play_result_variants";
+            this.r13playresultvariantsBindingSource.DataSource = this.bd_kidsDataSet42;
+            // 
+            // bd_kidsDataSet42
+            // 
+            this.bd_kidsDataSet42.DataSetName = "bd_kidsDataSet42";
+            this.bd_kidsDataSet42.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // R13_note
+            // 
+            this.R13_note.Location = new System.Drawing.Point(105, 71);
+            this.R13_note.Multiline = true;
+            this.R13_note.Name = "R13_note";
+            this.R13_note.Size = new System.Drawing.Size(240, 20);
+            this.R13_note.TabIndex = 58;
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label28.Location = new System.Drawing.Point(8, 72);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(91, 16);
+            this.label28.TabIndex = 57;
+            this.label28.Text = "Примечание";
+            // 
+            // R13_name_play_result
+            // 
+            this.R13_name_play_result.Location = new System.Drawing.Point(143, 11);
+            this.R13_name_play_result.Multiline = true;
+            this.R13_name_play_result.Name = "R13_name_play_result";
+            this.R13_name_play_result.Size = new System.Drawing.Size(202, 54);
+            this.R13_name_play_result.TabIndex = 56;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label29.Location = new System.Drawing.Point(8, 12);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(129, 48);
+            this.label29.TabIndex = 55;
+            this.label29.Text = "Вариант \r\nвоспроизведения \r\nрезультата";
+            // 
             // R14_track_types
             // 
             this.R14_track_types.Controls.Add(this.R14addButton);
@@ -2146,6 +2261,121 @@
             this.R14_track_types.Text = "Типы файлов сопровождений";
             this.R14_track_types.UseVisualStyleBackColor = true;
             // 
+            // R14addButton
+            // 
+            this.R14addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R14addButton.Location = new System.Drawing.Point(413, 296);
+            this.R14addButton.Name = "R14addButton";
+            this.R14addButton.Size = new System.Drawing.Size(123, 47);
+            this.R14addButton.TabIndex = 68;
+            this.R14addButton.Text = "Добавить";
+            this.R14addButton.UseVisualStyleBackColor = true;
+            this.R14addButton.Click += new System.EventHandler(this.R14addButton_Click);
+            // 
+            // R14changeButton
+            // 
+            this.R14changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R14changeButton.Location = new System.Drawing.Point(542, 296);
+            this.R14changeButton.Name = "R14changeButton";
+            this.R14changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R14changeButton.TabIndex = 69;
+            this.R14changeButton.Text = "Изменить";
+            this.R14changeButton.UseVisualStyleBackColor = true;
+            this.R14changeButton.Click += new System.EventHandler(this.R14changeButton_Click);
+            // 
+            // R14deleteButton
+            // 
+            this.R14deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R14deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R14deleteButton.Name = "R14deleteButton";
+            this.R14deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R14deleteButton.TabIndex = 70;
+            this.R14deleteButton.Text = "Удалить";
+            this.R14deleteButton.UseVisualStyleBackColor = true;
+            this.R14deleteButton.Click += new System.EventHandler(this.R14deleteButton_Click);
+            // 
+            // R14
+            // 
+            this.R14.AllowUserToOrderColumns = true;
+            this.R14.AutoGenerateColumns = false;
+            this.R14.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nametypeDataGridViewTextBoxColumn1,
+            this.noteDataGridViewTextBoxColumn12,
+            this.codetypeDataGridViewTextBoxColumn1});
+            this.R14.DataSource = this.r14tracktypesBindingSource;
+            this.R14.Location = new System.Drawing.Point(351, 11);
+            this.R14.Name = "R14";
+            this.R14.Size = new System.Drawing.Size(446, 279);
+            this.R14.TabIndex = 67;
+            this.R14.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R14_CellClick);
+            // 
+            // nametypeDataGridViewTextBoxColumn1
+            // 
+            this.nametypeDataGridViewTextBoxColumn1.DataPropertyName = "name_type";
+            this.nametypeDataGridViewTextBoxColumn1.HeaderText = "Тип файла";
+            this.nametypeDataGridViewTextBoxColumn1.Name = "nametypeDataGridViewTextBoxColumn1";
+            // 
+            // noteDataGridViewTextBoxColumn12
+            // 
+            this.noteDataGridViewTextBoxColumn12.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn12.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn12.Name = "noteDataGridViewTextBoxColumn12";
+            // 
+            // codetypeDataGridViewTextBoxColumn1
+            // 
+            this.codetypeDataGridViewTextBoxColumn1.DataPropertyName = "code_type";
+            this.codetypeDataGridViewTextBoxColumn1.HeaderText = "code_type";
+            this.codetypeDataGridViewTextBoxColumn1.Name = "codetypeDataGridViewTextBoxColumn1";
+            this.codetypeDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // r14tracktypesBindingSource
+            // 
+            this.r14tracktypesBindingSource.DataMember = "R14_track_types";
+            this.r14tracktypesBindingSource.DataSource = this.bd_kidsDataSet43;
+            // 
+            // bd_kidsDataSet43
+            // 
+            this.bd_kidsDataSet43.DataSetName = "bd_kidsDataSet43";
+            this.bd_kidsDataSet43.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // R14_note
+            // 
+            this.R14_note.Location = new System.Drawing.Point(105, 60);
+            this.R14_note.Multiline = true;
+            this.R14_note.Name = "R14_note";
+            this.R14_note.Size = new System.Drawing.Size(240, 20);
+            this.R14_note.TabIndex = 66;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label30.Location = new System.Drawing.Point(8, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(91, 16);
+            this.label30.TabIndex = 65;
+            this.label30.Text = "Примечание";
+            // 
+            // R14_name_type
+            // 
+            this.R14_name_type.Location = new System.Drawing.Point(143, 11);
+            this.R14_name_type.Multiline = true;
+            this.R14_name_type.Name = "R14_name_type";
+            this.R14_name_type.Size = new System.Drawing.Size(202, 42);
+            this.R14_name_type.TabIndex = 64;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label31.Location = new System.Drawing.Point(8, 12);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(119, 32);
+            this.label31.TabIndex = 63;
+            this.label31.Text = "Тип файла\r\nспопровождения";
+            // 
             // R15_task_key_words
             // 
             this.R15_task_key_words.Controls.Add(this.R15addButton);
@@ -2162,6 +2392,121 @@
             this.R15_task_key_words.TabIndex = 14;
             this.R15_task_key_words.Text = "Ключевые слова тестов";
             this.R15_task_key_words.UseVisualStyleBackColor = true;
+            // 
+            // R15addButton
+            // 
+            this.R15addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R15addButton.Location = new System.Drawing.Point(413, 296);
+            this.R15addButton.Name = "R15addButton";
+            this.R15addButton.Size = new System.Drawing.Size(123, 47);
+            this.R15addButton.TabIndex = 76;
+            this.R15addButton.Text = "Добавить";
+            this.R15addButton.UseVisualStyleBackColor = true;
+            this.R15addButton.Click += new System.EventHandler(this.R15addButton_Click);
+            // 
+            // R15changeButton
+            // 
+            this.R15changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R15changeButton.Location = new System.Drawing.Point(542, 296);
+            this.R15changeButton.Name = "R15changeButton";
+            this.R15changeButton.Size = new System.Drawing.Size(123, 47);
+            this.R15changeButton.TabIndex = 77;
+            this.R15changeButton.Text = "Изменить";
+            this.R15changeButton.UseVisualStyleBackColor = true;
+            this.R15changeButton.Click += new System.EventHandler(this.R15changeButton_Click);
+            // 
+            // R15deleteButton
+            // 
+            this.R15deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.R15deleteButton.Location = new System.Drawing.Point(671, 296);
+            this.R15deleteButton.Name = "R15deleteButton";
+            this.R15deleteButton.Size = new System.Drawing.Size(123, 47);
+            this.R15deleteButton.TabIndex = 78;
+            this.R15deleteButton.Text = "Удалить";
+            this.R15deleteButton.UseVisualStyleBackColor = true;
+            this.R15deleteButton.Click += new System.EventHandler(this.R15deleteButton_Click);
+            // 
+            // R15
+            // 
+            this.R15.AllowUserToOrderColumns = true;
+            this.R15.AutoGenerateColumns = false;
+            this.R15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.R15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.R15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.namekeywordDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn13,
+            this.codekeywordDataGridViewTextBoxColumn});
+            this.R15.DataSource = this.r15taskkeywordsBindingSource;
+            this.R15.Location = new System.Drawing.Point(351, 11);
+            this.R15.Name = "R15";
+            this.R15.Size = new System.Drawing.Size(446, 279);
+            this.R15.TabIndex = 75;
+            this.R15.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R15_CellClick);
+            // 
+            // namekeywordDataGridViewTextBoxColumn
+            // 
+            this.namekeywordDataGridViewTextBoxColumn.DataPropertyName = "name_key_word";
+            this.namekeywordDataGridViewTextBoxColumn.HeaderText = "Ключевое слово";
+            this.namekeywordDataGridViewTextBoxColumn.Name = "namekeywordDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn13
+            // 
+            this.noteDataGridViewTextBoxColumn13.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn13.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn13.Name = "noteDataGridViewTextBoxColumn13";
+            // 
+            // codekeywordDataGridViewTextBoxColumn
+            // 
+            this.codekeywordDataGridViewTextBoxColumn.DataPropertyName = "code_key_word";
+            this.codekeywordDataGridViewTextBoxColumn.HeaderText = "code_key_word";
+            this.codekeywordDataGridViewTextBoxColumn.Name = "codekeywordDataGridViewTextBoxColumn";
+            this.codekeywordDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // r15taskkeywordsBindingSource
+            // 
+            this.r15taskkeywordsBindingSource.DataMember = "R15_task_key_words";
+            this.r15taskkeywordsBindingSource.DataSource = this.bd_kidsDataSet44;
+            // 
+            // bd_kidsDataSet44
+            // 
+            this.bd_kidsDataSet44.DataSetName = "bd_kidsDataSet44";
+            this.bd_kidsDataSet44.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // R15_note
+            // 
+            this.R15_note.Location = new System.Drawing.Point(130, 37);
+            this.R15_note.Multiline = true;
+            this.R15_note.Name = "R15_note";
+            this.R15_note.Size = new System.Drawing.Size(202, 20);
+            this.R15_note.TabIndex = 74;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label32.Location = new System.Drawing.Point(8, 38);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(91, 16);
+            this.label32.TabIndex = 73;
+            this.label32.Text = "Примечание";
+            // 
+            // R15_name_key_word
+            // 
+            this.R15_name_key_word.Location = new System.Drawing.Point(130, 11);
+            this.R15_name_key_word.Multiline = true;
+            this.R15_name_key_word.Name = "R15_name_key_word";
+            this.R15_name_key_word.Size = new System.Drawing.Size(202, 20);
+            this.R15_name_key_word.TabIndex = 72;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label33.Location = new System.Drawing.Point(8, 12);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(116, 16);
+            this.label33.TabIndex = 71;
+            this.label33.Text = "Ключевое слово";
             // 
             // r01_people_categoryTableAdapter
             // 
@@ -2221,367 +2566,22 @@
             // 
             this.r12_instructions_to_test_tasks_typesTableAdapter.ClearBeforeFill = true;
             // 
-            // R13addButton
-            // 
-            this.R13addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R13addButton.Location = new System.Drawing.Point(351, 296);
-            this.R13addButton.Name = "R13addButton";
-            this.R13addButton.Size = new System.Drawing.Size(123, 47);
-            this.R13addButton.TabIndex = 60;
-            this.R13addButton.Text = "Добавить";
-            this.R13addButton.UseVisualStyleBackColor = true;
-            this.R13addButton.Click += new System.EventHandler(this.R13addButton_Click);
-            // 
-            // R13changeButton
-            // 
-            this.R13changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R13changeButton.Location = new System.Drawing.Point(513, 296);
-            this.R13changeButton.Name = "R13changeButton";
-            this.R13changeButton.Size = new System.Drawing.Size(123, 47);
-            this.R13changeButton.TabIndex = 61;
-            this.R13changeButton.Text = "Изменить";
-            this.R13changeButton.UseVisualStyleBackColor = true;
-            this.R13changeButton.Click += new System.EventHandler(this.R13changeButton_Click);
-            // 
-            // R13deleteButton
-            // 
-            this.R13deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R13deleteButton.Location = new System.Drawing.Point(671, 296);
-            this.R13deleteButton.Name = "R13deleteButton";
-            this.R13deleteButton.Size = new System.Drawing.Size(123, 47);
-            this.R13deleteButton.TabIndex = 62;
-            this.R13deleteButton.Text = "Удалить";
-            this.R13deleteButton.UseVisualStyleBackColor = true;
-            this.R13deleteButton.Click += new System.EventHandler(this.R13deleteButton_Click);
-            // 
-            // R13
-            // 
-            this.R13.AllowUserToOrderColumns = true;
-            this.R13.AutoGenerateColumns = false;
-            this.R13.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.R13.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.R13.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nameplayresultDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn11,
-            this.codeplayresultDataGridViewTextBoxColumn});
-            this.R13.DataSource = this.r13playresultvariantsBindingSource;
-            this.R13.Location = new System.Drawing.Point(351, 11);
-            this.R13.Name = "R13";
-            this.R13.Size = new System.Drawing.Size(446, 279);
-            this.R13.TabIndex = 59;
-            this.R13.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R13_CellClick);
-            // 
-            // R13_note
-            // 
-            this.R13_note.Location = new System.Drawing.Point(105, 71);
-            this.R13_note.Multiline = true;
-            this.R13_note.Name = "R13_note";
-            this.R13_note.Size = new System.Drawing.Size(240, 20);
-            this.R13_note.TabIndex = 58;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label28.Location = new System.Drawing.Point(8, 72);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(91, 16);
-            this.label28.TabIndex = 57;
-            this.label28.Text = "Примечание";
-            // 
-            // R13_name_play_result
-            // 
-            this.R13_name_play_result.Location = new System.Drawing.Point(143, 11);
-            this.R13_name_play_result.Multiline = true;
-            this.R13_name_play_result.Name = "R13_name_play_result";
-            this.R13_name_play_result.Size = new System.Drawing.Size(202, 54);
-            this.R13_name_play_result.TabIndex = 56;
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label29.Location = new System.Drawing.Point(8, 12);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(129, 48);
-            this.label29.TabIndex = 55;
-            this.label29.Text = "Вариант \r\nвоспроизведения \r\nрезультата";
-            // 
             // bd_kidsDataSet41
             // 
             this.bd_kidsDataSet41.DataSetName = "bd_kidsDataSet41";
             this.bd_kidsDataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // bd_kidsDataSet42
-            // 
-            this.bd_kidsDataSet42.DataSetName = "bd_kidsDataSet42";
-            this.bd_kidsDataSet42.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r13playresultvariantsBindingSource
-            // 
-            this.r13playresultvariantsBindingSource.DataMember = "R13_play_result_variants";
-            this.r13playresultvariantsBindingSource.DataSource = this.bd_kidsDataSet42;
-            // 
             // r13_play_result_variantsTableAdapter
             // 
             this.r13_play_result_variantsTableAdapter.ClearBeforeFill = true;
-            // 
-            // nameplayresultDataGridViewTextBoxColumn
-            // 
-            this.nameplayresultDataGridViewTextBoxColumn.DataPropertyName = "name_play_result";
-            this.nameplayresultDataGridViewTextBoxColumn.HeaderText = "Вариант воспроизведения";
-            this.nameplayresultDataGridViewTextBoxColumn.Name = "nameplayresultDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn11
-            // 
-            this.noteDataGridViewTextBoxColumn11.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn11.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn11.Name = "noteDataGridViewTextBoxColumn11";
-            // 
-            // codeplayresultDataGridViewTextBoxColumn
-            // 
-            this.codeplayresultDataGridViewTextBoxColumn.DataPropertyName = "code_play_result";
-            this.codeplayresultDataGridViewTextBoxColumn.HeaderText = "code_play_result";
-            this.codeplayresultDataGridViewTextBoxColumn.Name = "codeplayresultDataGridViewTextBoxColumn";
-            this.codeplayresultDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // R14addButton
-            // 
-            this.R14addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R14addButton.Location = new System.Drawing.Point(351, 296);
-            this.R14addButton.Name = "R14addButton";
-            this.R14addButton.Size = new System.Drawing.Size(123, 47);
-            this.R14addButton.TabIndex = 68;
-            this.R14addButton.Text = "Добавить";
-            this.R14addButton.UseVisualStyleBackColor = true;
-            this.R14addButton.Click += new System.EventHandler(this.R14addButton_Click);
-            // 
-            // R14changeButton
-            // 
-            this.R14changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R14changeButton.Location = new System.Drawing.Point(513, 296);
-            this.R14changeButton.Name = "R14changeButton";
-            this.R14changeButton.Size = new System.Drawing.Size(123, 47);
-            this.R14changeButton.TabIndex = 69;
-            this.R14changeButton.Text = "Изменить";
-            this.R14changeButton.UseVisualStyleBackColor = true;
-            this.R14changeButton.Click += new System.EventHandler(this.R14changeButton_Click);
-            // 
-            // R14deleteButton
-            // 
-            this.R14deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R14deleteButton.Location = new System.Drawing.Point(671, 296);
-            this.R14deleteButton.Name = "R14deleteButton";
-            this.R14deleteButton.Size = new System.Drawing.Size(123, 47);
-            this.R14deleteButton.TabIndex = 70;
-            this.R14deleteButton.Text = "Удалить";
-            this.R14deleteButton.UseVisualStyleBackColor = true;
-            this.R14deleteButton.Click += new System.EventHandler(this.R14deleteButton_Click);
-            // 
-            // R14
-            // 
-            this.R14.AllowUserToOrderColumns = true;
-            this.R14.AutoGenerateColumns = false;
-            this.R14.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.R14.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.R14.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nametypeDataGridViewTextBoxColumn1,
-            this.noteDataGridViewTextBoxColumn12,
-            this.codetypeDataGridViewTextBoxColumn1});
-            this.R14.DataSource = this.r14tracktypesBindingSource;
-            this.R14.Location = new System.Drawing.Point(351, 11);
-            this.R14.Name = "R14";
-            this.R14.Size = new System.Drawing.Size(446, 279);
-            this.R14.TabIndex = 67;
-            this.R14.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R14_CellClick);
-            // 
-            // R14_note
-            // 
-            this.R14_note.Location = new System.Drawing.Point(105, 60);
-            this.R14_note.Multiline = true;
-            this.R14_note.Name = "R14_note";
-            this.R14_note.Size = new System.Drawing.Size(240, 20);
-            this.R14_note.TabIndex = 66;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label30.Location = new System.Drawing.Point(8, 61);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(91, 16);
-            this.label30.TabIndex = 65;
-            this.label30.Text = "Примечание";
-            // 
-            // R14_name_type
-            // 
-            this.R14_name_type.Location = new System.Drawing.Point(143, 11);
-            this.R14_name_type.Multiline = true;
-            this.R14_name_type.Name = "R14_name_type";
-            this.R14_name_type.Size = new System.Drawing.Size(202, 42);
-            this.R14_name_type.TabIndex = 64;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label31.Location = new System.Drawing.Point(8, 12);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(119, 32);
-            this.label31.TabIndex = 63;
-            this.label31.Text = "Тип файла\r\nспопровождения";
-            // 
-            // bd_kidsDataSet43
-            // 
-            this.bd_kidsDataSet43.DataSetName = "bd_kidsDataSet43";
-            this.bd_kidsDataSet43.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r14tracktypesBindingSource
-            // 
-            this.r14tracktypesBindingSource.DataMember = "R14_track_types";
-            this.r14tracktypesBindingSource.DataSource = this.bd_kidsDataSet43;
             // 
             // r14_track_typesTableAdapter
             // 
             this.r14_track_typesTableAdapter.ClearBeforeFill = true;
             // 
-            // nametypeDataGridViewTextBoxColumn1
-            // 
-            this.nametypeDataGridViewTextBoxColumn1.DataPropertyName = "name_type";
-            this.nametypeDataGridViewTextBoxColumn1.HeaderText = "Тип файла";
-            this.nametypeDataGridViewTextBoxColumn1.Name = "nametypeDataGridViewTextBoxColumn1";
-            // 
-            // noteDataGridViewTextBoxColumn12
-            // 
-            this.noteDataGridViewTextBoxColumn12.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn12.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn12.Name = "noteDataGridViewTextBoxColumn12";
-            // 
-            // codetypeDataGridViewTextBoxColumn1
-            // 
-            this.codetypeDataGridViewTextBoxColumn1.DataPropertyName = "code_type";
-            this.codetypeDataGridViewTextBoxColumn1.HeaderText = "code_type";
-            this.codetypeDataGridViewTextBoxColumn1.Name = "codetypeDataGridViewTextBoxColumn1";
-            this.codetypeDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // R15addButton
-            // 
-            this.R15addButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R15addButton.Location = new System.Drawing.Point(351, 296);
-            this.R15addButton.Name = "R15addButton";
-            this.R15addButton.Size = new System.Drawing.Size(123, 47);
-            this.R15addButton.TabIndex = 76;
-            this.R15addButton.Text = "Добавить";
-            this.R15addButton.UseVisualStyleBackColor = true;
-            this.R15addButton.Click += new System.EventHandler(this.R15addButton_Click);
-            // 
-            // R15changeButton
-            // 
-            this.R15changeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R15changeButton.Location = new System.Drawing.Point(513, 296);
-            this.R15changeButton.Name = "R15changeButton";
-            this.R15changeButton.Size = new System.Drawing.Size(123, 47);
-            this.R15changeButton.TabIndex = 77;
-            this.R15changeButton.Text = "Изменить";
-            this.R15changeButton.UseVisualStyleBackColor = true;
-            this.R15changeButton.Click += new System.EventHandler(this.R15changeButton_Click);
-            // 
-            // R15deleteButton
-            // 
-            this.R15deleteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.R15deleteButton.Location = new System.Drawing.Point(671, 296);
-            this.R15deleteButton.Name = "R15deleteButton";
-            this.R15deleteButton.Size = new System.Drawing.Size(123, 47);
-            this.R15deleteButton.TabIndex = 78;
-            this.R15deleteButton.Text = "Удалить";
-            this.R15deleteButton.UseVisualStyleBackColor = true;
-            this.R15deleteButton.Click += new System.EventHandler(this.R15deleteButton_Click);
-            // 
-            // R15
-            // 
-            this.R15.AllowUserToOrderColumns = true;
-            this.R15.AutoGenerateColumns = false;
-            this.R15.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.R15.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.R15.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.namekeywordDataGridViewTextBoxColumn,
-            this.noteDataGridViewTextBoxColumn13,
-            this.codekeywordDataGridViewTextBoxColumn});
-            this.R15.DataSource = this.r15taskkeywordsBindingSource;
-            this.R15.Location = new System.Drawing.Point(351, 11);
-            this.R15.Name = "R15";
-            this.R15.Size = new System.Drawing.Size(446, 279);
-            this.R15.TabIndex = 75;
-            this.R15.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.R15_CellClick);
-            // 
-            // R15_note
-            // 
-            this.R15_note.Location = new System.Drawing.Point(130, 37);
-            this.R15_note.Multiline = true;
-            this.R15_note.Name = "R15_note";
-            this.R15_note.Size = new System.Drawing.Size(202, 20);
-            this.R15_note.TabIndex = 74;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label32.Location = new System.Drawing.Point(8, 38);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(91, 16);
-            this.label32.TabIndex = 73;
-            this.label32.Text = "Примечание";
-            // 
-            // R15_name_key_word
-            // 
-            this.R15_name_key_word.Location = new System.Drawing.Point(130, 11);
-            this.R15_name_key_word.Multiline = true;
-            this.R15_name_key_word.Name = "R15_name_key_word";
-            this.R15_name_key_word.Size = new System.Drawing.Size(202, 20);
-            this.R15_name_key_word.TabIndex = 72;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label33.Location = new System.Drawing.Point(8, 12);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(116, 16);
-            this.label33.TabIndex = 71;
-            this.label33.Text = "Ключевое слово";
-            // 
-            // bd_kidsDataSet44
-            // 
-            this.bd_kidsDataSet44.DataSetName = "bd_kidsDataSet44";
-            this.bd_kidsDataSet44.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r15taskkeywordsBindingSource
-            // 
-            this.r15taskkeywordsBindingSource.DataMember = "R15_task_key_words";
-            this.r15taskkeywordsBindingSource.DataSource = this.bd_kidsDataSet44;
-            // 
             // r15_task_key_wordsTableAdapter
             // 
             this.r15_task_key_wordsTableAdapter.ClearBeforeFill = true;
-            // 
-            // namekeywordDataGridViewTextBoxColumn
-            // 
-            this.namekeywordDataGridViewTextBoxColumn.DataPropertyName = "name_key_word";
-            this.namekeywordDataGridViewTextBoxColumn.HeaderText = "Ключевое слово";
-            this.namekeywordDataGridViewTextBoxColumn.Name = "namekeywordDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn13
-            // 
-            this.noteDataGridViewTextBoxColumn13.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn13.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn13.Name = "noteDataGridViewTextBoxColumn13";
-            // 
-            // codekeywordDataGridViewTextBoxColumn
-            // 
-            this.codekeywordDataGridViewTextBoxColumn.DataPropertyName = "code_key_word";
-            this.codekeywordDataGridViewTextBoxColumn.HeaderText = "code_key_word";
-            this.codekeywordDataGridViewTextBoxColumn.Name = "codekeywordDataGridViewTextBoxColumn";
-            this.codekeywordDataGridViewTextBoxColumn.Visible = false;
             // 
             // References
             // 
@@ -2658,22 +2658,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet27)).EndInit();
             this.R13_play_result_variants.ResumeLayout(false);
             this.R13_play_result_variants.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r13playresultvariantsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet42)).EndInit();
             this.R14_track_types.ResumeLayout(false);
             this.R14_track_types.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r14tracktypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet43)).EndInit();
             this.R15_task_key_words.ResumeLayout(false);
             this.R15_task_key_words.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.R15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r15taskkeywordsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet44)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet20)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.r05legalownershipformsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r13playresultvariantsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r14tracktypesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.R15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r15taskkeywordsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
