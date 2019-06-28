@@ -42,14 +42,14 @@ namespace oksana_kids
 
         private string logIn()
         {
-            string login = tlogin.Text;
-            string password = tpassword.Text;
+            //string login = tlogin.Text;
+            //string password = tpassword.Text;
 
             //string login = "anpilova.k"; // VOT EOT DLYATESTOV!1111
             //string password = "anpilova.k";
         
-            //string login = "admin";
-            //var password = "admin";
+            string login = "admin";
+            var password = "admin";
 
             string who = "";
             DateTime localDate = DateTime.Now;

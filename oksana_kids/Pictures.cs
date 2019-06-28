@@ -43,8 +43,15 @@ namespace oksana_kids
             testPicture.SizeMode = PictureBoxSizeMode.CenterImage;
                      
 
-            if (img.Height < this.testPicture.Height || img.Width < this.testPicture.Width)
-                this.testPicture.Size = new Size(img.Height, img.Width);
+            if (img.Height < this.testPicture.Height || img.Width < this.testPicture.Width) {
+                //this.testPicture.Left = 0;
+                //this.testPicture.Top = 0;
+
+                this.testPicture.Size = new Size(img.Width, img.Height);
+                this.Size = new Size(img.Width + 50, img.Height + 75);
+                //this.Height = this.testPicture.Height + this.testPicture.Top*4;
+                //this.Width = img.Width + this.testPicture.Left * 4;
+            }
 
             testPicture.SizeMode = PictureBoxSizeMode.StretchImage;
 

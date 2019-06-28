@@ -53,6 +53,7 @@ namespace oksana_kids
             x => x.id_person,
             y => y.id_person,
             (p, w) => new {
+                p.id_person,
                 fio = w.surname + " " + w.name + " " + w.patronymic,
                 w.date_birth,
                 p.name_decode,
@@ -64,7 +65,7 @@ namespace oksana_kids
                 p.date_updating,
                 p.note
             });
-
+            gridViewPupils.DataSource = null;
             gridViewPupils.DataSource = pupilsData.ToList();
 
             var otherData = bd.T01_2_others.Join(
@@ -72,6 +73,7 @@ namespace oksana_kids
             x => x.id_person,
             y => y.id_person,
             (p, w) => new {
+                p.id_person,
                 fio = w.surname + " " + w.name + " " + w.patronymic,
                 w.date_birth,
                 p.name_decode,
@@ -82,7 +84,7 @@ namespace oksana_kids
                 p.date_updating,
                 p.note
             });
-
+            gridViewOthers.DataSource = null;
             gridViewOthers.DataSource = otherData.ToList();
         }
 
@@ -175,9 +177,13 @@ namespace oksana_kids
                 date_updating = " ",
                 note = note.Text == "" ? " " : note.Text
             };
-            bd.T01_personalities.Add(person);
-            bd.SaveChanges();
-            
+            try { 
+                bd.T01_personalities.Add(person);
+                bd.SaveChanges();
+            }catch(Exception ee)
+            {
+                MessageBox.Show("ошибка в веденных данных!");
+            }
             UpdateDataGrids();
         }
 

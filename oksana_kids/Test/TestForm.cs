@@ -53,6 +53,7 @@ namespace oksana_kids.Test
 
         private void InitTest(SimplyTest test)
         {
+            SummaryFailCount = 0;
             this.labelQuestionBody.Text = test.Question.StringValue;
             if (test.Question.ImageValue != null)
             { 
@@ -141,7 +142,7 @@ namespace oksana_kids.Test
                     SummaryFailCount++;
                 _selectedCheckBox.Visible = false;
                 _selectedPicture.Visible = false;
-                if(SummaryFailCount < MAX_FAILS)
+                if(SummaryFailCount <= MAX_FAILS)
                     return;
             }
             if (currentTestIndex < testCollection.Count - 1) {

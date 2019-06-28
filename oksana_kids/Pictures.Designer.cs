@@ -36,7 +36,7 @@
             // 
             this.testPicture.Location = new System.Drawing.Point(12, 12);
             this.testPicture.Name = "testPicture";
-            this.testPicture.Size = new System.Drawing.Size(660, 591);
+            this.testPicture.Size = new System.Drawing.Size(750, 662);
             this.testPicture.TabIndex = 0;
             this.testPicture.TabStop = false;
             // 
@@ -44,7 +44,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(682, 615);
+            this.ClientSize = new System.Drawing.Size(774, 686);
             this.Controls.Add(this.testPicture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Pictures";

@@ -376,7 +376,12 @@ namespace oksana_kids
             //var imageSwapper = new TestForm2(simplyQuestion, this);
             //imageSwapper.Show();
             var args = new TestFormsArgument(new List<List<SimplyTest>>() { test_case, simplyQuestion }, this);
-            var timeTest = int.Parse(duration.Text);
+            int timeTest = 0;
+            if (!int.TryParse(duration.Text, out timeTest))
+                timeTest = 9999;
+            else
+                timeTest *= 60;
+            
             var parent = new TestParent(args,timeTest);
             parent.Show();
 
