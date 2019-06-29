@@ -81,6 +81,9 @@
         <EntityTypeShape EntityType="bd_kidsModel.T08_view_audio_video_tracks" Width="1.5" PointX="7.375" PointY="3.75" />
         <EntityTypeShape EntityType="bd_kidsModel.T07_view_soundtracks" Width="1.5" PointX="5.375" PointY="7.75" />
         <EntityTypeShape EntityType="bd_kidsModel.T06_view_teaching_materials" Width="1.5" PointX="7.375" PointY="7.75" />
+        <EntityTypeShape EntityType="bd_kidsModel.T05_view_test_passing_results" Width="1.5" PointX="13.375" PointY="0.75" />
+        <EntityTypeShape EntityType="bd_kidsModel.T09_view_comment_variants" Width="1.5" PointX="13.375" PointY="4.75" />
+        <EntityTypeShape EntityType="bd_kidsModel.T03_view_tt_modules" Width="1.5" PointX="15.375" PointY="0.75" />
         </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

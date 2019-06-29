@@ -495,5 +495,48 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="T05_view_test_passing_results">
+      <EntityTypeMapping TypeName="bd_kidsModel.T05_view_test_passing_results">
+        <MappingFragment StoreEntitySet="T05_view_test_passing_results">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="perc_partially_right" ColumnName="perc_partially_right" />
+          <ScalarProperty Name="perc_totally_right" ColumnName="perc_totally_right" />
+          <ScalarProperty Name="amount_passing_tests" ColumnName="amount_passing_tests" />
+          <ScalarProperty Name="name_end_reason" ColumnName="name_end_reason" />
+          <ScalarProperty Name="time_end" ColumnName="time_end" />
+          <ScalarProperty Name="time_start" ColumnName="time_start" />
+          <ScalarProperty Name="date_testing" ColumnName="date_testing" />
+          <ScalarProperty Name="name_test" ColumnName="name_test" />
+          <ScalarProperty Name="id_result" ColumnName="id_result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T09_view_comment_variants">
+      <EntityTypeMapping TypeName="bd_kidsModel.T09_view_comment_variants">
+        <MappingFragment StoreEntitySet="T09_view_comment_variants">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="file_location" ColumnName="file_location" />
+          <ScalarProperty Name="name_play_result" ColumnName="name_play_result" />
+          <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="T03_view_tt_modules">
+      <EntityTypeMapping TypeName="bd_kidsModel.T03_view_tt_modules">
+        <MappingFragment StoreEntitySet="T03_view_tt_modules">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="description" ColumnName="description" />
+          <ScalarProperty Name="name_action" ColumnName="name_action" />
+          <ScalarProperty Name="max_passing_duration_sec" ColumnName="max_passing_duration_sec" />
+          <ScalarProperty Name="comment_view_duration_sec" ColumnName="comment_view_duration_sec" />
+          <ScalarProperty Name="name_play_result" ColumnName="name_play_result" />
+          <ScalarProperty Name="name_variant" ColumnName="name_variant" />
+          <ScalarProperty Name="name_instruction" ColumnName="name_instruction" />
+          <ScalarProperty Name="name_av_track" ColumnName="name_av_track" />
+          <ScalarProperty Name="name_track" ColumnName="name_track" />
+          <ScalarProperty Name="id_module" ColumnName="id_module" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

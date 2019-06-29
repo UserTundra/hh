@@ -234,7 +234,7 @@
           <Property Name="max_passing_duration_sec" Type="integer" />
           <Property Name="code_action" Type="integer" />
           <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
-          <Property Name="additional_teaching_material" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="additional_teaching_material" Type="integer" />
         </EntityType>
         <EntityType Name="T04_testing_tasks">
           <Key>
@@ -427,6 +427,25 @@
           <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
+предупреждение 6005: Тип данных "" в настоящее время не поддерживается для целевой версии платформы Entity Framework; столбец "name_task" в таблице "main.T03_view_tt_modules" был исключен.
+предупреждение 6002: В таблице или представлении "main.T03_view_tt_modules" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="T03_view_tt_modules">
+          <Key>
+            <PropertyRef Name="id_module" />
+          </Key>
+          <Property Name="id_module" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_track" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_av_track" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_instruction" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_variant" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_play_result" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="comment_view_duration_sec" Type="integer" />
+          <Property Name="max_passing_duration_sec" Type="integer" />
+          <Property Name="name_action" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="description" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
 предупреждение 6005: Тип данных "" в настоящее время не поддерживается для целевой версии платформы Entity Framework; столбец "fio" в таблице "main.T04_view_testing_tasks" был исключен.
 предупреждение 6002: В таблице или представлении "main.T04_view_testing_tasks" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
         <EntityType Name="T04_view_testing_tasks">
@@ -439,6 +458,24 @@
           <Property Name="date_correct" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="name_type" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6005: Тип данных "" в настоящее время не поддерживается для целевой версии платформы Entity Framework; столбец "fio" в таблице "main.T05_view_test_passing_results" был исключен.
+предупреждение 6002: В таблице или представлении "main.T05_view_test_passing_results" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="T05_view_test_passing_results">
+          <Key>
+            <PropertyRef Name="id_result" />
+          </Key>
+          <Property Name="id_result" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_test" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="date_testing" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="time_start" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="time_end" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="name_end_reason" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="amount_passing_tests" Type="integer" />
+          <Property Name="perc_totally_right" Type="real" />
+          <Property Name="perc_partially_right" Type="real" />
           <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
         </EntityType>
         <!--Ошибки, обнаруженные при создании:
@@ -482,6 +519,18 @@
           <Property Name="image_size_pix" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="filesize" Type="integer" />
           <Property Name="date_create" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6005: Тип данных "" в настоящее время не поддерживается для целевой версии платформы Entity Framework; столбец "is_av_track" в таблице "main.T09_view_comment_variants" был исключен.
+предупреждение 6002: В таблице или представлении "main.T09_view_comment_variants" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="T09_view_comment_variants">
+          <Key>
+            <PropertyRef Name="id_comment" />
+          </Key>
+          <Property Name="id_comment" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name_play_result" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="file_location" Type="nvarchar" MaxLength="2147483647" />
           <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
         </EntityType>
         <Association Name="FK_B01_testing_aims_to_tests_0_0">
@@ -677,30 +726,6 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_T03_testing_task_modules_0_0">
-          <End Role="T09_comment_variants_on_passing_tasks" Type="Self.T09_comment_variants_on_passing_tasks" Multiplicity="0..1" />
-          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="T09_comment_variants_on_passing_tasks">
-              <PropertyRef Name="id_comment" />
-            </Principal>
-            <Dependent Role="T03_testing_task_modules">
-              <PropertyRef Name="id_comment" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_T03_testing_task_modules_1_0">
-          <End Role="R12_instructions_to_test_tasks_types" Type="Self.R12_instructions_to_test_tasks_types" Multiplicity="0..1" />
-          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="R12_instructions_to_test_tasks_types">
-              <PropertyRef Name="code_instruction" />
-            </Principal>
-            <Dependent Role="T03_testing_task_modules">
-              <PropertyRef Name="code_instruction" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_T03_testing_task_modules_2_0">
           <End Role="R11_variants_of_passing_tasks_results_analysis" Type="Self.R11_variants_of_passing_tasks_results_analysis" Multiplicity="0..1" />
           <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
           <ReferentialConstraint>
@@ -712,7 +737,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_T03_testing_task_modules_3_0">
+        <Association Name="FK_T03_testing_task_modules_1_0">
           <End Role="T04_testing_tasks" Type="Self.T04_testing_tasks" Multiplicity="0..1" />
           <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
           <ReferentialConstraint>
@@ -721,6 +746,30 @@
             </Principal>
             <Dependent Role="T03_testing_task_modules">
               <PropertyRef Name="id_task" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_2_0">
+          <End Role="T09_comment_variants_on_passing_tasks" Type="Self.T09_comment_variants_on_passing_tasks" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="T09_comment_variants_on_passing_tasks">
+              <PropertyRef Name="id_comment" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="id_comment" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_T03_testing_task_modules_3_0">
+          <End Role="R12_instructions_to_test_tasks_types" Type="Self.R12_instructions_to_test_tasks_types" Multiplicity="0..1" />
+          <End Role="T03_testing_task_modules" Type="Self.T03_testing_task_modules" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="R12_instructions_to_test_tasks_types">
+              <PropertyRef Name="code_instruction" />
+            </Principal>
+            <Dependent Role="T03_testing_task_modules">
+              <PropertyRef Name="code_instruction" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -988,6 +1037,21 @@ FROM [T01_2_others] AS [T01_2_others]</DefiningQuery>
 [T02_view_tests].[note] AS [note]
 FROM [T02_view_tests] AS [T02_view_tests]</DefiningQuery>
           </EntitySet>
+          <EntitySet Name="T03_view_tt_modules" EntityType="Self.T03_view_tt_modules" store:Type="Views">
+            <DefiningQuery>SELECT 
+[T03_view_tt_modules].[id_module] AS [id_module], 
+[T03_view_tt_modules].[name_track] AS [name_track], 
+[T03_view_tt_modules].[name_av_track] AS [name_av_track], 
+[T03_view_tt_modules].[name_instruction] AS [name_instruction], 
+[T03_view_tt_modules].[name_variant] AS [name_variant], 
+[T03_view_tt_modules].[name_play_result] AS [name_play_result], 
+[T03_view_tt_modules].[comment_view_duration_sec] AS [comment_view_duration_sec], 
+[T03_view_tt_modules].[max_passing_duration_sec] AS [max_passing_duration_sec], 
+[T03_view_tt_modules].[name_action] AS [name_action], 
+[T03_view_tt_modules].[description] AS [description], 
+[T03_view_tt_modules].[note] AS [note]
+FROM [T03_view_tt_modules] AS [T03_view_tt_modules]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="T04_view_testing_tasks" EntityType="Self.T04_view_testing_tasks" store:Type="Views">
             <DefiningQuery>SELECT 
 [T04_view_testing_tasks].[id_task] AS [id_task], 
@@ -998,6 +1062,20 @@ FROM [T02_view_tests] AS [T02_view_tests]</DefiningQuery>
 [T04_view_testing_tasks].[file_location] AS [file_location], 
 [T04_view_testing_tasks].[note] AS [note]
 FROM [T04_view_testing_tasks] AS [T04_view_testing_tasks]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="T05_view_test_passing_results" EntityType="Self.T05_view_test_passing_results" store:Type="Views">
+            <DefiningQuery>SELECT 
+[T05_view_test_passing_results].[id_result] AS [id_result], 
+[T05_view_test_passing_results].[name_test] AS [name_test], 
+[T05_view_test_passing_results].[date_testing] AS [date_testing], 
+[T05_view_test_passing_results].[time_start] AS [time_start], 
+[T05_view_test_passing_results].[time_end] AS [time_end], 
+[T05_view_test_passing_results].[name_end_reason] AS [name_end_reason], 
+[T05_view_test_passing_results].[amount_passing_tests] AS [amount_passing_tests], 
+[T05_view_test_passing_results].[perc_totally_right] AS [perc_totally_right], 
+[T05_view_test_passing_results].[perc_partially_right] AS [perc_partially_right], 
+[T05_view_test_passing_results].[note] AS [note]
+FROM [T05_view_test_passing_results] AS [T05_view_test_passing_results]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="T06_view_teaching_materials" EntityType="Self.T06_view_teaching_materials" store:Type="Views">
             <DefiningQuery>SELECT 
@@ -1031,6 +1109,14 @@ FROM [T07_view_soundtracks] AS [T07_view_soundtracks]</DefiningQuery>
 [T08_view_audio_video_tracks].[date_create] AS [date_create], 
 [T08_view_audio_video_tracks].[note] AS [note]
 FROM [T08_view_audio_video_tracks] AS [T08_view_audio_video_tracks]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="T09_view_comment_variants" EntityType="Self.T09_view_comment_variants" store:Type="Views">
+            <DefiningQuery>SELECT 
+[T09_view_comment_variants].[id_comment] AS [id_comment], 
+[T09_view_comment_variants].[name_play_result] AS [name_play_result], 
+[T09_view_comment_variants].[file_location] AS [file_location], 
+[T09_view_comment_variants].[note] AS [note]
+FROM [T09_view_comment_variants] AS [T09_view_comment_variants]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_B01_testing_aims_to_tests_0_0" Association="Self.FK_B01_testing_aims_to_tests_0_0">
             <End Role="R06_testing_aims" EntitySet="R06_testing_aims" />
@@ -1097,19 +1183,19 @@ FROM [T08_view_audio_video_tracks] AS [T08_view_audio_video_tracks]</DefiningQue
             <End Role="T02_tests" EntitySet="T02_tests" />
           </AssociationSet>
           <AssociationSet Name="FK_T03_testing_task_modules_0_0" Association="Self.FK_T03_testing_task_modules_0_0">
-            <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
-            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
-          </AssociationSet>
-          <AssociationSet Name="FK_T03_testing_task_modules_1_0" Association="Self.FK_T03_testing_task_modules_1_0">
-            <End Role="R12_instructions_to_test_tasks_types" EntitySet="R12_instructions_to_test_tasks_types" />
-            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
-          </AssociationSet>
-          <AssociationSet Name="FK_T03_testing_task_modules_2_0" Association="Self.FK_T03_testing_task_modules_2_0">
             <End Role="R11_variants_of_passing_tasks_results_analysis" EntitySet="R11_variants_of_passing_tasks_results_analysis" />
             <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
           </AssociationSet>
-          <AssociationSet Name="FK_T03_testing_task_modules_3_0" Association="Self.FK_T03_testing_task_modules_3_0">
+          <AssociationSet Name="FK_T03_testing_task_modules_1_0" Association="Self.FK_T03_testing_task_modules_1_0">
             <End Role="T04_testing_tasks" EntitySet="T04_testing_tasks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_2_0" Association="Self.FK_T03_testing_task_modules_2_0">
+            <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
+            <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
+          </AssociationSet>
+          <AssociationSet Name="FK_T03_testing_task_modules_3_0" Association="Self.FK_T03_testing_task_modules_3_0">
+            <End Role="R12_instructions_to_test_tasks_types" EntitySet="R12_instructions_to_test_tasks_types" />
             <End Role="T03_testing_task_modules" EntitySet="T03_testing_task_modules" />
           </AssociationSet>
           <AssociationSet Name="FK_T03_testing_task_modules_4_0" Association="Self.FK_T03_testing_task_modules_4_0">
@@ -1451,7 +1537,7 @@ FROM [T08_view_audio_video_tracks] AS [T08_view_audio_video_tracks]</DefiningQue
           <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_T03_testing_task_modules_3_0" FromRole="T03_testing_task_modules" ToRole="T04_testing_tasks" />
           <NavigationProperty Name="T08_audio_video_tracks" Relationship="Self.FK_T03_testing_task_modules_4_0" FromRole="T03_testing_task_modules" ToRole="T08_audio_video_tracks" />
           <NavigationProperty Name="T09_comment_variants_on_passing_tasks" Relationship="Self.FK_T03_testing_task_modules_5_0" FromRole="T03_testing_task_modules" ToRole="T09_comment_variants_on_passing_tasks" />
-          <Property Name="additional_teaching_material" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="additional_teaching_material" Type="Int64" />
         </EntityType>
         <EntityType Name="T04_testing_tasks">
           <Key>
@@ -2176,6 +2262,9 @@ FROM [T08_view_audio_video_tracks] AS [T08_view_audio_video_tracks]</DefiningQue
           <EntitySet Name="T08_view_audio_video_tracks" EntityType="bd_kidsModel.T08_view_audio_video_tracks" />
           <EntitySet Name="T07_view_soundtracks" EntityType="bd_kidsModel.T07_view_soundtracks" />
           <EntitySet Name="T06_view_teaching_materials" EntityType="bd_kidsModel.T06_view_teaching_materials" />
+          <EntitySet Name="T05_view_test_passing_results" EntityType="bd_kidsModel.T05_view_test_passing_results" />
+          <EntitySet Name="T09_view_comment_variants" EntityType="bd_kidsModel.T09_view_comment_variants" />
+          <EntitySet Name="T03_view_tt_modules" EntityType="bd_kidsModel.T03_view_tt_modules" />
           </EntityContainer>
         <EntityType Name="T11_test_answers">
           <Key>
@@ -2281,6 +2370,46 @@ FROM [T08_view_audio_video_tracks] AS [T08_view_audio_video_tracks]</DefiningQue
           <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="author" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="source" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T05_view_test_passing_results">
+          <Key>
+            <PropertyRef Name="id_result" />
+          </Key>
+          <Property Name="id_result" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_test" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="date_testing" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="time_start" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="time_end" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_end_reason" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="amount_passing_tests" Type="Int64" />
+          <Property Name="perc_totally_right" Type="Double" />
+          <Property Name="perc_partially_right" Type="Double" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T09_view_comment_variants">
+          <Key>
+            <PropertyRef Name="id_comment" />
+          </Key>
+          <Property Name="id_comment" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_play_result" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="T03_view_tt_modules">
+          <Key>
+            <PropertyRef Name="id_module" />
+          </Key>
+          <Property Name="id_module" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_av_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_instruction" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_variant" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="name_play_result" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="comment_view_duration_sec" Type="Int64" />
+          <Property Name="max_passing_duration_sec" Type="Int64" />
+          <Property Name="name_action" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="description" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
           <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
         </EntityType>
         </Schema>
@@ -2780,6 +2909,49 @@ FROM [T08_view_audio_video_tracks] AS [T08_view_audio_video_tracks]</DefiningQue
                 <ScalarProperty Name="file_location" ColumnName="file_location" />
                 <ScalarProperty Name="description" ColumnName="description" />
                 <ScalarProperty Name="id_teach_material" ColumnName="id_teach_material" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T05_view_test_passing_results">
+            <EntityTypeMapping TypeName="bd_kidsModel.T05_view_test_passing_results">
+              <MappingFragment StoreEntitySet="T05_view_test_passing_results">
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="perc_partially_right" ColumnName="perc_partially_right" />
+                <ScalarProperty Name="perc_totally_right" ColumnName="perc_totally_right" />
+                <ScalarProperty Name="amount_passing_tests" ColumnName="amount_passing_tests" />
+                <ScalarProperty Name="name_end_reason" ColumnName="name_end_reason" />
+                <ScalarProperty Name="time_end" ColumnName="time_end" />
+                <ScalarProperty Name="time_start" ColumnName="time_start" />
+                <ScalarProperty Name="date_testing" ColumnName="date_testing" />
+                <ScalarProperty Name="name_test" ColumnName="name_test" />
+                <ScalarProperty Name="id_result" ColumnName="id_result" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T09_view_comment_variants">
+            <EntityTypeMapping TypeName="bd_kidsModel.T09_view_comment_variants">
+              <MappingFragment StoreEntitySet="T09_view_comment_variants">
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="file_location" ColumnName="file_location" />
+                <ScalarProperty Name="name_play_result" ColumnName="name_play_result" />
+                <ScalarProperty Name="id_comment" ColumnName="id_comment" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="T03_view_tt_modules">
+            <EntityTypeMapping TypeName="bd_kidsModel.T03_view_tt_modules">
+              <MappingFragment StoreEntitySet="T03_view_tt_modules">
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="name_action" ColumnName="name_action" />
+                <ScalarProperty Name="max_passing_duration_sec" ColumnName="max_passing_duration_sec" />
+                <ScalarProperty Name="comment_view_duration_sec" ColumnName="comment_view_duration_sec" />
+                <ScalarProperty Name="name_play_result" ColumnName="name_play_result" />
+                <ScalarProperty Name="name_variant" ColumnName="name_variant" />
+                <ScalarProperty Name="name_instruction" ColumnName="name_instruction" />
+                <ScalarProperty Name="name_av_track" ColumnName="name_av_track" />
+                <ScalarProperty Name="name_track" ColumnName="name_track" />
+                <ScalarProperty Name="id_module" ColumnName="id_module" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

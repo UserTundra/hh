@@ -278,7 +278,7 @@
     <NavigationProperty Name="T04_testing_tasks" Relationship="Self.FK_T03_testing_task_modules_3_0" FromRole="T03_testing_task_modules" ToRole="T04_testing_tasks" />
     <NavigationProperty Name="T08_audio_video_tracks" Relationship="Self.FK_T03_testing_task_modules_4_0" FromRole="T03_testing_task_modules" ToRole="T08_audio_video_tracks" />
     <NavigationProperty Name="T09_comment_variants_on_passing_tasks" Relationship="Self.FK_T03_testing_task_modules_5_0" FromRole="T03_testing_task_modules" ToRole="T09_comment_variants_on_passing_tasks" />
-    <Property Name="additional_teaching_material" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="additional_teaching_material" Type="Int64" />
   </EntityType>
   <EntityType Name="T04_testing_tasks">
     <Key>
@@ -1003,6 +1003,9 @@
     <EntitySet Name="T08_view_audio_video_tracks" EntityType="bd_kidsModel.T08_view_audio_video_tracks" />
     <EntitySet Name="T07_view_soundtracks" EntityType="bd_kidsModel.T07_view_soundtracks" />
     <EntitySet Name="T06_view_teaching_materials" EntityType="bd_kidsModel.T06_view_teaching_materials" />
+    <EntitySet Name="T05_view_test_passing_results" EntityType="bd_kidsModel.T05_view_test_passing_results" />
+    <EntitySet Name="T09_view_comment_variants" EntityType="bd_kidsModel.T09_view_comment_variants" />
+    <EntitySet Name="T03_view_tt_modules" EntityType="bd_kidsModel.T03_view_tt_modules" />
   </EntityContainer>
   <EntityType Name="T11_test_answers">
     <Key>
@@ -1108,6 +1111,46 @@
     <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="author" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="source" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T05_view_test_passing_results">
+    <Key>
+      <PropertyRef Name="id_result" />
+    </Key>
+    <Property Name="id_result" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_test" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="date_testing" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="time_start" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="time_end" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="name_end_reason" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="amount_passing_tests" Type="Int64" />
+    <Property Name="perc_totally_right" Type="Double" />
+    <Property Name="perc_partially_right" Type="Double" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T09_view_comment_variants">
+    <Key>
+      <PropertyRef Name="id_comment" />
+    </Key>
+    <Property Name="id_comment" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_play_result" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="file_location" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="T03_view_tt_modules">
+    <Key>
+      <PropertyRef Name="id_module" />
+    </Key>
+    <Property Name="id_module" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="name_av_track" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="name_instruction" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="name_variant" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="name_play_result" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="comment_view_duration_sec" Type="Int64" />
+    <Property Name="max_passing_duration_sec" Type="Int64" />
+    <Property Name="name_action" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="description" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

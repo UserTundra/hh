@@ -415,6 +415,31 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet6.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet60.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet60.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet61.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet61.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet62.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet62.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet63.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet63.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet64.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet64.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_kidsDataSet7.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -465,6 +490,12 @@
     </Compile>
     <Compile Include="ChooseTZForModulesTZ.Designer.cs">
       <DependentUpon>ChooseTZForModulesTZ.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommentVariantsOnPassigTasksChoose.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CommentVariantsOnPassigTasksChoose.Designer.cs">
+      <DependentUpon>CommentVariantsOnPassigTasksChoose.cs</DependentUpon>
     </Compile>
     <Compile Include="FileParser.cs" />
     <Compile Include="AuthorisationForm.cs">
@@ -584,6 +615,9 @@
     <Compile Include="T03_testing_task_modules.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="T03_view_tt_modules.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="T04_testing_tasks.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -591,6 +625,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="T05_test_passing_results.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T05_view_test_passing_results.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="T06_teaching_materials.cs">
@@ -612,6 +649,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="T09_comment_variants_on_passing_tasks.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="T09_view_comment_variants.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="T10_organizations.cs">
@@ -717,6 +757,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChooseTZForModulesTZ.resx">
       <DependentUpon>ChooseTZForModulesTZ.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommentVariantsOnPassigTasksChoose.resx">
+      <DependentUpon>CommentVariantsOnPassigTasksChoose.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Files.resx">
       <DependentUpon>Files.cs</DependentUpon>
@@ -1428,6 +1471,61 @@
     </None>
     <None Include="bd_kidsDataSet6.xss">
       <DependentUpon>bd_kidsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet60.xsc">
+      <DependentUpon>bd_kidsDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet60.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet60.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet60.xss">
+      <DependentUpon>bd_kidsDataSet60.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet61.xsc">
+      <DependentUpon>bd_kidsDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet61.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet61.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet61.xss">
+      <DependentUpon>bd_kidsDataSet61.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet62.xsc">
+      <DependentUpon>bd_kidsDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet62.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet62.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet62.xss">
+      <DependentUpon>bd_kidsDataSet62.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet63.xsc">
+      <DependentUpon>bd_kidsDataSet63.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet63.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet63.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet63.xss">
+      <DependentUpon>bd_kidsDataSet63.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet64.xsc">
+      <DependentUpon>bd_kidsDataSet64.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet64.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet64.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet64.xss">
+      <DependentUpon>bd_kidsDataSet64.xsd</DependentUpon>
     </None>
     <None Include="bd_kidsDataSet7.xsc">
       <DependentUpon>bd_kidsDataSet7.xsd</DependentUpon>

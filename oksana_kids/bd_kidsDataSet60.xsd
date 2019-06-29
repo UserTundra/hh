@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bd_kidsDataSet60" targetNamespace="http://tempuri.org/bd_kidsDataSet60.xsd" xmlns:mstns="http://tempuri.org/bd_kidsDataSet60.xsd" xmlns="http://tempuri.org/bd_kidsDataSet60.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bd_kidsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bd_kidsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.oksana_kids.Properties.Settings.GlobalReference.Default.bd_kidsConnectionString" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="T05_view_test_passing_resultsTableAdapter" GeneratorDataComponentClassName="T05_view_test_passing_resultsTableAdapter" Name="T05_view_test_passing_results" UserDataComponentName="T05_view_test_passing_resultsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_kidsConnectionString (Settings)" DbObjectName="main.T05_view_test_passing_results" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [id_result], [fio], [name_test], [date_testing], [time_start], [time_end], [name_end_reason], [amount_passing_tests], [perc_totally_right], [perc_partially_right], [note] FROM [T05_view_test_passing_results]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_result" DataSetColumn="id_result" />
+              <Mapping SourceColumn="fio" DataSetColumn="fio" />
+              <Mapping SourceColumn="name_test" DataSetColumn="name_test" />
+              <Mapping SourceColumn="date_testing" DataSetColumn="date_testing" />
+              <Mapping SourceColumn="time_start" DataSetColumn="time_start" />
+              <Mapping SourceColumn="time_end" DataSetColumn="time_end" />
+              <Mapping SourceColumn="name_end_reason" DataSetColumn="name_end_reason" />
+              <Mapping SourceColumn="amount_passing_tests" DataSetColumn="amount_passing_tests" />
+              <Mapping SourceColumn="perc_totally_right" DataSetColumn="perc_totally_right" />
+              <Mapping SourceColumn="perc_partially_right" DataSetColumn="perc_partially_right" />
+              <Mapping SourceColumn="note" DataSetColumn="note" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bd_kidsDataSet60" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bd_kidsDataSet60" msprop:Generator_UserDSName="bd_kidsDataSet60">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="T05_view_test_passing_results" msprop:Generator_TableClassName="T05_view_test_passing_resultsDataTable" msprop:Generator_TableVarName="tableT05_view_test_passing_results" msprop:Generator_TablePropName="T05_view_test_passing_results" msprop:Generator_RowDeletingName="T05_view_test_passing_resultsRowDeleting" msprop:Generator_RowChangingName="T05_view_test_passing_resultsRowChanging" msprop:Generator_RowEvHandlerName="T05_view_test_passing_resultsRowChangeEventHandler" msprop:Generator_RowDeletedName="T05_view_test_passing_resultsRowDeleted" msprop:Generator_UserTableName="T05_view_test_passing_results" msprop:Generator_RowChangedName="T05_view_test_passing_resultsRowChanged" msprop:Generator_RowEvArgName="T05_view_test_passing_resultsRowChangeEvent" msprop:Generator_RowClassName="T05_view_test_passing_resultsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_result" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_result" msprop:Generator_ColumnPropNameInRow="id_result" msprop:Generator_ColumnPropNameInTable="id_resultColumn" msprop:Generator_UserColumnName="id_result" type="xs:long" />
+              <xs:element name="fio" msdata:DataType="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnVarNameInTable="columnfio" msprop:Generator_ColumnPropNameInRow="fio" msprop:Generator_ColumnPropNameInTable="fioColumn" msprop:Generator_UserColumnName="fio" type="xs:anyType" minOccurs="0" />
+              <xs:element name="name_test" msprop:Generator_ColumnVarNameInTable="columnname_test" msprop:Generator_ColumnPropNameInRow="name_test" msprop:Generator_ColumnPropNameInTable="name_testColumn" msprop:Generator_UserColumnName="name_test" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="date_testing" msprop:Generator_ColumnVarNameInTable="columndate_testing" msprop:Generator_ColumnPropNameInRow="date_testing" msprop:Generator_ColumnPropNameInTable="date_testingColumn" msprop:Generator_UserColumnName="date_testing" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="time_start" msprop:Generator_ColumnVarNameInTable="columntime_start" msprop:Generator_ColumnPropNameInRow="time_start" msprop:Generator_ColumnPropNameInTable="time_startColumn" msprop:Generator_UserColumnName="time_start" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="time_end" msprop:Generator_ColumnVarNameInTable="columntime_end" msprop:Generator_ColumnPropNameInRow="time_end" msprop:Generator_ColumnPropNameInTable="time_endColumn" msprop:Generator_UserColumnName="time_end" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_end_reason" msprop:Generator_ColumnVarNameInTable="columnname_end_reason" msprop:Generator_ColumnPropNameInRow="name_end_reason" msprop:Generator_ColumnPropNameInTable="name_end_reasonColumn" msprop:Generator_UserColumnName="name_end_reason" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="amount_passing_tests" msprop:Generator_ColumnVarNameInTable="columnamount_passing_tests" msprop:Generator_ColumnPropNameInRow="amount_passing_tests" msprop:Generator_ColumnPropNameInTable="amount_passing_testsColumn" msprop:Generator_UserColumnName="amount_passing_tests" type="xs:long" minOccurs="0" />
+              <xs:element name="perc_totally_right" msprop:Generator_ColumnVarNameInTable="columnperc_totally_right" msprop:Generator_ColumnPropNameInRow="perc_totally_right" msprop:Generator_ColumnPropNameInTable="perc_totally_rightColumn" msprop:Generator_UserColumnName="perc_totally_right" type="xs:double" minOccurs="0" />
+              <xs:element name="perc_partially_right" msprop:Generator_ColumnVarNameInTable="columnperc_partially_right" msprop:Generator_ColumnPropNameInRow="perc_partially_right" msprop:Generator_ColumnPropNameInTable="perc_partially_rightColumn" msprop:Generator_UserColumnName="perc_partially_right" type="xs:double" minOccurs="0" />
+              <xs:element name="note" msprop:Generator_ColumnVarNameInTable="columnnote" msprop:Generator_ColumnPropNameInRow="note" msprop:Generator_ColumnPropNameInTable="noteColumn" msprop:Generator_UserColumnName="note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

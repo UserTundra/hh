@@ -40,6 +40,10 @@ namespace oksana_kids
 
         private void Tests_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet64.T03_view_tt_modules". При необходимости она может быть перемещена или удалена.
+            this.t03_view_tt_modulesTableAdapter.Fill(this.bd_kidsDataSet64.T03_view_tt_modules);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet60.T05_view_test_passing_results". При необходимости она может быть перемещена или удалена.
+            this.t05_view_test_passing_resultsTableAdapter.Fill(this.bd_kidsDataSet60.T05_view_test_passing_results);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet58.R10_next_action_variants". При необходимости она может быть перемещена или удалена.
             this.r10_next_action_variantsTableAdapter.Fill(this.bd_kidsDataSet58.R10_next_action_variants);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet57.T09_comment_variants_on_passing_tasks". При необходимости она может быть перемещена или удалена.
@@ -314,9 +318,10 @@ namespace oksana_kids
 
         #region T03
 
-        private int IDaddTM;
-        private int IDTZ;      
-
+        private int IDaddTM; // дополнительный обучающий материал
+        private int IDTZ; // тестовое задание, чтоб на него модуль повесить
+        private int IDCV; // вариант коммента по окончанию ТЗ
+              
         private void T03_additional_teaching_material_add_Click(object sender, EventArgs e)
         {
             AdditionalTeachingMaterial a = new AdditionalTeachingMaterial(this);
@@ -343,12 +348,93 @@ namespace oksana_kids
             T03_id_task_name.Text = name;
         }
 
+        private void T03_id_comment_Click(object sender, EventArgs e)
+        {
+            CommentVariantsOnPassigTasksChoose co = new CommentVariantsOnPassigTasksChoose(this);
+            co.Show();
+        }
+
+        public void fillCV(int id)
+        {
+            IDTZ = id;
+        }
+
+        private void updateT03()
+        {
+            var data = from t3 in bd.T03_testing_task_modules
+                       join t8 in bd.T08_audio_video_tracks on t3.id_av_track equals t8.id_av_track
+                       join r11 in bd.R11_variants_of_passing_tasks_results_analysis on t3.code_variant equals r11.code_variant
+                       join r10 in bd.R10_next_action_variants on t3.code_action equals r10.code_action
+                       join r12 in bd.R12_instructions_to_test_tasks_types on t3.code_instruction equals r12.code_instruction
+                       join t4 in bd.T04_testing_tasks on t3.id_task equals t4.id_task
+                       join t7 in bd.T07_soundtracks on t3.id_track equals t7.id_track
+                       join t6 in bd.T06_teaching_materials on t3.additional_teaching_material equals t6.id_teach_material
+                       join t9 in bd.T09_comment_variants_on_passing_tasks on t3.id_comment equals t9.id_comment
+                       join r13 in bd.R13_play_result_variants on t9.code_play_result equals r13.code_play_result
+                       select new
+                       {
+                           id_module = t3.id_module,
+                           name_task = t4.name_task + "(" + t4.id_task + ")",
+                           name_track = t7.name_track,
+                           name_av_track = t8.name_av_track,
+                           name_instruction = r12.name_instruction,
+                           name_variant = r11.name_variant,
+                           name_play_result = r13.name_play_result,
+                           comment_view_duration_sec = t3.comment_view_duration_sec,
+                           max_passing_duration_sec = t3.max_passing_duration_sec,
+                           name_action = r10.name_action,
+                           description = t6.description,
+                           note = t3.note
+                       };
+            T03.DataSource = data.ToList();
+        }
+
+        private void T03addButton_Click(object sender, EventArgs e)
+        {
+            if (T03_id_task_name.Text == "" || T03_comment_view_duration_sec.Text == "" || T03_max_passing_duration_sec.Text == "" || T03_additional_teaching_material.Text == "")
+            {
+                MessageBox.Show("Заполните поля!");
+            }
+            else
+            {
+                var person = new T03_testing_task_modules()
+                {
+                    id_track = int.Parse(T03_id_track.SelectedValue.ToString()),
+                    id_av_track = int.Parse(T03_id_av_track.SelectedValue.ToString()),
+                    code_instruction = int.Parse(T03_code_instruction.SelectedValue.ToString()),
+                    id_task = IDTZ,
+                    code_variant = int.Parse(T03_code_variant.SelectedValue.ToString()),
+                    id_comment = IDCV, // ???
+                    comment_view_duration_sec = int.Parse(T03_comment_view_duration_sec.ToString()),
+                    max_passing_duration_sec = int.Parse(T03_max_passing_duration_sec.ToString()),
+                    code_action = int.Parse(T03_code_action.SelectedValue.ToString()),
+                    note = note.Text == "" ? " " : note.Text,
+                    additional_teaching_material = IDaddTM,
+                };
+                bd.T03_testing_task_modules.Add(person);
+                bd.SaveChanges();
+
+            }
+            T03_id_task_name.Clear();
+            T03_comment_view_duration_sec.Clear();
+            T03_max_passing_duration_sec.Clear();
+            T03_additional_teaching_material.Clear();
+            T03_note.Clear();
+
+            updateT03();
+        }
+
+        private void T03_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            id = int.Parse(T03.CurrentRow.Cells[11].Value.ToString());
+        }
+   
+
+    
+
 
         #endregion
 
-        private void T04_testing_tasks_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
