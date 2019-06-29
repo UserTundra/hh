@@ -201,7 +201,7 @@ namespace oksana_kids
 
         private void T07_file_location_add_Click(object sender, EventArgs e)
         {
-            OPF(T07_file_location, @"test{ 1}.*(.wav | aiff | ape | flac | mp3 | ogg | alac | wma | aac | WAV | AIFF | APE | FLAC | MP3 | OGG | ALAC | WMA | AAC)");
+            OPF(T07_file_location, @"test{ 1}.*(.wav|aiff|ape|flac|mp3|ogg|alac|wma|aac|WAV|AIFF|APE|FLAC|MP3|OGG|ALAC|WMA|AAC)");
         }
 
         private void T07addButton_Click(object sender, EventArgs e)
@@ -340,5 +340,7 @@ namespace oksana_kids
         }
 
         #endregion
+
+      
     }
 }

@@ -78,7 +78,7 @@ namespace oksana_kids.Test
                     this.Controls["pictureBox" + (counter)].BackgroundImage = el.ImageValue;
                 } catch(Exception ee)
                 {
-                    MessageBox.Show("Упс, что то пошло не так!");
+                    MessageBox.Show("Упс, что-то пошло не так!");
                 }
             }
             for (int i = 1; i <= MAX_BLOCKS_SIZE; i++)
@@ -129,6 +129,9 @@ namespace oksana_kids.Test
             this.checkBox2.Click += new System.EventHandler(this.checkBoxClick);
             this.checkBox3.Click += new System.EventHandler(this.checkBoxClick);
             this.checkBox4.Click += new System.EventHandler(this.checkBoxClick);
+            this.checkBox5.Click += new System.EventHandler(this.checkBoxClick);
+            this.checkBox6.Click += new System.EventHandler(this.checkBoxClick);
+
 
         }
 

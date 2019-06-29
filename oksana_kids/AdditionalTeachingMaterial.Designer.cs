@@ -30,20 +30,20 @@
         {
             this.components = new System.ComponentModel.Container();
             this.additionalTM = new System.Windows.Forms.DataGridView();
-            this.nameTM = new System.Windows.Forms.TextBox();
-            this.chooseTeachingMaterial = new System.Windows.Forms.Button();
-            this.bd_kidsDataSet52 = new oksana_kids.bd_kidsDataSet52();
-            this.t06viewteachingmaterialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.t06_view_teaching_materialsTableAdapter = new oksana_kids.bd_kidsDataSet52TableAdapters.T06_view_teaching_materialsTableAdapter();
             this.idteachmaterialDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filelocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t06viewteachingmaterialsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet52 = new oksana_kids.bd_kidsDataSet52();
+            this.nameTM = new System.Windows.Forms.TextBox();
+            this.chooseTeachingMaterial = new System.Windows.Forms.Button();
+            this.t06_view_teaching_materialsTableAdapter = new oksana_kids.bd_kidsDataSet52TableAdapters.T06_view_teaching_materialsTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.additionalTM)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet52)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t06viewteachingmaterialsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet52)).BeginInit();
             this.SuspendLayout();
             // 
             // additionalTM
@@ -65,37 +65,6 @@
             this.additionalTM.Size = new System.Drawing.Size(596, 260);
             this.additionalTM.TabIndex = 0;
             this.additionalTM.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.additionalTM_CellClick);
-            // 
-            // nameTM
-            // 
-            this.nameTM.Enabled = false;
-            this.nameTM.Location = new System.Drawing.Point(12, 278);
-            this.nameTM.Name = "nameTM";
-            this.nameTM.Size = new System.Drawing.Size(367, 20);
-            this.nameTM.TabIndex = 1;
-            // 
-            // chooseTeachingMaterial
-            // 
-            this.chooseTeachingMaterial.Location = new System.Drawing.Point(500, 276);
-            this.chooseTeachingMaterial.Name = "chooseTeachingMaterial";
-            this.chooseTeachingMaterial.Size = new System.Drawing.Size(107, 23);
-            this.chooseTeachingMaterial.TabIndex = 2;
-            this.chooseTeachingMaterial.Text = "Выбрать";
-            this.chooseTeachingMaterial.UseVisualStyleBackColor = true;
-            // 
-            // bd_kidsDataSet52
-            // 
-            this.bd_kidsDataSet52.DataSetName = "bd_kidsDataSet52";
-            this.bd_kidsDataSet52.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t06viewteachingmaterialsBindingSource
-            // 
-            this.t06viewteachingmaterialsBindingSource.DataMember = "T06_view_teaching_materials";
-            this.t06viewteachingmaterialsBindingSource.DataSource = this.bd_kidsDataSet52;
-            // 
-            // t06_view_teaching_materialsTableAdapter
-            // 
-            this.t06_view_teaching_materialsTableAdapter.ClearBeforeFill = true;
             // 
             // idteachmaterialDataGridViewTextBoxColumn
             // 
@@ -135,6 +104,38 @@
             this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
+            // t06viewteachingmaterialsBindingSource
+            // 
+            this.t06viewteachingmaterialsBindingSource.DataMember = "T06_view_teaching_materials";
+            this.t06viewteachingmaterialsBindingSource.DataSource = this.bd_kidsDataSet52;
+            // 
+            // bd_kidsDataSet52
+            // 
+            this.bd_kidsDataSet52.DataSetName = "bd_kidsDataSet52";
+            this.bd_kidsDataSet52.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // nameTM
+            // 
+            this.nameTM.Enabled = false;
+            this.nameTM.Location = new System.Drawing.Point(12, 278);
+            this.nameTM.Name = "nameTM";
+            this.nameTM.Size = new System.Drawing.Size(367, 20);
+            this.nameTM.TabIndex = 1;
+            // 
+            // chooseTeachingMaterial
+            // 
+            this.chooseTeachingMaterial.Location = new System.Drawing.Point(500, 276);
+            this.chooseTeachingMaterial.Name = "chooseTeachingMaterial";
+            this.chooseTeachingMaterial.Size = new System.Drawing.Size(107, 23);
+            this.chooseTeachingMaterial.TabIndex = 2;
+            this.chooseTeachingMaterial.Text = "Выбрать";
+            this.chooseTeachingMaterial.UseVisualStyleBackColor = true;
+            this.chooseTeachingMaterial.Click += new System.EventHandler(this.chooseTeachingMaterial_Click);
+            // 
+            // t06_view_teaching_materialsTableAdapter
+            // 
+            this.t06_view_teaching_materialsTableAdapter.ClearBeforeFill = true;
+            // 
             // AdditionalTeachingMaterial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,8 +149,8 @@
             this.Text = "Дополнительный обучающий материал к тестам";
             this.Load += new System.EventHandler(this.AdditionalTeachingMaterial_Load);
             ((System.ComponentModel.ISupportInitialize)(this.additionalTM)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet52)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t06viewteachingmaterialsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet52)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

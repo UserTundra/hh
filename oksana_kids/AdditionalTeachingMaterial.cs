@@ -12,14 +12,17 @@ namespace oksana_kids
 {
     public partial class AdditionalTeachingMaterial : Form
     {
-        public AdditionalTeachingMaterial()
+        public AdditionalTeachingMaterial(Tests parent)
         {
             InitializeComponent();
+            this.parent = parent;
         }
 
         bd_kidsEntities1 bd = new bd_kidsEntities1();
         private int id;
         private string name;
+
+        private Tests parent;
 
         private void AdditionalTeachingMaterial_Load(object sender, EventArgs e)
         {
@@ -30,9 +33,13 @@ namespace oksana_kids
 
         private void additionalTM_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            id = int.Parse(additionalTM.CurrentRow.Cells[0].Value.ToString());
+
             var data = (from c in bd.T06_teaching_materials
                        where c.id_teach_material == id
-                       select c.description).ToList();
+                       select c.description).FirstOrDefault();
+
+            if (data == null) return;
             
             name = data.ToString();
             nameTM.Clear();
@@ -42,13 +49,18 @@ namespace oksana_kids
 
         public int getID()
         {
-            id = int.Parse(additionalTM.CurrentRow.Cells[0].Value.ToString());
             return id;
         }
 
         public string getName()
         {
             return name;
+        }
+
+        private void chooseTeachingMaterial_Click(object sender, EventArgs e)
+        {
+            parent.fillATM(getID(), getName());
+            this.Close();
         }
     }
 }

@@ -78,12 +78,24 @@
             this.T03_max_passing_duration_sec = new System.Windows.Forms.TextBox();
             this.T03_comment_view_duration_sec = new System.Windows.Forms.TextBox();
             this.T03_id_track = new System.Windows.Forms.ComboBox();
+            this.t07soundtracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet53 = new oksana_kids.bd_kidsDataSet53();
             this.T03_id_av_track = new System.Windows.Forms.ComboBox();
+            this.t08audiovideotracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet54 = new oksana_kids.bd_kidsDataSet54();
             this.T03_code_instruction = new System.Windows.Forms.ComboBox();
+            this.r12instructionstotesttaskstypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet55 = new oksana_kids.bd_kidsDataSet55();
             this.T03_id_task = new System.Windows.Forms.Button();
             this.T03_code_variant = new System.Windows.Forms.ComboBox();
+            this.r11variantsofpassingtasksresultsanalysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet56 = new oksana_kids.bd_kidsDataSet56();
             this.T03_id_comment = new System.Windows.Forms.ComboBox();
+            this.t09commentvariantsonpassingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet57 = new oksana_kids.bd_kidsDataSet57();
             this.T03_code_action = new System.Windows.Forms.ComboBox();
+            this.r10nextactionvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet58 = new oksana_kids.bd_kidsDataSet58();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -147,24 +159,13 @@
             this.t02_view_testsTableAdapter2 = new oksana_kids.bd_kidsDataSetFOR_TESTSTableAdapters.T02_view_testsTableAdapter();
             this.r03_testing_typesTableAdapter = new oksana_kids.bd_kidsDataSet45TableAdapters.R03_testing_typesTableAdapter();
             this.t04_view_testing_tasksTableAdapter1 = new oksana_kids.bd_kidsDataSet46TableAdapters.T04_view_testing_tasksTableAdapter();
-            this.bd_kidsDataSet53 = new oksana_kids.bd_kidsDataSet53();
-            this.t07soundtracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t07_soundtracksTableAdapter = new oksana_kids.bd_kidsDataSet53TableAdapters.T07_soundtracksTableAdapter();
-            this.bd_kidsDataSet54 = new oksana_kids.bd_kidsDataSet54();
-            this.t08audiovideotracksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t08_audio_video_tracksTableAdapter = new oksana_kids.bd_kidsDataSet54TableAdapters.T08_audio_video_tracksTableAdapter();
-            this.bd_kidsDataSet55 = new oksana_kids.bd_kidsDataSet55();
-            this.r12instructionstotesttaskstypesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r12_instructions_to_test_tasks_typesTableAdapter = new oksana_kids.bd_kidsDataSet55TableAdapters.R12_instructions_to_test_tasks_typesTableAdapter();
-            this.bd_kidsDataSet56 = new oksana_kids.bd_kidsDataSet56();
-            this.r11variantsofpassingtasksresultsanalysisBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r11_variants_of_passing_tasks_results_analysisTableAdapter = new oksana_kids.bd_kidsDataSet56TableAdapters.R11_variants_of_passing_tasks_results_analysisTableAdapter();
-            this.bd_kidsDataSet57 = new oksana_kids.bd_kidsDataSet57();
-            this.t09commentvariantsonpassingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t09_comment_variants_on_passing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet57TableAdapters.T09_comment_variants_on_passing_tasksTableAdapter();
-            this.bd_kidsDataSet58 = new oksana_kids.bd_kidsDataSet58();
-            this.r10nextactionvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet58TableAdapters.R10_next_action_variantsTableAdapter();
+            this.T03_id_task_name = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.T02_tests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
@@ -174,6 +175,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetFOR_TESTS)).BeginInit();
             this.T03_testing_task_modules.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.T03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet55)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r11variantsofpassingtasksresultsanalysisBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet56)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t09commentvariantsonpassingtasksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r10nextactionvariantsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet58)).BeginInit();
             this.T04_testing_tasks.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.r03testingtypesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet45)).BeginInit();
@@ -191,18 +204,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet54)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet55)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet56)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r11variantsofpassingtasksresultsanalysisBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t09commentvariantsonpassingtasksBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet58)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r10nextactionvariantsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -542,6 +543,7 @@
             // 
             // T03_testing_task_modules
             // 
+            this.T03_testing_task_modules.Controls.Add(this.T03_id_task_name);
             this.T03_testing_task_modules.Controls.Add(this.T03_additional_teaching_material_add);
             this.T03_testing_task_modules.Controls.Add(this.label26);
             this.T03_testing_task_modules.Controls.Add(this.T03_additional_teaching_material);
@@ -696,6 +698,16 @@
             this.T03_id_track.TabIndex = 29;
             this.T03_id_track.ValueMember = "id_track";
             // 
+            // t07soundtracksBindingSource
+            // 
+            this.t07soundtracksBindingSource.DataMember = "T07_soundtracks";
+            this.t07soundtracksBindingSource.DataSource = this.bd_kidsDataSet53;
+            // 
+            // bd_kidsDataSet53
+            // 
+            this.bd_kidsDataSet53.DataSetName = "bd_kidsDataSet53";
+            this.bd_kidsDataSet53.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // T03_id_av_track
             // 
             this.T03_id_av_track.DataSource = this.t08audiovideotracksBindingSource;
@@ -706,6 +718,16 @@
             this.T03_id_av_track.Size = new System.Drawing.Size(217, 21);
             this.T03_id_av_track.TabIndex = 28;
             this.T03_id_av_track.ValueMember = "id_av_track";
+            // 
+            // t08audiovideotracksBindingSource
+            // 
+            this.t08audiovideotracksBindingSource.DataMember = "T08_audio_video_tracks";
+            this.t08audiovideotracksBindingSource.DataSource = this.bd_kidsDataSet54;
+            // 
+            // bd_kidsDataSet54
+            // 
+            this.bd_kidsDataSet54.DataSetName = "bd_kidsDataSet54";
+            this.bd_kidsDataSet54.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // T03_code_instruction
             // 
@@ -718,14 +740,25 @@
             this.T03_code_instruction.TabIndex = 27;
             this.T03_code_instruction.ValueMember = "code_instruction";
             // 
+            // r12instructionstotesttaskstypesBindingSource
+            // 
+            this.r12instructionstotesttaskstypesBindingSource.DataMember = "R12_instructions_to_test_tasks_types";
+            this.r12instructionstotesttaskstypesBindingSource.DataSource = this.bd_kidsDataSet55;
+            // 
+            // bd_kidsDataSet55
+            // 
+            this.bd_kidsDataSet55.DataSetName = "bd_kidsDataSet55";
+            this.bd_kidsDataSet55.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // T03_id_task
             // 
             this.T03_id_task.Location = new System.Drawing.Point(9, 10);
             this.T03_id_task.Name = "T03_id_task";
-            this.T03_id_task.Size = new System.Drawing.Size(399, 23);
+            this.T03_id_task.Size = new System.Drawing.Size(202, 23);
             this.T03_id_task.TabIndex = 26;
-            this.T03_id_task.Text = "Выбрать тестовое задание для добавление модуля";
+            this.T03_id_task.Text = "Выбрать ТЗ для добавление модуля";
             this.T03_id_task.UseVisualStyleBackColor = true;
+            this.T03_id_task.Click += new System.EventHandler(this.T03_id_task_Click);
             // 
             // T03_code_variant
             // 
@@ -738,6 +771,16 @@
             this.T03_code_variant.TabIndex = 25;
             this.T03_code_variant.ValueMember = "code_variant";
             // 
+            // r11variantsofpassingtasksresultsanalysisBindingSource
+            // 
+            this.r11variantsofpassingtasksresultsanalysisBindingSource.DataMember = "R11_variants_of_passing_tasks_results_analysis";
+            this.r11variantsofpassingtasksresultsanalysisBindingSource.DataSource = this.bd_kidsDataSet56;
+            // 
+            // bd_kidsDataSet56
+            // 
+            this.bd_kidsDataSet56.DataSetName = "bd_kidsDataSet56";
+            this.bd_kidsDataSet56.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // T03_id_comment
             // 
             this.T03_id_comment.DataSource = this.t09commentvariantsonpassingtasksBindingSource;
@@ -747,6 +790,16 @@
             this.T03_id_comment.Name = "T03_id_comment";
             this.T03_id_comment.Size = new System.Drawing.Size(188, 21);
             this.T03_id_comment.TabIndex = 24;
+            // 
+            // t09commentvariantsonpassingtasksBindingSource
+            // 
+            this.t09commentvariantsonpassingtasksBindingSource.DataMember = "T09_comment_variants_on_passing_tasks";
+            this.t09commentvariantsonpassingtasksBindingSource.DataSource = this.bd_kidsDataSet57;
+            // 
+            // bd_kidsDataSet57
+            // 
+            this.bd_kidsDataSet57.DataSetName = "bd_kidsDataSet57";
+            this.bd_kidsDataSet57.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // T03_code_action
             // 
@@ -758,6 +811,16 @@
             this.T03_code_action.Size = new System.Drawing.Size(169, 21);
             this.T03_code_action.TabIndex = 23;
             this.T03_code_action.ValueMember = "code_action";
+            // 
+            // r10nextactionvariantsBindingSource
+            // 
+            this.r10nextactionvariantsBindingSource.DataMember = "R10_next_action_variants";
+            this.r10nextactionvariantsBindingSource.DataSource = this.bd_kidsDataSet58;
+            // 
+            // bd_kidsDataSet58
+            // 
+            this.bd_kidsDataSet58.DataSetName = "bd_kidsDataSet58";
+            this.bd_kidsDataSet58.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label23
             // 
@@ -1262,89 +1325,37 @@
             // 
             this.t04_view_testing_tasksTableAdapter1.ClearBeforeFill = true;
             // 
-            // bd_kidsDataSet53
-            // 
-            this.bd_kidsDataSet53.DataSetName = "bd_kidsDataSet53";
-            this.bd_kidsDataSet53.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t07soundtracksBindingSource
-            // 
-            this.t07soundtracksBindingSource.DataMember = "T07_soundtracks";
-            this.t07soundtracksBindingSource.DataSource = this.bd_kidsDataSet53;
-            // 
             // t07_soundtracksTableAdapter
             // 
             this.t07_soundtracksTableAdapter.ClearBeforeFill = true;
-            // 
-            // bd_kidsDataSet54
-            // 
-            this.bd_kidsDataSet54.DataSetName = "bd_kidsDataSet54";
-            this.bd_kidsDataSet54.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t08audiovideotracksBindingSource
-            // 
-            this.t08audiovideotracksBindingSource.DataMember = "T08_audio_video_tracks";
-            this.t08audiovideotracksBindingSource.DataSource = this.bd_kidsDataSet54;
             // 
             // t08_audio_video_tracksTableAdapter
             // 
             this.t08_audio_video_tracksTableAdapter.ClearBeforeFill = true;
             // 
-            // bd_kidsDataSet55
-            // 
-            this.bd_kidsDataSet55.DataSetName = "bd_kidsDataSet55";
-            this.bd_kidsDataSet55.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r12instructionstotesttaskstypesBindingSource
-            // 
-            this.r12instructionstotesttaskstypesBindingSource.DataMember = "R12_instructions_to_test_tasks_types";
-            this.r12instructionstotesttaskstypesBindingSource.DataSource = this.bd_kidsDataSet55;
-            // 
             // r12_instructions_to_test_tasks_typesTableAdapter
             // 
             this.r12_instructions_to_test_tasks_typesTableAdapter.ClearBeforeFill = true;
-            // 
-            // bd_kidsDataSet56
-            // 
-            this.bd_kidsDataSet56.DataSetName = "bd_kidsDataSet56";
-            this.bd_kidsDataSet56.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r11variantsofpassingtasksresultsanalysisBindingSource
-            // 
-            this.r11variantsofpassingtasksresultsanalysisBindingSource.DataMember = "R11_variants_of_passing_tasks_results_analysis";
-            this.r11variantsofpassingtasksresultsanalysisBindingSource.DataSource = this.bd_kidsDataSet56;
             // 
             // r11_variants_of_passing_tasks_results_analysisTableAdapter
             // 
             this.r11_variants_of_passing_tasks_results_analysisTableAdapter.ClearBeforeFill = true;
             // 
-            // bd_kidsDataSet57
-            // 
-            this.bd_kidsDataSet57.DataSetName = "bd_kidsDataSet57";
-            this.bd_kidsDataSet57.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t09commentvariantsonpassingtasksBindingSource
-            // 
-            this.t09commentvariantsonpassingtasksBindingSource.DataMember = "T09_comment_variants_on_passing_tasks";
-            this.t09commentvariantsonpassingtasksBindingSource.DataSource = this.bd_kidsDataSet57;
-            // 
             // t09_comment_variants_on_passing_tasksTableAdapter
             // 
             this.t09_comment_variants_on_passing_tasksTableAdapter.ClearBeforeFill = true;
             // 
-            // bd_kidsDataSet58
-            // 
-            this.bd_kidsDataSet58.DataSetName = "bd_kidsDataSet58";
-            this.bd_kidsDataSet58.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // r10nextactionvariantsBindingSource
-            // 
-            this.r10nextactionvariantsBindingSource.DataMember = "R10_next_action_variants";
-            this.r10nextactionvariantsBindingSource.DataSource = this.bd_kidsDataSet58;
-            // 
             // r10_next_action_variantsTableAdapter
             // 
             this.r10_next_action_variantsTableAdapter.ClearBeforeFill = true;
+            // 
+            // T03_id_task_name
+            // 
+            this.T03_id_task_name.Enabled = false;
+            this.T03_id_task_name.Location = new System.Drawing.Point(220, 12);
+            this.T03_id_task_name.Name = "T03_id_task_name";
+            this.T03_id_task_name.Size = new System.Drawing.Size(188, 20);
+            this.T03_id_task_name.TabIndex = 48;
             // 
             // Tests
             // 
@@ -1367,6 +1378,18 @@
             this.T03_testing_task_modules.ResumeLayout(false);
             this.T03_testing_task_modules.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.T03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet55)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r11variantsofpassingtasksresultsanalysisBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet56)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t09commentvariantsonpassingtasksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.r10nextactionvariantsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet58)).EndInit();
             this.T04_testing_tasks.ResumeLayout(false);
             this.T04_testing_tasks.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.r03testingtypesBindingSource)).EndInit();
@@ -1385,18 +1408,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet54)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet55)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r12instructionstotesttaskstypesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet56)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r11variantsofpassingtasksresultsanalysisBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t09commentvariantsonpassingtasksBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet58)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.r10nextactionvariantsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1539,5 +1550,6 @@
         private bd_kidsDataSet58 bd_kidsDataSet58;
         private System.Windows.Forms.BindingSource r10nextactionvariantsBindingSource;
         private bd_kidsDataSet58TableAdapters.R10_next_action_variantsTableAdapter r10_next_action_variantsTableAdapter;
+        private System.Windows.Forms.TextBox T03_id_task_name;
     }
 }

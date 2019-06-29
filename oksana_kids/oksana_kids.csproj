@@ -405,6 +405,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet58.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet59.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet59.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_kidsDataSet6.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -454,6 +459,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet_TESTING_TASKS.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ChooseTZForModulesTZ.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChooseTZForModulesTZ.Designer.cs">
+      <DependentUpon>ChooseTZForModulesTZ.cs</DependentUpon>
     </Compile>
     <Compile Include="FileParser.cs" />
     <Compile Include="AuthorisationForm.cs">
@@ -703,6 +714,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AuthorisationForm.resx">
       <DependentUpon>AuthorisationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChooseTZForModulesTZ.resx">
+      <DependentUpon>ChooseTZForModulesTZ.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Files.resx">
       <DependentUpon>Files.cs</DependentUpon>
@@ -1392,6 +1406,17 @@
     </None>
     <None Include="bd_kidsDataSet58.xss">
       <DependentUpon>bd_kidsDataSet58.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet59.xsc">
+      <DependentUpon>bd_kidsDataSet59.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet59.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet59.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet59.xss">
+      <DependentUpon>bd_kidsDataSet59.xsd</DependentUpon>
     </None>
     <None Include="bd_kidsDataSet6.xsc">
       <DependentUpon>bd_kidsDataSet6.xsd</DependentUpon>

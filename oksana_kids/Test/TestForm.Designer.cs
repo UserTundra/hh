@@ -65,20 +65,21 @@
             // labelQuestionBody
             // 
             this.labelQuestionBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelQuestionBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelQuestionBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelQuestionBody.Location = new System.Drawing.Point(94, 47);
             this.labelQuestionBody.Name = "labelQuestionBody";
-            this.labelQuestionBody.Size = new System.Drawing.Size(296, 71);
+            this.labelQuestionBody.Size = new System.Drawing.Size(340, 71);
             this.labelQuestionBody.TabIndex = 0;
             this.labelQuestionBody.Text = "labelQuestionBody";
+            this.labelQuestionBody.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelQuestionTitle
             // 
             this.labelQuestionTitle.AutoSize = true;
-            this.labelQuestionTitle.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelQuestionTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.labelQuestionTitle.Location = new System.Drawing.Point(94, 11);
             this.labelQuestionTitle.Name = "labelQuestionTitle";
-            this.labelQuestionTitle.Size = new System.Drawing.Size(150, 21);
+            this.labelQuestionTitle.Size = new System.Drawing.Size(196, 27);
             this.labelQuestionTitle.TabIndex = 1;
             this.labelQuestionTitle.Text = "LabelQuestionTitle";
             // 
@@ -109,7 +110,7 @@
             // 
             this.checkBox3.AutoSize = true;
             this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox3.Location = new System.Drawing.Point(278, 140);
+            this.checkBox3.Location = new System.Drawing.Point(296, 140);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(115, 24);
             this.checkBox3.TabIndex = 4;
@@ -120,7 +121,7 @@
             // 
             this.checkBox4.AutoSize = true;
             this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox4.Location = new System.Drawing.Point(278, 276);
+            this.checkBox4.Location = new System.Drawing.Point(296, 276);
             this.checkBox4.Name = "checkBox4";
             this.checkBox4.Size = new System.Drawing.Size(115, 24);
             this.checkBox4.TabIndex = 5;
@@ -129,10 +130,10 @@
             // 
             // buttonNext
             // 
-            this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNext.Location = new System.Drawing.Point(408, 47);
+            this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.buttonNext.Location = new System.Drawing.Point(440, 47);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(172, 52);
+            this.buttonNext.Size = new System.Drawing.Size(244, 69);
             this.buttonNext.TabIndex = 6;
             this.buttonNext.Text = "buttonNext";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -159,7 +160,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(278, 165);
+            this.pictureBox3.Location = new System.Drawing.Point(296, 165);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(112, 97);
             this.pictureBox3.TabIndex = 9;
@@ -168,7 +169,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(278, 301);
+            this.pictureBox4.Location = new System.Drawing.Point(296, 301);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(112, 97);
             this.pictureBox4.TabIndex = 10;
@@ -177,7 +178,7 @@
             // pictureBoxQuestion1
             // 
             this.pictureBoxQuestion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxQuestion1.Location = new System.Drawing.Point(408, 122);
+            this.pictureBoxQuestion1.Location = new System.Drawing.Point(440, 122);
             this.pictureBoxQuestion1.Name = "pictureBoxQuestion1";
             this.pictureBoxQuestion1.Size = new System.Drawing.Size(341, 314);
             this.pictureBoxQuestion1.TabIndex = 19;
@@ -225,7 +226,7 @@
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(281, 420);
+            this.checkBox7.Location = new System.Drawing.Point(299, 420);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(80, 17);
             this.checkBox7.TabIndex = 15;
@@ -235,7 +236,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(281, 443);
+            this.pictureBox7.Location = new System.Drawing.Point(299, 443);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(109, 97);
             this.pictureBox7.TabIndex = 16;
@@ -244,7 +245,7 @@
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(281, 556);
+            this.checkBox8.Location = new System.Drawing.Point(299, 556);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(80, 17);
             this.checkBox8.TabIndex = 17;
@@ -254,7 +255,7 @@
             // pictureBox8
             // 
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(281, 579);
+            this.pictureBox8.Location = new System.Drawing.Point(299, 579);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(109, 97);
             this.pictureBox8.TabIndex = 18;
@@ -263,10 +264,11 @@
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
-            this.timeLabel.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.timeLabel.Location = new System.Drawing.Point(413, 11);
+            this.timeLabel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.timeLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.timeLabel.Location = new System.Drawing.Point(445, 11);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(167, 21);
+            this.timeLabel.Size = new System.Drawing.Size(255, 31);
             this.timeLabel.TabIndex = 20;
             this.timeLabel.Text = "Осталось времени: ";
             // 

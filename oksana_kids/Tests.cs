@@ -314,15 +314,33 @@ namespace oksana_kids
 
         #region T03
 
-        private int addTM;
-        
+        private int IDaddTM;
+        private int IDTZ;      
 
         private void T03_additional_teaching_material_add_Click(object sender, EventArgs e)
         {
-            AdditionalTeachingMaterial a = new AdditionalTeachingMaterial();
+            AdditionalTeachingMaterial a = new AdditionalTeachingMaterial(this);
             a.Show();
-            addTM = a.getID();
-            T03_additional_teaching_material.Text = a.getName();
+        }
+
+        public void fillATM(int id, string name)
+        {
+            IDaddTM = id;
+            T03_additional_teaching_material.Clear();
+            T03_additional_teaching_material.Text = name;
+        }
+
+        private void T03_id_task_Click(object sender, EventArgs e)
+        {
+            ChooseTZForModulesTZ c = new ChooseTZForModulesTZ(this);
+            c.Show();
+        }
+
+        public void fillTZ(int id, string name)
+        {
+            IDTZ = id;
+            T03_id_task_name.Clear();
+            T03_id_task_name.Text = name;
         }
 
         #endregion
