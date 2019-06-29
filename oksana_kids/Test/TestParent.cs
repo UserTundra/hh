@@ -19,6 +19,8 @@ namespace oksana_kids.Test
 
         private TestFormsArgument Condition;
 
+        public bd_kidsEntities1 bd = new bd_kidsEntities1();
+
         public TestParent(TestFormsArgument cond, int time = 999999)
         {
             this.time = time;
@@ -43,6 +45,8 @@ namespace oksana_kids.Test
 
 
         }
+
+        public int testnumber = 1;
         public void ShowNext()
         {
             this.Condition.GetNextTest();

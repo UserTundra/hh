@@ -343,8 +343,12 @@ namespace oksana_kids
             T03_id_task_name.Text = name;
         }
 
+
         #endregion
 
+        private void T04_testing_tasks_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace oksana_kids
         {
             selectedTest.Text = name;
             
+            
         }
 
         private void change_answer_numbers_TextChanged(object sender, EventArgs e)

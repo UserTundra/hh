@@ -15,6 +15,7 @@ namespace oksana_kids.Test
         public const string FINISH_STRING = "Закончить тестирование";
         public const string NEXT_TASK_STRING = "Следующий вопрос";
         public const int MAX_BLOCKS_SIZE = 8;
+        public int currentTestNumber = 1;
 
         public PupilSelectionWindow callback;
         TestParent parent;
@@ -59,11 +60,11 @@ namespace oksana_kids.Test
             InitializeComponent();
         }
 
-        public TestForm2(List<SimplyTest> tests, PupilSelectionWindow callback, TestParent parent, int time = 999999)
+        public TestForm2(List<SimplyTest> tests, PupilSelectionWindow callback, TestParent parent, int time = 999999, int currentTestNumber = 1)
         {
             this.callback = callback;
             this.parent = parent;
-            
+            this.currentTestNumber = currentTestNumber;
             
             InitializeComponent();
             this.ElapsedTime = this.parent.time;
@@ -165,9 +166,9 @@ namespace oksana_kids.Test
             this.pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
 
 
-            labelQuestionTitle.Text = "Вопрос Номер: " + (this.currentTestIndex + 1);
+            labelQuestionTitle.Text = "Вопрос Номер: " + this.currentTestNumber.ToString();
+            currentTestNumber++;
 
-            
 
             int counter = 0;
             foreach (var el in test.Variables)

@@ -141,8 +141,10 @@ namespace oksana_kids.Test
                 this.RightAnswersCount++;
             else
             {
-                if(this._selectedCheckBox.Visible)
+                if (this._selectedCheckBox.Visible) { 
                     SummaryFailCount++;
+                    //callback.bd.
+                }
                 _selectedCheckBox.Visible = false;
                 _selectedPicture.Visible = false;
                 if(SummaryFailCount <= MAX_FAILS)
@@ -156,6 +158,7 @@ namespace oksana_kids.Test
                 //MessageBox.Show("Первая часть тестирования окончена\n\rВерных ответов: "+this.RightAnswersCount);
                 this.callback.SummaryRightAnswers += this.RightAnswersCount;
                 this.Hide();
+                this.callback.testnumber = this.currentTestIndex + 1;
                 this.callback.ShowNext();
             }
             

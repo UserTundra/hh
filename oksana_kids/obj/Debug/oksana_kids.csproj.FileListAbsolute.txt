@@ -331,3 +331,6 @@ C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.TestTasksT
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.AdditionalTeachingMaterial.resources
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.ChooseTZForModulesTZ.resources
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.csprojAssemblyReference.cache
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AdditionalTeachingMaterial.resources
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.ChooseTZForModulesTZ.resources

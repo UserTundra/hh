@@ -14,6 +14,8 @@ namespace oksana_kids
     {
         public string name = "";
 
+        bd_kidsEntities1 bd = new bd_kidsEntities1();
+
         public AdaptiveTTConstructor(string taskName)
         {
             name = taskName;

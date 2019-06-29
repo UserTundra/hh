@@ -65,6 +65,7 @@
             this.t02viewtestsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSetFOR_TESTS = new oksana_kids.bd_kidsDataSetFOR_TESTS();
             this.T03_testing_task_modules = new System.Windows.Forms.TabPage();
+            this.T03_id_task_name = new System.Windows.Forms.TextBox();
             this.T03_additional_teaching_material_add = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.T03_additional_teaching_material = new System.Windows.Forms.TextBox();
@@ -165,7 +166,6 @@
             this.r11_variants_of_passing_tasks_results_analysisTableAdapter = new oksana_kids.bd_kidsDataSet56TableAdapters.R11_variants_of_passing_tasks_results_analysisTableAdapter();
             this.t09_comment_variants_on_passing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet57TableAdapters.T09_comment_variants_on_passing_tasksTableAdapter();
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet58TableAdapters.R10_next_action_variantsTableAdapter();
-            this.T03_id_task_name = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.T02_tests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
@@ -580,6 +580,14 @@
             this.T03_testing_task_modules.Text = "Модули спецификации использования тз";
             this.T03_testing_task_modules.UseVisualStyleBackColor = true;
             // 
+            // T03_id_task_name
+            // 
+            this.T03_id_task_name.Enabled = false;
+            this.T03_id_task_name.Location = new System.Drawing.Point(220, 12);
+            this.T03_id_task_name.Name = "T03_id_task_name";
+            this.T03_id_task_name.Size = new System.Drawing.Size(188, 20);
+            this.T03_id_task_name.TabIndex = 48;
+            // 
             // T03_additional_teaching_material_add
             // 
             this.T03_additional_teaching_material_add.Location = new System.Drawing.Point(121, 315);
@@ -941,6 +949,7 @@
             this.T04_testing_tasks.TabIndex = 2;
             this.T04_testing_tasks.Text = "Тестовые задания";
             this.T04_testing_tasks.UseVisualStyleBackColor = true;
+            this.T04_testing_tasks.Click += new System.EventHandler(this.T04_testing_tasks_Click);
             // 
             // T04_show_file_location
             // 
@@ -1348,14 +1357,6 @@
             // r10_next_action_variantsTableAdapter
             // 
             this.r10_next_action_variantsTableAdapter.ClearBeforeFill = true;
-            // 
-            // T03_id_task_name
-            // 
-            this.T03_id_task_name.Enabled = false;
-            this.T03_id_task_name.Location = new System.Drawing.Point(220, 12);
-            this.T03_id_task_name.Name = "T03_id_task_name";
-            this.T03_id_task_name.Size = new System.Drawing.Size(188, 20);
-            this.T03_id_task_name.TabIndex = 48;
             // 
             // Tests
             // 
