@@ -126,9 +126,13 @@ namespace oksana_kids.Test
                 MessageBox.Show("не удается сохранить результаты теста");
             }
             this.Condition.Callback.Show();
-            this.Close();
+            this.Hide();
             
         }
-        
+
+        private void TestParent_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.preClose();
+        }
     }
 }

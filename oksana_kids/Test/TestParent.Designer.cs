@@ -35,10 +35,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(984, 749);
+            this.ClientSize = new System.Drawing.Size(984, 741);
             this.IsMdiContainer = true;
             this.Name = "TestParent";
             this.Text = "TestParent";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestParent_FormClosing);
             this.Load += new System.EventHandler(this.TestParent_Load);
             this.ResumeLayout(false);
 

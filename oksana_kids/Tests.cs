@@ -15,9 +15,11 @@ namespace oksana_kids
     {
         public int tabIndex;
         public string testName = "";
+
         public string taskName = "";
 
         public int testID;
+        
 
         List<string> fio = new List<string>();
         Dictionary<int, string> fio_dict = new Dictionary<int, string>();
@@ -197,9 +199,27 @@ namespace oksana_kids
             updateT02();
         }
 
+        private void B05testing_task_modules_to_tests_Click(object sender, EventArgs e)
+        {
+            TestingTasksModulesToTestsBind t = new TestingTasksModulesToTestsBind();
+            t.Show();
+        }
+
+        private void B01testing_aims_to_tests_Click(object sender, EventArgs e)
+        {
+            TestingAimsToTestsBind ta = new TestingAimsToTestsBind();
+            ta.Show();
+        }
+
         #endregion
 
         #region T04
+
+        private void T11_test_answers_add_Click(object sender, EventArgs e)
+        {
+            AddAnswersToTasks a = new AddAnswersToTasks(taskID, taskName);
+            a.Show();
+        }
 
         private void TT_constructor_button_Click(object sender, EventArgs e)
         {
@@ -207,9 +227,13 @@ namespace oksana_kids
             tt.Show();
         }
 
+        public int taskID;
+        
+
         private void T04_Click(object sender, EventArgs e)
         {
             id = int.Parse(T04.CurrentRow.Cells[7].Value.ToString());
+            taskID = int.Parse(T04.CurrentRow.Cells[7].Value.ToString());
 
             var linq = from i in bd.T04_testing_tasks
                        where i.id_task == id
@@ -457,9 +481,8 @@ namespace oksana_kids
         }
 
 
-
         #endregion
 
-
+      
     }
 }

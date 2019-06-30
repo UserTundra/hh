@@ -336,6 +336,18 @@
     <Property Name="group_no" Type="integer" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.B01_view_testing_aims_to_tests" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="B01_view_testing_aims_to_tests">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_test" Type="integer" />
+    <Property Name="name_aim" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="is_main_aim" Type="integer" />
+    <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
 предупреждение 6002: В таблице или представлении "main.B02_bind_view" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
   <EntityType Name="B02_bind_view">
     <Key>
@@ -370,6 +382,18 @@
     <Property Name="code_subject" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name_task" Type="nvarchar" MaxLength="2147483647" />
     <Property Name="equvivalent_perc" Type="integer" />
+    <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
+  </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "main.B05_view_tt_modules_to_tests" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="B05_view_tt_modules_to_tests">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="integer" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="id_test" Type="integer" />
+    <Property Name="name_task" Type="nvarchar" MaxLength="2147483647" />
+    <Property Name="serial_number_module" Type="integer" />
     <Property Name="note" Type="nvarchar" MaxLength="2147483647" />
   </EntityType>
   <!--Ошибки, обнаруженные при создании:
@@ -996,6 +1020,15 @@
     <EntitySet Name="T09_comment_variants_on_passing_tasks" EntityType="Self.T09_comment_variants_on_passing_tasks" store:Type="Tables" />
     <EntitySet Name="T10_organizations" EntityType="Self.T10_organizations" store:Type="Tables" />
     <EntitySet Name="T11_test_answers" EntityType="Self.T11_test_answers" store:Type="Tables" />
+    <EntitySet Name="B01_view_testing_aims_to_tests" EntityType="Self.B01_view_testing_aims_to_tests" store:Type="Views">
+      <DefiningQuery>SELECT 
+[B01_view_testing_aims_to_tests].[id] AS [id], 
+[B01_view_testing_aims_to_tests].[id_test] AS [id_test], 
+[B01_view_testing_aims_to_tests].[name_aim] AS [name_aim], 
+[B01_view_testing_aims_to_tests].[is_main_aim] AS [is_main_aim], 
+[B01_view_testing_aims_to_tests].[note] AS [note]
+FROM [B01_view_testing_aims_to_tests] AS [B01_view_testing_aims_to_tests]</DefiningQuery>
+    </EntitySet>
     <EntitySet Name="B02_bind_view" EntityType="Self.B02_bind_view" store:Type="Views">
       <DefiningQuery>SELECT 
 [B02_bind_view].[id] AS [id], 
@@ -1021,6 +1054,15 @@ FROM [B03_bind_view] AS [B03_bind_view]</DefiningQuery>
 [B04_bind_view].[equvivalent_perc] AS [equvivalent_perc], 
 [B04_bind_view].[note] AS [note]
 FROM [B04_bind_view] AS [B04_bind_view]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="B05_view_tt_modules_to_tests" EntityType="Self.B05_view_tt_modules_to_tests" store:Type="Views">
+      <DefiningQuery>SELECT 
+[B05_view_tt_modules_to_tests].[id] AS [id], 
+[B05_view_tt_modules_to_tests].[id_test] AS [id_test], 
+[B05_view_tt_modules_to_tests].[name_task] AS [name_task], 
+[B05_view_tt_modules_to_tests].[serial_number_module] AS [serial_number_module], 
+[B05_view_tt_modules_to_tests].[note] AS [note]
+FROM [B05_view_tt_modules_to_tests] AS [B05_view_tt_modules_to_tests]</DefiningQuery>
     </EntitySet>
     <EntitySet Name="T01_1_pupils" EntityType="Self.T01_1_pupils" store:Type="Views">
       <DefiningQuery>SELECT 

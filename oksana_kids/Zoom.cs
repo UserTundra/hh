@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,7 @@ namespace oksana_kids
         public Zoom(string text, Func<int> callback = null)
         {
             t = text;
+            
             this.callback = callback;
             InitializeComponent();
         }
@@ -25,6 +27,7 @@ namespace oksana_kids
         private void Zoom_Load(object sender, EventArgs e)
         {
             zoomText.Text = t;
+            timer1.Enabled = true;
         }
 
         private void changeTextSize()
@@ -43,5 +46,12 @@ namespace oksana_kids
             if(this.callback != null)
                 this.callback.Invoke();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        
     }
 }

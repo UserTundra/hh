@@ -18,9 +18,37 @@ namespace oksana_kids
     {
         bd_kidsEntities1 bd = new bd_kidsEntities1();
         public string currentTest;
-        
 
-        
+        Dictionary<int, string> speakCount = new Dictionary<int, string>();
+
+        private void fillDictionary()
+        {
+            speakCount.Add(1, "первый");
+            speakCount.Add(2, "второй");
+            speakCount.Add(3, "третий");
+            speakCount.Add(4, "четвертый");
+            speakCount.Add(5, "пятый");
+            speakCount.Add(6, "шестой");
+            speakCount.Add(7, "седьмой");
+            speakCount.Add(8, "восьмой");
+            speakCount.Add(9, "девятый");
+            speakCount.Add(10, "десятый");
+            speakCount.Add(11, "одиннадцатый");
+            speakCount.Add(12, "двенадцатый");
+            speakCount.Add(13, "тринадцатый");
+            speakCount.Add(14, "четырнадцатый");
+            speakCount.Add(15, "пятнадцатый");
+            speakCount.Add(16, "шестнадцатый");
+            speakCount.Add(17, "семнадцатый");
+            speakCount.Add(18, "восемнадцатый");
+            speakCount.Add(19, "девятнадцатый");
+            speakCount.Add(20, "двадцатый");
+            speakCount.Add(21, "двадцать первый");
+            speakCount.Add(22, "двадцать второй");
+            speakCount.Add(23, "двадцать третий");
+            speakCount.Add(24, "двадцать четвертый");
+        }
+
         public PupilSelectionWindow()
         {
             InitializeComponent();
@@ -40,7 +68,7 @@ namespace oksana_kids
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            fillDictionary();
         }
 
         public void setTestId()
@@ -83,11 +111,22 @@ namespace oksana_kids
                 foreach (var item in linq)
                 {
                     duration.Text = item.duration.ToString();
-                    //setSpeech(item.duration.ToString());
-                    countTZ.Text = item.count.ToString();
-                    //setSpeech(item.count.ToString());
+                    //countTZ.Text = item.count.ToString();
                     methodMaterial.Text = item.material.ToString();
-                    //setSpeech(item.material.ToString());
+                }
+
+                var linq2 = (from a in bd.B05_testing_task_modules_to_tests
+                             where a.id_test == test_id
+                             group a by a.id_test into g
+                             select new
+                             {
+                                 count = g.Count()
+                             }).ToList();
+
+                foreach (var item in linq2)
+                {
+                    countTZ.Text = item.count.ToString();
+
                 }
             }
             catch (Exception e)
@@ -98,10 +137,8 @@ namespace oksana_kids
 
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
-            setSpeech("Хочешь завершить работу");
             if (e.CloseReason == CloseReason.UserClosing)
             {
-
                 e.Cancel = true;
                 AskToLeaveForm a = new AskToLeaveForm();
                 a.Show();
@@ -165,6 +202,7 @@ namespace oksana_kids
             //               listTaskID = 
             //           }
         }
+
         public string wrongAnswerImagePath = "";
         public static long TestID;
         public static string dateBegin;
@@ -178,7 +216,7 @@ namespace oksana_kids
             PupilSelectionWindow.dateBegin = DateTime.Today.ToShortDateString();
             PupilSelectionWindow.timeBegin = DateTime.Now.ToShortTimeString();
 
-            TestID = selectedTaskIdx;
+            TestID = selectedTaskIdx+1;
             List<List<SimplyTest>> lstTest = null;
             if(selectedTaskIdx == 17)
             {
@@ -192,9 +230,11 @@ namespace oksana_kids
                 lstTest = getFirstTest();
             }
             setSpeech("Начать тестирование");
+
+            int testID = (int)getTestID();
             //var attempts = new FileParser().IMages((int)this.getTestID());
             this.Hide();
-            setSpeech("Тест первый");
+            setSpeech("Тест " + speakCount[testID]);
             
 
             //var imageSwapper = new TestForm2(simplyQuestion, this);
@@ -281,27 +321,7 @@ namespace oksana_kids
 
             return description;
         }
-
         
-            //    if (e.Button == MouseButtons.Right)
-            //    {
-            //        TextBox textBox = sender as TextBox;
-            //        ContextMenuStrip menu = textBox.ContextMenuStrip;
-            //        if (menu == null)
-            //        {
-            //            menu = textBox.ContextMenuStrip = new ContextMenuStrip();
-            //            menu.Items.Add(textBox.SelectedText);
-            //        }
-            //        else
-            //        {
-            //            menu.Items[0].Text = textBox.SelectedText;
-            //        }
-            //        menu.Show(textBox, e.Location);
-            //    }
-
-            
-        
-
         private void label4_Click(object sender, EventArgs e)
         {
             if (duration.Text != "")
@@ -317,17 +337,7 @@ namespace oksana_kids
                 Clipboard.SetText(label4.Text, TextDataFormat.UnicodeText);
             }
         }
-
-        //private void text()
-        //{
-        //    string s = testList.SelectedItem.ToString();
-        //    duration.SelectionStart = 0;
-        //    duration.SelectionLength = duration.TextLength;
-        //    string s1 = duration.SelectedText.ToString();
-
-        //    MessageBox.Show(s1);
-        //}
-
+        
         private void zoomButton_Click(object sender, EventArgs e)
         {
             setSpeech("Экранная лупа");
@@ -435,16 +445,7 @@ namespace oksana_kids
                 Clipboard.SetText(s, TextDataFormat.UnicodeText);
             }
         }
-
-        private void countTZ_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void testList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
 
 
@@ -494,6 +495,11 @@ namespace oksana_kids
                         {
                             StringValue="4",
                             ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\4.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="5",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\5.png"))
                         }
                     },
                     RightIdx=3 // индекс правильного ответа
@@ -528,6 +534,11 @@ namespace oksana_kids
                         {
                             StringValue="4",
                             ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\4.png"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="5",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\5.jpg"))
                         }
                     },
                     RightIdx=2
@@ -701,6 +712,11 @@ namespace oksana_kids
                         {
                             StringValue="4",
                             ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\1\4.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="5",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\1\5.png"))
                         }
                     },
                     RightIdx=4 // индекс правильного ответа
@@ -711,7 +727,7 @@ namespace oksana_kids
                     TestType = "OneWrong",
                     Question = new RenderObject()
                     {
-                        StringValue = "Сколько на рисунке труегольников?", // вот тут текст вопросa
+                        StringValue = "Сколько на рисунке треугольников?", // вот тут текст вопросa
                         ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\2\2.jpg")) // картинка вопроса
 
                     },
@@ -790,7 +806,7 @@ namespace oksana_kids
                     TestType = "Juxtaposition",
                 Question = new RenderObject()
                 {
-                    StringValue = "раздели предметы на квадратные и треугольные"
+                    StringValue = "Раздели предметы на квадратные и треугольные"
                 },
                 Questions = new List<RenderObject>()
                 {
@@ -846,7 +862,7 @@ namespace oksana_kids
                     TestType = "Juxtaposition",
                 Question = new RenderObject()
                 {
-                    StringValue = "раздели предметы на овальные и не овальные"
+                    StringValue = "Раздели предметы на овальные и не овальные"
                 },
                 Questions = new List<RenderObject>()
                 {
@@ -915,7 +931,7 @@ namespace oksana_kids
                     TestType = "OneWrong",
                     Question = new RenderObject()
                     {
-                        StringValue = "расшифруй слово, отметь соответсвующий рисунок", // вот тут текст вопросa
+                        StringValue = "Расшифруй слово, отметь соответсвующий рисунок", // вот тут текст вопросa
                         ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\1\0.jpg")) // ккатринка ответа
 
                     },
@@ -946,7 +962,7 @@ namespace oksana_kids
                     TestType = "OneWrong",
                     Question = new RenderObject()
                     {
-                        StringValue = "расшифруй слово, отметь правильную запись", // вот тут текст вопросa
+                        StringValue = "Расшифруй слово, отметь правильную запись", // вот тут текст вопросa
                         ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\2\1.jpg")) // ккатринка ответа
 
                     },
@@ -977,7 +993,7 @@ namespace oksana_kids
                     TestType = "OneWrong",
                     Question = new RenderObject()
                     {
-                        StringValue = "расшифруй слово, отметь соответсвующий рисунок", // вот тут текст вопросa
+                        StringValue = "Расшифруй слово, отметь соответсвующий рисунок", // вот тут текст вопросa
                         ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\3\0.jpg")) // ккатринка ответа
 
                     },
@@ -1008,7 +1024,7 @@ namespace oksana_kids
                     TestType = "OneWrong",
                     Question = new RenderObject()
                     {
-                        StringValue = "расшифруй слово, отметь правильную запись", // вот тут текст вопросa
+                        StringValue = "Расшифруй слово, отметь правильную запись", // вот тут текст вопросa
                         ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\4\1.jpg")) // ккатринка ответа
 
                     },
@@ -1039,7 +1055,7 @@ namespace oksana_kids
                     TestType = "OneWrong",
                     Question = new RenderObject()
                     {
-                        StringValue = "расшифруй слово, отметь правильную запись", // вот тут текст вопросa
+                        StringValue = "Расшифруй слово, отметь правильную запись", // вот тут текст вопросa
                         ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\5\1.jpg")) // ккатринка ответа
 
                     },
@@ -1058,7 +1074,7 @@ namespace oksana_kids
                         },
                         new RenderObject()
                         {
-                            StringValue = "крым",
+                            StringValue = "стол",
                             ImageValue = null
                         }
                     },

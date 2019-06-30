@@ -1013,6 +1013,8 @@
       <End Role="R14_track_types" EntitySet="R14_track_types" />
       <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
     </AssociationSet>
+    <EntitySet Name="B05_view_tt_modules_to_tests" EntityType="bd_kidsModel.B05_view_tt_modules_to_tests" />
+    <EntitySet Name="B01_view_testing_aims_to_tests" EntityType="bd_kidsModel.B01_view_testing_aims_to_tests" />
   </EntityContainer>
   <EntityType Name="T11_test_answers">
     <Key>
@@ -1185,4 +1187,24 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityType Name="B05_view_tt_modules_to_tests">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_test" Type="Int64" />
+    <Property Name="name_task" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="serial_number_module" Type="Int64" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="B01_view_testing_aims_to_tests">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_test" Type="Int64" />
+    <Property Name="name_aim" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="is_main_aim" Type="Int64" />
+  </EntityType>
 </Schema>

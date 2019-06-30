@@ -84,6 +84,12 @@
     <Compile Include="AdaptiveTTConstructor.Designer.cs">
       <DependentUpon>AdaptiveTTConstructor.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddAnswersToTasks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAnswersToTasks.Designer.cs">
+      <DependentUpon>AddAnswersToTasks.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdditionalTeachingMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +103,9 @@
       <DependentUpon>AskToLeaveForm.cs</DependentUpon>
     </Compile>
     <Compile Include="B01_testing_aims_to_tests.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B01_view_testing_aims_to_tests.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="B02_bind_view.cs">
@@ -118,6 +127,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="B05_testing_task_modules_to_tests.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="B05_view_tt_modules_to_tests.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="bd_kidsDataOthers.Designer.cs">
@@ -470,6 +482,51 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>bd_kidsDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="bd_kidsDataSet70.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet70.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet71.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet71.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet72.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet72.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet73.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet73.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet74.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet74.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet75.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet75.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet76.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet76.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet77.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet77.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="bd_kidsDataSet78.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>bd_kidsDataSet78.xsd</DependentUpon>
+    </Compile>
     <Compile Include="bd_kidsDataSet8.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -721,6 +778,18 @@
     <Compile Include="References.Designer.cs">
       <DependentUpon>References.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestingAimsToTestsBind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestingAimsToTestsBind.Designer.cs">
+      <DependentUpon>TestingAimsToTestsBind.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestingTasksModulesToTestsBind.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestingTasksModulesToTestsBind.Designer.cs">
+      <DependentUpon>TestingTasksModulesToTestsBind.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -780,6 +849,9 @@
     <EmbeddedResource Include="AdaptiveTTConstructor.resx">
       <DependentUpon>AdaptiveTTConstructor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddAnswersToTasks.resx">
+      <DependentUpon>AddAnswersToTasks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdditionalTeachingMaterial.resx">
       <DependentUpon>AdditionalTeachingMaterial.cs</DependentUpon>
     </EmbeddedResource>
@@ -834,6 +906,12 @@
     </Compile>
     <EmbeddedResource Include="References.resx">
       <DependentUpon>References.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestingAimsToTestsBind.resx">
+      <DependentUpon>TestingAimsToTestsBind.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestingTasksModulesToTestsBind.resx">
+      <DependentUpon>TestingTasksModulesToTestsBind.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests.resx">
       <DependentUpon>Tests.cs</DependentUpon>
@@ -1629,6 +1707,105 @@
     </None>
     <None Include="bd_kidsDataSet7.xss">
       <DependentUpon>bd_kidsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet70.xsc">
+      <DependentUpon>bd_kidsDataSet70.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet70.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet70.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet70.xss">
+      <DependentUpon>bd_kidsDataSet70.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet71.xsc">
+      <DependentUpon>bd_kidsDataSet71.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet71.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet71.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet71.xss">
+      <DependentUpon>bd_kidsDataSet71.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet72.xsc">
+      <DependentUpon>bd_kidsDataSet72.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet72.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet72.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet72.xss">
+      <DependentUpon>bd_kidsDataSet72.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet73.xsc">
+      <DependentUpon>bd_kidsDataSet73.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet73.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet73.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet73.xss">
+      <DependentUpon>bd_kidsDataSet73.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet74.xsc">
+      <DependentUpon>bd_kidsDataSet74.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet74.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet74.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet74.xss">
+      <DependentUpon>bd_kidsDataSet74.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet75.xsc">
+      <DependentUpon>bd_kidsDataSet75.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet75.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet75.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet75.xss">
+      <DependentUpon>bd_kidsDataSet75.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet76.xsc">
+      <DependentUpon>bd_kidsDataSet76.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet76.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet76.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet76.xss">
+      <DependentUpon>bd_kidsDataSet76.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet77.xsc">
+      <DependentUpon>bd_kidsDataSet77.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet77.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet77.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet77.xss">
+      <DependentUpon>bd_kidsDataSet77.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet78.xsc">
+      <DependentUpon>bd_kidsDataSet78.xsd</DependentUpon>
+    </None>
+    <None Include="bd_kidsDataSet78.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>bd_kidsDataSet78.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bd_kidsDataSet78.xss">
+      <DependentUpon>bd_kidsDataSet78.xsd</DependentUpon>
     </None>
     <None Include="bd_kidsDataSet8.xsc">
       <DependentUpon>bd_kidsDataSet8.xsd</DependentUpon>

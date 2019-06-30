@@ -77,7 +77,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AskToLeaveForm";
             this.Text = "Выход из программы";
-
+            this.Load += new System.EventHandler(this.AskToLeaveForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

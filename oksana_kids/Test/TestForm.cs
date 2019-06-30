@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -141,10 +142,22 @@ namespace oksana_kids.Test
 
         }
 
+        public void setSpeech(string text)
+        {
+            SpeechSynthesizer speechSynth = new SpeechSynthesizer();
+
+            speechSynth.Volume = 100;
+            speechSynth.Speak(text);
+
+            speechSynth.SelectVoiceByHints(VoiceGender.Female, VoiceAge.Teen);
+
+        }
+
         private void buttonNext_Click(object sender, EventArgs e)
         {
             if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) {
                 new Zoom("Молодец! Всё правильно!").Show();
+                setSpeech("Молодец! Всё правильно!");
                 this.RightAnswersCount++;
                 if (!isFail)
                 {
@@ -157,6 +170,7 @@ namespace oksana_kids.Test
                     SummaryFailCount++;
                     isFail = true;
                     new Zoom("Неправильно. Подумай ещё раз!", callback.ShowWrongAnswerPictures).Show();
+                    setSpeech("Неправильно. Подумай ещё раз!");
                 }
                 _selectedCheckBox.Visible = false;
                 _selectedPicture.Visible = false;

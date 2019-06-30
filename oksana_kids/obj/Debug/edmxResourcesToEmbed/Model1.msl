@@ -552,5 +552,27 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="B05_view_tt_modules_to_tests">
+      <EntityTypeMapping TypeName="bd_kidsModel.B05_view_tt_modules_to_tests">
+        <MappingFragment StoreEntitySet="B05_view_tt_modules_to_tests">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="serial_number_module" ColumnName="serial_number_module" />
+          <ScalarProperty Name="name_task" ColumnName="name_task" />
+          <ScalarProperty Name="id_test" ColumnName="id_test" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="B01_view_testing_aims_to_tests">
+      <EntityTypeMapping TypeName="bd_kidsModel.B01_view_testing_aims_to_tests">
+        <MappingFragment StoreEntitySet="B01_view_testing_aims_to_tests">
+          <ScalarProperty Name="is_main_aim" ColumnName="is_main_aim" />
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="name_aim" ColumnName="name_aim" />
+          <ScalarProperty Name="id_test" ColumnName="id_test" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

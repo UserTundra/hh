@@ -70,7 +70,7 @@
             // 
             this.labelQuestionTitle.AutoSize = true;
             this.labelQuestionTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelQuestionTitle.Location = new System.Drawing.Point(316, 7);
+            this.labelQuestionTitle.Location = new System.Drawing.Point(310, 65);
             this.labelQuestionTitle.Name = "labelQuestionTitle";
             this.labelQuestionTitle.Size = new System.Drawing.Size(196, 27);
             this.labelQuestionTitle.TabIndex = 2;
@@ -80,7 +80,7 @@
             // 
             this.labelQuestionBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelQuestionBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelQuestionBody.Location = new System.Drawing.Point(274, 56);
+            this.labelQuestionBody.Location = new System.Drawing.Point(274, 107);
             this.labelQuestionBody.Name = "labelQuestionBody";
             this.labelQuestionBody.Size = new System.Drawing.Size(269, 102);
             this.labelQuestionBody.TabIndex = 3;
@@ -170,7 +170,7 @@
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNext.Location = new System.Drawing.Point(582, 586);
+            this.buttonNext.Location = new System.Drawing.Point(582, 542);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(230, 69);
             this.buttonNext.TabIndex = 30;

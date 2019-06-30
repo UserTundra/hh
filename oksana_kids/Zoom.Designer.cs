@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.zoomText = new System.Windows.Forms.TextBox();
             this.trackText = new System.Windows.Forms.TrackBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.trackText)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,6 +60,11 @@
             this.trackText.Value = 12;
             this.trackText.Scroll += new System.EventHandler(this.trackText_Scroll);
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 2000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Zoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -80,5 +87,6 @@
 
         private System.Windows.Forms.TextBox zoomText;
         private System.Windows.Forms.TrackBar trackText;
+        private System.Windows.Forms.Timer timer1;
     }
 }

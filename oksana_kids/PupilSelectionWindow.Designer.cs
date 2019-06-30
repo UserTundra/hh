@@ -78,7 +78,6 @@
             this.testList.Size = new System.Drawing.Size(530, 323);
             this.testList.TabIndex = 2;
             this.testList.Click += new System.EventHandler(this.testList_Click);
-            this.testList.SelectedIndexChanged += new System.EventHandler(this.testList_SelectedIndexChanged);
             this.testList.DoubleClick += new System.EventHandler(this.testList_DoubleClick);
             // 
             // button1
@@ -99,7 +98,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.label3.Location = new System.Drawing.Point(565, 98);
+            this.label3.Location = new System.Drawing.Point(565, 57);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(313, 31);
             this.label3.TabIndex = 4;
@@ -142,7 +141,7 @@
             // duration
             // 
             this.duration.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.duration.Location = new System.Drawing.Point(796, 156);
+            this.duration.Location = new System.Drawing.Point(809, 156);
             this.duration.Name = "duration";
             this.duration.ReadOnly = true;
             this.duration.Size = new System.Drawing.Size(106, 29);
@@ -152,13 +151,12 @@
             // countTZ
             // 
             this.countTZ.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.countTZ.Location = new System.Drawing.Point(796, 240);
+            this.countTZ.Location = new System.Drawing.Point(809, 240);
             this.countTZ.Name = "countTZ";
             this.countTZ.ReadOnly = true;
             this.countTZ.Size = new System.Drawing.Size(106, 29);
             this.countTZ.TabIndex = 10;
             this.countTZ.Click += new System.EventHandler(this.countTZ_Click);
-            this.countTZ.TextChanged += new System.EventHandler(this.countTZ_TextChanged);
             // 
             // methodMaterial
             // 
@@ -168,18 +166,18 @@
             this.methodMaterial.Name = "methodMaterial";
             this.methodMaterial.ReadOnly = true;
             this.methodMaterial.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.methodMaterial.Size = new System.Drawing.Size(558, 74);
+            this.methodMaterial.Size = new System.Drawing.Size(614, 74);
             this.methodMaterial.TabIndex = 11;
             this.methodMaterial.Click += new System.EventHandler(this.methodMaterial_Click);
             // 
             // testName
             // 
             this.testName.AutoSize = true;
-            this.testName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.testName.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.testName.ForeColor = System.Drawing.Color.Lime;
-            this.testName.Location = new System.Drawing.Point(884, 105);
+            this.testName.Location = new System.Drawing.Point(567, 98);
             this.testName.Name = "testName";
-            this.testName.Size = new System.Drawing.Size(18, 25);
+            this.testName.Size = new System.Drawing.Size(19, 29);
             this.testName.TabIndex = 13;
             this.testName.Text = " ";
             // 
@@ -188,7 +186,7 @@
             this.button3.BackgroundImage = global::oksana_kids.Properties.Resources.kisspng_hola_yo_hablo_espanol_childrens_learn_spanish_b_smile_learning_5a921089370874_5506914115195219292254;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(908, 139);
+            this.button3.Location = new System.Drawing.Point(959, 139);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(226, 145);
             this.button3.TabIndex = 12;
@@ -199,7 +197,7 @@
             // 
             this.zoomButton.BackgroundImage = global::oksana_kids.Properties.Resources.images;
             this.zoomButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.zoomButton.Location = new System.Drawing.Point(908, 8);
+            this.zoomButton.Location = new System.Drawing.Point(959, 8);
             this.zoomButton.Name = "zoomButton";
             this.zoomButton.Size = new System.Drawing.Size(226, 91);
             this.zoomButton.TabIndex = 5;
@@ -210,7 +208,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1141, 511);
+            this.ClientSize = new System.Drawing.Size(1197, 511);
             this.Controls.Add(this.testName);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.methodMaterial);

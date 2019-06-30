@@ -45,16 +45,16 @@
             this.B03_note = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.B03 = new System.Windows.Forms.DataGridView();
-            this.b03bindviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bd_kidsDataSet30 = new oksana_kids.bd_kidsDataSet30();
-            this.b03_bind_viewTableAdapter = new oksana_kids.bd_kidsDataSet30TableAdapters.B03_bind_viewTableAdapter();
-            this.B03changeButton = new System.Windows.Forms.Button();
-            this.B03deleteButton = new System.Windows.Forms.Button();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codecourseDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.serialnumbersubjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.namesubjectDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.b03bindviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet30 = new oksana_kids.bd_kidsDataSet30();
+            this.b03_bind_viewTableAdapter = new oksana_kids.bd_kidsDataSet30TableAdapters.B03_bind_viewTableAdapter();
+            this.B03changeButton = new System.Windows.Forms.Button();
+            this.B03deleteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.r08studycoursesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet29)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.r09studysubjectsBindingSource)).BeginInit();
@@ -196,9 +196,43 @@
             this.B03.DataSource = this.b03bindviewBindingSource;
             this.B03.Location = new System.Drawing.Point(12, 181);
             this.B03.Name = "B03";
+            this.B03.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.B03.Size = new System.Drawing.Size(528, 198);
             this.B03.TabIndex = 42;
             this.B03.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.B03_CellClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // codecourseDataGridViewTextBoxColumn
+            // 
+            this.codecourseDataGridViewTextBoxColumn.DataPropertyName = "code_course";
+            this.codecourseDataGridViewTextBoxColumn.HeaderText = "code_course";
+            this.codecourseDataGridViewTextBoxColumn.Name = "codecourseDataGridViewTextBoxColumn";
+            this.codecourseDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // serialnumbersubjectDataGridViewTextBoxColumn
+            // 
+            this.serialnumbersubjectDataGridViewTextBoxColumn.DataPropertyName = "serial_number_subject";
+            this.serialnumbersubjectDataGridViewTextBoxColumn.HeaderText = "Номер темы в курсе";
+            this.serialnumbersubjectDataGridViewTextBoxColumn.Name = "serialnumbersubjectDataGridViewTextBoxColumn";
+            // 
+            // namesubjectDataGridViewTextBoxColumn
+            // 
+            this.namesubjectDataGridViewTextBoxColumn.DataPropertyName = "name_subject";
+            this.namesubjectDataGridViewTextBoxColumn.HeaderText = "Учебная тема";
+            this.namesubjectDataGridViewTextBoxColumn.Name = "namesubjectDataGridViewTextBoxColumn";
+            this.namesubjectDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
             // b03bindviewBindingSource
             // 
@@ -235,39 +269,6 @@
             this.B03deleteButton.Text = "Удалить";
             this.B03deleteButton.UseVisualStyleBackColor = true;
             this.B03deleteButton.Click += new System.EventHandler(this.B03deleteButton_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // codecourseDataGridViewTextBoxColumn
-            // 
-            this.codecourseDataGridViewTextBoxColumn.DataPropertyName = "code_course";
-            this.codecourseDataGridViewTextBoxColumn.HeaderText = "code_course";
-            this.codecourseDataGridViewTextBoxColumn.Name = "codecourseDataGridViewTextBoxColumn";
-            this.codecourseDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // serialnumbersubjectDataGridViewTextBoxColumn
-            // 
-            this.serialnumbersubjectDataGridViewTextBoxColumn.DataPropertyName = "serial_number_subject";
-            this.serialnumbersubjectDataGridViewTextBoxColumn.HeaderText = "Номер темы в курсе";
-            this.serialnumbersubjectDataGridViewTextBoxColumn.Name = "serialnumbersubjectDataGridViewTextBoxColumn";
-            // 
-            // namesubjectDataGridViewTextBoxColumn
-            // 
-            this.namesubjectDataGridViewTextBoxColumn.DataPropertyName = "name_subject";
-            this.namesubjectDataGridViewTextBoxColumn.HeaderText = "Учебная тема";
-            this.namesubjectDataGridViewTextBoxColumn.Name = "namesubjectDataGridViewTextBoxColumn";
-            this.namesubjectDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
             // StudySubjectsToCourcesBind
             // 

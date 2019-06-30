@@ -180,7 +180,7 @@
             this.pictureBoxQuestion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBoxQuestion1.Location = new System.Drawing.Point(440, 122);
             this.pictureBoxQuestion1.Name = "pictureBoxQuestion1";
-            this.pictureBoxQuestion1.Size = new System.Drawing.Size(341, 314);
+            this.pictureBoxQuestion1.Size = new System.Drawing.Size(388, 314);
             this.pictureBoxQuestion1.TabIndex = 19;
             this.pictureBoxQuestion1.TabStop = false;
             this.pictureBoxQuestion1.Click += new System.EventHandler(this.pictureBoxQuestion1_Click);
@@ -188,9 +188,10 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Location = new System.Drawing.Point(94, 420);
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox5.Location = new System.Drawing.Point(94, 417);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(80, 17);
+            this.checkBox5.Size = new System.Drawing.Size(115, 24);
             this.checkBox5.TabIndex = 11;
             this.checkBox5.Text = "checkBox5";
             this.checkBox5.UseVisualStyleBackColor = true;
