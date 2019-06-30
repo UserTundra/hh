@@ -92,6 +92,7 @@
             this.adaptiveTTAllConstructorGo.TabIndex = 8;
             this.adaptiveTTAllConstructorGo.Text = "Задать";
             this.adaptiveTTAllConstructorGo.UseVisualStyleBackColor = true;
+            this.adaptiveTTAllConstructorGo.Click += new System.EventHandler(this.adaptiveTTAllConstructorGo_Click);
             // 
             // label2
             // 
@@ -149,6 +150,7 @@
             this.adaptiveTT1ConstructorGo.TabIndex = 9;
             this.adaptiveTT1ConstructorGo.Text = "Задать";
             this.adaptiveTT1ConstructorGo.UseVisualStyleBackColor = true;
+            this.adaptiveTT1ConstructorGo.Click += new System.EventHandler(this.adaptiveTT1ConstructorGo_Click);
             // 
             // TT_2_class
             // 
@@ -264,7 +266,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(13, 18);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(243, 16);
+            this.label3.Size = new System.Drawing.Size(239, 16);
             this.label3.TabIndex = 10;
             this.label3.Text = "Выбранное тестовое задание: ";
             // 

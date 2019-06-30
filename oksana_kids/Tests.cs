@@ -215,7 +215,7 @@ namespace oksana_kids
                        where i.id_task == id
                        select new
                        {
-                           name = i.name_task
+                           name = i.name_task                           
                        };
 
             foreach (var item in linq)
