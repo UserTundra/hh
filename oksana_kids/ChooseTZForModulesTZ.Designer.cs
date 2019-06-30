@@ -30,11 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.T04_choose_TZ = new System.Windows.Forms.DataGridView();
-            this.nameTZ = new System.Windows.Forms.TextBox();
-            this.chooseTZ = new System.Windows.Forms.Button();
-            this.bd_kidsDataSet59 = new oksana_kids.bd_kidsDataSet59();
-            this.t04viewtestingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.t04_view_testing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet59TableAdapters.T04_view_testing_tasksTableAdapter();
             this.idtaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nametaskDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,9 +38,14 @@
             this.nametypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filelocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t04viewtestingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet59 = new oksana_kids.bd_kidsDataSet59();
+            this.nameTZ = new System.Windows.Forms.TextBox();
+            this.chooseTZ = new System.Windows.Forms.Button();
+            this.t04_view_testing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet59TableAdapters.T04_view_testing_tasksTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.T04_choose_TZ)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet59)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet59)).BeginInit();
             this.SuspendLayout();
             // 
             // T04_choose_TZ
@@ -64,10 +64,79 @@
             this.T04_choose_TZ.DataSource = this.t04viewtestingtasksBindingSource;
             this.T04_choose_TZ.Location = new System.Drawing.Point(12, 12);
             this.T04_choose_TZ.Name = "T04_choose_TZ";
+            this.T04_choose_TZ.ReadOnly = true;
             this.T04_choose_TZ.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.T04_choose_TZ.Size = new System.Drawing.Size(601, 268);
             this.T04_choose_TZ.TabIndex = 0;
             this.T04_choose_TZ.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.T04_choose_TZ_CellClick);
+            // 
+            // idtaskDataGridViewTextBoxColumn
+            // 
+            this.idtaskDataGridViewTextBoxColumn.DataPropertyName = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.HeaderText = "id_task";
+            this.idtaskDataGridViewTextBoxColumn.Name = "idtaskDataGridViewTextBoxColumn";
+            this.idtaskDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idtaskDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nametaskDataGridViewTextBoxColumn
+            // 
+            this.nametaskDataGridViewTextBoxColumn.DataPropertyName = "name_task";
+            this.nametaskDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nametaskDataGridViewTextBoxColumn.Name = "nametaskDataGridViewTextBoxColumn";
+            this.nametaskDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fioDataGridViewTextBoxColumn
+            // 
+            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn.HeaderText = "Автор";
+            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
+            this.fioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datecreateDataGridViewTextBoxColumn
+            // 
+            this.datecreateDataGridViewTextBoxColumn.DataPropertyName = "date_create";
+            this.datecreateDataGridViewTextBoxColumn.HeaderText = "Дата сощдания";
+            this.datecreateDataGridViewTextBoxColumn.Name = "datecreateDataGridViewTextBoxColumn";
+            this.datecreateDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // datecorrectDataGridViewTextBoxColumn
+            // 
+            this.datecorrectDataGridViewTextBoxColumn.DataPropertyName = "date_correct";
+            this.datecorrectDataGridViewTextBoxColumn.HeaderText = "Дата корректировки";
+            this.datecorrectDataGridViewTextBoxColumn.Name = "datecorrectDataGridViewTextBoxColumn";
+            this.datecorrectDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nametypeDataGridViewTextBoxColumn
+            // 
+            this.nametypeDataGridViewTextBoxColumn.DataPropertyName = "name_type";
+            this.nametypeDataGridViewTextBoxColumn.HeaderText = "Тип";
+            this.nametypeDataGridViewTextBoxColumn.Name = "nametypeDataGridViewTextBoxColumn";
+            this.nametypeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // filelocationDataGridViewTextBoxColumn
+            // 
+            this.filelocationDataGridViewTextBoxColumn.DataPropertyName = "file_location";
+            this.filelocationDataGridViewTextBoxColumn.HeaderText = "file_location";
+            this.filelocationDataGridViewTextBoxColumn.Name = "filelocationDataGridViewTextBoxColumn";
+            this.filelocationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.filelocationDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // t04viewtestingtasksBindingSource
+            // 
+            this.t04viewtestingtasksBindingSource.DataMember = "T04_view_testing_tasks";
+            this.t04viewtestingtasksBindingSource.DataSource = this.bd_kidsDataSet59;
+            // 
+            // bd_kidsDataSet59
+            // 
+            this.bd_kidsDataSet59.DataSetName = "bd_kidsDataSet59";
+            this.bd_kidsDataSet59.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // nameTZ
             // 
@@ -87,69 +156,9 @@
             this.chooseTZ.UseVisualStyleBackColor = true;
             this.chooseTZ.Click += new System.EventHandler(this.chooseTZ_Click);
             // 
-            // bd_kidsDataSet59
-            // 
-            this.bd_kidsDataSet59.DataSetName = "bd_kidsDataSet59";
-            this.bd_kidsDataSet59.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t04viewtestingtasksBindingSource
-            // 
-            this.t04viewtestingtasksBindingSource.DataMember = "T04_view_testing_tasks";
-            this.t04viewtestingtasksBindingSource.DataSource = this.bd_kidsDataSet59;
-            // 
             // t04_view_testing_tasksTableAdapter
             // 
             this.t04_view_testing_tasksTableAdapter.ClearBeforeFill = true;
-            // 
-            // idtaskDataGridViewTextBoxColumn
-            // 
-            this.idtaskDataGridViewTextBoxColumn.DataPropertyName = "id_task";
-            this.idtaskDataGridViewTextBoxColumn.HeaderText = "id_task";
-            this.idtaskDataGridViewTextBoxColumn.Name = "idtaskDataGridViewTextBoxColumn";
-            this.idtaskDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nametaskDataGridViewTextBoxColumn
-            // 
-            this.nametaskDataGridViewTextBoxColumn.DataPropertyName = "name_task";
-            this.nametaskDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.nametaskDataGridViewTextBoxColumn.Name = "nametaskDataGridViewTextBoxColumn";
-            // 
-            // fioDataGridViewTextBoxColumn
-            // 
-            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn.HeaderText = "Автор";
-            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
-            // 
-            // datecreateDataGridViewTextBoxColumn
-            // 
-            this.datecreateDataGridViewTextBoxColumn.DataPropertyName = "date_create";
-            this.datecreateDataGridViewTextBoxColumn.HeaderText = "Дата сощдания";
-            this.datecreateDataGridViewTextBoxColumn.Name = "datecreateDataGridViewTextBoxColumn";
-            // 
-            // datecorrectDataGridViewTextBoxColumn
-            // 
-            this.datecorrectDataGridViewTextBoxColumn.DataPropertyName = "date_correct";
-            this.datecorrectDataGridViewTextBoxColumn.HeaderText = "Дата корректировки";
-            this.datecorrectDataGridViewTextBoxColumn.Name = "datecorrectDataGridViewTextBoxColumn";
-            // 
-            // nametypeDataGridViewTextBoxColumn
-            // 
-            this.nametypeDataGridViewTextBoxColumn.DataPropertyName = "name_type";
-            this.nametypeDataGridViewTextBoxColumn.HeaderText = "Тип";
-            this.nametypeDataGridViewTextBoxColumn.Name = "nametypeDataGridViewTextBoxColumn";
-            // 
-            // filelocationDataGridViewTextBoxColumn
-            // 
-            this.filelocationDataGridViewTextBoxColumn.DataPropertyName = "file_location";
-            this.filelocationDataGridViewTextBoxColumn.HeaderText = "file_location";
-            this.filelocationDataGridViewTextBoxColumn.Name = "filelocationDataGridViewTextBoxColumn";
-            this.filelocationDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
             // 
             // ChooseTZForModulesTZ
             // 
@@ -164,8 +173,8 @@
             this.Text = "Выбрать тестовое задание для добавления модуля";
             this.Load += new System.EventHandler(this.ChooseTZForModulesTZ_Load);
             ((System.ComponentModel.ISupportInitialize)(this.T04_choose_TZ)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet59)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet59)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

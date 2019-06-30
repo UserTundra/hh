@@ -29,5 +29,6 @@ namespace oksana_kids
         public virtual R13_play_result_variants R13_play_result_variants { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T03_testing_task_modules> T03_testing_task_modules { get; set; }
+        public virtual R14_track_types R14_track_types { get; set; }
     }
 }

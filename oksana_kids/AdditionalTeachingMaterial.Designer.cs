@@ -61,6 +61,7 @@
             this.additionalTM.DataSource = this.t06viewteachingmaterialsBindingSource;
             this.additionalTM.Location = new System.Drawing.Point(12, 12);
             this.additionalTM.Name = "additionalTM";
+            this.additionalTM.ReadOnly = true;
             this.additionalTM.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.additionalTM.Size = new System.Drawing.Size(596, 260);
             this.additionalTM.TabIndex = 0;
@@ -71,6 +72,7 @@
             this.idteachmaterialDataGridViewTextBoxColumn.DataPropertyName = "id_teach_material";
             this.idteachmaterialDataGridViewTextBoxColumn.HeaderText = "id_teach_material";
             this.idteachmaterialDataGridViewTextBoxColumn.Name = "idteachmaterialDataGridViewTextBoxColumn";
+            this.idteachmaterialDataGridViewTextBoxColumn.ReadOnly = true;
             this.idteachmaterialDataGridViewTextBoxColumn.Visible = false;
             // 
             // descriptionDataGridViewTextBoxColumn
@@ -78,12 +80,14 @@
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Описание";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // filelocationDataGridViewTextBoxColumn
             // 
             this.filelocationDataGridViewTextBoxColumn.DataPropertyName = "file_location";
             this.filelocationDataGridViewTextBoxColumn.HeaderText = "file_location";
             this.filelocationDataGridViewTextBoxColumn.Name = "filelocationDataGridViewTextBoxColumn";
+            this.filelocationDataGridViewTextBoxColumn.ReadOnly = true;
             this.filelocationDataGridViewTextBoxColumn.Visible = false;
             // 
             // authorDataGridViewTextBoxColumn
@@ -91,18 +95,21 @@
             this.authorDataGridViewTextBoxColumn.DataPropertyName = "author";
             this.authorDataGridViewTextBoxColumn.HeaderText = "Автор";
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
+            this.authorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // sourceDataGridViewTextBoxColumn
             // 
             this.sourceDataGridViewTextBoxColumn.DataPropertyName = "source";
             this.sourceDataGridViewTextBoxColumn.HeaderText = "Источник";
             this.sourceDataGridViewTextBoxColumn.Name = "sourceDataGridViewTextBoxColumn";
+            this.sourceDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // noteDataGridViewTextBoxColumn
             // 
             this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
             this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
             this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // t06viewteachingmaterialsBindingSource
             // 

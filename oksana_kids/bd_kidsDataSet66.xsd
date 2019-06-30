@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="bd_kidsDataSet66" targetNamespace="http://tempuri.org/bd_kidsDataSet66.xsd" xmlns:mstns="http://tempuri.org/bd_kidsDataSet66.xsd" xmlns="http://tempuri.org/bd_kidsDataSet66.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="bd_kidsConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="bd_kidsConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.oksana_kids.Properties.Settings.GlobalReference.Default.bd_kidsConnectionString" Provider="System.Data.SQLite.EF6" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="T10_view_organizationsTableAdapter" GeneratorDataComponentClassName="T10_view_organizationsTableAdapter" Name="T10_view_organizations" UserDataComponentName="T10_view_organizationsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="bd_kidsConnectionString (Settings)" DbObjectName="main.T10_view_organizations" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [id_org], [full_name], [short_name], [name_ownership], [address], [contact_info], [web_site], [note] FROM [T10_view_organizations]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_org" DataSetColumn="id_org" />
+              <Mapping SourceColumn="full_name" DataSetColumn="full_name" />
+              <Mapping SourceColumn="short_name" DataSetColumn="short_name" />
+              <Mapping SourceColumn="name_ownership" DataSetColumn="name_ownership" />
+              <Mapping SourceColumn="address" DataSetColumn="address" />
+              <Mapping SourceColumn="contact_info" DataSetColumn="contact_info" />
+              <Mapping SourceColumn="web_site" DataSetColumn="web_site" />
+              <Mapping SourceColumn="note" DataSetColumn="note" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="bd_kidsDataSet66" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="bd_kidsDataSet66" msprop:Generator_UserDSName="bd_kidsDataSet66">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="T10_view_organizations" msprop:Generator_TableClassName="T10_view_organizationsDataTable" msprop:Generator_TableVarName="tableT10_view_organizations" msprop:Generator_TablePropName="T10_view_organizations" msprop:Generator_RowDeletingName="T10_view_organizationsRowDeleting" msprop:Generator_RowChangingName="T10_view_organizationsRowChanging" msprop:Generator_RowEvHandlerName="T10_view_organizationsRowChangeEventHandler" msprop:Generator_RowDeletedName="T10_view_organizationsRowDeleted" msprop:Generator_UserTableName="T10_view_organizations" msprop:Generator_RowChangedName="T10_view_organizationsRowChanged" msprop:Generator_RowEvArgName="T10_view_organizationsRowChangeEvent" msprop:Generator_RowClassName="T10_view_organizationsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_org" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_org" msprop:Generator_ColumnPropNameInRow="id_org" msprop:Generator_ColumnPropNameInTable="id_orgColumn" msprop:Generator_UserColumnName="id_org" type="xs:long" />
+              <xs:element name="full_name" msprop:Generator_ColumnVarNameInTable="columnfull_name" msprop:Generator_ColumnPropNameInRow="full_name" msprop:Generator_ColumnPropNameInTable="full_nameColumn" msprop:Generator_UserColumnName="full_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="short_name" msprop:Generator_ColumnVarNameInTable="columnshort_name" msprop:Generator_ColumnPropNameInRow="short_name" msprop:Generator_ColumnPropNameInTable="short_nameColumn" msprop:Generator_UserColumnName="short_name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="name_ownership" msprop:Generator_ColumnVarNameInTable="columnname_ownership" msprop:Generator_ColumnPropNameInRow="name_ownership" msprop:Generator_ColumnPropNameInTable="name_ownershipColumn" msprop:Generator_UserColumnName="name_ownership" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contact_info" msprop:Generator_ColumnVarNameInTable="columncontact_info" msprop:Generator_ColumnPropNameInRow="contact_info" msprop:Generator_ColumnPropNameInTable="contact_infoColumn" msprop:Generator_UserColumnName="contact_info" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="web_site" msprop:Generator_ColumnVarNameInTable="columnweb_site" msprop:Generator_ColumnPropNameInRow="web_site" msprop:Generator_ColumnPropNameInTable="web_siteColumn" msprop:Generator_UserColumnName="web_site" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="note" msprop:Generator_ColumnVarNameInTable="columnnote" msprop:Generator_ColumnPropNameInRow="note" msprop:Generator_ColumnPropNameInTable="noteColumn" msprop:Generator_UserColumnName="note" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

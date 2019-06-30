@@ -538,5 +538,19 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="T10_view_organizations">
+      <EntityTypeMapping TypeName="bd_kidsModel.T10_view_organizations">
+        <MappingFragment StoreEntitySet="T10_view_organizations">
+          <ScalarProperty Name="note" ColumnName="note" />
+          <ScalarProperty Name="web_site" ColumnName="web_site" />
+          <ScalarProperty Name="contact_info" ColumnName="contact_info" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="name_ownership" ColumnName="name_ownership" />
+          <ScalarProperty Name="short_name" ColumnName="short_name" />
+          <ScalarProperty Name="full_name" ColumnName="full_name" />
+          <ScalarProperty Name="id_org" ColumnName="id_org" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

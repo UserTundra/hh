@@ -18,6 +18,7 @@ namespace oksana_kids
         public R14_track_types()
         {
             this.T08_audio_video_tracks = new HashSet<T08_audio_video_tracks>();
+            this.T09_comment_variants_on_passing_tasks = new HashSet<T09_comment_variants_on_passing_tasks>();
         }
     
         public long code_type { get; set; }
@@ -26,5 +27,7 @@ namespace oksana_kids
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<T08_audio_video_tracks> T08_audio_video_tracks { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<T09_comment_variants_on_passing_tasks> T09_comment_variants_on_passing_tasks { get; set; }
     }
 }

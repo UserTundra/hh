@@ -175,8 +175,11 @@ namespace oksana_kids
                 Files f = new Files(shower.SelectedIndex);
                 f.Show();
             }
-            
-            
+            else if (whatTableIs().StartsWith("T09") || whatTableIs().StartsWith("T10"))
+            {
+                Others o = new Others(shower.SelectedIndex);
+                o.Show();
+            }
         }
 
         private void personal_data_Click(object sender, EventArgs e)

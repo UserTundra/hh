@@ -198,6 +198,7 @@
     <Property Name="name_type" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="T08_audio_video_tracks" Relationship="Self.FK_T08_audio_video_tracks_0_0" FromRole="R14_track_types" ToRole="T08_audio_video_tracks" />
+    <NavigationProperty Name="T09_comment_variants_on_passing_tasks" Relationship="bd_kidsModel.FK_T09_comment_variants_on_passing_tasks_0_01" FromRole="R14_track_types" ToRole="T09_comment_variants_on_passing_tasks" />
   </EntityType>
   <EntityType Name="R15_task_key_words">
     <Key>
@@ -372,6 +373,7 @@
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="R13_play_result_variants" Relationship="Self.FK_T09_comment_variants_on_passing_tasks_0_0" FromRole="T09_comment_variants_on_passing_tasks" ToRole="R13_play_result_variants" />
     <NavigationProperty Name="T03_testing_task_modules" Relationship="Self.FK_T03_testing_task_modules_5_0" FromRole="T09_comment_variants_on_passing_tasks" ToRole="T03_testing_task_modules" />
+    <NavigationProperty Name="R14_track_types" Relationship="bd_kidsModel.FK_T09_comment_variants_on_passing_tasks_0_01" FromRole="T09_comment_variants_on_passing_tasks" ToRole="R14_track_types" />
   </EntityType>
   <EntityType Name="T10_organizations">
     <Key>
@@ -1006,6 +1008,11 @@
     <EntitySet Name="T05_view_test_passing_results" EntityType="bd_kidsModel.T05_view_test_passing_results" />
     <EntitySet Name="T09_view_comment_variants" EntityType="bd_kidsModel.T09_view_comment_variants" />
     <EntitySet Name="T03_view_tt_modules" EntityType="bd_kidsModel.T03_view_tt_modules" />
+    <EntitySet Name="T10_view_organizations" EntityType="bd_kidsModel.T10_view_organizations" />
+    <AssociationSet Name="FK_T09_comment_variants_on_passing_tasks_0_01" Association="bd_kidsModel.FK_T09_comment_variants_on_passing_tasks_0_01">
+      <End Role="R14_track_types" EntitySet="R14_track_types" />
+      <End Role="T09_comment_variants_on_passing_tasks" EntitySet="T09_comment_variants_on_passing_tasks" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="T11_test_answers">
     <Key>
@@ -1153,4 +1160,29 @@
     <Property Name="description" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
     <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
   </EntityType>
+  <EntityType Name="T10_view_organizations">
+    <Key>
+      <PropertyRef Name="id_org" />
+    </Key>
+    <Property Name="id_org" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="full_name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="short_name" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="name_ownership" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="address" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="contact_info" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="web_site" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+    <Property Name="note" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_T09_comment_variants_on_passing_tasks_0_01">
+    <End Type="bd_kidsModel.R14_track_types" Role="R14_track_types" Multiplicity="0..1" />
+    <End Type="bd_kidsModel.T09_comment_variants_on_passing_tasks" Role="T09_comment_variants_on_passing_tasks" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="R14_track_types">
+        <PropertyRef Name="code_type" />
+      </Principal>
+      <Dependent Role="T09_comment_variants_on_passing_tasks">
+        <PropertyRef Name="is_av_track" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

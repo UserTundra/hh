@@ -356,37 +356,39 @@ namespace oksana_kids
 
         public void fillCV(int id)
         {
-            IDTZ = id;
+            IDCV = id;
         }
 
         private void updateT03()
         {
-            var data = from t3 in bd.T03_testing_task_modules
-                       join t8 in bd.T08_audio_video_tracks on t3.id_av_track equals t8.id_av_track
-                       join r11 in bd.R11_variants_of_passing_tasks_results_analysis on t3.code_variant equals r11.code_variant
-                       join r10 in bd.R10_next_action_variants on t3.code_action equals r10.code_action
-                       join r12 in bd.R12_instructions_to_test_tasks_types on t3.code_instruction equals r12.code_instruction
-                       join t4 in bd.T04_testing_tasks on t3.id_task equals t4.id_task
-                       join t7 in bd.T07_soundtracks on t3.id_track equals t7.id_track
-                       join t6 in bd.T06_teaching_materials on t3.additional_teaching_material equals t6.id_teach_material
-                       join t9 in bd.T09_comment_variants_on_passing_tasks on t3.id_comment equals t9.id_comment
-                       join r13 in bd.R13_play_result_variants on t9.code_play_result equals r13.code_play_result
-                       select new
-                       {
-                           id_module = t3.id_module,
-                           name_task = t4.name_task + "(" + t4.id_task + ")",
-                           name_track = t7.name_track,
-                           name_av_track = t8.name_av_track,
-                           name_instruction = r12.name_instruction,
-                           name_variant = r11.name_variant,
-                           name_play_result = r13.name_play_result,
-                           comment_view_duration_sec = t3.comment_view_duration_sec,
-                           max_passing_duration_sec = t3.max_passing_duration_sec,
-                           name_action = r10.name_action,
-                           description = t6.description,
-                           note = t3.note
-                       };
-            T03.DataSource = data.ToList();
+            //var data = from t3 in bd.T03_testing_task_modules
+            //           join t8 in bd.T08_audio_video_tracks on t3.id_av_track equals t8.id_av_track
+            //           join r11 in bd.R11_variants_of_passing_tasks_results_analysis on t3.code_variant equals r11.code_variant
+            //           join r10 in bd.R10_next_action_variants on t3.code_action equals r10.code_action
+            //           join r12 in bd.R12_instructions_to_test_tasks_types on t3.code_instruction equals r12.code_instruction
+            //           join t4 in bd.T04_testing_tasks on t3.id_task equals t4.id_task
+            //           join t7 in bd.T07_soundtracks on t3.id_track equals t7.id_track
+            //           join t6 in bd.T06_teaching_materials on t3.additional_teaching_material equals t6.id_teach_material
+            //           join t9 in bd.T09_comment_variants_on_passing_tasks on t3.id_comment equals t9.id_comment
+            //           join r13 in bd.R13_play_result_variants on t9.code_play_result equals r13.code_play_result
+            //           select new
+            //           {
+            //               id_module = (int)t3.id_module,
+            //               name_task = t4.name_task + "(" + t4.id_task + ")",
+            //               name_track = t7.name_track,
+            //               name_av_track = t8.name_av_track,
+            //               name_instruction = r12.name_instruction,
+            //               name_variant = r11.name_variant,
+            //               name_play_result = r13.name_play_result,
+            //               comment_view_duration_sec = (int)(t3.comment_view_duration_sec == null ? 0 : t3.comment_view_duration_sec.Value),
+            //               max_passing_duration_sec = (int)(t3.max_passing_duration_sec == null ? 0 : t3.max_passing_duration_sec.Value),
+            //               name_action = r10.name_action,
+            //               description = t6.description,
+            //               note = t3.note
+            //           };
+            //T03.DataSource = data.ToList();
+
+            this.t03_view_tt_modulesTableAdapter.Fill(this.bd_kidsDataSet64.T03_view_tt_modules);
         }
 
         private void T03addButton_Click(object sender, EventArgs e)
@@ -405,10 +407,10 @@ namespace oksana_kids
                     id_task = IDTZ,
                     code_variant = int.Parse(T03_code_variant.SelectedValue.ToString()),
                     id_comment = IDCV, // ???
-                    comment_view_duration_sec = int.Parse(T03_comment_view_duration_sec.ToString()),
-                    max_passing_duration_sec = int.Parse(T03_max_passing_duration_sec.ToString()),
+                    comment_view_duration_sec = int.Parse(T03_comment_view_duration_sec.Text),
+                    max_passing_duration_sec = int.Parse(T03_max_passing_duration_sec.Text),
                     code_action = int.Parse(T03_code_action.SelectedValue.ToString()),
-                    note = note.Text == "" ? " " : note.Text,
+                    note = T03_note.Text == "" ? " " : T03_note.Text,
                     additional_teaching_material = IDaddTM,
                 };
                 bd.T03_testing_task_modules.Add(person);
@@ -428,13 +430,36 @@ namespace oksana_kids
         {
             id = int.Parse(T03.CurrentRow.Cells[11].Value.ToString());
         }
-   
 
-    
+        private void T03changeButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.T03_testing_task_modules.Where(x => x.id_module == id).FirstOrDefault();
+            if (row == null) return;
+
+            row.comment_view_duration_sec = int.Parse(T03.CurrentRow.Cells[6].Value.ToString());
+            row.max_passing_duration_sec = int.Parse(T03.CurrentRow.Cells[7].Value.ToString());
+            row.note = T03.CurrentRow.Cells[10].Value.ToString();
+
+            bd.SaveChanges();
+
+            updateT03();
+        }
+
+        private void T03deleteButton_Click(object sender, EventArgs e)
+        {
+            var row = bd.T03_testing_task_modules.Where(x => x.id_module == id).FirstOrDefault();
+            if (row == null) return;
+
+            bd.T03_testing_task_modules.Remove(row);
+            bd.SaveChanges();
+
+            updateT03();
+        }
+
 
 
         #endregion
 
-        
+
     }
 }

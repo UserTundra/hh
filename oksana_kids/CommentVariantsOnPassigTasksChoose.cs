@@ -28,12 +28,11 @@ namespace oksana_kids
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "bd_kidsDataSet61.T09_view_comment_variants". При необходимости она может быть перемещена или удалена.
             this.t09_view_comment_variantsTableAdapter.Fill(this.bd_kidsDataSet61.T09_view_comment_variants);
-
         }
 
         private void T09_comment_variants_choose_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            id = int.Parse(T09_comment_variants_choose.CurrentRow.Cells[4].Value.ToString());            
+            id = int.Parse(T09_comment_variants_choose.CurrentRow.Cells[4].Value.ToString());
         }
 
         public int getID()

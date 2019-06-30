@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             this.T09_comment_variants_choose = new System.Windows.Forms.DataGridView();
-            this.t09viewcommentvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.bd_kidsDataSet61 = new oksana_kids.bd_kidsDataSet61();
-            this.t09_view_comment_variantsTableAdapter = new oksana_kids.bd_kidsDataSet61TableAdapters.T09_view_comment_variantsTableAdapter();
-            this.T09commentChoose = new System.Windows.Forms.Button();
             this.nameplayresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.isavtrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.filelocationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idcommentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.t09viewcommentvariantsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet61 = new oksana_kids.bd_kidsDataSet61();
+            this.t09_view_comment_variantsTableAdapter = new oksana_kids.bd_kidsDataSet61TableAdapters.T09_view_comment_variantsTableAdapter();
+            this.T09commentChoose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.T09_comment_variants_choose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t09viewcommentvariantsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet61)).BeginInit();
@@ -58,10 +58,48 @@
             this.T09_comment_variants_choose.DataSource = this.t09viewcommentvariantsBindingSource;
             this.T09_comment_variants_choose.Location = new System.Drawing.Point(12, 12);
             this.T09_comment_variants_choose.Name = "T09_comment_variants_choose";
+            this.T09_comment_variants_choose.ReadOnly = true;
             this.T09_comment_variants_choose.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.T09_comment_variants_choose.Size = new System.Drawing.Size(654, 263);
             this.T09_comment_variants_choose.TabIndex = 0;
             this.T09_comment_variants_choose.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.T09_comment_variants_choose_CellClick);
+            // 
+            // nameplayresultDataGridViewTextBoxColumn
+            // 
+            this.nameplayresultDataGridViewTextBoxColumn.DataPropertyName = "name_play_result";
+            this.nameplayresultDataGridViewTextBoxColumn.HeaderText = "Тип воспроизведения результата";
+            this.nameplayresultDataGridViewTextBoxColumn.Name = "nameplayresultDataGridViewTextBoxColumn";
+            this.nameplayresultDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // isavtrackDataGridViewTextBoxColumn
+            // 
+            this.isavtrackDataGridViewTextBoxColumn.DataPropertyName = "is_av_track";
+            this.isavtrackDataGridViewTextBoxColumn.HeaderText = "Файл-сопровождение";
+            this.isavtrackDataGridViewTextBoxColumn.Name = "isavtrackDataGridViewTextBoxColumn";
+            this.isavtrackDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // filelocationDataGridViewTextBoxColumn
+            // 
+            this.filelocationDataGridViewTextBoxColumn.DataPropertyName = "file_location";
+            this.filelocationDataGridViewTextBoxColumn.HeaderText = "file_location";
+            this.filelocationDataGridViewTextBoxColumn.Name = "filelocationDataGridViewTextBoxColumn";
+            this.filelocationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.filelocationDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            this.noteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // idcommentDataGridViewTextBoxColumn
+            // 
+            this.idcommentDataGridViewTextBoxColumn.DataPropertyName = "id_comment";
+            this.idcommentDataGridViewTextBoxColumn.HeaderText = "id_comment";
+            this.idcommentDataGridViewTextBoxColumn.Name = "idcommentDataGridViewTextBoxColumn";
+            this.idcommentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idcommentDataGridViewTextBoxColumn.Visible = false;
             // 
             // t09viewcommentvariantsBindingSource
             // 
@@ -86,38 +124,6 @@
             this.T09commentChoose.Text = "Выбрать";
             this.T09commentChoose.UseVisualStyleBackColor = true;
             this.T09commentChoose.Click += new System.EventHandler(this.T09commentChoose_Click);
-            // 
-            // nameplayresultDataGridViewTextBoxColumn
-            // 
-            this.nameplayresultDataGridViewTextBoxColumn.DataPropertyName = "name_play_result";
-            this.nameplayresultDataGridViewTextBoxColumn.HeaderText = "Тип воспроизведения результата";
-            this.nameplayresultDataGridViewTextBoxColumn.Name = "nameplayresultDataGridViewTextBoxColumn";
-            // 
-            // isavtrackDataGridViewTextBoxColumn
-            // 
-            this.isavtrackDataGridViewTextBoxColumn.DataPropertyName = "is_av_track";
-            this.isavtrackDataGridViewTextBoxColumn.HeaderText = "Файл-сопровождение";
-            this.isavtrackDataGridViewTextBoxColumn.Name = "isavtrackDataGridViewTextBoxColumn";
-            // 
-            // filelocationDataGridViewTextBoxColumn
-            // 
-            this.filelocationDataGridViewTextBoxColumn.DataPropertyName = "file_location";
-            this.filelocationDataGridViewTextBoxColumn.HeaderText = "file_location";
-            this.filelocationDataGridViewTextBoxColumn.Name = "filelocationDataGridViewTextBoxColumn";
-            this.filelocationDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // noteDataGridViewTextBoxColumn
-            // 
-            this.noteDataGridViewTextBoxColumn.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
-            // 
-            // idcommentDataGridViewTextBoxColumn
-            // 
-            this.idcommentDataGridViewTextBoxColumn.DataPropertyName = "id_comment";
-            this.idcommentDataGridViewTextBoxColumn.HeaderText = "id_comment";
-            this.idcommentDataGridViewTextBoxColumn.Name = "idcommentDataGridViewTextBoxColumn";
-            this.idcommentDataGridViewTextBoxColumn.Visible = false;
             // 
             // CommentVariantsOnPassigTasksChoose
             // 

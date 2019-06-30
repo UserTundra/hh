@@ -76,6 +76,8 @@
             this.T03changeButton = new System.Windows.Forms.Button();
             this.T03deleteButton = new System.Windows.Forms.Button();
             this.T03 = new System.Windows.Forms.DataGridView();
+            this.t03viewttmodulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bd_kidsDataSet64 = new oksana_kids.bd_kidsDataSet64();
             this.T03_note = new System.Windows.Forms.TextBox();
             this.T03_max_passing_duration_sec = new System.Windows.Forms.TextBox();
             this.T03_comment_view_duration_sec = new System.Windows.Forms.TextBox();
@@ -181,8 +183,6 @@
             this.t09_comment_variants_on_passing_tasksTableAdapter = new oksana_kids.bd_kidsDataSet57TableAdapters.T09_comment_variants_on_passing_tasksTableAdapter();
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet58TableAdapters.R10_next_action_variantsTableAdapter();
             this.t05_view_test_passing_resultsTableAdapter = new oksana_kids.bd_kidsDataSet60TableAdapters.T05_view_test_passing_resultsTableAdapter();
-            this.bd_kidsDataSet64 = new oksana_kids.bd_kidsDataSet64();
-            this.t03viewttmodulesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.t03_view_tt_modulesTableAdapter = new oksana_kids.bd_kidsDataSet64TableAdapters.T03_view_tt_modulesTableAdapter();
             this.nametaskDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nametrackDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -205,6 +205,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSetFOR_TESTS)).BeginInit();
             this.T03_testing_task_modules.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.T03)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t03viewttmodulesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet64)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).BeginInit();
@@ -238,8 +240,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet64)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t03viewttmodulesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -702,6 +702,7 @@
             this.T03changeButton.TabIndex = 35;
             this.T03changeButton.Text = "Изменить";
             this.T03changeButton.UseVisualStyleBackColor = true;
+            this.T03changeButton.Click += new System.EventHandler(this.T03changeButton_Click);
             // 
             // T03deleteButton
             // 
@@ -712,6 +713,7 @@
             this.T03deleteButton.TabIndex = 36;
             this.T03deleteButton.Text = "Удалить";
             this.T03deleteButton.UseVisualStyleBackColor = true;
+            this.T03deleteButton.Click += new System.EventHandler(this.T03deleteButton_Click);
             // 
             // T03
             // 
@@ -736,6 +738,16 @@
             this.T03.Size = new System.Drawing.Size(551, 337);
             this.T03.TabIndex = 33;
             this.T03.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.T03_CellClick);
+            // 
+            // t03viewttmodulesBindingSource
+            // 
+            this.t03viewttmodulesBindingSource.DataMember = "T03_view_tt_modules";
+            this.t03viewttmodulesBindingSource.DataSource = this.bd_kidsDataSet64;
+            // 
+            // bd_kidsDataSet64
+            // 
+            this.bd_kidsDataSet64.DataSetName = "bd_kidsDataSet64";
+            this.bd_kidsDataSet64.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // T03_note
             // 
@@ -1514,16 +1526,6 @@
             // 
             this.t05_view_test_passing_resultsTableAdapter.ClearBeforeFill = true;
             // 
-            // bd_kidsDataSet64
-            // 
-            this.bd_kidsDataSet64.DataSetName = "bd_kidsDataSet64";
-            this.bd_kidsDataSet64.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // t03viewttmodulesBindingSource
-            // 
-            this.t03viewttmodulesBindingSource.DataMember = "T03_view_tt_modules";
-            this.t03viewttmodulesBindingSource.DataSource = this.bd_kidsDataSet64;
-            // 
             // t03_view_tt_modulesTableAdapter
             // 
             this.t03_view_tt_modulesTableAdapter.ClearBeforeFill = true;
@@ -1533,36 +1535,42 @@
             this.nametaskDataGridViewTextBoxColumn1.DataPropertyName = "name_task";
             this.nametaskDataGridViewTextBoxColumn1.HeaderText = "ТЗ";
             this.nametaskDataGridViewTextBoxColumn1.Name = "nametaskDataGridViewTextBoxColumn1";
+            this.nametaskDataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // nametrackDataGridViewTextBoxColumn
             // 
             this.nametrackDataGridViewTextBoxColumn.DataPropertyName = "name_track";
             this.nametrackDataGridViewTextBoxColumn.HeaderText = "Звуковое сопровождение";
             this.nametrackDataGridViewTextBoxColumn.Name = "nametrackDataGridViewTextBoxColumn";
+            this.nametrackDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameavtrackDataGridViewTextBoxColumn
             // 
             this.nameavtrackDataGridViewTextBoxColumn.DataPropertyName = "name_av_track";
             this.nameavtrackDataGridViewTextBoxColumn.HeaderText = "Аудио- видеосопровождение";
             this.nameavtrackDataGridViewTextBoxColumn.Name = "nameavtrackDataGridViewTextBoxColumn";
+            this.nameavtrackDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameinstructionDataGridViewTextBoxColumn
             // 
             this.nameinstructionDataGridViewTextBoxColumn.DataPropertyName = "name_instruction";
             this.nameinstructionDataGridViewTextBoxColumn.HeaderText = "Указание к выполнению";
             this.nameinstructionDataGridViewTextBoxColumn.Name = "nameinstructionDataGridViewTextBoxColumn";
+            this.nameinstructionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // namevariantDataGridViewTextBoxColumn
             // 
             this.namevariantDataGridViewTextBoxColumn.DataPropertyName = "name_variant";
             this.namevariantDataGridViewTextBoxColumn.HeaderText = "Вариант оценки результатов";
             this.namevariantDataGridViewTextBoxColumn.Name = "namevariantDataGridViewTextBoxColumn";
+            this.namevariantDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // nameplayresultDataGridViewTextBoxColumn
             // 
             this.nameplayresultDataGridViewTextBoxColumn.DataPropertyName = "name_play_result";
             this.nameplayresultDataGridViewTextBoxColumn.HeaderText = "Комментарий по результатам";
             this.nameplayresultDataGridViewTextBoxColumn.Name = "nameplayresultDataGridViewTextBoxColumn";
+            this.nameplayresultDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // commentviewdurationsecDataGridViewTextBoxColumn
             // 
@@ -1581,12 +1589,14 @@
             this.nameactionDataGridViewTextBoxColumn.DataPropertyName = "name_action";
             this.nameactionDataGridViewTextBoxColumn.HeaderText = "Вариант последующего действия";
             this.nameactionDataGridViewTextBoxColumn.Name = "nameactionDataGridViewTextBoxColumn";
+            this.nameactionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // descriptionDataGridViewTextBoxColumn
             // 
             this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "description";
             this.descriptionDataGridViewTextBoxColumn.HeaderText = "Доп.обучающий материал";
             this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // noteDataGridViewTextBoxColumn3
             // 
@@ -1622,6 +1632,8 @@
             this.T03_testing_task_modules.ResumeLayout(false);
             this.T03_testing_task_modules.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.T03)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.t03viewttmodulesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet64)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t07soundtracksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet53)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t08audiovideotracksBindingSource)).EndInit();
@@ -1656,8 +1668,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.t04viewtestingtasksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.t02viewtestsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bd_kidsDataSet64)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.t03viewttmodulesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
