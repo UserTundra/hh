@@ -16,6 +16,8 @@ namespace oksana_kids.Test
         public const string NEXT_TASK_STRING = "Следующий вопрос";
         public const int MAX_BLOCKS_SIZE = 8;
 
+        public bool isFail = false;
+
         public int MAX_FAILS = 44;
         private int _ElapsedTime;
         public int ElapsedTime {
@@ -48,6 +50,7 @@ namespace oksana_kids.Test
             }
             set
             {
+                isFail = false;
                 InitTest(value);
                 _currentValue = value;
             }
@@ -142,13 +145,17 @@ namespace oksana_kids.Test
         {
             if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) {
                 new Zoom("Молодец! Всё правильно!").Show();
-                
                 this.RightAnswersCount++;
+                if (!isFail)
+                {
+                    this.callback.ClearAnswers++;
+                }
             }
             else
             {
                 if (this._selectedCheckBox.Visible) { 
                     SummaryFailCount++;
+                    isFail = true;
                     new Zoom("Неправильно. Подумай ещё раз!", callback.ShowWrongAnswerPictures).Show();
                 }
                 _selectedCheckBox.Visible = false;

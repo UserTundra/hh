@@ -19,6 +19,7 @@ namespace oksana_kids
         }
 
         bd_kidsEntities1 bd = new bd_kidsEntities1();
+        public static long peopleID;
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -69,14 +70,17 @@ namespace oksana_kids
                                 where a.login.Equals(login) && a.password.Equals(password)
                                 select new
                                 {
+                                    id_person = a.id_person,
                                     name = a.surname + " " + a.name.Substring(0, 1) + ". " + a.patronymic.Substring(0, 1) + ".",
                                     category = b.name_category,
                                 }).ToList();
+                    
                     if (query.Any())
                     {
                         foreach (var item in query)
                         {
                             who += item.category;
+                            AuthorisationForm.peopleID = item.id_person;
                             MessageBox.Show(item.category + " : " + item.name + "\r\nДата авторизации : " + localDate.ToString());
                          }
 

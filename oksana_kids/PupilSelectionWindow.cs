@@ -166,14 +166,23 @@ namespace oksana_kids
             //           }
         }
         public string wrongAnswerImagePath = "";
+        public static long TestID;
+        public static string dateBegin;
+        public static string timeBegin;
+        public static string timeEnd;
+        public static int endTestingReason = 2;
         private void button1_Click(object sender, EventArgs e)
         {
             int selectedTaskIdx = 0;
             selectedTaskIdx = this.testList.SelectedIndex;
+            PupilSelectionWindow.dateBegin = DateTime.Today.ToShortDateString();
+            PupilSelectionWindow.timeBegin = DateTime.Now.ToShortTimeString();
+
+            TestID = selectedTaskIdx;
             List<List<SimplyTest>> lstTest = null;
             if(selectedTaskIdx == 17)
             {
-
+                lstTest = getLastTest();
             }else if(selectedTaskIdx == 1)
             {
                 lstTest = getSecondTest(); 
@@ -891,6 +900,173 @@ namespace oksana_kids
 
             };
             return new List<List<SimplyTest>>() { test_case, simplyQuestion };
+        }
+
+
+
+        public List<List<SimplyTest>> getLastTest()
+        {
+            this.wrongAnswerImagePath = Path.GetFullPath(@"testsources\18\add_teaching_material.PNG");
+            var test_case = new List<SimplyTest>()
+            {
+
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "расшифруй слово, отметь соответсвующий рисунок", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\1\0.jpg")) // ккатринка ответа
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\1\1.jpg")) // ккатринка ответа
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\1\2.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\1\3.jpg"))
+                        }
+                    },
+                    RightIdx=2 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "расшифруй слово, отметь правильную запись", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\2\1.jpg")) // ккатринка ответа
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "лесовик", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "картина",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "камбала",
+                            ImageValue = null
+                        }
+                    },
+                    RightIdx=2 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "расшифруй слово, отметь соответсвующий рисунок", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\3\0.jpg")) // ккатринка ответа
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\3\1.jpg")) // ккатринка ответа
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\3\2.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\3\3.jpg"))
+                        }
+                    },
+                    RightIdx=2 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "расшифруй слово, отметь правильную запись", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\4\1.jpg")) // ккатринка ответа
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "козлята", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "колбаса",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "магазин",
+                            ImageValue = null
+                        }
+                    },
+                    RightIdx=1 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "расшифруй слово, отметь правильную запись", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\18\5\1.jpg")) // ккатринка ответа
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "клад", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "соль",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "крым",
+                            ImageValue = null
+                        }
+                    },
+                    RightIdx=2 // индекс правильного ответа
+                        
+                },
+            };
+            return new List<List<SimplyTest>>() { test_case};
         }
     }
 }

@@ -60,7 +60,12 @@ namespace oksana_kids.Test
         public int testnumber = 1;
         public void ShowNext()
         {
-            this.Condition.GetNextTest();
+            var res = this.Condition.GetNextTest();
+            if(res == null)
+            {
+                this.preClose();
+                return;
+            }
             if(this.Condition.IdxCurrentTest == 0)
             {
                 this.IsMdiContainer = true;
@@ -87,13 +92,42 @@ namespace oksana_kids.Test
             form.Left = 0;
             form.Top = 0;
         }
-        
 
+
+        public int ClearAnswers = 0;
+         
         public void preClose()
         {
             MessageBox.Show("Тестирование окончено, верных ответов: " + this.SummaryRightAnswers);
-            this.Hide();
 
+            //bd_kidsEntities1 db = new bd_kidsEntities1();
+
+            
+            try {
+                PupilSelectionWindow.timeEnd = DateTime.Now.ToShortTimeString();
+                var allCount = this.Condition.testQuestionCount(); // all count
+                float percent = (SummaryRightAnswers * 1.0f) / (allCount * 1.0f) * 100;
+                float clearPercent = (ClearAnswers * 1.0f) / (allCount * 1.0f) * 100;
+                bd.T05_test_passing_results.Add(new T05_test_passing_results()
+                {
+                    id_person = AuthorisationForm.peopleID,
+                    perc_partially_right = clearPercent,
+                    perc_totally_right = percent,
+                    amount_passing_tests = allCount,
+                    time_end = PupilSelectionWindow.timeEnd,
+                    date_testing = PupilSelectionWindow.dateBegin,
+                    time_start = PupilSelectionWindow.timeBegin,
+                    code_end_reason = PupilSelectionWindow.endTestingReason,
+                    id_test = PupilSelectionWindow.TestID
+                });
+                bd.SaveChanges();
+            }catch(Exception ee)
+            {
+                MessageBox.Show("не удается сохранить результаты теста");
+            }
+            this.Condition.Callback.Show();
+            this.Close();
+            
         }
         
     }

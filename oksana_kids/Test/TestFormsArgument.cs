@@ -12,8 +12,19 @@ namespace oksana_kids.Test
             get { return _idxCurrentTest; }
             set { _idxCurrentTest = value; }
         }
-        private int _idxCurrentTest;
-
+        private int _idxCurrentTest = -1;
+        public int testQuestionCount()
+        {
+            int ans = 0;
+            foreach (var el in ListOfArguments)
+            {
+                foreach (var el2 in el)
+                {
+                    ans++;
+                }
+            }
+            return ans;
+        }
         public List<SimplyTest> CurrentTest => ListOfArguments[IdxCurrentTest];
 
         public TestFormsArgument(List<List<SimplyTest>> listOfArguments, PupilSelectionWindow callback)
@@ -24,7 +35,8 @@ namespace oksana_kids.Test
 
         public List<SimplyTest> GetNextTest()
         {
-            if (IdxCurrentTest >= ListOfArguments.Count || ++IdxCurrentTest < 0)
+            IdxCurrentTest++;
+            if (IdxCurrentTest >= ListOfArguments.Count)
                 return null;
             return this.CurrentTest;
         }

@@ -260,6 +260,7 @@ namespace oksana_kids.Test
             if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) { 
                 this.RightAnswersCount++;
                 new Zoom("Молодец! Всё правильно!").Show();
+                this.parent.ClearAnswers++;
             }
             else
             {
@@ -274,7 +275,7 @@ namespace oksana_kids.Test
             {
                 //MessageBox.Show("Тестирование окончено\n\rВерных ответов: " + this.RightAnswersCount);
                 this.Hide();
-                this.callback.Show();
+                //this.callback.Show();
                 parent.SummaryRightAnswers += this.RightAnswersCount;
                 parent.preClose();
             }
