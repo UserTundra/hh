@@ -68,6 +68,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Zoom";
             this.Text = "Zoom";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Zoom_FormClosed);
             this.Load += new System.EventHandler(this.Zoom_Load);
             ((System.ComponentModel.ISupportInitialize)(this.trackText)).EndInit();
             this.ResumeLayout(false);

@@ -336,3 +336,5 @@ C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.ChooseTZFo
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.CommentVariantsOnPassigTasksChoose.resources
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.csprojResolveAssemblyReference.cache
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.Others.resources
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.CommentVariantsOnPassigTasksChoose.resources
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Others.resources

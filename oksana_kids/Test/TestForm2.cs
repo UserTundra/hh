@@ -21,6 +21,8 @@ namespace oksana_kids.Test
         TestParent parent;
         public int AnswersCount { get; set; }
 
+        public List<List<int>> picsCoords = new List<List<int>>();
+
         public int SelectedCheckBoxIdx = 0;
         public int RightAnswersCount = 0;
 
@@ -67,6 +69,7 @@ namespace oksana_kids.Test
             this.currentTestNumber = currentTestNumber;
             
             InitializeComponent();
+            init();
             this.ElapsedTime = this.parent.time;
             this.testCollection = tests;
             this.CurrentTest = this.testCollection.FirstOrDefault();
@@ -78,7 +81,7 @@ namespace oksana_kids.Test
         }
         private void TestForm2_Load(object sender, EventArgs e)
         {
-            init();
+            
             buttonNext.Text = NEXT_TASK_STRING;
         }
 
@@ -102,6 +105,7 @@ namespace oksana_kids.Test
                 el.MouseUp += new MouseEventHandler(this.OnPictureBoxMouseUp);
                 el.MouseDown += new MouseEventHandler(this.OnPictureBoxMouseDown);
                 el.MouseMove += new MouseEventHandler(this.OnPictureBoxMouseMove);
+                picsCoords.Add(new List<int>() { el.Top, el.Left });
             }
             
             
@@ -187,6 +191,25 @@ namespace oksana_kids.Test
                 this.Controls["pictureBoxAnswer" + i].Visible = false;
             }
 
+            var pics = new List<PictureBox>()
+            {
+                this.pictureBoxAnswer1,
+                this.pictureBoxAnswer2,
+                this.pictureBoxAnswer3,
+                this.pictureBoxAnswer4,
+                this.pictureBoxAnswer5,
+                this.pictureBoxAnswer6,
+                this.pictureBoxAnswer7,
+                this.pictureBoxAnswer8
+            };
+            
+            for(int i =0; i < pics.Count; i++)
+            {
+                pics[i].Top = picsCoords[i][0];
+                pics[i].Left = picsCoords[i][1];
+                
+            }
+
         }
 
 
@@ -234,8 +257,14 @@ namespace oksana_kids.Test
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx)
+            if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) { 
                 this.RightAnswersCount++;
+                new Zoom("Молодец! Всё правильно!").Show();
+            }
+            else
+            {
+                new Zoom("Неправильно. Подумай ещё раз!", parent.ShowWrongAnswerPictures).Show();
+            }
             if (currentTestIndex < testCollection.Count - 1)
             {
                 this.CurrentTest = testCollection[++currentTestIndex];

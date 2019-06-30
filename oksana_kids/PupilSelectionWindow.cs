@@ -165,224 +165,39 @@ namespace oksana_kids
             //               listTaskID = 
             //           }
         }
-
+        public string wrongAnswerImagePath = "";
         private void button1_Click(object sender, EventArgs e)
         {
+            int selectedTaskIdx = 0;
+            selectedTaskIdx = this.testList.SelectedIndex;
+            List<List<SimplyTest>> lstTest = null;
+            if(selectedTaskIdx == 17)
+            {
+
+            }else if(selectedTaskIdx == 1)
+            {
+                lstTest = getSecondTest(); 
+            }
+            else
+            {
+                lstTest = getFirstTest();
+            }
             setSpeech("Начать тестирование");
             //var attempts = new FileParser().IMages((int)this.getTestID());
             this.Hide();
             setSpeech("Тест первый");
-            var test_case = new List<SimplyTest>()
-            {
-                
-                new SimplyTest()
-                {
-                    TestType = "OneWrong",
-                    Question = new RenderObject()
-                    {
-                        StringValue = "Отметь \"лишний\" предмет", // вот тут текст вопросa
-                        ImageValue = null // картинка вопроса
-
-                    },
-                    Variables = new List<RenderObject>()
-                    {
-                        new RenderObject()
-                        {
-                            StringValue  = "1", // вот тут текст который будет в варианте ответа
-                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\1.png")) // ккатринка ответа
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "2",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\2.jpg"))
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "3",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\3.png"))
-                        },
-                        new RenderObject()
-                        {
-                            StringValue="4",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\4.jpg"))
-                        }                        
-                    },
-                    RightIdx=3 // индекс правильного ответа
-                        
-                },
-                new SimplyTest()
-                {
-                    TestType = "OneWrong",
-                    Question = new RenderObject()
-                    {
-                        StringValue = "Отметь \"лишний\" предмет",
-                        ImageValue = null
-                    },
-                    Variables = new List<RenderObject>()
-                    {
-                        new RenderObject()
-                        {
-                            StringValue  = "1",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\1.jpg"))
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "2",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\2.jpg"))
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "3",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\3.png"))
-                        },
-                        new RenderObject()
-                        {
-                            StringValue="4",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\4.png"))
-                        }
-                    },
-                    RightIdx=2
-
-                },
-                 new SimplyTest()
-                {
-                    TestType = "OneWrong",
-                    Question = new RenderObject()
-                    {
-                        StringValue = "Отметь \"лишний\" предмет",
-                        ImageValue = null
-                    },
-                    Variables = new List<RenderObject>()
-                    {
-                        new RenderObject()
-                        {
-                            StringValue  = "1",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\1.png"))
-
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "2",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\2.png"))
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "3",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\3.png"))
-                        },
-                        new RenderObject()
-                        {
-                            StringValue="4",
-                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\4.png"))
-                        }
-                    },
-                    RightIdx = 3
-
-                },
-                 new SimplyTest()
-                {
-                    TestType = "OneWrong",
-                    Question = new RenderObject()
-                    {
-                        StringValue = "Какого цвета эти предметы?",
-                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\4\4.jpg"))
-                    },
-                    Variables = new List<RenderObject>()
-                    {
-                        new RenderObject()
-                        {
-                            StringValue  = "оранжевого"
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "красного"
-                        },
-                        new RenderObject()
-                        {
-                            StringValue = "желтого"
-                        },
-                        new RenderObject()
-                        {
-                            StringValue="голубого"
-                        }
-                    },
-                    RightIdx=2
-
-                }
-                
-            };
-           
-            //Test.TestForm a = new Test.TestForm(test_case,this);
-            //a.Show();
-
-            var simplyQuestion = new List<SimplyTest>() {
-                new SimplyTest() {
-                    TestType = "Juxtaposition",
-                Question = new RenderObject()
-                {
-                    StringValue = "Разложи фрукты и ягоды по баночкам"
-                },
-                Questions = new List<RenderObject>()
-                {
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\1.jpg")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\2.jpg")
-                    }
-                },
-                Variables = new List<RenderObject>()
-                {
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\1-1.jpg")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\1-2.jpg")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\1-3.png")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\1-4.jpg")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\2-1.jpg")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\2-2.jpg")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\2-3.jpg")
-                    },
-                    new RenderObject()
-                    {
-                        ImageValue = Image.FromFile(@"testsources\1\3\2-4.jpg")
-                    }
-
-                },
-                RightIdx=30
-            } };
+            
 
             //var imageSwapper = new TestForm2(simplyQuestion, this);
             //imageSwapper.Show();
-            var args = new TestFormsArgument(new List<List<SimplyTest>>() { test_case, simplyQuestion }, this);
+            var args = new TestFormsArgument(lstTest, this);
             int timeTest = 0;
             if (!int.TryParse(duration.Text, out timeTest))
                 timeTest = 9999;
             else
                 timeTest *= 60;
             
-            var parent = new TestParent(args,timeTest);
+            var parent = new TestParent(args,timeTest,wrongAnswerImagePath);
             parent.Show();
 
         }
@@ -620,6 +435,462 @@ namespace oksana_kids
         private void testList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+        public List<List<SimplyTest>> getFirstTest()
+        {
+            this.wrongAnswerImagePath = Path.GetFullPath(@"testsources\1\add_teaching_material.jpg");
+            var test_case = new List<SimplyTest>()
+            {
+
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Отметь \"лишний\" предмет", // вот тут текст вопросa
+                        ImageValue = null // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\1.png")) // ккатринка ответа
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\2.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\3.png"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="4",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\1\4.jpg"))
+                        }
+                    },
+                    RightIdx=3 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Отметь \"лишний\" предмет",
+                        ImageValue = null
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\1.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\2.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\3.png"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="4",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\2\4.png"))
+                        }
+                    },
+                    RightIdx=2
+
+                },
+                 new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Отметь \"лишний\" предмет",
+                        ImageValue = null
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\1.png"))
+
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\2.png"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\3.png"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="4",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\5\4.png"))
+                        }
+                    },
+                    RightIdx = 3
+
+                },
+                 new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Какого цвета эти предметы?",
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\1\4\4.jpg"))
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "оранжевого"
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "красного"
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "желтого"
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="голубого"
+                        }
+                    },
+                    RightIdx=2
+
+                }
+
+            };
+
+            //Test.TestForm a = new Test.TestForm(test_case,this);
+            //a.Show();
+
+            var simplyQuestion = new List<SimplyTest>() {
+                new SimplyTest() {
+                    TestType = "Juxtaposition",
+                Question = new RenderObject()
+                {
+                    StringValue = "Разложи фрукты и ягоды по баночкам"
+                },
+                Questions = new List<RenderObject>()
+                {
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\2.jpg")
+                    }
+                },
+                Variables = new List<RenderObject>()
+                {
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\1-1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\1-2.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\1-3.png")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\1-4.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\2-1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\2-2.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\2-3.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\1\3\2-4.jpg")
+                    }
+
+                },
+                RightIdx=30
+            } };
+            return new List<List<SimplyTest>>() { test_case, simplyQuestion };
+        }
+
+
+        public List<List<SimplyTest>> getSecondTest()
+        {
+            this.wrongAnswerImagePath = Path.GetFullPath(@"testsources\2\add_teaching_material.jpg");
+            var test_case = new List<SimplyTest>()
+            {
+
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Отметь \"лишний\" предмет", // вот тут текст вопросa
+                        ImageValue = null // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\1\1.jpg")) // ккатринка ответа
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\1\2.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\1\3.jpg"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="4",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\1\4.jpg"))
+                        }
+                    },
+                    RightIdx=4 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Сколько на рисунке труегольников?", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\2\2.jpg")) // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "8", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null// Image.FromFile(Path.GetFullPath(@"testsources\2\1\1.png")) // ккатринка ответа
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "10",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "11",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="12",
+                            ImageValue = null
+                        }
+                    },
+                    RightIdx=3 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Отметь \"лишний\" предмет", // вот тут текст вопросa
+                        ImageValue = null // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\5\1.PNG"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\5\2.PNG"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\5\3.PNG"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="4",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\5\4.PNG"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="5",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\2\5\5.png"))
+                        }
+                    },
+                    RightIdx=3 // индекс правильного ответа
+                        
+                },
+
+            };
+            var simplyQuestion = new List<SimplyTest>() {
+                new SimplyTest() {
+                    TestType = "Juxtaposition",
+                Question = new RenderObject()
+                {
+                    StringValue = "раздели предметы на квадратные и треугольные"
+                },
+                Questions = new List<RenderObject>()
+                {
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\2.jpg")
+                    }
+                },
+                Variables = new List<RenderObject>()
+                {
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\1-1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\1-2.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\1-3.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\1-4.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\2-1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\2-2.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\2-3.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\4\2-4.jpg")
+                    }
+
+                },
+                RightIdx=30
+            },
+
+                new SimplyTest() {
+                    TestType = "Juxtaposition",
+                Question = new RenderObject()
+                {
+                    StringValue = "раздели предметы на овальные и не овальные"
+                },
+                Questions = new List<RenderObject>()
+                {
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\2.jpg")
+                    }
+                },
+                Variables = new List<RenderObject>()
+                {
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\1-1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\1-2.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\1-3.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\1-4.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\2-1.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\2-2.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\2-3.jpg")
+                    },
+                    new RenderObject()
+                    {
+                        ImageValue = Image.FromFile(@"testsources\2\3\2-4.jpg")
+                    }
+
+                },
+                RightIdx=30
+            },
+
+            };
+            return new List<List<SimplyTest>>() { test_case, simplyQuestion };
         }
     }
 }

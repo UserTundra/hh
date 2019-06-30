@@ -33,6 +33,8 @@ namespace oksana_kids.Test
         public int RightAnswersCount = 0;
         public int SummaryFailCount = 0;
 
+        public string wrongAnswerImagePath = "";
+
         public List<SimplyTest> testCollection;
         public int currentTestIndex = 0;
         private SimplyTest _currentValue;
@@ -101,7 +103,7 @@ namespace oksana_kids.Test
 
         public int AnswersCount { get; set; }
 
-        public TestForm(List<SimplyTest> tests, TestParent callback, int width, int height, int max_fails=44, int time = 999999)
+        public TestForm(List<SimplyTest> tests, TestParent callback, int width, int height, int max_fails=44, int time = 999999, string wrongAnswerImagePath = "")
         {
             InitializeComponent();
 
@@ -110,6 +112,7 @@ namespace oksana_kids.Test
             this.callback = callback;
             this.MAX_FAILS = max_fails;
             this.ElapsedTime = time;
+            this.wrongAnswerImagePath = wrongAnswerImagePath;
 
             this.testCollection = tests;
             this.CurrentTest = this.testCollection.FirstOrDefault();
@@ -137,13 +140,16 @@ namespace oksana_kids.Test
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
-            if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx)
+            if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) {
+                new Zoom("Молодец! Всё правильно!").Show();
+                
                 this.RightAnswersCount++;
+            }
             else
             {
                 if (this._selectedCheckBox.Visible) { 
                     SummaryFailCount++;
-                    //callback.bd.
+                    new Zoom("Неправильно. Подумай ещё раз!", callback.ShowWrongAnswerPictures).Show();
                 }
                 _selectedCheckBox.Visible = false;
                 _selectedPicture.Visible = false;
@@ -248,5 +254,7 @@ namespace oksana_kids.Test
                 
             }
         }
+
+        
     }
 }

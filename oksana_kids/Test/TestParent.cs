@@ -21,11 +21,22 @@ namespace oksana_kids.Test
 
         public bd_kidsEntities1 bd = new bd_kidsEntities1();
 
-        public TestParent(TestFormsArgument cond, int time = 999999)
+        public TestParent(TestFormsArgument cond, int time = 999999, string wrongAnswerImagePath = "")
         {
+            this.wrongAnswerImagePath = wrongAnswerImagePath;
             this.time = time;
             this.Condition = cond;
             InitializeComponent();
+        }
+
+        public string wrongAnswerImagePath = "";
+        public int ShowWrongAnswerPictures()
+        {
+            if (wrongAnswerImagePath != "")
+            {
+                new Pictures(wrongAnswerImagePath, " ").Show();
+            }
+            return 0;
         }
 
         private void TestParent_Load(object sender, EventArgs e)

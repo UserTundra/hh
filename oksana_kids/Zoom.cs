@@ -13,11 +13,12 @@ namespace oksana_kids
     public partial class Zoom : Form
     {
         public string t;
+        public Func<int> callback;
 
-        public Zoom(string text)
+        public Zoom(string text, Func<int> callback = null)
         {
             t = text;
-            
+            this.callback = callback;
             InitializeComponent();
         }
 
@@ -35,6 +36,12 @@ namespace oksana_kids
         private void trackText_Scroll(object sender, EventArgs e)
         {
             changeTextSize();
+        }
+
+        private void Zoom_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(this.callback != null)
+                this.callback.Invoke();
         }
     }
 }
