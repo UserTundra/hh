@@ -39,6 +39,8 @@ namespace oksana_kids.Test
             return 0;
         }
 
+        public int TestNumber = 1;
+
         private void TestParent_Load(object sender, EventArgs e)
         {
             MdiClient mdi;

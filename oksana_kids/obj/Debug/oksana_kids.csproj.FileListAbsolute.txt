@@ -341,3 +341,6 @@ C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.Others.res
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.TestingTasksModulesToTestsBind.resources
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.TestingAimsToTestsBind.resources
 C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids-master\oksana_kids\obj\Debug\oksana_kids.AddAnswersToTasks.resources
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.AddAnswersToTasks.resources
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.TestingAimsToTestsBind.resources
+C:\учеба\new_new_new_oksana\hh\oksana_kids\obj\Debug\oksana_kids.TestingTasksModulesToTestsBind.resources

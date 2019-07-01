@@ -38,7 +38,7 @@
             this.ClientSize = new System.Drawing.Size(984, 741);
             this.IsMdiContainer = true;
             this.Name = "TestParent";
-            this.Text = "TestParent";
+            this.Text = "Тестирование";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TestParent_FormClosing);
             this.Load += new System.EventHandler(this.TestParent_Load);
             this.ResumeLayout(false);

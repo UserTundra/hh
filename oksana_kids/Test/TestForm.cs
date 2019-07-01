@@ -52,6 +52,7 @@ namespace oksana_kids.Test
             set
             {
                 isFail = false;
+                SelectedCheckBoxIdx = 0;
                 InitTest(value);
                 _currentValue = value;
             }
@@ -67,7 +68,7 @@ namespace oksana_kids.Test
                 pictureBoxQuestion1.SizeMode = PictureBoxSizeMode.StretchImage;
             }
 
-            labelQuestionTitle.Text = "Вопрос Номер: " + (this.currentTestIndex+1);
+            labelQuestionTitle.Text = "Вопрос Номер: " + (this.callback.TestNumber.ToString());
 
             for (int i = 1; i <= MAX_BLOCKS_SIZE; i++)
             {
@@ -155,6 +156,11 @@ namespace oksana_kids.Test
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            if(this.SelectedCheckBoxIdx == 0)
+            {
+                new Zoom("Не выбран вариант ответа, попробуй ещё раз.").Show();
+                return;
+            }
             if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) {
                 new Zoom("Молодец! Всё правильно!").Show();
                 setSpeech("Молодец! Всё правильно!");
@@ -178,6 +184,7 @@ namespace oksana_kids.Test
                     return;
             }
             if (currentTestIndex < testCollection.Count - 1) {
+                this.callback.TestNumber++;
                 this.CurrentTest = testCollection[++currentTestIndex];
                 QuestionInit(this.CurrentTest);
             }else
@@ -186,6 +193,7 @@ namespace oksana_kids.Test
                 this.callback.SummaryRightAnswers += this.RightAnswersCount;
                 this.Hide();
                 this.callback.testnumber = this.currentTestIndex + 1;
+                this.callback.TestNumber++;
                 this.callback.ShowNext();
             }
             

@@ -170,7 +170,7 @@ namespace oksana_kids.Test
             this.pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
 
 
-            labelQuestionTitle.Text = "Вопрос Номер: " + this.currentTestNumber.ToString();
+            labelQuestionTitle.Text = "Вопрос Номер: " + this.parent.TestNumber.ToString();
             currentTestNumber++;
 
 
@@ -257,6 +257,7 @@ namespace oksana_kids.Test
 
         private void buttonNext_Click(object sender, EventArgs e)
         {
+            this.parent.TestNumber++;
             if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) { 
                 this.RightAnswersCount++;
                 new Zoom("Молодец! Всё правильно!").Show();
