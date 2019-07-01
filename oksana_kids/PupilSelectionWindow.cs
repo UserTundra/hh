@@ -225,6 +225,10 @@ namespace oksana_kids
             {
                 lstTest = getSecondTest(); 
             }
+            else if(selectedTaskIdx == 7)
+            {
+                lstTest = getEightsTest();
+            }
             else
             {
                 lstTest = getFirstTest();
@@ -406,32 +410,44 @@ namespace oksana_kids
 
         private void duration_Click(object sender, EventArgs e)
         {
-            TextBox duration = sender as TextBox;
-
-            if (duration != null)
+            try
             {
-                Clipboard.SetText(duration.Text, TextDataFormat.UnicodeText);
+                TextBox duration = sender as TextBox;
+
+                if (duration != null)
+                {
+                    Clipboard.SetText(duration.Text, TextDataFormat.UnicodeText);
+                }
             }
+            catch(Exception ee) { }            
         }
 
         private void countTZ_Click(object sender, EventArgs e)
         {
-            TextBox countTZ = sender as TextBox;
+            try
+            { 
+                TextBox countTZ = sender as TextBox;
 
-            if (countTZ != null)
-            {
-                Clipboard.SetText(countTZ.Text, TextDataFormat.UnicodeText);
+                if (countTZ != null || countTZ.Text!= "")
+                {
+                    Clipboard.SetText(countTZ.Text, TextDataFormat.UnicodeText);
+                }
             }
+            catch(Exception ee) { }
         }
 
         private void methodMaterial_Click(object sender, EventArgs e)
         {
-            TextBox methodMaterial = sender as TextBox;
-
-            if (methodMaterial != null)
+            try
             {
-                Clipboard.SetText(methodMaterial.Text, TextDataFormat.UnicodeText);
+                TextBox methodMaterial = sender as TextBox;
+
+                if (methodMaterial != null)
+                {
+                    Clipboard.SetText(methodMaterial.Text, TextDataFormat.UnicodeText);
+                }
             }
+            catch(Exception ee) { }
         }
 
         private void testList_Click(object sender, EventArgs e)
@@ -916,6 +932,192 @@ namespace oksana_kids
 
             };
             return new List<List<SimplyTest>>() { test_case, simplyQuestion };
+        }
+
+        public List<List<SimplyTest>> getEightsTest()
+        {
+            this.wrongAnswerImagePath = Path.GetFullPath(@"testsources\8\add_teaching_material.PNG");
+            var test_case = new List<SimplyTest>()
+            {
+
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Выбери верное суждение", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\1\1.png")) // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "количество яблок \r\nна первой яблоне \r\nбольше, чем под \r\nвторой яблоней", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null // ккатринка ответа
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "количество яблок \r\nна второй яблоне \r\nменьше, чем под \r\nпервой яблоней",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "количество яблок \r\nна первой яблоне \r\nбольше, чем на \r\nвторой яблоне",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="количество яблок \r\nна первой яблоне \r\nравно количеству \r\nяблок на \r\nвторой яблоне",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue="количество яблок \r\nпод первой яблоней \r\nравно количеству \r\nяблок под \r\nвторой яблоней",
+                            ImageValue = null
+                        }
+                    },
+                    RightIdx=3 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "У ежика 6 грибов, а у белочки 3, значит, у ежика грибов", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\2\1.png")) // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "больше", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null// Image.FromFile(Path.GetFullPath(@"testsources\2\1\1.png")) // ккатринка ответа
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "меньше",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "столько же",
+                            ImageValue = null
+                        }
+                    },
+                    RightIdx=1 // индекс правильного ответа
+                        
+                },
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "В корзине 3 яблока и 6 слив. Чего меньше в корзине?", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\3\1.jpg")) // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "слив", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "яблок",
+                            ImageValue = null
+                        }
+                        
+                    },
+                    RightIdx=2 // индекс правильного ответа
+                        
+                },
+
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "У Алеши 7 монет, а у Ани - меньше. Сколько монет может быть у Ани?", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\4\1.jpg")) // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "8", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "7",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "5",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "9",
+                            ImageValue = null
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "10",
+                            ImageValue = null
+                        }
+
+                    },
+                    RightIdx=3 // индекс правильного ответа
+                        
+                },
+
+                new SimplyTest()
+                {
+                    TestType = "OneWrong",
+                    Question = new RenderObject()
+                    {
+                        StringValue = "Выбери знак <, >, или =", // вот тут текст вопросa
+                        ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\5\0.PNG")) // картинка вопроса
+
+                    },
+                    Variables = new List<RenderObject>()
+                    {
+                        new RenderObject()
+                        {
+                            StringValue  = "1", // вот тут текст который будет в варианте ответа
+                            //ImageValue = Image.FromFile(@"C:\Users\Дарья\Documents\Visual Studio 2015\Projects\oksanas_kids\oksana_kids\bin\Debug\testsources\1\1\1.png") // ккатринка ответа
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\5\1.PNG"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "2",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\5\2.PNG"))
+                        },
+                        new RenderObject()
+                        {
+                            StringValue = "3",
+                            ImageValue = Image.FromFile(Path.GetFullPath(@"testsources\8\5\3.PNG"))
+                        }
+
+                    },
+                    RightIdx=1 // индекс правильного ответа
+                        
+                }
+
+            };
+            return new List<List<SimplyTest>>() { test_case };
         }
 
 

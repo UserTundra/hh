@@ -66,9 +66,9 @@
             // 
             this.labelQuestionBody.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.labelQuestionBody.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelQuestionBody.Location = new System.Drawing.Point(94, 47);
+            this.labelQuestionBody.Location = new System.Drawing.Point(12, 47);
             this.labelQuestionBody.Name = "labelQuestionBody";
-            this.labelQuestionBody.Size = new System.Drawing.Size(340, 71);
+            this.labelQuestionBody.Size = new System.Drawing.Size(502, 71);
             this.labelQuestionBody.TabIndex = 0;
             this.labelQuestionBody.Text = "labelQuestionBody";
             this.labelQuestionBody.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -77,7 +77,7 @@
             // 
             this.labelQuestionTitle.AutoSize = true;
             this.labelQuestionTitle.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.labelQuestionTitle.Location = new System.Drawing.Point(94, 11);
+            this.labelQuestionTitle.Location = new System.Drawing.Point(12, 9);
             this.labelQuestionTitle.Name = "labelQuestionTitle";
             this.labelQuestionTitle.Size = new System.Drawing.Size(196, 27);
             this.labelQuestionTitle.TabIndex = 1;
@@ -86,10 +86,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox1.Location = new System.Drawing.Point(94, 141);
+            this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.Location = new System.Drawing.Point(119, 138);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(115, 24);
+            this.checkBox1.Size = new System.Drawing.Size(110, 22);
             this.checkBox1.TabIndex = 2;
             this.checkBox1.Text = "checkBox1";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -98,10 +98,10 @@
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox2.Location = new System.Drawing.Point(94, 276);
+            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox2.Location = new System.Drawing.Point(119, 279);
             this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(115, 24);
+            this.checkBox2.Size = new System.Drawing.Size(110, 22);
             this.checkBox2.TabIndex = 3;
             this.checkBox2.Text = "checkBox2";
             this.checkBox2.UseVisualStyleBackColor = true;
@@ -109,10 +109,10 @@
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox3.Location = new System.Drawing.Point(296, 140);
+            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox3.Location = new System.Drawing.Point(404, 138);
             this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(115, 24);
+            this.checkBox3.Size = new System.Drawing.Size(110, 22);
             this.checkBox3.TabIndex = 4;
             this.checkBox3.Text = "checkBox3";
             this.checkBox3.UseVisualStyleBackColor = true;
@@ -120,10 +120,10 @@
             // checkBox4
             // 
             this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox4.Location = new System.Drawing.Point(296, 276);
+            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox4.Location = new System.Drawing.Point(404, 279);
             this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(115, 24);
+            this.checkBox4.Size = new System.Drawing.Size(110, 22);
             this.checkBox4.TabIndex = 5;
             this.checkBox4.Text = "checkBox4";
             this.checkBox4.UseVisualStyleBackColor = true;
@@ -131,7 +131,7 @@
             // buttonNext
             // 
             this.buttonNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.buttonNext.Location = new System.Drawing.Point(440, 47);
+            this.buttonNext.Location = new System.Drawing.Point(580, 45);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(244, 69);
             this.buttonNext.TabIndex = 6;
@@ -141,8 +141,9 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(94, 166);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 138);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(109, 97);
             this.pictureBox1.TabIndex = 7;
@@ -151,7 +152,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(94, 301);
+            this.pictureBox2.Location = new System.Drawing.Point(7, 279);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(109, 97);
             this.pictureBox2.TabIndex = 8;
@@ -160,7 +161,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(296, 165);
+            this.pictureBox3.Location = new System.Drawing.Point(289, 138);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(112, 97);
             this.pictureBox3.TabIndex = 9;
@@ -169,7 +170,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(296, 301);
+            this.pictureBox4.Location = new System.Drawing.Point(289, 279);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(112, 97);
             this.pictureBox4.TabIndex = 10;
@@ -178,9 +179,9 @@
             // pictureBoxQuestion1
             // 
             this.pictureBoxQuestion1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBoxQuestion1.Location = new System.Drawing.Point(440, 122);
+            this.pictureBoxQuestion1.Location = new System.Drawing.Point(580, 119);
             this.pictureBoxQuestion1.Name = "pictureBoxQuestion1";
-            this.pictureBoxQuestion1.Size = new System.Drawing.Size(388, 314);
+            this.pictureBoxQuestion1.Size = new System.Drawing.Size(369, 323);
             this.pictureBoxQuestion1.TabIndex = 19;
             this.pictureBoxQuestion1.TabStop = false;
             this.pictureBoxQuestion1.Click += new System.EventHandler(this.pictureBoxQuestion1_Click);
@@ -188,10 +189,10 @@
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox5.Location = new System.Drawing.Point(94, 417);
+            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox5.Location = new System.Drawing.Point(119, 420);
             this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(115, 24);
+            this.checkBox5.Size = new System.Drawing.Size(110, 22);
             this.checkBox5.TabIndex = 11;
             this.checkBox5.Text = "checkBox5";
             this.checkBox5.UseVisualStyleBackColor = true;
@@ -199,7 +200,7 @@
             // pictureBox5
             // 
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(94, 443);
+            this.pictureBox5.Location = new System.Drawing.Point(7, 420);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(109, 97);
             this.pictureBox5.TabIndex = 12;
@@ -208,7 +209,7 @@
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Location = new System.Drawing.Point(94, 555);
+            this.checkBox6.Location = new System.Drawing.Point(407, 447);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(80, 17);
             this.checkBox6.TabIndex = 13;
@@ -218,16 +219,16 @@
             // pictureBox6
             // 
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(94, 578);
+            this.pictureBox6.Location = new System.Drawing.Point(453, 470);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox6.Size = new System.Drawing.Size(16, 19);
             this.pictureBox6.TabIndex = 14;
             this.pictureBox6.TabStop = false;
             // 
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Location = new System.Drawing.Point(299, 420);
+            this.checkBox7.Location = new System.Drawing.Point(407, 424);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(80, 17);
             this.checkBox7.TabIndex = 15;
@@ -237,16 +238,16 @@
             // pictureBox7
             // 
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(299, 443);
+            this.pictureBox7.Location = new System.Drawing.Point(289, 420);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox7.Size = new System.Drawing.Size(112, 97);
             this.pictureBox7.TabIndex = 16;
             this.pictureBox7.TabStop = false;
             // 
             // checkBox8
             // 
             this.checkBox8.AutoSize = true;
-            this.checkBox8.Location = new System.Drawing.Point(299, 556);
+            this.checkBox8.Location = new System.Drawing.Point(402, 495);
             this.checkBox8.Name = "checkBox8";
             this.checkBox8.Size = new System.Drawing.Size(80, 17);
             this.checkBox8.TabIndex = 17;
@@ -256,9 +257,9 @@
             // pictureBox8
             // 
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(299, 579);
+            this.pictureBox8.Location = new System.Drawing.Point(445, 518);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(109, 97);
+            this.pictureBox8.Size = new System.Drawing.Size(24, 18);
             this.pictureBox8.TabIndex = 18;
             this.pictureBox8.TabStop = false;
             // 
@@ -267,11 +268,12 @@
             this.timeLabel.AutoSize = true;
             this.timeLabel.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.timeLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.timeLabel.Location = new System.Drawing.Point(445, 11);
+            this.timeLabel.Location = new System.Drawing.Point(574, 11);
             this.timeLabel.Name = "timeLabel";
             this.timeLabel.Size = new System.Drawing.Size(255, 31);
             this.timeLabel.TabIndex = 20;
             this.timeLabel.Text = "Осталось времени: ";
+            this.timeLabel.Click += new System.EventHandler(this.timeLabel_Click);
             // 
             // timer1
             // 
@@ -283,7 +285,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(840, 710);
+            this.ClientSize = new System.Drawing.Size(961, 672);
             this.Controls.Add(this.timeLabel);
             this.Controls.Add(this.pictureBoxQuestion1);
             this.Controls.Add(this.pictureBox8);

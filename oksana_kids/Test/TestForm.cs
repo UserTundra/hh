@@ -161,7 +161,7 @@ namespace oksana_kids.Test
                 return;
             }
             if (this.CurrentTest.RightIdx == this.SelectedCheckBoxIdx) {
-                new Zoom("Молодец! Всё правильно!").Show();
+                new Zoom("Молодец! Всё правильно!", showDuration:2000).Show();
                 setSpeech("Молодец! Всё правильно!");
                 this.RightAnswersCount++;
                 if (!isFail)
@@ -174,7 +174,7 @@ namespace oksana_kids.Test
                 if (this._selectedCheckBox.Visible) { 
                     SummaryFailCount++;
                     isFail = true;
-                    new Zoom("Неправильно. Подумай ещё раз!", callback.ShowWrongAnswerPictures).Show();
+                    new Zoom("Неправильно. Подумай ещё раз!", callback.ShowWrongAnswerPictures, showDuration: 2000).Show();
                     setSpeech("Неправильно. Подумай ещё раз!");
                 }
                 _selectedCheckBox.Visible = false;
@@ -284,6 +284,9 @@ namespace oksana_kids.Test
             }
         }
 
-        
+        private void timeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -38,7 +38,10 @@ namespace oksana_kids
             try { 
                 testingTask.max_count_TT_try = long.Parse(this.max_duration_testing.Text);
                 bd.SaveChanges();
-            }catch(Exception ee)
+
+                this.Close();
+            }
+            catch(Exception ee)
             {
                 MessageBox.Show("неверное значение");
             }
@@ -46,7 +49,47 @@ namespace oksana_kids
 
         private void adaptiveTT1ConstructorGo_Click(object sender, EventArgs e)
         {
-            //testingTask.
+            try
+            {
+                testingTask.unique_adaptive_constraint = long.Parse(this.changeAnswerCountType1.Text);
+                bd.SaveChanges();
+
+                this.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("неверное значение");
+            }
+        }
+
+        private void adaptiveTT2ConstructorGo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                testingTask.unique_adaptive_constraint = long.Parse(this.changeAnswerCountType2.Text);
+                bd.SaveChanges();
+
+                this.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("неверное значение");
+            }
+        }
+
+        private void adaptiveTT3ConstructorGo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                testingTask.unique_adaptive_constraint = long.Parse(this.changeAnswerCountType3.Text);
+                bd.SaveChanges();
+
+                this.Close();
+            }
+            catch (Exception ee)
+            {
+                MessageBox.Show("неверное значение");
+            }
         }
     }
 }

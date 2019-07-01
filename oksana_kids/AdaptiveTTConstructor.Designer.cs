@@ -35,15 +35,15 @@
             this.max_duration_testing = new System.Windows.Forms.TextBox();
             this.TT_1_class = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.changeAnswerCountType1 = new System.Windows.Forms.TextBox();
             this.adaptiveTT1ConstructorGo = new System.Windows.Forms.Button();
             this.TT_2_class = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.changeAnswerCountType2 = new System.Windows.Forms.TextBox();
             this.adaptiveTT2ConstructorGo = new System.Windows.Forms.Button();
             this.TT_3_class = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.changeAnswerCountType3 = new System.Windows.Forms.TextBox();
             this.adaptiveTT3ConstructorGo = new System.Windows.Forms.Button();
             this.TT_4_class = new System.Windows.Forms.TabPage();
             this.adaptiveTT4ConstructorGo = new System.Windows.Forms.Button();
@@ -114,7 +114,7 @@
             // TT_1_class
             // 
             this.TT_1_class.Controls.Add(this.label1);
-            this.TT_1_class.Controls.Add(this.textBox1);
+            this.TT_1_class.Controls.Add(this.changeAnswerCountType1);
             this.TT_1_class.Controls.Add(this.adaptiveTT1ConstructorGo);
             this.TT_1_class.Location = new System.Drawing.Point(4, 22);
             this.TT_1_class.Name = "TT_1_class";
@@ -134,12 +134,12 @@
             this.label1.TabIndex = 10;
             this.label1.Text = "Изменение количества ответов при \r\nследующей попытке";
             // 
-            // textBox1
+            // changeAnswerCountType1
             // 
-            this.textBox1.Location = new System.Drawing.Point(317, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(90, 20);
-            this.textBox1.TabIndex = 11;
+            this.changeAnswerCountType1.Location = new System.Drawing.Point(317, 22);
+            this.changeAnswerCountType1.Name = "changeAnswerCountType1";
+            this.changeAnswerCountType1.Size = new System.Drawing.Size(90, 20);
+            this.changeAnswerCountType1.TabIndex = 11;
             // 
             // adaptiveTT1ConstructorGo
             // 
@@ -155,7 +155,7 @@
             // TT_2_class
             // 
             this.TT_2_class.Controls.Add(this.label4);
-            this.TT_2_class.Controls.Add(this.textBox2);
+            this.TT_2_class.Controls.Add(this.changeAnswerCountType2);
             this.TT_2_class.Controls.Add(this.adaptiveTT2ConstructorGo);
             this.TT_2_class.Location = new System.Drawing.Point(4, 22);
             this.TT_2_class.Name = "TT_2_class";
@@ -174,12 +174,12 @@
             this.label4.TabIndex = 11;
             this.label4.Text = "Изменение количества ранжируемых\r\nответов";
             // 
-            // textBox2
+            // changeAnswerCountType2
             // 
-            this.textBox2.Location = new System.Drawing.Point(326, 20);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(90, 20);
-            this.textBox2.TabIndex = 12;
+            this.changeAnswerCountType2.Location = new System.Drawing.Point(326, 20);
+            this.changeAnswerCountType2.Name = "changeAnswerCountType2";
+            this.changeAnswerCountType2.Size = new System.Drawing.Size(90, 20);
+            this.changeAnswerCountType2.TabIndex = 12;
             // 
             // adaptiveTT2ConstructorGo
             // 
@@ -190,11 +190,12 @@
             this.adaptiveTT2ConstructorGo.TabIndex = 10;
             this.adaptiveTT2ConstructorGo.Text = "Задать";
             this.adaptiveTT2ConstructorGo.UseVisualStyleBackColor = true;
+            this.adaptiveTT2ConstructorGo.Click += new System.EventHandler(this.adaptiveTT2ConstructorGo_Click);
             // 
             // TT_3_class
             // 
             this.TT_3_class.Controls.Add(this.label5);
-            this.TT_3_class.Controls.Add(this.textBox3);
+            this.TT_3_class.Controls.Add(this.changeAnswerCountType3);
             this.TT_3_class.Controls.Add(this.adaptiveTT3ConstructorGo);
             this.TT_3_class.Location = new System.Drawing.Point(4, 22);
             this.TT_3_class.Name = "TT_3_class";
@@ -213,12 +214,12 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Изменение количества объектов в \r\nсопоставляемых списках";
             // 
-            // textBox3
+            // changeAnswerCountType3
             // 
-            this.textBox3.Location = new System.Drawing.Point(323, 18);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(90, 20);
-            this.textBox3.TabIndex = 12;
+            this.changeAnswerCountType3.Location = new System.Drawing.Point(323, 18);
+            this.changeAnswerCountType3.Name = "changeAnswerCountType3";
+            this.changeAnswerCountType3.Size = new System.Drawing.Size(90, 20);
+            this.changeAnswerCountType3.TabIndex = 12;
             // 
             // adaptiveTT3ConstructorGo
             // 
@@ -229,6 +230,7 @@
             this.adaptiveTT3ConstructorGo.TabIndex = 10;
             this.adaptiveTT3ConstructorGo.Text = "Задать";
             this.adaptiveTT3ConstructorGo.UseVisualStyleBackColor = true;
+            this.adaptiveTT3ConstructorGo.Click += new System.EventHandler(this.adaptiveTT3ConstructorGo_Click);
             // 
             // TT_4_class
             // 
@@ -311,13 +313,13 @@
         private System.Windows.Forms.TextBox max_duration_testing;
         private System.Windows.Forms.Button adaptiveTTAllConstructorGo;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox changeAnswerCountType1;
         private System.Windows.Forms.Button adaptiveTT1ConstructorGo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox changeAnswerCountType2;
         private System.Windows.Forms.Button adaptiveTT2ConstructorGo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox changeAnswerCountType3;
         private System.Windows.Forms.Button adaptiveTT3ConstructorGo;
         private System.Windows.Forms.Button adaptiveTT4ConstructorGo;
     }

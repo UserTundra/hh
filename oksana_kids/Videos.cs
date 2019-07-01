@@ -32,5 +32,15 @@ namespace oksana_kids
             axWindowsMediaPlayer1.Ctlenabled = false;
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
+
+        private void hideButton_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void closeButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

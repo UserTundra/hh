@@ -59,10 +59,14 @@ namespace oksana_kids
                 test.max_count_TT_bcause_time_limit = this.max_TT_with_high_time_limit.Text == "" ? test.max_count_TT_bcause_time_limit : long.Parse(this.max_TT_with_high_time_limit.Text);
                 test.max_count_TT_not_done_full_try = this.max_not_done_TT.Text == "" ? test.max_count_TT_not_done_full_try : long.Parse(this.max_not_done_TT.Text);
                 test.max_passing_duration_sec = this.max_duration_testing.Text == "" ? test.max_passing_duration_sec : long.Parse(this.max_duration_testing.Text);
+
+                this.Close();
             }catch(Exception ee)
             {
                 MessageBox.Show("Введены некорректные данные");
             }
+
+            
         }
     }
 }

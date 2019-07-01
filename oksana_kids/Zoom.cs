@@ -15,18 +15,21 @@ namespace oksana_kids
     {
         public string t;
         public Func<int> callback;
+        public int showDuration;
 
-        public Zoom(string text, Func<int> callback = null)
+        public Zoom(string text, Func<int> callback = null, int showDuration = 20000)
         {
             t = text;
-            
+            this.showDuration = showDuration;
             this.callback = callback;
             InitializeComponent();
+
         }
 
         private void Zoom_Load(object sender, EventArgs e)
         {
             zoomText.Text = t;
+            timer1.Interval = showDuration;
             timer1.Enabled = true;
         }
 

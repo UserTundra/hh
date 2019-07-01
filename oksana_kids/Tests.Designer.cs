@@ -154,17 +154,6 @@
             this.TT_constructor_button = new System.Windows.Forms.Button();
             this.T05_test_passing_results = new System.Windows.Forms.TabPage();
             this.T05 = new System.Windows.Forms.DataGridView();
-            this.fioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nametestDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.datetestingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timestartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameendreasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountpassingtestsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perctotallyrightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.percpartiallyrightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.noteDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.t05viewtestpassingresultsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bd_kidsDataSet60 = new oksana_kids.bd_kidsDataSet60();
             this.t09commentvariantsonpassingtasksBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -196,6 +185,17 @@
             this.r10_next_action_variantsTableAdapter = new oksana_kids.bd_kidsDataSet58TableAdapters.R10_next_action_variantsTableAdapter();
             this.t05_view_test_passing_resultsTableAdapter = new oksana_kids.bd_kidsDataSet60TableAdapters.T05_view_test_passing_resultsTableAdapter();
             this.t03_view_tt_modulesTableAdapter = new oksana_kids.bd_kidsDataSet64TableAdapters.T03_view_tt_modulesTableAdapter();
+            this.fioDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nametestDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.datetestingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timestartDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timeendDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameendreasonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.amountpassingtestsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perctotallyrightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.percpartiallyrightDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idresultDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.T02_tests.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.t012othersBindingSource)).BeginInit();
@@ -1404,79 +1404,11 @@
             this.noteDataGridViewTextBoxColumn2,
             this.idresultDataGridViewTextBoxColumn});
             this.T05.DataSource = this.t05viewtestpassingresultsBindingSource;
-            this.T05.Enabled = false;
             this.T05.Location = new System.Drawing.Point(3, 3);
             this.T05.Name = "T05";
             this.T05.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.T05.Size = new System.Drawing.Size(916, 396);
             this.T05.TabIndex = 0;
-            // 
-            // fioDataGridViewTextBoxColumn2
-            // 
-            this.fioDataGridViewTextBoxColumn2.DataPropertyName = "fio";
-            this.fioDataGridViewTextBoxColumn2.HeaderText = "ФИО ученика";
-            this.fioDataGridViewTextBoxColumn2.Name = "fioDataGridViewTextBoxColumn2";
-            // 
-            // nametestDataGridViewTextBoxColumn1
-            // 
-            this.nametestDataGridViewTextBoxColumn1.DataPropertyName = "name_test";
-            this.nametestDataGridViewTextBoxColumn1.HeaderText = "Название теста";
-            this.nametestDataGridViewTextBoxColumn1.Name = "nametestDataGridViewTextBoxColumn1";
-            // 
-            // datetestingDataGridViewTextBoxColumn
-            // 
-            this.datetestingDataGridViewTextBoxColumn.DataPropertyName = "date_testing";
-            this.datetestingDataGridViewTextBoxColumn.HeaderText = "Дата тестирования";
-            this.datetestingDataGridViewTextBoxColumn.Name = "datetestingDataGridViewTextBoxColumn";
-            // 
-            // timestartDataGridViewTextBoxColumn
-            // 
-            this.timestartDataGridViewTextBoxColumn.DataPropertyName = "time_start";
-            this.timestartDataGridViewTextBoxColumn.HeaderText = "Время начала";
-            this.timestartDataGridViewTextBoxColumn.Name = "timestartDataGridViewTextBoxColumn";
-            // 
-            // timeendDataGridViewTextBoxColumn
-            // 
-            this.timeendDataGridViewTextBoxColumn.DataPropertyName = "time_end";
-            this.timeendDataGridViewTextBoxColumn.HeaderText = "Время окончания";
-            this.timeendDataGridViewTextBoxColumn.Name = "timeendDataGridViewTextBoxColumn";
-            // 
-            // nameendreasonDataGridViewTextBoxColumn
-            // 
-            this.nameendreasonDataGridViewTextBoxColumn.DataPropertyName = "name_end_reason";
-            this.nameendreasonDataGridViewTextBoxColumn.HeaderText = "Причина окончания теста";
-            this.nameendreasonDataGridViewTextBoxColumn.Name = "nameendreasonDataGridViewTextBoxColumn";
-            // 
-            // amountpassingtestsDataGridViewTextBoxColumn
-            // 
-            this.amountpassingtestsDataGridViewTextBoxColumn.DataPropertyName = "amount_passing_tests";
-            this.amountpassingtestsDataGridViewTextBoxColumn.HeaderText = "Пройденные ТЗ";
-            this.amountpassingtestsDataGridViewTextBoxColumn.Name = "amountpassingtestsDataGridViewTextBoxColumn";
-            // 
-            // perctotallyrightDataGridViewTextBoxColumn
-            // 
-            this.perctotallyrightDataGridViewTextBoxColumn.DataPropertyName = "perc_totally_right";
-            this.perctotallyrightDataGridViewTextBoxColumn.HeaderText = "% пройденных ТЗ с полностью правильными ответами";
-            this.perctotallyrightDataGridViewTextBoxColumn.Name = "perctotallyrightDataGridViewTextBoxColumn";
-            // 
-            // percpartiallyrightDataGridViewTextBoxColumn
-            // 
-            this.percpartiallyrightDataGridViewTextBoxColumn.DataPropertyName = "perc_partially_right";
-            this.percpartiallyrightDataGridViewTextBoxColumn.HeaderText = "% верных ответов по совокупности пройденных тз";
-            this.percpartiallyrightDataGridViewTextBoxColumn.Name = "percpartiallyrightDataGridViewTextBoxColumn";
-            // 
-            // noteDataGridViewTextBoxColumn2
-            // 
-            this.noteDataGridViewTextBoxColumn2.DataPropertyName = "note";
-            this.noteDataGridViewTextBoxColumn2.HeaderText = "Примечание";
-            this.noteDataGridViewTextBoxColumn2.Name = "noteDataGridViewTextBoxColumn2";
-            // 
-            // idresultDataGridViewTextBoxColumn
-            // 
-            this.idresultDataGridViewTextBoxColumn.DataPropertyName = "id_result";
-            this.idresultDataGridViewTextBoxColumn.HeaderText = "id_result";
-            this.idresultDataGridViewTextBoxColumn.Name = "idresultDataGridViewTextBoxColumn";
-            this.idresultDataGridViewTextBoxColumn.Visible = false;
             // 
             // t05viewtestpassingresultsBindingSource
             // 
@@ -1616,6 +1548,84 @@
             // t03_view_tt_modulesTableAdapter
             // 
             this.t03_view_tt_modulesTableAdapter.ClearBeforeFill = true;
+            // 
+            // fioDataGridViewTextBoxColumn2
+            // 
+            this.fioDataGridViewTextBoxColumn2.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn2.HeaderText = "ФИО ученика";
+            this.fioDataGridViewTextBoxColumn2.Name = "fioDataGridViewTextBoxColumn2";
+            this.fioDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // nametestDataGridViewTextBoxColumn1
+            // 
+            this.nametestDataGridViewTextBoxColumn1.DataPropertyName = "name_test";
+            this.nametestDataGridViewTextBoxColumn1.HeaderText = "Название теста";
+            this.nametestDataGridViewTextBoxColumn1.Name = "nametestDataGridViewTextBoxColumn1";
+            this.nametestDataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // datetestingDataGridViewTextBoxColumn
+            // 
+            this.datetestingDataGridViewTextBoxColumn.DataPropertyName = "date_testing";
+            this.datetestingDataGridViewTextBoxColumn.HeaderText = "Дата тестирования";
+            this.datetestingDataGridViewTextBoxColumn.Name = "datetestingDataGridViewTextBoxColumn";
+            this.datetestingDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timestartDataGridViewTextBoxColumn
+            // 
+            this.timestartDataGridViewTextBoxColumn.DataPropertyName = "time_start";
+            this.timestartDataGridViewTextBoxColumn.HeaderText = "Время начала";
+            this.timestartDataGridViewTextBoxColumn.Name = "timestartDataGridViewTextBoxColumn";
+            this.timestartDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // timeendDataGridViewTextBoxColumn
+            // 
+            this.timeendDataGridViewTextBoxColumn.DataPropertyName = "time_end";
+            this.timeendDataGridViewTextBoxColumn.HeaderText = "Время окончания";
+            this.timeendDataGridViewTextBoxColumn.Name = "timeendDataGridViewTextBoxColumn";
+            this.timeendDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameendreasonDataGridViewTextBoxColumn
+            // 
+            this.nameendreasonDataGridViewTextBoxColumn.DataPropertyName = "name_end_reason";
+            this.nameendreasonDataGridViewTextBoxColumn.HeaderText = "Причина окончания теста";
+            this.nameendreasonDataGridViewTextBoxColumn.Name = "nameendreasonDataGridViewTextBoxColumn";
+            this.nameendreasonDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // amountpassingtestsDataGridViewTextBoxColumn
+            // 
+            this.amountpassingtestsDataGridViewTextBoxColumn.DataPropertyName = "amount_passing_tests";
+            this.amountpassingtestsDataGridViewTextBoxColumn.HeaderText = "Пройденные ТЗ";
+            this.amountpassingtestsDataGridViewTextBoxColumn.Name = "amountpassingtestsDataGridViewTextBoxColumn";
+            this.amountpassingtestsDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // perctotallyrightDataGridViewTextBoxColumn
+            // 
+            this.perctotallyrightDataGridViewTextBoxColumn.DataPropertyName = "perc_totally_right";
+            this.perctotallyrightDataGridViewTextBoxColumn.HeaderText = "% пройденных ТЗ с полностью правильными ответами";
+            this.perctotallyrightDataGridViewTextBoxColumn.Name = "perctotallyrightDataGridViewTextBoxColumn";
+            this.perctotallyrightDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // percpartiallyrightDataGridViewTextBoxColumn
+            // 
+            this.percpartiallyrightDataGridViewTextBoxColumn.DataPropertyName = "perc_partially_right";
+            this.percpartiallyrightDataGridViewTextBoxColumn.HeaderText = "% верных ответов по совокупности пройденных тз";
+            this.percpartiallyrightDataGridViewTextBoxColumn.Name = "percpartiallyrightDataGridViewTextBoxColumn";
+            this.percpartiallyrightDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // noteDataGridViewTextBoxColumn2
+            // 
+            this.noteDataGridViewTextBoxColumn2.DataPropertyName = "note";
+            this.noteDataGridViewTextBoxColumn2.HeaderText = "Примечание";
+            this.noteDataGridViewTextBoxColumn2.Name = "noteDataGridViewTextBoxColumn2";
+            this.noteDataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // idresultDataGridViewTextBoxColumn
+            // 
+            this.idresultDataGridViewTextBoxColumn.DataPropertyName = "id_result";
+            this.idresultDataGridViewTextBoxColumn.HeaderText = "id_result";
+            this.idresultDataGridViewTextBoxColumn.Name = "idresultDataGridViewTextBoxColumn";
+            this.idresultDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idresultDataGridViewTextBoxColumn.Visible = false;
             // 
             // Tests
             // 
@@ -1820,17 +1830,6 @@
         private bd_kidsDataSet60 bd_kidsDataSet60;
         private System.Windows.Forms.BindingSource t05viewtestpassingresultsBindingSource;
         private bd_kidsDataSet60TableAdapters.T05_view_test_passing_resultsTableAdapter t05_view_test_passing_resultsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nametestDataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn datetestingDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timestartDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn timeendDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameendreasonDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn amountpassingtestsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn perctotallyrightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn percpartiallyrightDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idresultDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button T03_id_comment;
         private bd_kidsDataSet64 bd_kidsDataSet64;
         private System.Windows.Forms.BindingSource t03viewttmodulesBindingSource;
@@ -1847,5 +1846,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmoduleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nametestDataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn datetestingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timestartDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn timeendDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameendreasonDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn amountpassingtestsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perctotallyrightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn percpartiallyrightDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idresultDataGridViewTextBoxColumn;
     }
 }
