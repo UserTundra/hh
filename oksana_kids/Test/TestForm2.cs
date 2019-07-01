@@ -274,9 +274,8 @@ namespace oksana_kids.Test
             }
             else
             {
-                //MessageBox.Show("Тестирование окончено\n\rВерных ответов: " + this.RightAnswersCount);
                 this.Hide();
-                //this.callback.Show();
+                this.timer1.Enabled = false;
                 parent.SummaryRightAnswers += this.RightAnswersCount;
                 parent.preClose();
             }

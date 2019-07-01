@@ -192,6 +192,7 @@ namespace oksana_kids.Test
                 //MessageBox.Show("Первая часть тестирования окончена\n\rВерных ответов: "+this.RightAnswersCount);
                 this.callback.SummaryRightAnswers += this.RightAnswersCount;
                 this.Hide();
+                this.timer1.Enabled = false;
                 this.callback.testnumber = this.currentTestIndex + 1;
                 this.callback.TestNumber++;
                 this.callback.ShowNext();
