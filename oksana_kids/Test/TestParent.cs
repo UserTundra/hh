@@ -71,7 +71,7 @@ namespace oksana_kids.Test
             if(this.Condition.IdxCurrentTest == 0)
             {
                 this.IsMdiContainer = true;
-                TestForm first = new TestForm(this.Condition.CurrentTest, this, this.Width, this.Height, 1, time);
+                TestForm first = new TestForm(this.Condition.CurrentTest, this, this.Width, this.Height, 4, time);
                 InitChildForm(first);
                 first.Show();
             }
