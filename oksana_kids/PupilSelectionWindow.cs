@@ -1280,7 +1280,7 @@ namespace oksana_kids
                             ImageValue = null
                         }
                     },
-                    RightIdx=2 // индекс правильного ответа
+                    RightIdx=1 // индекс правильного ответа
                         
                 },
             };
