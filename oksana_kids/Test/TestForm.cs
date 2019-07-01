@@ -62,11 +62,10 @@ namespace oksana_kids.Test
         {
             SummaryFailCount = 0;
             this.labelQuestionBody.Text = test.Question.StringValue;
-            if (test.Question.ImageValue != null)
-            { 
-                this.pictureBoxQuestion1.Image = test.Question.ImageValue;
-                pictureBoxQuestion1.SizeMode = PictureBoxSizeMode.StretchImage;
-            }
+            
+            this.pictureBoxQuestion1.Image = test.Question.ImageValue;
+            pictureBoxQuestion1.SizeMode = PictureBoxSizeMode.StretchImage;
+            
 
             labelQuestionTitle.Text = "Вопрос Номер: " + (this.callback.TestNumber.ToString());
 
